@@ -16,6 +16,8 @@ class RecommendViewController: UIViewController {
         //test code
         
         
+        //인준 테스트
+        
     }
     
 
