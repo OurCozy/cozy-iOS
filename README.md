@@ -4,8 +4,8 @@ Cozy iOS 📱
 >  **인준이형**
 
 <div>
-  <img src = "./Readme-images/스크린샷 2020-07-03 오후 6.26.13.png" width = "250" height = "700">
-  <img src = "./Readme-images/스크린샷 2020-07-03 오후 6.29.23.png" width = "250" height = "700">
+  <img src = "./Readme-images/injoon1.png" width = "250" height = "700">
+  <img src = "./Readme-images/injoon2.png" width = "250" height = "700">
 </div>
 
 
