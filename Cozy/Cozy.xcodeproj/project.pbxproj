@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		183C1E2F24B1D5E500FFE494 /* BookStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */; };
 		183C1E3324B1D69D00FFE494 /* UserNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3224B1D69D00FFE494 /* UserNameTableViewCell.swift */; };
+		183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3424B1DB4600FFE494 /* BookStore.swift */; };
 		55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C524AF29C2003C64FE /* AppDelegate.swift */; };
 		55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C724AF29C2003C64FE /* SceneDelegate.swift */; };
 		55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C924AF29C2003C64FE /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreTableViewCell.swift; sourceTree = "<group>"; };
 		183C1E3224B1D69D00FFE494 /* UserNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTableViewCell.swift; sourceTree = "<group>"; };
+		183C1E3424B1DB4600FFE494 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
 		55E839C224AF29C2003C64FE /* Cozy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cozy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E839C524AF29C2003C64FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E839C724AF29C2003C64FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				55E839EA24AF2B4A003C64FE /* InterestViewController.swift */,
 				183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */,
 				183C1E3224B1D69D00FFE494 /* UserNameTableViewCell.swift */,
+				183C1E3424B1DB4600FFE494 /* BookStore.swift */,
 			);
 			path = Interest;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				55E839ED24AF2B51003C64FE /* MyPageViewController.swift in Sources */,
 				B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */,
 				B63341E024B19C210070F8C4 /* CountTableViewCell.swift in Sources */,
+				183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */,
 				183C1E3324B1D69D00FFE494 /* UserNameTableViewCell.swift in Sources */,
 				B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */,
 				55E839E724AF2B39003C64FE /* RecommendViewController.swift in Sources */,

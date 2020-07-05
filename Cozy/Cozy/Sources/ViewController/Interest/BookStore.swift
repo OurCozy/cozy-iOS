@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+struct BookStore{
+    var bookStoreImageName:String
+    var bookStoreName: String
+    var hashTag01: String
+    var hashTag02: String
+    var hashTag03: String
+    
+    init(bookStoreImageName: String, bookStoreName: String, hashTag01: String, hashTag02: String, hashTag03: String){
+        self.bookStoreImageName = bookStoreImageName
+        self.bookStoreName = bookStoreName
+        self.hashTag01 = hashTag01
+        self.hashTag02 = hashTag02
+        self.hashTag03 = hashTag03
+    }
+}

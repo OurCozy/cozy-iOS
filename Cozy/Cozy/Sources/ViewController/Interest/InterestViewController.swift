@@ -25,13 +25,19 @@ class InterestViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! // table view
     
-    var sampleItems: [String] = ["hello1", "hello2", "hello3"]
+    var bookStoreList: [BookStore] = []
+    let data01 = BookStore(bookStoreImageName: "74", bookStoreName: "재욱이의 책방", hashTag01: "멋짐", hashTag02: "완전 멋짐", hashTag03: "개멋짐")
+    let data02 = BookStore(bookStoreImageName: "91", bookStoreName: "지윤이의 책방", hashTag01: "안 멋짐", hashTag02: "완전 안 멋짐", hashTag03: "그냥 안 멋짐")
+    let data03 = BookStore(bookStoreImageName: "74", bookStoreName: "재욱이의 책방", hashTag01: "멋짐", hashTag02: "완전 멋짐", hashTag03: "개멋짐")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //sample data
+        bookStoreList = [data01, data02, data03]
         
         if #available(iOS 11.0, *){
             self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -87,7 +93,7 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
         if 0 == section {
             return 1
         } else {
-            return sampleItems.count
+            return bookStoreList.count
         }
     }
     
@@ -99,6 +105,8 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! BookStoreTableViewCell
             cell.wholeView.setViewShadow()
+            
+            cell.setBookStoreData(bookStoreImageName: bookStoreList[indexPath.row].bookStoreImageName, bookStoreName: bookStoreList[indexPath.row].bookStoreName, hashTag01: bookStoreList[indexPath.row].hashTag01, hashTag02: bookStoreList[indexPath.row].hashTag02, hashTag03: bookStoreList[indexPath.row].hashTag03)
             
             return cell
         }
