@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // change navigation bar tint color 
-        UITabBar.appearance().tintColor = UIColor.coolGreen
+        UITabBar.appearance().tintColor = UIColor.dustyOrange
         
         return true
     }

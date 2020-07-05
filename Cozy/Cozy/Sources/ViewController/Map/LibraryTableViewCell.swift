@@ -12,6 +12,15 @@ class LibraryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var wholeView: UIView!
     
+    @IBOutlet weak var tagView: UIView!
+    @IBOutlet weak var tagLabel: UILabel!
+    
+    @IBOutlet weak var tagView2: UIView!
+    @IBOutlet weak var tagLabel2: UILabel!
+    
+    @IBOutlet weak var tagView3: UIView!
+    @IBOutlet weak var tagLabel3: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +30,7 @@ class LibraryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+    
 
 }

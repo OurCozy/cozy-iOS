@@ -18,4 +18,11 @@ extension UIView {
         self.layer.shadowOffset = .zero
         self.layer.shadowRadius = 2
     }
+    
+    func setTagView(){
+        self.layer.cornerRadius = 5
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.dustyOrange.cgColor
+    }
+    
 }

@@ -55,22 +55,16 @@ class MapViewController: UIViewController {
                 searchImage.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
                 searchImage.widthAnchor.constraint(equalTo: searchImage.heightAnchor)
             ])
-            
-            
-            //            self.navigationController?.navigationBar.backgroundColor
-            //            let navBarHeight = UIApplication.shared.statusBarFrame.size.height +
-            //            (navigationController?.navigationBar.frame.height ?? 0.0)
-            //            print(navBarHeight)
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        if let index = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: index, animated: true)
-        }
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//
+//        if let index = tableView.indexPathForSelectedRow {
+//            tableView.deselectRow(at: index, animated: true)
+//        }
+//    }
     
 }
 
@@ -108,6 +102,14 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! LibraryTableViewCell
             cell.wholeView.setViewShadow()
             
+            cell.tagView.setTagView()
+            cell.tagView2.setTagView()
+            cell.tagView3.setTagView()
+            
+            cell.tagLabel.text = "감성타코"
+            cell.tagLabel2.text = "독립서점"
+            cell.tagLabel3.text = "독립서점"
+            
             return cell
         }
     }
@@ -121,4 +123,5 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             // 가장 상단이 아닐 때
         }
     }
+    
 }
