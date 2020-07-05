@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
+		55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */; };
+		55CE353224B20876001210A7 /* Expandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353124B20876001210A7 /* Expandable.swift */; };
 		55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C524AF29C2003C64FE /* AppDelegate.swift */; };
 		55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C724AF29C2003C64FE /* SceneDelegate.swift */; };
 		55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C924AF29C2003C64FE /* ViewController.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
+		55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomExpandableCollectionViewCell.xib; sourceTree = "<group>"; };
+		55CE353124B20876001210A7 /* Expandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expandable.swift; sourceTree = "<group>"; };
 		55E839C224AF29C2003C64FE /* Cozy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cozy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E839C524AF29C2003C64FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E839C724AF29C2003C64FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5565A14824B1D1F200DF6E88 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		5565A14B24B1D29F00DF6E88 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		55CE353024B2084A001210A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				55CE353124B20876001210A7 /* Expandable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		55E839B924AF29C2003C64FE = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +137,8 @@
 		55E839D924AF2A08003C64FE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				55CE353024B2084A001210A7 /* Protocols */,
+				5565A14B24B1D29F00DF6E88 /* Cell */,
 				55E839F124AF2D75003C64FE /* Extension */,
 				55E839DA24AF2A0E003C64FE /* ViewController */,
 			);
@@ -146,6 +178,7 @@
 		55E839E524AF2AEE003C64FE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5565A14824B1D1F200DF6E88 /* Xib */,
 				55E839CE24AF29C6003C64FE /* Assets.xcassets */,
 				55E839EE24AF2D1E003C64FE /* Storyboard */,
 			);
@@ -272,6 +305,7 @@
 				55E839E024AF2AD1003C64FE /* Map.storyboard in Resources */,
 				55E839CF24AF29C6003C64FE /* Assets.xcassets in Resources */,
 				55E839E424AF2AEA003C64FE /* MyPage.storyboard in Resources */,
+				55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */,
 				55E839E224AF2AE1003C64FE /* Interest.storyboard in Resources */,
 				55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */,
 			);
@@ -331,9 +365,11 @@
 				55E839ED24AF2B51003C64FE /* MyPageViewController.swift in Sources */,
 				B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */,
 				B63341E024B19C210070F8C4 /* CountTableViewCell.swift in Sources */,
+				5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */,
 				B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */,
 				55E839E724AF2B39003C64FE /* RecommendViewController.swift in Sources */,
 				55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */,
+				55CE353224B20876001210A7 /* Expandable.swift in Sources */,
 				55E839E924AF2B43003C64FE /* MapViewController.swift in Sources */,
 				55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
