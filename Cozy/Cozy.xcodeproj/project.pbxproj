@@ -29,6 +29,7 @@
 		B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341D824B08F300070F8C4 /* UIView+Extension.swift */; };
 		B63341E024B19C210070F8C4 /* CountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */; };
 		B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */; };
+		B63341E624B1D4600070F8C4 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341E524B1D45F0070F8C4 /* MapDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		B63341D824B08F300070F8C4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountTableViewCell.swift; sourceTree = "<group>"; };
 		B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		B63341E524B1D45F0070F8C4 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 				55E839E824AF2B43003C64FE /* MapViewController.swift */,
 				B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */,
 				B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */,
+				B63341E524B1D45F0070F8C4 /* MapDetailViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				55E839E724AF2B39003C64FE /* RecommendViewController.swift in Sources */,
 				55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */,
 				55CE353224B20876001210A7 /* Expandable.swift in Sources */,
+				B63341E624B1D4600070F8C4 /* MapDetailViewController.swift in Sources */,
 				55E839E924AF2B43003C64FE /* MapViewController.swift in Sources */,
 				55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
