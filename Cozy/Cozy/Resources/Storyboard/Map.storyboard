@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJc-yY-w7P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G8f-8h-zUb">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,22 +7,134 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
-        <scene sceneID="ezn-0v-2h3">
+        <!--마포구-->
+        <scene sceneID="tEv-nS-Qwd">
             <objects>
-                <viewController id="QJc-yY-w7P" customClass="MapViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jAe-o3-3vH">
+                <viewController id="nBS-Wg-Njp" customClass="MapViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QfM-iF-Bul">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-Zf-pev">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" rowHeight="100" id="zW1-7U-6yU" customClass="CountTableViewCell" customModule="Cozy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zW1-7U-6yU" id="KcU-57-DDE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마포구의 독립서점 87곳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1T-hP-lGU">
+                                                    <rect key="frame" x="39" y="36.666666666666664" width="208" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="v1T-hP-lGU" firstAttribute="leading" secondItem="KcU-57-DDE" secondAttribute="leadingMargin" constant="24" id="imn-eR-7ri"/>
+                                                <constraint firstItem="v1T-hP-lGU" firstAttribute="centerY" secondItem="KcU-57-DDE" secondAttribute="centerY" id="ptT-dR-paJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countLabel" destination="v1T-hP-lGU" id="bwg-Fo-z7j"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="287" id="dFv-3k-yKW" customClass="LibraryTableViewCell" customModule="Cozy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="287"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dFv-3k-yKW" id="PNr-0E-dUQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yb3-2l-yyg">
+                                                    <rect key="frame" x="24" y="0.0" width="327" height="250"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="74" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-is-coP">
+                                                            <rect key="frame" x="0.0" y="2" width="327" height="164"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="퇴근길 책 한잔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdr-Bk-vCg">
+                                                            <rect key="frame" x="18" y="177.33333333333334" width="113" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBookmarkSelected" translatesAutoresizingMaskIntoConstraints="NO" id="J9X-dT-67B">
+                                                            <rect key="frame" x="260" y="178" width="57" height="57"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="J9X-dT-67B" secondAttribute="bottom" constant="15" id="0Cf-OW-n0m"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jaW-is-coP" secondAttribute="bottom" constant="84" id="4CC-Kh-bwN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="J9X-dT-67B" secondAttribute="trailing" constant="10" id="IsY-H4-yX7"/>
+                                                        <constraint firstItem="Vdr-Bk-vCg" firstAttribute="leading" secondItem="yb3-2l-yyg" secondAttribute="leading" constant="18" id="Tba-gu-arR"/>
+                                                        <constraint firstItem="Vdr-Bk-vCg" firstAttribute="top" secondItem="jaW-is-coP" secondAttribute="bottom" constant="11.300000000000001" id="gx1-13-Ida"/>
+                                                        <constraint firstItem="jaW-is-coP" firstAttribute="top" secondItem="yb3-2l-yyg" secondAttribute="top" constant="2" id="haG-sc-a49"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jaW-is-coP" secondAttribute="trailing" id="ihU-pr-4AV"/>
+                                                        <constraint firstItem="jaW-is-coP" firstAttribute="leading" secondItem="yb3-2l-yyg" secondAttribute="leading" id="nRj-MT-SKq"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yb3-2l-yyg" firstAttribute="top" secondItem="PNr-0E-dUQ" secondAttribute="top" id="Vx4-gA-0el"/>
+                                                <constraint firstAttribute="trailing" secondItem="yb3-2l-yyg" secondAttribute="trailing" constant="24" id="XQN-aU-CCM"/>
+                                                <constraint firstAttribute="bottom" secondItem="yb3-2l-yyg" secondAttribute="bottom" constant="37" id="bZM-UR-wA7"/>
+                                                <constraint firstItem="yb3-2l-yyg" firstAttribute="leading" secondItem="PNr-0E-dUQ" secondAttribute="leading" constant="24" id="xrw-Wk-WD7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="wholeView" destination="yb3-2l-yyg" id="XON-bO-zlO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="BLB-cP-Rgd"/>
+                        <constraints>
+                            <constraint firstItem="gHN-Zf-pev" firstAttribute="top" secondItem="foc-yY-XOA" secondAttribute="top" id="k9Q-Ji-dIl"/>
+                            <constraint firstItem="foc-yY-XOA" firstAttribute="trailing" secondItem="gHN-Zf-pev" secondAttribute="trailing" id="mKK-Ex-ufm"/>
+                            <constraint firstItem="foc-yY-XOA" firstAttribute="bottom" secondItem="gHN-Zf-pev" secondAttribute="bottom" id="sd9-ba-FNS"/>
+                            <constraint firstItem="gHN-Zf-pev" firstAttribute="leading" secondItem="foc-yY-XOA" secondAttribute="leading" id="wDh-7L-3kW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="foc-yY-XOA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="NfG-mt-MII"/>
+                    <tabBarItem key="tabBarItem" title="" image="icTabMapSelected" id="lmd-Va-UsU"/>
+                    <navigationItem key="navigationItem" title="마포구" id="DYz-xy-K6e"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="gHN-Zf-pev" id="PPY-Kf-qwa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bbs-6D-OSj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xC5-KP-eeg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-119" y="59"/>
+            <point key="canvasLocation" x="5829.6000000000004" y="-660.59113300492618"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wQd-Bb-Ik7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G8f-8h-zUb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p0e-8R-BHo">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nBS-Wg-Njp" kind="relationship" relationship="rootViewController" id="d5t-2f-OhJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBb-JA-ZXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4887.1999999999998" y="-660.59113300492618"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="74" width="497.33334350585938" height="331.66665649414062"/>
+        <image name="icBookmarkSelected" width="57" height="57"/>
+        <image name="icTabMapSelected" width="48" height="48"/>
+    </resources>
 </document>
