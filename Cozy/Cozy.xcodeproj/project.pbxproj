@@ -21,8 +21,11 @@
 		55E839E924AF2B43003C64FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839E824AF2B43003C64FE /* MapViewController.swift */; };
 		55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839EA24AF2B4A003C64FE /* InterestViewController.swift */; };
 		55E839ED24AF2B51003C64FE /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839EC24AF2B51003C64FE /* MyPageViewController.swift */; };
-		55E839F524AF2DCB003C64FE /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839F424AF2DCB003C64FE /* Color+Extension.swift */; };
+		55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839F424AF2DCB003C64FE /* UIColor+Extension.swift */; };
 		715C23D9F616374B09709C21 /* Pods_Cozy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */; };
+		B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341D824B08F300070F8C4 /* UIView+Extension.swift */; };
+		B63341E024B19C210070F8C4 /* CountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */; };
+		B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +45,12 @@
 		55E839E824AF2B43003C64FE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		55E839EA24AF2B4A003C64FE /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		55E839EC24AF2B51003C64FE /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
-		55E839F424AF2DCB003C64FE /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		55E839F424AF2DCB003C64FE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5698B70158DADB5E3BD971FA /* Pods-Cozy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cozy.debug.xcconfig"; path = "Target Support Files/Pods-Cozy/Pods-Cozy.debug.xcconfig"; sourceTree = "<group>"; };
 		95BA79266871E64FE8AC1FC7 /* Pods-Cozy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cozy.release.xcconfig"; path = "Target Support Files/Pods-Cozy/Pods-Cozy.release.xcconfig"; sourceTree = "<group>"; };
+		B63341D824B08F300070F8C4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountTableViewCell.swift; sourceTree = "<group>"; };
+		B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,11 +116,11 @@
 		55E839DA24AF2A0E003C64FE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B63341DE24B18C140070F8C4 /* Main */,
 				55E839F024AF2D51003C64FE /* MyPage */,
 				55E839EF24AF2D45003C64FE /* Interest */,
 				55E839DC24AF2A30003C64FE /* Map */,
 				55E839DB24AF2A1D003C64FE /* Recommend */,
-				55E839C924AF29C2003C64FE /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -131,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				55E839E824AF2B43003C64FE /* MapViewController.swift */,
+				B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */,
+				B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -176,9 +184,18 @@
 		55E839F124AF2D75003C64FE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				55E839F424AF2DCB003C64FE /* Color+Extension.swift */,
+				55E839F424AF2DCB003C64FE /* UIColor+Extension.swift */,
+				B63341D824B08F300070F8C4 /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B63341DE24B18C140070F8C4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				55E839C924AF29C2003C64FE /* ViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		DA6EB647575B9EB8135F0FC1 /* Pods */ = {
@@ -312,11 +329,14 @@
 				55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */,
 				55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */,
 				55E839ED24AF2B51003C64FE /* MyPageViewController.swift in Sources */,
+				B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */,
+				B63341E024B19C210070F8C4 /* CountTableViewCell.swift in Sources */,
+				B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */,
 				55E839E724AF2B39003C64FE /* RecommendViewController.swift in Sources */,
 				55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */,
 				55E839E924AF2B43003C64FE /* MapViewController.swift in Sources */,
 				55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */,
-				55E839F524AF2DCB003C64FE /* Color+Extension.swift in Sources */,
+				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
