@@ -13,7 +13,11 @@ class RecommendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //test code
+        
+        
+        //인준 테스트
+        
     }
     
 
