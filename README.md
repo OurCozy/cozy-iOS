@@ -15,12 +15,21 @@
 <br/>
 
 ## ✌️ Coding Convention
-- 변수 명은 low camel 사용
+- 변수 , 함수명 low camel case 사용
+- 변수값 숫자로 그냥 사용하지 않고, cellWidth = 400 처럼 사용 !
+- Struct, Class Upper camel case 사용
+- 메소드 동사 형태로, 축약어 금지 ex) tUpBtn(🙅🏻  🙅🏻‍♀️) touchUpMainButton( 🙆🏻 🙆🏻‍♂️)
 - 강제 옵셔널 금지
 - 각자 분담한 스토리보드 외에 건들기 금지
 - 커밋시 반드시 서로에게 알릴것
 
 <br/>
+
+## 📁 Foldering
+
+<img src="/Users/yangjaeug/Desktop/cozy-iOS/Readme-images/foldering.png" width="300" height="500">
+
+
 
 ## 👩‍👩‍👦‍👦 Contributor
 
