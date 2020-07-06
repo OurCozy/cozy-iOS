@@ -28,12 +28,10 @@
 ## 📁 Foldering
 
 <p align="center">
-    <img src="./Readme-images/foldering.png" width="300" height="500/>
+  <img src="./Readme-images/foldering.png" width="300"/>
 </p>
 
-
-
-
+<br/>
 
 ## 👩‍👩‍👦‍👦 Contributor
 
