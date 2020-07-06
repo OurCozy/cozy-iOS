@@ -185,21 +185,6 @@
             </objects>
             <point key="canvasLocation" x="5829.6000000000004" y="-660.59113300492618"/>
         </scene>
-        <!--Map Detail View Controller-->
-        <scene sceneID="8Ga-YL-CHJ">
-            <objects>
-                <viewController id="WzM-5d-A1I" customClass="MapDetailViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dcR-bp-Lfr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="e5T-bH-vbn"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zzN-GJ-O7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6609" y="-661"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="wQd-Bb-Ik7">
             <objects>
