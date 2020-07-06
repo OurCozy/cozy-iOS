@@ -16,12 +16,43 @@
 
 ## ✌️ Coding Convention
 - 변수 , 함수명 low camel case 사용
+
+```swift
+var isSelected: Bool 
+```
+
+```swift
+func touchUpButton () {
+  //code
+}
+```
+
 - 변수값 숫자로 그냥 사용하지 않고, cellWidth = 400 처럼 사용 !
+
+```swift
+extension RecommendViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellWidth = CGFloat(327)
+        let cellHeight = CGFloat(405)
+      
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+}
+```
+
 - Struct, Class Upper camel case 사용
 - 메소드 동사 형태로, 축약어 금지 ex) tUpBtn(🙅🏻  🙅🏻‍♀️) touchUpMainButton( 🙆🏻 🙆🏻‍♂️)
+
+```swift
+class CustomExpandableCollectionViewCell: UICollectionViewCell {
+  // 다음과 같이 CustomCell을 만들때도 컬렉션뷰의 셀인 것을 명시, 어떤 기능에 쓰여지는 셀인지 명시
+}
+```
+
 - 강제 옵셔널 금지
 - 각자 분담한 스토리보드 외에 건들기 금지
 - 커밋시 반드시 서로에게 알릴것
+- 남이봐도 좋은 코드에 대해 계속 생각해보기 (리팩토링 시간을 가져보게 노력)
 
 <br/>
 
