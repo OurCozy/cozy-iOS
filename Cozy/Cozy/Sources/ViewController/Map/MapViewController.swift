@@ -19,6 +19,7 @@ private struct Const {
     static let NavBarHeightLargeState: CGFloat = 96.5
 }
 
+// TODO : navigation bar 밑줄 추가
 // underline const
 private struct Const2 {
     // large state
@@ -51,12 +52,14 @@ class MapViewController: UIViewController {
             // insert searchImage
             self.navigationController?.navigationBar.addSubview(searchImage)
             
-            // insert underline
-            underlineView.layer.backgroundColor = UIColor.dustyOrange.cgColor
-//            navigationController?.navigationBar.addSubview(underlineView)
-//            underlineView.clipsToBounds = true
-//            underlineView.translatesAutoresizingMaskIntoConstraints = false
+            // add imageview click event
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchImageTapped))
+            searchImage.isUserInteractionEnabled = true
+            searchImage.addGestureRecognizer(tapGestureRecognizer)
             
+            // insert underline
+//            underlineView.layer.backgroundColor = UIColor.dustyOrange.cgColor
+
             searchImage.layer.cornerRadius = Const.ImageSizeForLargeState / 2
             searchImage.clipsToBounds = true
             searchImage.translatesAutoresizingMaskIntoConstraints = false
@@ -68,6 +71,17 @@ class MapViewController: UIViewController {
                 searchImage.widthAnchor.constraint(equalTo: searchImage.heightAnchor),
             ])
         }
+    }
+    
+    // search image click event
+    @objc func searchImageTapped(tapGestureRecognizer: UITapGestureRecognizer){
+        print("click search image!")
+        
+        let storyboard = UIStoryboard(name: "Search", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+        
     }
 }
 
@@ -113,6 +127,13 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             cell.tagLabel3.text = "독립서점"
             
             return cell
+        }
+    }
+    
+    // cell click event 지정
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            
         }
     }
 
