@@ -27,7 +27,7 @@
 
 ## 📁 Foldering
 
-<p>
+<p align="center">
   <img src="./Readme-images/foldering.png" width="300" height="500>
 </p>
 
@@ -35,6 +35,7 @@
 
 ## 👩‍👩‍👦‍👦 Contributor
 
+- 
 - [황인준](https://github.com/iJoom)
 - [최은지](https://github.com/ChoiEunji0114)
 - [양재욱](https://github.com/didwodnr123)
