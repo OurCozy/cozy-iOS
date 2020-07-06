@@ -33,6 +33,11 @@ class RecommendViewController: UIViewController {
     }
     
     
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    
     
     
 }
@@ -75,6 +80,7 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
         
         if let selectedCell = expandedCell {
             isStatusBarHidden = false
+            //setNeedsStatusBarAppearanceUpdate()
             
             animator.addAnimations {
                 selectedCell.collapse()
@@ -92,7 +98,7 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             }
         } else {
             isStatusBarHidden = true
-            
+
             collectionView.isScrollEnabled = false
             
             let selectedCell = collectionView.cellForItem(at: indexPath)! as! CustomExpandableCollectionViewCell
@@ -143,10 +149,10 @@ extension RecommendViewController: UIScrollViewDelegate {
 
 extension RecommendViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+
         let cellWidth = CGFloat(327)
         let cellHeight = CGFloat(405)
-        
+
         return CGSize(width: cellWidth, height: cellHeight)
     }
 }

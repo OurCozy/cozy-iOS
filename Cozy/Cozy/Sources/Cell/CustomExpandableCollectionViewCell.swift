@@ -75,7 +75,7 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell, Expandable {
         
         self.frame.origin.y = newY
         
-        layoutIfNeeded()
+        //layoutIfNeeded()
     }
     
     func show() {
@@ -83,7 +83,7 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell, Expandable {
         
         initialFrame = nil
         
-        layoutIfNeeded()
+        //layoutIfNeeded()
     }
     
     
@@ -96,6 +96,8 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell, Expandable {
         
         self.contentView.layer.cornerRadius = 0
         self.frame = CGRect(x: 0, y: collectionView.contentOffset.y, width: collectionView.frame.width, height: collectionView.frame.height)
+        
+        
         
         layoutIfNeeded()
     }
