@@ -85,7 +85,7 @@ class MapViewController: UIViewController {
     }
 }
 
-extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
+extension MapViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
@@ -130,10 +130,13 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
         }
     }
     
-    // cell click event 지정
+    // cell click event 지정 - detail view 로 넘어가기
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            
+            let storyboard = UIStoryboard(name: "MapDetail", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MapDetailViewController") as! MapDetailViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
         }
     }
 

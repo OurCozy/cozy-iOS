@@ -32,11 +32,7 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
         self.view.addGestureRecognizer(tapGesture)
         
         self.settingButtonLayer()
-        
-        
-        
     }
-    
     
     @IBAction func clickCloseButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

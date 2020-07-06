@@ -15,5 +15,6 @@ extension UIButton {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.dustyOrange.cgColor
         self.layer.cornerRadius = 5
+        self.setTitleColor(UIColor.brownishGrey, for: .normal)
     }
 }

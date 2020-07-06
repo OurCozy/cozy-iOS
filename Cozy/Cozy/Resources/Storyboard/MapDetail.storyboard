@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rGK-or-hGE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Detail View Controller-->
+        <scene sceneID="a01-nm-kez">
+            <objects>
+                <viewController storyboardIdentifier="MapDetailViewController" id="rGK-or-hGE" customClass="MapDetailViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UCx-nu-8Al">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6G6-tq-6R7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xty-7E-IzH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="71" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-XM-Le4">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="ZSG-m1-gr3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9i-tZ-xss">
+                                                <rect key="frame" x="354" y="9" width="48" height="48"/>
+                                                <state key="normal" image="icX"/>
+                                                <connections>
+                                                    <action selector="clickBackButton:" destination="rGK-or-hGE" eventType="touchUpInside" id="unz-5z-dIl"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안도북스" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfS-ql-fzE">
+                                                <rect key="frame" x="24" y="292" width="366" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNI-0H-QTL">
+                                                <rect key="frame" x="24" y="334" width="64" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="BeI-4d-KKq"/>
+                                                    <constraint firstAttribute="height" constant="24" id="C5P-ff-6Wc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="독립출판">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rb-cL-AZb">
+                                                <rect key="frame" x="100" y="334" width="64" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="HDD-WU-aRI"/>
+                                                    <constraint firstAttribute="width" constant="64" id="NVL-QJ-n3F"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="독립출판">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frI-GA-sru">
+                                                <rect key="frame" x="176" y="334" width="64" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="8Ui-iw-Hkq"/>
+                                                    <constraint firstAttribute="width" constant="64" id="AIf-nN-pdN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="독립출판">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifV-dM-lZ4">
+                                                <rect key="frame" x="348" y="298" width="62" height="62"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ifV-dM-lZ4" secondAttribute="height" multiplier="1:1" id="HIH-HO-VgS"/>
+                                                    <constraint firstAttribute="height" constant="62" id="Iue-E1-8fz"/>
+                                                    <constraint firstAttribute="width" constant="62" id="p6O-Qc-zJG"/>
+                                                </constraints>
+                                                <state key="normal" image="icBookmark"/>
+                                                <connections>
+                                                    <action selector="clickBookMarkButton:" destination="rGK-or-hGE" eventType="touchUpInside" id="Wm2-vb-eSN"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icContentAddress" translatesAutoresizingMaskIntoConstraints="NO" id="WDw-Tk-wLy">
+                                                <rect key="frame" x="29" y="419" width="11" height="14"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 용산구 신흥로 115-1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy2-C4-eSv">
+                                                <rect key="frame" x="53.5" y="416" width="200" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="Iux-HI-dJq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfj-Al-BGq">
+                                                <rect key="frame" x="352" y="402" width="48" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Wfj-Al-BGq" secondAttribute="height" multiplier="1:1" id="Jk6-cR-r0I"/>
+                                                    <constraint firstAttribute="width" constant="48" id="bNq-ey-cdE"/>
+                                                    <constraint firstAttribute="height" constant="48" id="gwy-uq-WVW"/>
+                                                </constraints>
+                                                <state key="normal" image="icFindRoad"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ifV-dM-lZ4" firstAttribute="top" secondItem="l2z-XM-Le4" secondAttribute="bottom" constant="48" id="3UF-Cz-35S"/>
+                                            <constraint firstAttribute="trailing" secondItem="a9i-tZ-xss" secondAttribute="trailing" constant="12" id="FHY-Vy-xcs"/>
+                                            <constraint firstItem="WDw-Tk-wLy" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="29" id="G7s-sz-9MR"/>
+                                            <constraint firstItem="BfS-ql-fzE" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="Jdf-cl-ZDf"/>
+                                            <constraint firstItem="5rb-cL-AZb" firstAttribute="leading" secondItem="bNI-0H-QTL" secondAttribute="trailing" constant="12" id="LNR-h9-ZHb"/>
+                                            <constraint firstItem="5rb-cL-AZb" firstAttribute="top" secondItem="BfS-ql-fzE" secondAttribute="bottom" constant="13" id="Lwq-wz-vKT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wfj-Al-BGq" secondAttribute="trailing" constant="14" id="M9b-Dl-Akt"/>
+                                            <constraint firstItem="frI-GA-sru" firstAttribute="leading" secondItem="5rb-cL-AZb" secondAttribute="trailing" constant="12" id="Mx6-MX-o63"/>
+                                            <constraint firstItem="Wfj-Al-BGq" firstAttribute="top" secondItem="ifV-dM-lZ4" secondAttribute="bottom" constant="42" id="OPK-dM-pBc"/>
+                                            <constraint firstItem="frI-GA-sru" firstAttribute="top" secondItem="BfS-ql-fzE" secondAttribute="bottom" constant="13" id="PdD-TJ-EVP"/>
+                                            <constraint firstItem="Gy2-C4-eSv" firstAttribute="leading" secondItem="WDw-Tk-wLy" secondAttribute="trailing" constant="13.699999999999999" id="ViO-1h-81e"/>
+                                            <constraint firstAttribute="trailing" secondItem="l2z-XM-Le4" secondAttribute="trailing" id="XrB-Kx-Pqe"/>
+                                            <constraint firstItem="WDw-Tk-wLy" firstAttribute="top" secondItem="l2z-XM-Le4" secondAttribute="bottom" constant="169" id="ax5-yj-5LV"/>
+                                            <constraint firstItem="BfS-ql-fzE" firstAttribute="top" secondItem="l2z-XM-Le4" secondAttribute="bottom" constant="42" id="azJ-Ck-gSa"/>
+                                            <constraint firstAttribute="bottom" secondItem="l2z-XM-Le4" secondAttribute="bottom" constant="1550" id="dUc-xE-yBG"/>
+                                            <constraint firstItem="l2z-XM-Le4" firstAttribute="top" secondItem="Xty-7E-IzH" secondAttribute="top" id="dw6-0f-zrN"/>
+                                            <constraint firstItem="l2z-XM-Le4" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" id="ijs-eA-GEA"/>
+                                            <constraint firstItem="a9i-tZ-xss" firstAttribute="top" secondItem="Xty-7E-IzH" secondAttribute="top" constant="9" id="kyY-i4-Il8"/>
+                                            <constraint firstAttribute="trailing" secondItem="BfS-ql-fzE" secondAttribute="trailing" constant="24" id="pqi-HI-2Z1"/>
+                                            <constraint firstAttribute="trailing" secondItem="ifV-dM-lZ4" secondAttribute="trailing" constant="4" id="ruy-3f-AuY"/>
+                                            <constraint firstItem="Gy2-C4-eSv" firstAttribute="top" secondItem="l2z-XM-Le4" secondAttribute="bottom" constant="166" id="skP-A4-b0d"/>
+                                            <constraint firstItem="bNI-0H-QTL" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="uK1-e0-f4C"/>
+                                            <constraint firstItem="bNI-0H-QTL" firstAttribute="top" secondItem="BfS-ql-fzE" secondAttribute="bottom" constant="13" id="zNe-XJ-p7u"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Xty-7E-IzH" secondAttribute="trailing" id="8zk-bX-4AR"/>
+                                    <constraint firstAttribute="top" secondItem="Xty-7E-IzH" secondAttribute="top" id="WdS-fl-3LU"/>
+                                    <constraint firstItem="Xty-7E-IzH" firstAttribute="width" secondItem="6G6-tq-6R7" secondAttribute="width" id="l9Y-tB-Phh"/>
+                                    <constraint firstItem="Xty-7E-IzH" firstAttribute="height" secondItem="6G6-tq-6R7" secondAttribute="height" priority="250" id="lSD-wb-Axr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xty-7E-IzH" secondAttribute="bottom" id="lb3-aQ-dHx"/>
+                                    <constraint firstItem="Xty-7E-IzH" firstAttribute="leading" secondItem="6G6-tq-6R7" secondAttribute="leading" id="tuD-RN-tCR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6G6-tq-6R7" secondAttribute="bottom" id="GBB-Ai-9VP"/>
+                            <constraint firstItem="6G6-tq-6R7" firstAttribute="top" secondItem="UCx-nu-8Al" secondAttribute="top" id="HiM-Rb-M7R"/>
+                            <constraint firstItem="6G6-tq-6R7" firstAttribute="trailing" secondItem="igV-q9-PRP" secondAttribute="trailing" id="Rx4-2n-Oti"/>
+                            <constraint firstItem="6G6-tq-6R7" firstAttribute="leading" secondItem="igV-q9-PRP" secondAttribute="leading" id="Zs0-Q8-ACV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="igV-q9-PRP"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="1800"/>
+                    <connections>
+                        <outlet property="bookstoreImageView" destination="l2z-XM-Le4" id="gx4-ZO-IR6"/>
+                        <outlet property="tagButton1" destination="bNI-0H-QTL" id="tIA-7p-Tfo"/>
+                        <outlet property="tagButton2" destination="5rb-cL-AZb" id="sQP-Rb-w8G"/>
+                        <outlet property="tagButton3" destination="frI-GA-sru" id="tdo-B8-K4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C15-hI-IDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143.47826086956522" y="-265.17857142857144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="71" width="402" height="268"/>
+        <image name="icBookmark" width="62" height="62"/>
+        <image name="icContentAddress" width="11.5" height="14"/>
+        <image name="icFindRoad" width="48" height="48"/>
+        <image name="icX" width="48" height="48"/>
+    </resources>
+</document>
