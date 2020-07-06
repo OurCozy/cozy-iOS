@@ -27,7 +27,9 @@
 
 ## 📁 Foldering
 
-<center><img src="./Readme-images/foldering.png" width="300" height="500></center>
+<p float="center">
+  <img src="./Readme-images/foldering.png" width="300" height="500>
+</p>
 
 
 
