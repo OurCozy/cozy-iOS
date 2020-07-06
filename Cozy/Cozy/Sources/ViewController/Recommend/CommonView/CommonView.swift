@@ -22,3 +22,7 @@ class CommonView: UIView, NibOwnerLoadable {
     }
     
 }
+
+
+//으어어 View의 CommonView 클래스 설정 해제해주고
+//topConstraint 옆 Relation클릭해서 toplabel+16pt 설정해주니작동됨

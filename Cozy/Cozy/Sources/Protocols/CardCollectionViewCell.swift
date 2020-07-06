@@ -9,7 +9,9 @@
 import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell, NibReusable {
-    @IBOutlet fileprivate weak var commonView: CommonView!
+    
+    
+    @IBOutlet weak var commonView: CommonView!
     
     override func awakeFromNib() {
     super.awakeFromNib()

@@ -13,8 +13,8 @@ class RecommendViewController: UIViewController {
     @IBOutlet weak var recommendCollectionView: UICollectionView!
     
     
-    private var hiddenCells: [CustomExpandableCollectionViewCell] = []
-    private var expandedCell: CustomExpandableCollectionViewCell?
+//    private var hiddenCells: [CustomExpandableCollectionViewCell] = []
+//    private var expandedCell: CustomExpandableCollectionViewCell?
     private var isStatusBarHidden = false
     
     override func viewDidLoad() {
@@ -39,6 +39,7 @@ class RecommendViewController: UIViewController {
         self.recommendCollectionView.collectionViewLayout = layout
 
         self.recommendCollectionView.register(cellType: CardCollectionViewCell.self)
+        
         
     }
     
