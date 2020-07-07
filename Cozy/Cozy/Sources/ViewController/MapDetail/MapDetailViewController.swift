@@ -24,12 +24,25 @@ class MapDetailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    let eunpyeongLoc = CLLocationCoordinate2D(latitude: 37.6176125, longitude: 126.9227004) // 은평구
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setTagButtonUI()
         self.setTimeLabel()
         self.setExplainLabel()
+        
         self.mapView.mapType = MKMapType.standard
+        self.setMapView(coordinate: eunpyeongLoc)
+    }
+    
+    func setMapView(coordinate: CLLocationCoordinate2D){
+        let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta:0.01, longitudeDelta:0.01))
+        self.mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        self.mapView.addAnnotation(annotation)
     }
     
     @IBAction func clickBackButton(_ sender: UIButton) {
@@ -70,8 +83,6 @@ class MapDetailViewController: UIViewController {
         좋아하는데 이 책방이 한 몫하는것 같아요. 골목길에 있지만 일부러
         찾아오는 책방입니다! 대형서점에 없는 책들도 많고 가게 자체도
         """
-        
-        
     }
     
     @IBAction func clickBookMarkButton(_ sender: UIButton) {
