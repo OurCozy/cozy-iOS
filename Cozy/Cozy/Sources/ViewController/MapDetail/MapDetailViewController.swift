@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class MapDetailViewController: UIViewController {
 
@@ -20,11 +21,15 @@ class MapDetailViewController: UIViewController {
     
     @IBOutlet weak var explainLabel: UILabel!
     
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setTagButtonUI()
         self.setTimeLabel()
         self.setExplainLabel()
+        self.mapView.mapType = MKMapType.standard
     }
     
     @IBAction func clickBackButton(_ sender: UIButton) {

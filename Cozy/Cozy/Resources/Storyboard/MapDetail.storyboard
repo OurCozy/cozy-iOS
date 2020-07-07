@@ -330,6 +330,7 @@
                     <connections>
                         <outlet property="bookstoreImageView" destination="l2z-XM-Le4" id="gx4-ZO-IR6"/>
                         <outlet property="explainLabel" destination="qRr-fa-GEx" id="9lI-Cw-gvo"/>
+                        <outlet property="mapView" destination="326-wH-W8R" id="03i-9z-Vxl"/>
                         <outlet property="tagButton1" destination="bNI-0H-QTL" id="tIA-7p-Tfo"/>
                         <outlet property="tagButton2" destination="5rb-cL-AZb" id="sQP-Rb-w8G"/>
                         <outlet property="tagButton3" destination="frI-GA-sru" id="tdo-B8-K4V"/>
