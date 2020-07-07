@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardCollectionViewCell" customModule="Cozy" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardCollectionViewCell" customModule="Cozy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="311" height="275"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he4-9o-9ey" customClass="ShadowView" customModule="Cozy" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="311" height="275"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyn-Oa-UxF" customClass="CommonView" customModule="Cozy" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="311" height="275"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Uyn-Oa-UxF" secondAttribute="trailing" id="H1U-ck-oD4"/>
+                        <constraint firstItem="Uyn-Oa-UxF" firstAttribute="top" secondItem="he4-9o-9ey" secondAttribute="top" id="gWQ-t3-kS1"/>
+                        <constraint firstItem="Uyn-Oa-UxF" firstAttribute="leading" secondItem="he4-9o-9ey" secondAttribute="leading" id="oqT-zX-cBu"/>
+                        <constraint firstAttribute="bottom" secondItem="Uyn-Oa-UxF" secondAttribute="bottom" id="rXR-P1-YEa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="he4-9o-9ey" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4hR-e5-1GY"/>
+                <constraint firstItem="he4-9o-9ey" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fWK-ld-KVk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="he4-9o-9ey" secondAttribute="bottom" id="mla-JH-8OP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="he4-9o-9ey" secondAttribute="trailing" id="ulK-8K-zyj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="commonView" destination="Uyn-Oa-UxF" id="hmC-Lq-uj8"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+</document>

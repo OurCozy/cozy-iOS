@@ -13,6 +13,23 @@
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
 		55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */; };
 		55CE353224B20876001210A7 /* Expandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353124B20876001210A7 /* Expandable.swift */; };
+		55ABB33724B37681008B5A5B /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33524B37681008B5A5B /* Animatable.swift */; };
+		55ABB33824B37681008B5A5B /* CustomTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33624B37681008B5A5B /* CustomTransitionAnimation.swift */; };
+		55ABB33A24B376DA008B5A5B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33924B376DA008B5A5B /* NavigationController.swift */; };
+		55ABB33C24B37901008B5A5B /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ABB33B24B37901008B5A5B /* DetailViewController.storyboard */; };
+		55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */; };
+		55CE353224B20876001210A7 /* Expandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353124B20876001210A7 /* Expandable.swift */; };
+		55CE353824B32D17001210A7 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353724B32D17001210A7 /* CardCollectionViewCell.swift */; };
+		55CE353F24B32F81001210A7 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353A24B32F80001210A7 /* StoryboardBased.swift */; };
+		55CE354024B32F81001210A7 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353B24B32F80001210A7 /* NibOwnerLoadable.swift */; };
+		55CE354124B32F81001210A7 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353C24B32F81001210A7 /* Reusable.swift */; };
+		55CE354224B32F81001210A7 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353D24B32F81001210A7 /* NibLoadable.swift */; };
+		55CE354324B32F81001210A7 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353E24B32F81001210A7 /* UICollectionView+Reusable.swift */; };
+		55CE354624B3306E001210A7 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE354524B3306E001210A7 /* ShadowView.swift */; };
+		55CE354924B3444B001210A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE354824B3444B001210A7 /* DetailViewController.swift */; };
+		55CE354B24B34536001210A7 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CE354A24B34536001210A7 /* CardCollectionViewCell.xib */; };
+		55CE354D24B3467E001210A7 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE354C24B3467E001210A7 /* CommonView.swift */; };
+		55CE354F24B3471E001210A7 /* CommonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CE354E24B3471E001210A7 /* CommonView.xib */; };
 		55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C524AF29C2003C64FE /* AppDelegate.swift */; };
 		55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C724AF29C2003C64FE /* SceneDelegate.swift */; };
 		55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C924AF29C2003C64FE /* ViewController.swift */; };
@@ -46,6 +63,23 @@
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomExpandableCollectionViewCell.xib; sourceTree = "<group>"; };
 		55CE353124B20876001210A7 /* Expandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expandable.swift; sourceTree = "<group>"; };
+		55ABB33524B37681008B5A5B /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		55ABB33624B37681008B5A5B /* CustomTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionAnimation.swift; sourceTree = "<group>"; };
+		55ABB33924B376DA008B5A5B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		55ABB33B24B37901008B5A5B /* DetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomExpandableCollectionViewCell.xib; sourceTree = "<group>"; };
+		55CE353124B20876001210A7 /* Expandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expandable.swift; sourceTree = "<group>"; };
+		55CE353724B32D17001210A7 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardCollectionViewCell.swift; path = Cozy/Sources/Protocols/CardCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		55CE353A24B32F80001210A7 /* StoryboardBased.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
+		55CE353B24B32F80001210A7 /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
+		55CE353C24B32F81001210A7 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		55CE353D24B32F81001210A7 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		55CE353E24B32F81001210A7 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		55CE354524B3306E001210A7 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		55CE354824B3444B001210A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		55CE354A24B34536001210A7 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		55CE354C24B3467E001210A7 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
+		55CE354E24B3471E001210A7 /* CommonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonView.xib; sourceTree = "<group>"; };
 		55E839C224AF29C2003C64FE /* Cozy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cozy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E839C524AF29C2003C64FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E839C724AF29C2003C64FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */,
+				55CE354A24B34536001210A7 /* CardCollectionViewCell.xib */,
+				55CE354E24B3471E001210A7 /* CommonView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -112,12 +148,69 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		55ABB33424B37626008B5A5B /* TransitionAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				55ABB33524B37681008B5A5B /* Animatable.swift */,
+				55ABB33624B37681008B5A5B /* CustomTransitionAnimation.swift */,
+				55ABB33924B376DA008B5A5B /* NavigationController.swift */,
+			);
+			path = TransitionAnimations;
+			sourceTree = "<group>";
+		};
 		55CE353024B2084A001210A7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				55CE353124B20876001210A7 /* Expandable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		55CE353424B32B75001210A7 /* RecommendViewUI */ = {
+			isa = PBXGroup;
+			children = (
+				55ABB33424B37626008B5A5B /* TransitionAnimations */,
+				55CE353924B32F04001210A7 /* Reusables */,
+			);
+			path = RecommendViewUI;
+			sourceTree = "<group>";
+		};
+		55CE353624B32CD4001210A7 /* RecommendCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				55E839E624AF2B39003C64FE /* RecommendViewController.swift */,
+				55CE353724B32D17001210A7 /* CardCollectionViewCell.swift */,
+			);
+			path = RecommendCollectionView;
+			sourceTree = "<group>";
+		};
+		55CE353924B32F04001210A7 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				55CE353D24B32F81001210A7 /* NibLoadable.swift */,
+				55CE353B24B32F80001210A7 /* NibOwnerLoadable.swift */,
+				55CE353C24B32F81001210A7 /* Reusable.swift */,
+				55CE353A24B32F80001210A7 /* StoryboardBased.swift */,
+				55CE353E24B32F81001210A7 /* UICollectionView+Reusable.swift */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		55CE354424B33036001210A7 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				55CE354524B3306E001210A7 /* ShadowView.swift */,
+				55CE354C24B3467E001210A7 /* CommonView.swift */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		55CE354724B34430001210A7 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				55CE354824B3444B001210A7 /* DetailViewController.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		55E839B924AF29C2003C64FE = {
@@ -153,6 +246,7 @@
 		55E839D924AF2A08003C64FE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				55CE353424B32B75001210A7 /* RecommendViewUI */,
 				55CE353024B2084A001210A7 /* Protocols */,
 				5565A14B24B1D29F00DF6E88 /* Cell */,
 				55E839F124AF2D75003C64FE /* Extension */,
@@ -178,7 +272,9 @@
 		55E839DB24AF2A1D003C64FE /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
-				55E839E624AF2B39003C64FE /* RecommendViewController.swift */,
+				55CE354724B34430001210A7 /* DetailView */,
+				55CE354424B33036001210A7 /* CommonView */,
+				55CE353624B32CD4001210A7 /* RecommendCollectionView */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -206,6 +302,7 @@
 		55E839EE24AF2D1E003C64FE /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				55ABB33B24B37901008B5A5B /* DetailViewController.storyboard */,
 				55E839CB24AF29C2003C64FE /* Main.storyboard */,
 				55E839DD24AF2AC3003C64FE /* Recommend.storyboard */,
 				55E839DF24AF2AD1003C64FE /* Map.storyboard */,
@@ -341,15 +438,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				55E839D224AF29C6003C64FE /* LaunchScreen.storyboard in Resources */,
+				55CE354B24B34536001210A7 /* CardCollectionViewCell.xib in Resources */,
 				55E839DE24AF2AC3003C64FE /* Recommend.storyboard in Resources */,
 				B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */,
 				55E839E024AF2AD1003C64FE /* Map.storyboard in Resources */,
 				55E839CF24AF29C6003C64FE /* Assets.xcassets in Resources */,
 				B63341E824B328880070F8C4 /* Search.storyboard in Resources */,
 				55E839E424AF2AEA003C64FE /* MyPage.storyboard in Resources */,
+				55ABB33C24B37901008B5A5B /* DetailViewController.storyboard in Resources */,
 				55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */,
 				55E839E224AF2AE1003C64FE /* Interest.storyboard in Resources */,
 				55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */,
+				55CE354F24B3471E001210A7 /* CommonView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,13 +504,21 @@
 			files = (
 				55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */,
 				55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */,
+				55CE354924B3444B001210A7 /* DetailViewController.swift in Sources */,
 				183C1E2F24B1D5E500FFE494 /* BookStoreTableViewCell.swift in Sources */,
+				55ABB33824B37681008B5A5B /* CustomTransitionAnimation.swift in Sources */,
+				55CE354324B32F81001210A7 /* UICollectionView+Reusable.swift in Sources */,
 				55E839ED24AF2B51003C64FE /* MyPageViewController.swift in Sources */,
 				B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */,
 				B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */,
+				55CE354224B32F81001210A7 /* NibLoadable.swift in Sources */,
 				B63341E024B19C210070F8C4 /* CountTableViewCell.swift in Sources */,
+				55CE354124B32F81001210A7 /* Reusable.swift in Sources */,
+				55CE353F24B32F81001210A7 /* StoryboardBased.swift in Sources */,
 				5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */,
 				183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */,
+				55CE354624B3306E001210A7 /* ShadowView.swift in Sources */,
+				55CE354024B32F81001210A7 /* NibOwnerLoadable.swift in Sources */,
 				183C1E3324B1D69D00FFE494 /* UserNameTableViewCell.swift in Sources */,
 				B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */,
 				55E839E724AF2B39003C64FE /* RecommendViewController.swift in Sources */,
@@ -418,8 +526,12 @@
 				B63341EB24B328C30070F8C4 /* SearchViewController.swift in Sources */,
 				55CE353224B20876001210A7 /* Expandable.swift in Sources */,
 				B63341E624B1D4600070F8C4 /* MapDetailViewController.swift in Sources */,
+				55ABB33A24B376DA008B5A5B /* NavigationController.swift in Sources */,
 				55E839E924AF2B43003C64FE /* MapViewController.swift in Sources */,
+				55ABB33724B37681008B5A5B /* Animatable.swift in Sources */,
 				55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */,
+				55CE354D24B3467E001210A7 /* CommonView.swift in Sources */,
+				55CE353824B32D17001210A7 /* CardCollectionViewCell.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
