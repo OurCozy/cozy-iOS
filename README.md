@@ -59,8 +59,16 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 ## 📁 Foldering
 
 <p align="center">
-  <img src="./Readme-images/foldering.png" width="300"/>
+  <img src="https://user-images.githubusercontent.com/55793344/86769419-1b0bcf00-c08a-11ea-8d4b-eb674b04a543.png" width="300"/>
 </p>
+
+* Resources
+  * Xib, Storyboard, Assets 등 리소스 관련
+
+* Sources
+  * 크게는 코드의 기능에 따라 그리고 ViewUi로 분류
+  * Protocols, Cell , Extension , Viewcontroller(뷰컨 안에 세분화된 기능으로 분류)
+  * 복잡한 View 구현시 기능 안에서도 폴더를 나눠 View와 코드를 분담시킴
 
 <br/>
 
