@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "imgCall.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "icFacebook.png",
+      "idiom" : "universal"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "imgCall@2x.png"
+      "filename" : "icFacebook@2x.png"
     },
     {
       "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "imgCall@3x.png"
+      "filename" : "icFacebook@3x.png"
     }
   ],
   "info" : {

@@ -83,6 +83,14 @@ class MapViewController: UIViewController {
         present(vc, animated: true, completion: nil)
         
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if let index = self.tableView.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: index, animated: true)
+        }
+    }
 }
 
 extension MapViewController: UITableViewDelegate, UITableViewDataSource {
