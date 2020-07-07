@@ -11,6 +11,7 @@ import UIKit
 class CommonView: UIView, NibOwnerLoadable {
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
     var topConstraintValue: CGFloat {
         get { return self.topConstraint.constant }
         set { self.topConstraint.constant = newValue }
