@@ -23,7 +23,7 @@ class RecommendViewController: UIViewController {
         //        let layout = recommendCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         //        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         
-        
+        //dev pull 완료
         
         recommendCollectionView.delegate = self
         recommendCollectionView.dataSource = self
