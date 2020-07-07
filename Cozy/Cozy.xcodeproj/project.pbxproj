@@ -11,8 +11,7 @@
 		183C1E3324B1D69D00FFE494 /* UserNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3224B1D69D00FFE494 /* UserNameTableViewCell.swift */; };
 		183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3424B1DB4600FFE494 /* BookStore.swift */; };
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
-		55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */; };
-		55CE353224B20876001210A7 /* Expandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE353124B20876001210A7 /* Expandable.swift */; };
+		55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */; };
 		55ABB33724B37681008B5A5B /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33524B37681008B5A5B /* Animatable.swift */; };
 		55ABB33824B37681008B5A5B /* CustomTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33624B37681008B5A5B /* CustomTransitionAnimation.swift */; };
 		55ABB33A24B376DA008B5A5B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33924B376DA008B5A5B /* NavigationController.swift */; };
@@ -61,8 +60,7 @@
 		183C1E3224B1D69D00FFE494 /* UserNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTableViewCell.swift; sourceTree = "<group>"; };
 		183C1E3424B1DB4600FFE494 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
-		55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomExpandableCollectionViewCell.xib; sourceTree = "<group>"; };
-		55CE353124B20876001210A7 /* Expandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expandable.swift; sourceTree = "<group>"; };
+		55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		55ABB33524B37681008B5A5B /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		55ABB33624B37681008B5A5B /* CustomTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionAnimation.swift; sourceTree = "<group>"; };
 		55ABB33924B376DA008B5A5B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -130,12 +128,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5565A14824B1D1F200DF6E88 /* Xib */ = {
+		5548793324B48EC200F5DE2A /* RecommendXib */ = {
 			isa = PBXGroup;
 			children = (
 				55CE352E24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib */,
 				55CE354A24B34536001210A7 /* CardCollectionViewCell.xib */,
 				55CE354E24B3471E001210A7 /* CommonView.xib */,
+			);
+			path = RecommendXib;
+			sourceTree = "<group>";
+		};
+		5565A14824B1D1F200DF6E88 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				5548793324B48EC200F5DE2A /* RecommendXib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 			children = (
 				55E839E624AF2B39003C64FE /* RecommendViewController.swift */,
 				55CE353724B32D17001210A7 /* CardCollectionViewCell.swift */,
+				55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */,
 			);
 			path = RecommendCollectionView;
 			sourceTree = "<group>";
@@ -525,6 +532,7 @@
 				55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */,
 				B63341EB24B328C30070F8C4 /* SearchViewController.swift in Sources */,
 				55CE353224B20876001210A7 /* Expandable.swift in Sources */,
+				55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */,
 				B63341E624B1D4600070F8C4 /* MapDetailViewController.swift in Sources */,
 				55ABB33A24B376DA008B5A5B /* NavigationController.swift in Sources */,
 				55E839E924AF2B43003C64FE /* MapViewController.swift in Sources */,

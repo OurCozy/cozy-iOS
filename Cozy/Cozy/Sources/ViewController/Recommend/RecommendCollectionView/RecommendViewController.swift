@@ -32,11 +32,13 @@ class RecommendViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 327, height: 405)
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 30
+        layout.minimumLineSpacing = 36
         layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         self.recommendCollectionView.collectionViewLayout = layout
         
         self.recommendCollectionView.register(cellType: CardCollectionViewCell.self)
+        
+       
         
         
     }
@@ -52,31 +54,65 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        
-        return 10
+        if 0 == section {
+            return 1
+        } else {
+            return 8
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: CardCollectionViewCell.self)
-        
-        return cell
+        if indexPath.section == 0{
+            let guideCell = collectionView.dequeueReusableCell(withReuseIdentifier: "logoSearchCell", for: indexPath)
+            
+            
+            return guideCell
+        } else {
+            let cardCell = collectionView.dequeueReusableCell(for: indexPath, cellType: CardCollectionViewCell.self)
+            
+            return cardCell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.selectedCell = self.recommendCollectionView.cellForItem(at: indexPath)
-        
-        let vc = DetailViewController.instantiate()
-        
-        self.tabBarController?.tabBar.isHidden = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        if indexPath.section == 1 {
+            self.selectedCell = self.recommendCollectionView.cellForItem(at: indexPath)
+            
+            let vc = DetailViewController.instantiate()
+            
+            self.tabBarController?.tabBar.isHidden = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
-      
+    
+}
+
+
+extension RecommendViewController: UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let guideSize: CGSize = CGSize.init(width: 327, height: 171)
+        let recommendSize: CGSize = CGSize.init(width: 327, height: 405)
+        
+        
+        
+        switch indexPath.section {
+        case 0:
+            return guideSize
+        case 1:
+            return recommendSize
+        default:
+            return CGSize.init(width: 0, height: 0)
+        }
+    }
 }
 
 extension RecommendViewController: Animatable {
