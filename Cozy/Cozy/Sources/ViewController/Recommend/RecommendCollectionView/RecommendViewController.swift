@@ -12,10 +12,6 @@ class RecommendViewController: UIViewController {
     
     @IBOutlet weak var recommendCollectionView: UICollectionView!
     
-    
-    //    private var hiddenCells: [CustomExpandableCollectionViewCell] = []
-    //    private var expandedCell: CustomExpandableCollectionViewCell?
-    
     fileprivate var selectedCell: UICollectionViewCell?
     private var isStatusBarHidden = false
     
@@ -50,9 +46,6 @@ class RecommendViewController: UIViewController {
         return isStatusBarHidden
     }
     
-    
-    
-    
 }
 
 
@@ -70,11 +63,6 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
-        //        guard let cell = recommendCollectionView.dequeueReusableCell(withReuseIdentifier: "sbCustomExpandableCell", for: indexPath) as? CustomExpandableCollectionViewCell else{
-        //            return UICollectionViewCell()
-        //        }
-        
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: CardCollectionViewCell.self)
         
         return cell
@@ -84,90 +72,11 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
         self.selectedCell = self.recommendCollectionView.cellForItem(at: indexPath)
         
         let vc = DetailViewController.instantiate()
+        
+        self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
-    //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //        if collectionView.contentOffset.y < 0 ||
-    //            collectionView.contentOffset.y > collectionView.contentSize.height - collectionView.frame.height {
-    //            return
-    //        }
-    //
-    //
-    //        let dampingRatio: CGFloat = 0.8
-    //        let initialVelocity: CGVector = CGVector.zero
-    //        let springParameters: UISpringTimingParameters = UISpringTimingParameters(dampingRatio: dampingRatio, initialVelocity: initialVelocity)
-    //        let animator = UIViewPropertyAnimator(duration: 0.5, timingParameters: springParameters)
-    //
-    //
-    //        self.view.isUserInteractionEnabled = false
-    //
-    //        if let selectedCell = expandedCell {
-    //            isStatusBarHidden = false
-    //            //setNeedsStatusBarAppearanceUpdate()
-    //
-    //            animator.addAnimations {
-    //                selectedCell.collapse()
-    //
-    //                for cell in self.hiddenCells {
-    //                    cell.show()
-    //                }
-    //            }
-    //
-    //            animator.addCompletion { _ in
-    //                collectionView.isScrollEnabled = true
-    //
-    //                self.expandedCell = nil
-    //                self.hiddenCells.removeAll()
-    //            }
-    //        } else {
-    //            isStatusBarHidden = true
-    //
-    //            collectionView.isScrollEnabled = false
-    //
-    //            let selectedCell = collectionView.cellForItem(at: indexPath)! as! CustomExpandableCollectionViewCell
-    //            let frameOfSelectedCell = selectedCell.frame
-    //
-    //            expandedCell = selectedCell
-    //            hiddenCells = collectionView.visibleCells.map { $0 as! CustomExpandableCollectionViewCell }.filter { $0 != selectedCell }
-    //
-    //            animator.addAnimations {
-    //                selectedCell.expand(in: collectionView)
-    //
-    //                for cell in self.hiddenCells {
-    //                    cell.hide(in: collectionView, frameOfSelectedCell: frameOfSelectedCell)
-    //                }
-    //            }
-    //        }
-    //
-    //
-    //        animator.addAnimations {
-    //            self.setNeedsStatusBarAppearanceUpdate()
-    //        }
-    //
-    //        animator.addCompletion { _ in
-    //            self.view.isUserInteractionEnabled = true
-    //        }
-    //
-    //        animator.startAnimation()
-    //    }
-    
-    
-}
-
-
-extension RecommendViewController: UIScrollViewDelegate {
-    
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        
-        
-        
-    }
-    
-    
+      
 }
 
 extension RecommendViewController: Animatable {
@@ -180,12 +89,28 @@ extension RecommendViewController: Animatable {
     }
 }
 
-//extension RecommendViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let cellWidth = CGFloat(327)
-//        let cellHeight = CGFloat(405)
-//
-//        return CGSize(width: cellWidth, height: cellHeight)
-//    }
-//}
+extension UIViewController {
+    
+    func setTabBarHidden(_ hidden: Bool, animated: Bool = true, duration: TimeInterval = 0.3) {
+        if self.tabBarController?.tabBar.isHidden != hidden{
+            if animated {
+                //Show the tabbar before the animation in case it has to appear
+                if (self.tabBarController?.tabBar.isHidden)!{
+                    self.tabBarController?.tabBar.isHidden = hidden
+                }
+                if let frame = self.tabBarController?.tabBar.frame {
+                    let factor: CGFloat = hidden ? 1 : -1
+                    let y = frame.origin.y + (frame.size.height * factor)
+                    UIView.animate(withDuration: duration, animations: {
+                        self.tabBarController?.tabBar.frame = CGRect(x: frame.origin.x, y: y, width: frame.width, height: frame.height)
+                    }) { (bool) in
+                        //hide the tabbar after the animation in case ti has to be hidden
+                        if (!(self.tabBarController?.tabBar.isHidden)!){
+                            self.tabBarController?.tabBar.isHidden = hidden
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

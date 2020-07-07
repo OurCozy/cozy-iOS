@@ -19,6 +19,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     }
 
     @IBAction func closePressed(_ sender: Any) {
+        self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.popViewController(animated: true)
     }
 

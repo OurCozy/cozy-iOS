@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0A7-Oe-tbR">
-                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KGQ-Ih-yC5">
                                     <size key="itemSize" width="128" height="128"/>
@@ -42,7 +42,7 @@
                             <constraint firstItem="0A7-Oe-tbR" firstAttribute="leading" secondItem="lfu-b6-V3f" secondAttribute="leading" id="LiO-MH-v7U"/>
                             <constraint firstItem="0A7-Oe-tbR" firstAttribute="top" secondItem="lfu-b6-V3f" secondAttribute="top" id="SBd-Z9-ue0"/>
                             <constraint firstItem="0A7-Oe-tbR" firstAttribute="trailing" secondItem="lfu-b6-V3f" secondAttribute="trailing" id="Vgg-Mk-RWI"/>
-                            <constraint firstItem="0A7-Oe-tbR" firstAttribute="bottom" secondItem="lfu-b6-V3f" secondAttribute="bottom" id="wDS-E3-Egl"/>
+                            <constraint firstItem="0A7-Oe-tbR" firstAttribute="bottom" secondItem="R6u-Tq-xKw" secondAttribute="bottom" id="wDS-E3-Egl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lfu-b6-V3f"/>
                     </view>
