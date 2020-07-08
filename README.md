@@ -92,6 +92,7 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 * Sources
   * 크게는 코드의 기능에 따라 그리고 ViewUi로 분류
   * Protocols, Cell , Extension , Viewcontroller(뷰컨 안에 세분화된 기능으로 분류)
+    * Cell 같은 경우 - Cell로 View의 메인을 구현하는 경우, 즉 뷰컨에 더욱 가까운 역할을 하면 그 기능안에 Cell을 넣어도 됨
   * 복잡한 View 구현시 기능 안에서도 폴더를 나눠 View와 코드를 분담시킴
 
 <br/>
