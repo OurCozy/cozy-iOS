@@ -26,6 +26,7 @@ class BookStoreTableViewCell: UITableViewCell {
         for view in hashTagCollection{
             view.layer.cornerRadius = 5
             view.layer.borderWidth = 1
+            view.layer.borderColor = UIColor.dustyOrange.cgColor
         }
         
     }
