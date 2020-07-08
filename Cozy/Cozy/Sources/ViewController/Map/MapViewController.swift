@@ -8,7 +8,7 @@
 
 import UIKit
 
-// image const
+// search image const
 private struct Const {
     static let ImageSizeForLargeState: CGFloat = 40
     static let ImageRightMargin: CGFloat = 16
@@ -19,26 +19,12 @@ private struct Const {
     static let NavBarHeightLargeState: CGFloat = 96.5
 }
 
-// TODO : navigation bar 밑줄 추가
-// underline const
-private struct Const2 {
-    // large state
-    static let ViewWidthSizeForLargeState: CGFloat = 75
-    static let ViewHeightSizeForLargeState: CGFloat = 3
-    static let ViewLeftMarginForLargeState: CGFloat = 24
-    static let ViewBottomMarginForLargeState: CGFloat = 28
-    // small state
-    static let ViewWidthSizeForSmallState: CGFloat = 12
-}
-
 class MapViewController: UIViewController {
     
     private let searchImage = UIImageView(image: UIImage(named: "icSearch")) // search image
-    private let underlineView = UIView(frame: CGRect(x: 17, y: 100, width: 75, height: 3))
+    private let underlineView = UIView(frame: CGRect(x: 17, y: 98, width: 85, height: 2))
     
     @IBOutlet weak var tableView: UITableView! // table view
-    
-    var sampleItems: [String] = ["hello1", "hello2", "hello3", "hello5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +32,7 @@ class MapViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        // iOS 11 버전 이상에서 실행
         if #available(iOS 11.0, *){
             self.navigationController?.navigationBar.prefersLargeTitles = true
             
@@ -57,13 +44,15 @@ class MapViewController: UIViewController {
             searchImage.isUserInteractionEnabled = true
             searchImage.addGestureRecognizer(tapGestureRecognizer)
             
-            // insert underline
-//            underlineView.layer.backgroundColor = UIColor.dustyOrange.cgColor
-
             searchImage.layer.cornerRadius = Const.ImageSizeForLargeState / 2
             searchImage.clipsToBounds = true
             searchImage.translatesAutoresizingMaskIntoConstraints = false
             
+            // insert underline view
+            underlineView.layer.backgroundColor = UIColor.dustyOrange.cgColor
+            self.navigationController?.navigationBar.addSubview(underlineView)
+            
+            // search image 지정
             NSLayoutConstraint.activate([
                 searchImage.rightAnchor.constraint(equalTo: (self.navigationController?.navigationBar.rightAnchor)!, constant: -Const.ImageRightMargin),
                 searchImage.bottomAnchor.constraint(equalTo: (self.navigationController?.navigationBar.bottomAnchor)!, constant: -Const.ImageBottomMarginForLargeState),
@@ -73,10 +62,15 @@ class MapViewController: UIViewController {
         }
     }
     
+    @objc func panAction(_ sender: UIPanGestureRecognizer){
+        let velocity = sender.velocity(in: self.view)
+        if abs(velocity.y) > abs(velocity.x) {
+            velocity.y < 0 ? print("up") :  print("down")
+        }
+    }
+    
     // search image click event
     @objc func searchImageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-        print("click search image!")
-        
         let storyboard = UIStoryboard(name: "Search", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         vc.modalPresentationStyle = .fullScreen
@@ -84,16 +78,17 @@ class MapViewController: UIViewController {
         
     }
     
+    // table cell deselect
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         if let index = self.tableView.indexPathForSelectedRow {
             self.tableView.deselectRow(at: index, animated: true)
         }
     }
 }
 
-extension MapViewController: UITableViewDelegate, UITableViewDataSource {
+extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
+    // table view height 지정
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
@@ -105,15 +100,17 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    // set section number
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
+    // set section list
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if 0 == section {
             return 1
         } else {
-            return sampleItems.count
+            return 5
         }
     }
     
@@ -147,5 +144,27 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource {
             present(vc, animated: true, completion: nil)
         }
     }
-
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
+    
+    // 처음 스크롤 시작할 때 한 번만 호출
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//        print("💖 willbegin")
+        self.underlineView.isHidden = true
+        
+    }
+    
+    // 스크롤 종료시 한 번만 호출
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y == 0 {
+            self.underlineView.isHidden = false
+        }
+    }
+    
+    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        return true
+    }
+    
 }

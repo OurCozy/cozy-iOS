@@ -151,6 +151,8 @@
 		5565A14B24B1D29F00DF6E88 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */,
+				B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */,
 				5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */,
 			);
 			path = Cell;
@@ -292,8 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				55E839E824AF2B43003C64FE /* MapViewController.swift */,
-				B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */,
-				B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
