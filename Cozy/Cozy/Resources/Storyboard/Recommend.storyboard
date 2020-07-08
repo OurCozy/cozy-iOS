@@ -38,16 +38,19 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="숨은 서점찾기 어떠세요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbX-fb-dBY">
-                                                    <rect key="frame" x="0.0" y="122" width="165" height="21"/>
+                                                    <rect key="frame" x="0.0" y="122" width="260" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EQS-t9-BwZ">
-                                                    <rect key="frame" x="66" y="169" width="150" height="2"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="코지님," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grD-Cv-dIl">
+                                                    <rect key="frame" x="0.0" y="90" width="78" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </progressView>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-Iv-J3K">
                                                     <rect key="frame" x="279" y="15" width="48" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,6 +63,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="327" height="171"/>
                                         <connections>
+                                            <outlet property="guideLabel1" destination="grD-Cv-dIl" id="hxQ-s5-ju7"/>
                                             <outlet property="guideLabel2" destination="dbX-fb-dBY" id="Cwd-qg-WAy"/>
                                             <outlet property="logoImage" destination="UYg-82-Fhy" id="7JY-6N-Ja1"/>
                                             <outlet property="searchButton" destination="zzO-Iv-J3K" id="bD8-xC-cUF"/>

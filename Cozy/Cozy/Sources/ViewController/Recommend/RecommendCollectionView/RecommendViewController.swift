@@ -30,16 +30,13 @@ class RecommendViewController: UIViewController {
         
         // Set the cells sizes and layout direction
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 327, height: 405)
+        //layout.itemSize = CGSize(width: 327, height: 405)
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 36
-        layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        layout.sectionInset = UIEdgeInsets(top: 13, left: 13, bottom: 13, right: 13)
         self.recommendCollectionView.collectionViewLayout = layout
         
         self.recommendCollectionView.register(cellType: CardCollectionViewCell.self)
-        
-       
-        
         
     }
     
@@ -87,7 +84,11 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             
             let vc = DetailViewController.instantiate()
             
-            self.tabBarController?.tabBar.isHidden = true
+            //self.tabBarController?.tabBar.isHidden = true
+            
+            
+            //self.tabBarController?.setTabBarHidden(true)
+            self.setTabBarHidden(true)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -99,8 +100,26 @@ extension RecommendViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let guideSize: CGSize = CGSize.init(width: 327, height: 171)
-        let recommendSize: CGSize = CGSize.init(width: 327, height: 405)
+        let guideSize: CGSize = CGSize.init(width: 327, height: 190)
+        //minimumLineSpacing = 36 이므로 디자이너가 요구한 55pt를 맞추기 위해 19pt 사이즈를 height값을 더주었음
+        let bounds = UIScreen.main.bounds
+        let deviceHeight = bounds.size.height
+        
+        let recommendCellHeightSize:CGFloat
+        
+        switch deviceHeight {
+        case 667.0: //iphone 6, 6s, 7, 8 => 4.7 inch
+            recommendCellHeightSize = 310
+        case 812.0: //iphone X, XS => 5.8 inch
+            recommendCellHeightSize = 405
+        default:
+            recommendCellHeightSize = 405
+        }
+        
+        
+        let recommendSize: CGSize = CGSize.init(width: 327, height: recommendCellHeightSize)
+        
+        
         
         
         
@@ -125,28 +144,3 @@ extension RecommendViewController: Animatable {
     }
 }
 
-extension UIViewController {
-    
-    func setTabBarHidden(_ hidden: Bool, animated: Bool = true, duration: TimeInterval = 0.3) {
-        if self.tabBarController?.tabBar.isHidden != hidden{
-            if animated {
-                //Show the tabbar before the animation in case it has to appear
-                if (self.tabBarController?.tabBar.isHidden)!{
-                    self.tabBarController?.tabBar.isHidden = hidden
-                }
-                if let frame = self.tabBarController?.tabBar.frame {
-                    let factor: CGFloat = hidden ? 1 : -1
-                    let y = frame.origin.y + (frame.size.height * factor)
-                    UIView.animate(withDuration: duration, animations: {
-                        self.tabBarController?.tabBar.frame = CGRect(x: frame.origin.x, y: y, width: frame.width, height: frame.height)
-                    }) { (bool) in
-                        //hide the tabbar after the animation in case ti has to be hidden
-                        if (!(self.tabBarController?.tabBar.isHidden)!){
-                            self.tabBarController?.tabBar.isHidden = hidden
-                        }
-                    }
-                }
-            }
-        }
-    }
-}

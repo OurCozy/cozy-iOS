@@ -12,6 +12,7 @@ class LogoSearchCollectionViewCell: UICollectionViewCell, Reusable {
     
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var guideLabel1: UILabel!
     @IBOutlet weak var guideLabel2: UILabel!
     private var myCellIdentifier:String = "logoSearchCell"
     override func awakeFromNib() {

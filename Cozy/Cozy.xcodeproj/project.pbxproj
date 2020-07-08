@@ -12,6 +12,7 @@
 		183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3424B1DB4600FFE494 /* BookStore.swift */; };
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
 		55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */; };
+		55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */; };
 		55ABB33724B37681008B5A5B /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33524B37681008B5A5B /* Animatable.swift */; };
 		55ABB33824B37681008B5A5B /* CustomTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33624B37681008B5A5B /* CustomTransitionAnimation.swift */; };
 		55ABB33A24B376DA008B5A5B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB33924B376DA008B5A5B /* NavigationController.swift */; };
@@ -61,6 +62,7 @@
 		183C1E3424B1DB4600FFE494 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarHideAnimation+Extension.swift"; sourceTree = "<group>"; };
 		55ABB33524B37681008B5A5B /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		55ABB33624B37681008B5A5B /* CustomTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionAnimation.swift; sourceTree = "<group>"; };
 		55ABB33924B376DA008B5A5B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				55E839F424AF2DCB003C64FE /* UIColor+Extension.swift */,
 				B63341D824B08F300070F8C4 /* UIView+Extension.swift */,
 				B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */,
+				55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				55CE354D24B3467E001210A7 /* CommonView.swift in Sources */,
 				55CE353824B32D17001210A7 /* CardCollectionViewCell.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
+				55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,8 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var commonView: CommonView!
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var closeButton: UIButton!
-
+    @IBOutlet weak var testLabel: UILabel!
+    
     // Constraint from the top of the CommonView to the top of the MaskView
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
 
@@ -17,10 +18,16 @@ class DetailViewController: UIViewController, StoryboardBased {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    override func viewDidLoad() {
+        
+    }
 
     @IBAction func closePressed(_ sender: Any) {
-        self.tabBarController?.tabBar.isHidden = false
+        
+        self.setTabBarHidden(false)
         self.navigationController?.popViewController(animated: true)
+        
     }
 
     func asCard(_ value: Bool) {
@@ -69,12 +76,11 @@ extension DetailViewController: Animatable {
         
         let safeAreaTop = self.view.window?.safeAreaInsets.top ?? .zero
         print("safeAreaTop 값: \(safeAreaTop)")
-        //window 관련해서 safeArea로 잡아당기는 것 같은데, iOS13에서 바껴서 그런지, 애니메이션 적용이 안됨
-        //애니메이팅 부분이 호출이 안됨
+        
         self.commonView.topConstraintValue = safeAreaTop + 16
 
         // Animate the common view to a height of 500 points
-        self.heightConstraint.constant = 500
+        self.heightConstraint.constant = 405
         sizeAnimator.addAnimations {
             self.view.layoutIfNeeded()
         }

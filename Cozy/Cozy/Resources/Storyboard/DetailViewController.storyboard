@@ -134,6 +134,7 @@
                         <outlet property="heightConstraint" destination="AI1-Vu-9DM" id="0kt-n6-LX2"/>
                         <outlet property="maskView" destination="Ls9-4X-1O9" id="Rhj-eK-1nd"/>
                         <outlet property="scrollView" destination="kCL-44-Ibu" id="fXW-fC-awu"/>
+                        <outlet property="testLabel" destination="mkI-x0-qHn" id="r7K-eS-IpO"/>
                         <outlet property="topConstraint" destination="mV8-hB-LcK" id="2gF-PJ-s9j"/>
                     </connections>
                 </viewController>
