@@ -56,6 +56,30 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 
 <br/>
 
+## 📱 Progress of Cozy
+
+|                             기능                             |                   구현                    |
+| :----------------------------------------------------------: | :---------------------------------------: |
+|               메인 추천뷰 - 고정 가이드셀 구현               |     [📘인준](https://github.com/iJoom)     |
+|    메인 추천뷰 - 펼쳐지면서 스크롤뷰 전환 애니메이션 구현    |     [📘인준](https://github.com/iJoom)     |
+|       메인 DetailView - 애니메이션 후 디테일뷰로 전환        |     [📘인준](https://github.com/iJoom)     |
+| 메인 추천 및 DetailView - 탭바 밑으로 내려가고 위로 올라가는 애니메이션 구현 |     [📘인준](https://github.com/iJoom)     |
+|           메인 추천뷰 - 서버APi 이용한 통신 붙이기           |                     -                     |
+|         메인 DetailView - 지도APi 구현 및 링크 연결          |                     -                     |
+|       MapView - 테이블뷰 이용한 커스텀 디자인뷰 그리기       | [📙은지](https://github.com/ChoiEunji0114) |
+| MapView - 테이블뷰 터치시 Detai View 이동 및 DetailView 작업 | [📙은지](https://github.com/ChoiEunji0114) |
+|         MapDetailView - APPLE지도 이용하여 위치 표시         | [📙은지](https://github.com/ChoiEunji0114) |
+|            SearchView - View 그리기 및 코드 연결             | [📙은지](https://github.com/ChoiEunji0114) |
+|           Server 통신을 이용한 나만의 북마크 기능            |                     -                     |
+|     BookMarkView - 테이블뷰를 이용한 커스텀 View 그리기      |  [📗재욱](https://github.com/didwodnr123)  |
+|             BookMarkView - 서점에 관한 Tag 구현              |  [📗재욱](https://github.com/didwodnr123)  |
+|    BookMarkView - 북마크한 책이 없을때를 확인해 View 구성    |                     -                     |
+|               MyPage - 뷰 그리기 및 코드 연결                |   [📒지영](https://github.com/yangg0228)   |
+|               MyPage - 기기에 맞는 AutoLayout                |                     -                     |
+|                      MyPage - 공지사항                       |                     -                     |
+
+<br/>
+
 ## 📁 Foldering
 
 <p align="center">
