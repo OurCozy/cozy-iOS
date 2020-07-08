@@ -23,6 +23,7 @@ class MapViewController: UIViewController {
     
     private let searchImage = UIImageView(image: UIImage(named: "icSearch")) // search image
     private let underlineView = UIView(frame: CGRect(x: 17, y: 98, width: 85, height: 2))
+    let downButton = UIButton(frame: CGRect(x: 100, y: 55, width: 42, height: 42))
     
     @IBOutlet weak var tableView: UITableView! // table view
     
@@ -52,6 +53,11 @@ class MapViewController: UIViewController {
             underlineView.layer.backgroundColor = UIColor.dustyOrange.cgColor
             self.navigationController?.navigationBar.addSubview(underlineView)
             
+            // insert down arrow button
+            downButton.setImage(UIImage(named: "icDownArrow"), for: .normal)
+            self.navigationController?.navigationBar.addSubview(downButton)
+            self.downButton.addTarget(self, action: #selector(clickDownButton), for: .touchUpInside)
+            
             // search image 지정
             NSLayoutConstraint.activate([
                 searchImage.rightAnchor.constraint(equalTo: (self.navigationController?.navigationBar.rightAnchor)!, constant: -Const.ImageRightMargin),
@@ -62,11 +68,8 @@ class MapViewController: UIViewController {
         }
     }
     
-    @objc func panAction(_ sender: UIPanGestureRecognizer){
-        let velocity = sender.velocity(in: self.view)
-        if abs(velocity.y) > abs(velocity.x) {
-            velocity.y < 0 ? print("up") :  print("down")
-        }
+    @objc func clickDownButton(){
+        print("click down button ")
     }
     
     // search image click event
@@ -153,6 +156,7 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
 //        print("💖 willbegin")
         self.underlineView.isHidden = true
+        self.downButton.isHidden = true
         
     }
     
@@ -160,6 +164,7 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y == 0 {
             self.underlineView.isHidden = false
+            self.downButton.isHidden = false
         }
     }
     
