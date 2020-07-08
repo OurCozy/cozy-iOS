@@ -100,13 +100,13 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcc-Ec-eOY">
-                                <rect key="frame" x="319" y="16" width="40" height="44"/>
+                                <rect key="frame" x="315" y="16" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="6bS-e0-bTP"/>
-                                    <constraint firstAttribute="width" secondItem="kcc-Ec-eOY" secondAttribute="height" multiplier="10:11" id="hMM-Mo-9So"/>
+                                    <constraint firstAttribute="height" constant="48" id="6bS-e0-bTP"/>
+                                    <constraint firstAttribute="width" secondItem="kcc-Ec-eOY" secondAttribute="height" multiplier="11:11" id="hMM-Mo-9So"/>
                                 </constraints>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="trash.fill" catalog="system">
+                                <state key="normal" image="icXDark">
                                     <color key="titleColor" red="0.70980392160000005" green="0.0" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -120,7 +120,7 @@
                             <constraint firstAttribute="bottom" secondItem="ONs-Ac-afN" secondAttribute="bottom" id="d9W-qW-Njd"/>
                             <constraint firstItem="ONs-Ac-afN" firstAttribute="leading" secondItem="paI-3w-oKc" secondAttribute="leading" id="dar-rB-kXW"/>
                             <constraint firstAttribute="trailing" secondItem="ONs-Ac-afN" secondAttribute="trailing" id="hAt-m0-7ub"/>
-                            <constraint firstItem="aeE-iv-8eO" firstAttribute="trailing" secondItem="kcc-Ec-eOY" secondAttribute="trailing" constant="16" id="ieR-lq-czm"/>
+                            <constraint firstItem="aeE-iv-8eO" firstAttribute="trailing" secondItem="kcc-Ec-eOY" secondAttribute="trailing" constant="12" id="ieR-lq-czm"/>
                             <constraint firstItem="ONs-Ac-afN" firstAttribute="top" secondItem="paI-3w-oKc" secondAttribute="top" id="sa5-j0-23t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aeE-iv-8eO"/>
@@ -134,6 +134,7 @@
                         <outlet property="heightConstraint" destination="AI1-Vu-9DM" id="0kt-n6-LX2"/>
                         <outlet property="maskView" destination="Ls9-4X-1O9" id="Rhj-eK-1nd"/>
                         <outlet property="scrollView" destination="kCL-44-Ibu" id="fXW-fC-awu"/>
+                        <outlet property="testLabel" destination="mkI-x0-qHn" id="r7K-eS-IpO"/>
                         <outlet property="topConstraint" destination="mV8-hB-LcK" id="2gF-PJ-s9j"/>
                     </connections>
                 </viewController>
@@ -143,6 +144,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <image name="icXDark" width="48" height="48"/>
     </resources>
 </document>
