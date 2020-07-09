@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		183C1E2F24B1D5E500FFE494 /* BookStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */; };
 		183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3424B1DB4600FFE494 /* BookStore.swift */; };
+		183C1E3924B73CC600FFE494 /* InterestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3824B73CC600FFE494 /* InterestModel.swift */; };
+		183C1E3C24B7416600FFE494 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3B24B7416600FFE494 /* APIConstants.swift */; };
+		183C1E3E24B7431B00FFE494 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3D24B7431B00FFE494 /* NetworkResult.swift */; };
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
 		55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */; };
 		55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */; };
@@ -60,6 +63,9 @@
 /* Begin PBXFileReference section */
 		183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreTableViewCell.swift; sourceTree = "<group>"; };
 		183C1E3424B1DB4600FFE494 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
+		183C1E3824B73CC600FFE494 /* InterestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestModel.swift; sourceTree = "<group>"; };
+		183C1E3B24B7416600FFE494 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		183C1E3D24B7431B00FFE494 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarHideAnimation+Extension.swift"; sourceTree = "<group>"; };
@@ -124,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183C1E3A24B7415400FFE494 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				183C1E3B24B7416600FFE494 /* APIConstants.swift */,
+				183C1E3D24B7431B00FFE494 /* NetworkResult.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		2DBE9317D4818232E10F414A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +274,7 @@
 		55E839D924AF2A08003C64FE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				183C1E3A24B7415400FFE494 /* API */,
 				55CE353424B32B75001210A7 /* RecommendViewUI */,
 				55CE353024B2084A001210A7 /* Protocols */,
 				5565A14B24B1D29F00DF6E88 /* Cell */,
@@ -334,6 +350,7 @@
 				55E839EA24AF2B4A003C64FE /* InterestViewController.swift */,
 				183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */,
 				183C1E3424B1DB4600FFE494 /* BookStore.swift */,
+				183C1E3824B73CC600FFE494 /* InterestModel.swift */,
 			);
 			path = Interest;
 			sourceTree = "<group>";
@@ -525,8 +542,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */,
+				183C1E3C24B7416600FFE494 /* APIConstants.swift in Sources */,
 				55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */,
+				183C1E3E24B7431B00FFE494 /* NetworkResult.swift in Sources */,
 				55CE354924B3444B001210A7 /* DetailViewController.swift in Sources */,
+				183C1E3924B73CC600FFE494 /* InterestModel.swift in Sources */,
 				B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */,
 				183C1E2F24B1D5E500FFE494 /* BookStoreTableViewCell.swift in Sources */,
 				55ABB33824B37681008B5A5B /* CustomTransitionAnimation.swift in Sources */,
