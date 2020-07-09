@@ -25,6 +25,10 @@ class DetailViewController: UIViewController, StoryboardBased {
 
     @IBAction func closePressed(_ sender: Any) {
         
+        
+        
+        
+        //self.scrollView.scrollToTop()
         self.setTabBarHidden(false)
         self.navigationController?.popViewController(animated: true)
         
@@ -125,5 +129,15 @@ extension DetailViewController: Animatable {
         positionAnimator.addAnimations {
             self.asCard(true)
         }
+    }
+}
+
+
+
+extension UIScrollView {
+    
+    func scrollToTop() {
+        let topOffset = CGPoint(x: 0, y: -contentInset.top)
+        setContentOffset(topOffset, animated: false)
     }
 }

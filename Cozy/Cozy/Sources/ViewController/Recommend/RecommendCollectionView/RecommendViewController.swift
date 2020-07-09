@@ -91,9 +91,6 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             let vc = DetailViewController.instantiate()
             
             //self.tabBarController?.tabBar.isHidden = true
-            
-            
-            //self.tabBarController?.setTabBarHidden(true)
             self.setTabBarHidden(true)
             self.navigationController?.pushViewController(vc, animated: true)
         }
