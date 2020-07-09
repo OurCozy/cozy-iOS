@@ -42,6 +42,7 @@ class InterestViewController: UIViewController {
         if #available(iOS 11.0, *){
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationController?.navigationBar.addSubview(searchImage)
+            title = "양재욱"
             
             searchImage.layer.cornerRadius = Const.ImageSizeForLargeState / 2
             searchImage.clipsToBounds = true
@@ -75,14 +76,14 @@ class InterestViewController: UIViewController {
 extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            
+        
         return 287
         
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 2
-//    }
+    //    func numberOfSections(in tableView: UITableView) -> Int {
+    //        return 2
+    //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -91,17 +92,17 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.section == 0 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! UserNameTableViewCell
-//            cell.userName.text = "양재욱"
-//            return cell
-//        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! BookStoreTableViewCell
-            cell.wholeView.setViewShadow()
-            
-            cell.setBookStoreData(bookStoreImageName: bookStoreList[indexPath.row].bookStoreImageName, bookStoreName: bookStoreList[indexPath.row].bookStoreName, hashTag01: bookStoreList[indexPath.row].hashTag01, hashTag02: bookStoreList[indexPath.row].hashTag02, hashTag03: bookStoreList[indexPath.row].hashTag03)
-            
-            return cell
+        //        if indexPath.section == 0 {
+        //            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! UserNameTableViewCell
+        //            cell.userName.text = "양재욱"
+        //            return cell
+        //        } else {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! BookStoreTableViewCell
+        cell.wholeView.setViewShadow()
+        
+        cell.setBookStoreData(bookStoreImageName: bookStoreList[indexPath.row].bookStoreImageName, bookStoreName: bookStoreList[indexPath.row].bookStoreName, hashTag01: bookStoreList[indexPath.row].hashTag01, hashTag02: bookStoreList[indexPath.row].hashTag02, hashTag03: bookStoreList[indexPath.row].hashTag03)
+        
+        return cell
         //}
     }
     

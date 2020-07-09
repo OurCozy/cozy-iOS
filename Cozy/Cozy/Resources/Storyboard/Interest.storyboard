@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--양재욱-->
+        <!--Interest View Controller-->
         <scene sceneID="B0R-TX-prk">
             <objects>
                 <viewController id="c7P-KG-ZBQ" customClass="InterestViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,57 +20,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" rowHeight="100" id="zDP-Sn-3CH" customClass="UserNameTableViewCell" customModule="Cozy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zDP-Sn-3CH" id="lEn-xy-CJK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-aL-Igf">
-                                                    <rect key="frame" x="15" y="40" width="49" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="님의 콕!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jde-SD-4jm">
-                                                    <rect key="frame" x="72" y="40" width="69" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="userName" destination="qzx-aL-Igf" id="THq-MB-5Zv"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="287" id="qz1-R4-4N5" customClass="BookStoreTableViewCell" customModule="Cozy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="128" width="375" height="287"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="339" id="qz1-R4-4N5" customClass="BookStoreTableViewCell" customModule="Cozy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="339"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qz1-R4-4N5" id="RH8-pB-QQF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="339"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14d-BC-p9y">
-                                                    <rect key="frame" x="24" y="28" width="327" height="223"/>
+                                                    <rect key="frame" x="24" y="28" width="327" height="311"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="74" translatesAutoresizingMaskIntoConstraints="NO" id="hgj-Pg-c0c">
-                                                            <rect key="frame" x="0.0" y="2" width="327" height="137"/>
+                                                            <rect key="frame" x="0.0" y="2" width="327" height="225"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="퇴근길 책 한잔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJv-5w-61h">
-                                                            <rect key="frame" x="18" y="150.33333333333334" width="113" height="29"/>
+                                                            <rect key="frame" x="18" y="238.33333333333331" width="113" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBookmarkSelected" translatesAutoresizingMaskIntoConstraints="NO" id="gRL-SD-IUd">
-                                                            <rect key="frame" x="260" y="151" width="57" height="57"/>
+                                                            <rect key="frame" x="260" y="239" width="57" height="57"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2w-Sz-9Qp">
-                                                            <rect key="frame" x="18" y="185" width="51" height="24"/>
+                                                            <rect key="frame" x="18" y="273" width="51" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjb-is-f5b">
                                                                     <rect key="frame" x="10" y="3" width="31" height="18"/>
@@ -88,7 +61,7 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07Z-86-11k">
-                                                            <rect key="frame" x="81" y="185" width="51" height="24"/>
+                                                            <rect key="frame" x="81" y="273" width="51" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aeb-99-KEf">
                                                                     <rect key="frame" x="10" y="3" width="31" height="18"/>
@@ -106,7 +79,7 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tm-na-cw8">
-                                                            <rect key="frame" x="144" y="185" width="51" height="24"/>
+                                                            <rect key="frame" x="144" y="273" width="51" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhp-63-wR6">
                                                                     <rect key="frame" x="10" y="3" width="31" height="18"/>
@@ -126,9 +99,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="250" id="00h-xy-UiT"/>
                                                         <constraint firstItem="OJv-5w-61h" firstAttribute="top" secondItem="hgj-Pg-c0c" secondAttribute="bottom" constant="11.300000000000001" id="0FG-3U-x5U"/>
-                                                        <constraint firstAttribute="width" constant="327" id="5IE-j7-fza"/>
                                                         <constraint firstAttribute="trailing" secondItem="hgj-Pg-c0c" secondAttribute="trailing" id="9IP-ZZ-FGB"/>
                                                         <constraint firstItem="6Tm-na-cw8" firstAttribute="leading" secondItem="07Z-86-11k" secondAttribute="trailing" constant="12" id="9cf-Rd-dwP"/>
                                                         <constraint firstAttribute="bottom" secondItem="hgj-Pg-c0c" secondAttribute="bottom" constant="84" id="Bcu-VB-Ejp"/>
@@ -150,7 +121,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="14d-BC-p9y" secondAttribute="trailing" constant="24" id="DV2-s8-3VB"/>
                                                 <constraint firstItem="14d-BC-p9y" firstAttribute="top" secondItem="RH8-pB-QQF" secondAttribute="top" constant="28" id="oLm-t2-Au0"/>
                                                 <constraint firstItem="14d-BC-p9y" firstAttribute="leading" secondItem="RH8-pB-QQF" secondAttribute="leading" constant="24" id="uVW-Qm-Ejt"/>
-                                                <constraint firstAttribute="bottom" secondItem="14d-BC-p9y" secondAttribute="bottom" constant="36" id="wNd-L8-uUa"/>
+                                                <constraint firstAttribute="bottom" secondItem="14d-BC-p9y" secondAttribute="bottom" id="wNd-L8-uUa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -171,7 +142,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tYm-Ui-wN1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="양재욱" id="GQb-nI-bpW"/>
+                    <navigationItem key="navigationItem" id="GQb-nI-bpW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="p4J-aO-r42" id="tRd-me-Jf9"/>
