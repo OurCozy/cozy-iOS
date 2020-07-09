@@ -27,6 +27,9 @@
                                                 <state key="normal" title="서울">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectSeoulButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="JYj-9Z-GYY"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkX-GJ-AX5">
                                                 <rect key="frame" x="85" y="57.5" width="37" height="2"/>
@@ -45,21 +48,34 @@
                                             <constraint firstItem="DkX-GJ-AX5" firstAttribute="top" secondItem="JE7-MR-BoO" secondAttribute="bottom" constant="-4" id="cti-xf-a8U"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ln7-eE-D0F">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MJ-2W-9Md">
                                         <rect key="frame" x="207" y="0.0" width="207" height="87"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5D-C1-t8c">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJV-kT-yc5">
                                                 <rect key="frame" x="86" y="25.5" width="35" height="36"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="경기">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectGyeongiButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="XJY-VG-6Wz"/>
+                                                </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-EA-YTi">
+                                                <rect key="frame" x="85" y="57.5" width="37" height="2"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="bCh-TF-YwW"/>
+                                                    <constraint firstAttribute="height" constant="2" id="gPO-wJ-TgF"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="i5D-C1-t8c" firstAttribute="centerY" secondItem="ln7-eE-D0F" secondAttribute="centerY" id="Xxz-6Q-M6v"/>
-                                            <constraint firstItem="i5D-C1-t8c" firstAttribute="centerX" secondItem="ln7-eE-D0F" secondAttribute="centerX" id="xf2-ic-0pj"/>
+                                            <constraint firstItem="LJV-kT-yc5" firstAttribute="centerY" secondItem="9MJ-2W-9Md" secondAttribute="centerY" id="Ohk-aD-Uja"/>
+                                            <constraint firstItem="gAK-EA-YTi" firstAttribute="top" secondItem="LJV-kT-yc5" secondAttribute="bottom" constant="-4" id="Vt8-mC-vSz"/>
+                                            <constraint firstItem="gAK-EA-YTi" firstAttribute="centerX" secondItem="9MJ-2W-9Md" secondAttribute="centerX" id="WhD-7H-Y0A"/>
+                                            <constraint firstItem="LJV-kT-yc5" firstAttribute="centerX" secondItem="9MJ-2W-9Md" secondAttribute="centerX" id="wjB-to-1Y7"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -85,6 +101,9 @@
                                                         <state key="normal" title="마포구">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="NxK-uu-B4d"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -106,6 +125,9 @@
                                                         <state key="normal" title="용산구">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="jzP-Y5-Zds"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -137,6 +159,9 @@
                                                         <state key="normal" title="관악구/영등포구">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="P0S-o0-WSF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -158,6 +183,9 @@
                                                         <state key="normal" title="광진구/동대문구">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="ScX-48-knk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -189,6 +217,9 @@
                                                         <state key="normal" title="강남구/서초구">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="dV7-se-4lU"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -210,6 +241,9 @@
                                                         <state key="normal" title="서대문구/종로구">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="gKc-Ag-KeN"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -248,12 +282,15 @@
                         <viewLayoutGuide key="safeArea" id="Kfh-ha-IYB"/>
                     </view>
                     <connections>
+                        <outlet property="buttonView" destination="pFF-eU-IJF" id="kIL-xg-Llj"/>
+                        <outlet property="gyeongiUnderline" destination="gAK-EA-YTi" id="uVs-xv-3s1"/>
                         <outlet property="regionButton1" destination="WfN-YJ-nQO" id="wFl-9f-7mX"/>
                         <outlet property="regionButton2" destination="P2l-lG-aUW" id="LjW-Rl-hjW"/>
                         <outlet property="regionButton3" destination="IC9-S0-1I9" id="dvB-e5-k6x"/>
                         <outlet property="regionButton4" destination="oXV-Oz-Aob" id="riU-Td-Ksg"/>
                         <outlet property="regionButton5" destination="bYI-u2-NIN" id="HHY-T2-ryC"/>
                         <outlet property="regionButton6" destination="fUl-Cb-OJa" id="vPK-c6-Pnm"/>
+                        <outlet property="seoulUnderline" destination="DkX-GJ-AX5" id="VAA-W1-eNW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxW-0n-Hel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
