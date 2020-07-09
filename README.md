@@ -1,4 +1,8 @@
-<h1 align="center"> Cozy_iOS 📗 </h1>
+<p align="center">
+  <img src="./Readme-images/cozy.png" width="100" />   
+</p>
+
+<h1 align="center"> Cozy_iOS </h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/SOPT-blue" />
