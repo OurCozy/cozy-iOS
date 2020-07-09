@@ -21,6 +21,10 @@ class LogoSearchCollectionViewCell: UICollectionViewCell, Reusable {
     
     @IBAction func touchUpSearchButton(_ sender: UIButton) {
         print("MainSearchButton 터치됨")
+        let storyboard = UIStoryboard(name: "Search", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.window?.rootViewController?.present(vc, animated: true, completion: nil)
     }
     
 }

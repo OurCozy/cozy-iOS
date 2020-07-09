@@ -15,7 +15,10 @@ class CardCollectionViewCell: UICollectionViewCell, NibReusable {
     
     override func awakeFromNib() {
     super.awakeFromNib()
-
+        
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+        
     // Round the corners
     self.commonView.layer.cornerRadius = 10
     self.commonView.layer.masksToBounds = true

@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "icContentAddress.png",
       "idiom" : "universal",
+      "filename" : "icContentAddress.png",
       "scale" : "1x"
     },
     {
-      "filename" : "icContentAddress@2x.png",
       "scale" : "2x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "icContentAddress@2x.png"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
+      "scale" : "3x",
       "filename" : "icContentAddress@3x.png"
     }
   ],
