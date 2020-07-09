@@ -84,8 +84,8 @@ class MapViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Search", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
         
+        present(vc, animated: true, completion: nil)
     }
     
     // deselect table cell
@@ -178,7 +178,6 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
     func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
         return true
     }
-    
 }
 
 class HalfSizePresentationController : UIPresentationController {
@@ -187,8 +186,7 @@ class HalfSizePresentationController : UIPresentationController {
             guard let theView = containerView else {
                 return CGRect.zero
             }
-
-            return CGRect(x: 0, y: theView.bounds.height/2, width: theView.bounds.width, height: theView.bounds.height/2)
+            return CGRect(x: 0, y: theView.bounds.height-306, width: theView.bounds.width, height: 306)
         }
     }
 }
