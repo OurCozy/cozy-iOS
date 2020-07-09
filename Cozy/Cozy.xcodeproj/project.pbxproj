@@ -53,6 +53,8 @@
 		B63341EB24B328C30070F8C4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341EA24B328C30070F8C4 /* SearchViewController.swift */; };
 		B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */; };
 		B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63341F324B34F630070F8C4 /* MapDetail.storyboard */; };
+		B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */; };
+		B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,8 @@
 		B63341EA24B328C30070F8C4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		B63341F324B34F630070F8C4 /* MapDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDetail.storyboard; sourceTree = "<group>"; };
+		B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectRegion.storyboard; sourceTree = "<group>"; };
+		B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionViewController.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -267,6 +271,7 @@
 		55E839DA24AF2A0E003C64FE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B6776B4524B7081C00BF0E53 /* SelectRegion */,
 				B63341F524B3515B0070F8C4 /* MapDetail */,
 				B63341E924B328A90070F8C4 /* Search */,
 				B63341DE24B18C140070F8C4 /* Main */,
@@ -318,6 +323,7 @@
 				55E839D024AF29C6003C64FE /* LaunchScreen.storyboard */,
 				B63341E724B328880070F8C4 /* Search.storyboard */,
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
+				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -373,6 +379,14 @@
 				B63341E524B1D45F0070F8C4 /* MapDetailViewController.swift */,
 			);
 			path = MapDetail;
+			sourceTree = "<group>";
+		};
+		B6776B4524B7081C00BF0E53 /* SelectRegion */ = {
+			isa = PBXGroup;
+			children = (
+				B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */,
+			);
+			path = SelectRegion;
 			sourceTree = "<group>";
 		};
 		DA6EB647575B9EB8135F0FC1 /* Pods */ = {
@@ -450,6 +464,7 @@
 				B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */,
 				55E839E024AF2AD1003C64FE /* Map.storyboard in Resources */,
 				55E839CF24AF29C6003C64FE /* Assets.xcassets in Resources */,
+				B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */,
 				B63341E824B328880070F8C4 /* Search.storyboard in Resources */,
 				55E839E424AF2AEA003C64FE /* MyPage.storyboard in Resources */,
 				55ABB33C24B37901008B5A5B /* DetailViewController.storyboard in Resources */,
@@ -512,6 +527,7 @@
 				55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */,
 				55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */,
 				55CE354924B3444B001210A7 /* DetailViewController.swift in Sources */,
+				B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */,
 				183C1E2F24B1D5E500FFE494 /* BookStoreTableViewCell.swift in Sources */,
 				55ABB33824B37681008B5A5B /* CustomTransitionAnimation.swift in Sources */,
 				55CE354324B32F81001210A7 /* UICollectionView+Reusable.swift in Sources */,

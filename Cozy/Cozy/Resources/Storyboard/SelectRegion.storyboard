@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Region View Controller-->
+        <scene sceneID="X7l-f7-7hL">
+            <objects>
+                <viewController storyboardIdentifier="SelectRegionViewController" id="yhC-EY-6Na" customClass="SelectRegionViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tfI-dd-MXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fLP-XH-1QU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="87"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqf-aD-G1d">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="87"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE7-MR-BoO">
+                                                <rect key="frame" x="86" y="25.5" width="35" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="서울">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectSeoulButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="JYj-9Z-GYY"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkX-GJ-AX5">
+                                                <rect key="frame" x="85" y="57.5" width="37" height="2"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="A3P-SC-obN"/>
+                                                    <constraint firstAttribute="height" constant="2" id="OqA-Qy-sjQ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JE7-MR-BoO" firstAttribute="centerY" secondItem="Lqf-aD-G1d" secondAttribute="centerY" id="2Bv-MF-oTo"/>
+                                            <constraint firstItem="DkX-GJ-AX5" firstAttribute="centerX" secondItem="Lqf-aD-G1d" secondAttribute="centerX" id="Fac-rV-WzG"/>
+                                            <constraint firstItem="JE7-MR-BoO" firstAttribute="centerX" secondItem="Lqf-aD-G1d" secondAttribute="centerX" id="Zyh-7G-SlT"/>
+                                            <constraint firstItem="DkX-GJ-AX5" firstAttribute="top" secondItem="JE7-MR-BoO" secondAttribute="bottom" constant="-4" id="cti-xf-a8U"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MJ-2W-9Md">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="87"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJV-kT-yc5">
+                                                <rect key="frame" x="86" y="25.5" width="35" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="경기">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectGyeongiButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="XJY-VG-6Wz"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-EA-YTi">
+                                                <rect key="frame" x="85" y="57.5" width="37" height="2"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="bCh-TF-YwW"/>
+                                                    <constraint firstAttribute="height" constant="2" id="gPO-wJ-TgF"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="LJV-kT-yc5" firstAttribute="centerY" secondItem="9MJ-2W-9Md" secondAttribute="centerY" id="Ohk-aD-Uja"/>
+                                            <constraint firstItem="gAK-EA-YTi" firstAttribute="top" secondItem="LJV-kT-yc5" secondAttribute="bottom" constant="-4" id="Vt8-mC-vSz"/>
+                                            <constraint firstItem="gAK-EA-YTi" firstAttribute="centerX" secondItem="9MJ-2W-9Md" secondAttribute="centerX" id="WhD-7H-Y0A"/>
+                                            <constraint firstItem="LJV-kT-yc5" firstAttribute="centerX" secondItem="9MJ-2W-9Md" secondAttribute="centerX" id="wjB-to-1Y7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="2dF-MV-8uA"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pFF-eU-IJF">
+                                <rect key="frame" x="0.0" y="131" width="414" height="183"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="51d-3I-Dbs">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-Dv-2O7">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="61"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfN-YJ-nQO">
+                                                        <rect key="frame" x="24" y="9" width="168" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="OLA-ri-hNV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="마포구">
+                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="NxK-uu-B4d"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="WfN-YJ-nQO" firstAttribute="centerY" secondItem="Gk2-Dv-2O7" secondAttribute="centerY" id="72t-LW-7St"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WfN-YJ-nQO" secondAttribute="trailing" constant="15" id="Nxs-my-iuE"/>
+                                                    <constraint firstItem="WfN-YJ-nQO" firstAttribute="leading" secondItem="Gk2-Dv-2O7" secondAttribute="leading" constant="24" id="cmE-St-kVl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mO0-mx-FRD">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="61"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2l-lG-aUW">
+                                                        <rect key="frame" x="15" y="9" width="168" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="XCL-M4-kOi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="용산구">
+                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="jzP-Y5-Zds"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="P2l-lG-aUW" firstAttribute="centerY" secondItem="mO0-mx-FRD" secondAttribute="centerY" id="gt2-Vo-fFe"/>
+                                                    <constraint firstItem="P2l-lG-aUW" firstAttribute="leading" secondItem="mO0-mx-FRD" secondAttribute="leading" constant="15" id="lGs-Fv-A9b"/>
+                                                    <constraint firstAttribute="trailing" secondItem="P2l-lG-aUW" secondAttribute="trailing" constant="24" id="uBq-IL-GZV"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Gk2-Dv-2O7" firstAttribute="top" secondItem="51d-3I-Dbs" secondAttribute="top" id="1yI-BY-LUr"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gk2-Dv-2O7" secondAttribute="bottom" id="Hz8-cy-UNg"/>
+                                            <constraint firstItem="Gk2-Dv-2O7" firstAttribute="leading" secondItem="51d-3I-Dbs" secondAttribute="leading" id="Te4-nW-2rb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FCH-MI-P4S">
+                                        <rect key="frame" x="0.0" y="61" width="414" height="61"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-PF-sMj">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="61"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IC9-S0-1I9">
+                                                        <rect key="frame" x="24" y="9" width="168" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="lgO-ye-fQo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="관악구/영등포구">
+                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="P0S-o0-WSF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="IC9-S0-1I9" firstAttribute="leading" secondItem="Lac-PF-sMj" secondAttribute="leading" constant="24" id="MPm-qN-hEa"/>
+                                                    <constraint firstItem="IC9-S0-1I9" firstAttribute="centerY" secondItem="Lac-PF-sMj" secondAttribute="centerY" id="ouM-Ry-CMp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IC9-S0-1I9" secondAttribute="trailing" constant="15" id="stB-5d-VrG"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAV-rF-70N">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="61"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXV-Oz-Aob">
+                                                        <rect key="frame" x="15" y="9" width="168" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="k6J-b6-9O7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="광진구/동대문구">
+                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="ScX-48-knk"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="oXV-Oz-Aob" firstAttribute="leading" secondItem="LAV-rF-70N" secondAttribute="leading" constant="15" id="OeT-X9-HXy"/>
+                                                    <constraint firstItem="oXV-Oz-Aob" firstAttribute="centerY" secondItem="LAV-rF-70N" secondAttribute="centerY" id="gu5-Fp-4hb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oXV-Oz-Aob" secondAttribute="trailing" constant="24" id="pZD-gf-Z3w"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Lac-PF-sMj" firstAttribute="leading" secondItem="FCH-MI-P4S" secondAttribute="leading" id="OIR-Lq-KnF"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lac-PF-sMj" secondAttribute="bottom" id="hsO-Bl-wW6"/>
+                                            <constraint firstItem="Lac-PF-sMj" firstAttribute="top" secondItem="FCH-MI-P4S" secondAttribute="top" id="vQt-mq-tpC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-2o-wJ6">
+                                        <rect key="frame" x="0.0" y="122" width="414" height="61"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZX-kA-WXb">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="61"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYI-u2-NIN">
+                                                        <rect key="frame" x="24" y="9" width="168" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="mMD-HR-7BL"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="강남구/서초구">
+                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="dV7-se-4lU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="bYI-u2-NIN" firstAttribute="centerY" secondItem="SZX-kA-WXb" secondAttribute="centerY" id="2wO-oL-ll1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bYI-u2-NIN" secondAttribute="trailing" constant="15" id="EXf-zO-1jo"/>
+                                                    <constraint firstItem="bYI-u2-NIN" firstAttribute="leading" secondItem="SZX-kA-WXb" secondAttribute="leading" constant="24" id="lgP-c4-w3K"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7I-Ax-Rzq">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="61"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUl-Cb-OJa">
+                                                        <rect key="frame" x="15" y="9" width="168" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="bdq-Ha-RDI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="서대문구/종로구">
+                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickRegionButton:" destination="yhC-EY-6Na" eventType="touchUpInside" id="gKc-Ag-KeN"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="fUl-Cb-OJa" firstAttribute="leading" secondItem="S7I-Ax-Rzq" secondAttribute="leading" constant="15" id="0kF-2f-vCF"/>
+                                                    <constraint firstItem="fUl-Cb-OJa" firstAttribute="centerY" secondItem="S7I-Ax-Rzq" secondAttribute="centerY" id="YHP-ZP-WVh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fUl-Cb-OJa" secondAttribute="trailing" constant="24" id="uxG-Ap-sEu"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="SZX-kA-WXb" firstAttribute="leading" secondItem="3bS-2o-wJ6" secondAttribute="leading" id="90w-Jx-UaX"/>
+                                            <constraint firstItem="SZX-kA-WXb" firstAttribute="top" secondItem="3bS-2o-wJ6" secondAttribute="top" id="TFY-Wl-EeA"/>
+                                            <constraint firstAttribute="bottom" secondItem="SZX-kA-WXb" secondAttribute="bottom" id="hlT-dP-MXQ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="51d-3I-Dbs" firstAttribute="leading" secondItem="pFF-eU-IJF" secondAttribute="leading" id="Lq2-n9-Ql4"/>
+                                    <constraint firstAttribute="height" constant="183" id="jy1-0Z-Diz"/>
+                                    <constraint firstAttribute="trailing" secondItem="51d-3I-Dbs" secondAttribute="trailing" id="nAD-DF-xy4"/>
+                                    <constraint firstItem="51d-3I-Dbs" firstAttribute="top" secondItem="pFF-eU-IJF" secondAttribute="top" id="zsD-cG-SVL"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fLP-XH-1QU" firstAttribute="leading" secondItem="Kfh-ha-IYB" secondAttribute="leading" id="6cZ-ZU-fAW"/>
+                            <constraint firstItem="pFF-eU-IJF" firstAttribute="trailing" secondItem="Kfh-ha-IYB" secondAttribute="trailing" id="IzN-mW-kLw"/>
+                            <constraint firstItem="pFF-eU-IJF" firstAttribute="leading" secondItem="Kfh-ha-IYB" secondAttribute="leading" id="Pkv-9m-vdB"/>
+                            <constraint firstItem="pFF-eU-IJF" firstAttribute="top" secondItem="fLP-XH-1QU" secondAttribute="bottom" id="UHX-Rd-jdR"/>
+                            <constraint firstItem="Kfh-ha-IYB" firstAttribute="trailing" secondItem="fLP-XH-1QU" secondAttribute="trailing" id="WaX-uj-GGb"/>
+                            <constraint firstItem="fLP-XH-1QU" firstAttribute="top" secondItem="Kfh-ha-IYB" secondAttribute="top" id="cmK-k3-qVK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kfh-ha-IYB"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonView" destination="pFF-eU-IJF" id="kIL-xg-Llj"/>
+                        <outlet property="gyeongiUnderline" destination="gAK-EA-YTi" id="uVs-xv-3s1"/>
+                        <outlet property="regionButton1" destination="WfN-YJ-nQO" id="wFl-9f-7mX"/>
+                        <outlet property="regionButton2" destination="P2l-lG-aUW" id="LjW-Rl-hjW"/>
+                        <outlet property="regionButton3" destination="IC9-S0-1I9" id="dvB-e5-k6x"/>
+                        <outlet property="regionButton4" destination="oXV-Oz-Aob" id="riU-Td-Ksg"/>
+                        <outlet property="regionButton5" destination="bYI-u2-NIN" id="HHY-T2-ryC"/>
+                        <outlet property="regionButton6" destination="fUl-Cb-OJa" id="vPK-c6-Pnm"/>
+                        <outlet property="seoulUnderline" destination="DkX-GJ-AX5" id="VAA-W1-eNW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxW-0n-Hel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81.159420289855078" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+</document>
