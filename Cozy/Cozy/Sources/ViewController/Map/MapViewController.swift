@@ -68,8 +68,15 @@ class MapViewController: UIViewController {
         }
     }
     
+    // 지역 선택 버튼 클릭
     @objc func clickDownButton(){
-        print("click down button ")
+        let storybaord = UIStoryboard(name: "SelectRegion", bundle: nil)
+        let pvc = storybaord.instantiateViewController(identifier: "SelectRegionViewController") as! SelectRegionViewController
+        
+        pvc.transitioningDelegate = self
+        pvc.modalPresentationStyle = .custom
+        
+        present(pvc, animated: true, completion: nil)
     }
     
     // search image click event
@@ -81,7 +88,7 @@ class MapViewController: UIViewController {
         
     }
     
-    // table cell deselect
+    // deselect table cell
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         if let index = self.tableView.indexPathForSelectedRow {
@@ -90,7 +97,13 @@ class MapViewController: UIViewController {
     }
 }
 
-extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
+extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
+    
+    // present half
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return HalfSizePresentationController(presentedViewController: presented, presenting: presenting)
+    }
+    
     // table view height 지정
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
@@ -148,16 +161,10 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-    }
-    
     // 처음 스크롤 시작할 때 한 번만 호출
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-//        print("💖 willbegin")
         self.underlineView.isHidden = true
         self.downButton.isHidden = true
-        
     }
     
     // 스크롤 종료시 한 번만 호출
@@ -172,4 +179,16 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
         return true
     }
     
+}
+
+class HalfSizePresentationController : UIPresentationController {
+    override var frameOfPresentedViewInContainerView: CGRect {
+        get {
+            guard let theView = containerView else {
+                return CGRect.zero
+            }
+
+            return CGRect(x: 0, y: theView.bounds.height/2, width: theView.bounds.width, height: theView.bounds.height/2)
+        }
+    }
 }
