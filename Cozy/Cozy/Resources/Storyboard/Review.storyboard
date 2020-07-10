@@ -14,13 +14,184 @@
                     <view key="view" contentMode="scaleToFill" id="Hld-K8-hc9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjR-j3-fcu">
+                                <rect key="frame" x="13" y="48" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZjR-j3-fcu" secondAttribute="height" multiplier="1:1" id="OjE-Bu-aj7"/>
+                                    <constraint firstAttribute="height" constant="48" id="niN-kP-bTY"/>
+                                    <constraint firstAttribute="width" constant="48" id="wbp-5x-SZQ"/>
+                                </constraints>
+                                <state key="normal" image="icXDark"/>
+                                <connections>
+                                    <action selector="goBack:" destination="E8F-kP-N97" eventType="touchUpInside" id="FHa-eE-Lim"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKM-x0-EjJ">
+                                <rect key="frame" x="358" y="58" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goNextButton:" destination="E8F-kP-N97" eventType="touchUpInside" id="eb9-C0-wHv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 책방은 어떠셨나요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5e-ts-i3L">
+                                <rect key="frame" x="24" y="124" width="210.5" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uj2-r0-sj0">
+                                <rect key="frame" x="28" y="195" width="180" height="35"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="en2-Uj-Kto">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-vw-fQl">
+                                                <rect key="frame" x="-3.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="8Z5-tg-QBM"/>
+                                                    <constraint firstAttribute="height" constant="35" id="M8H-FP-IQi"/>
+                                                    <constraint firstAttribute="width" secondItem="D3e-vw-fQl" secondAttribute="height" multiplier="1:1" id="apF-bf-kRK"/>
+                                                </constraints>
+                                                <state key="normal" image="icCommentsStar"/>
+                                                <connections>
+                                                    <action selector="clickStar:" destination="E8F-kP-N97" eventType="touchUpInside" id="NkE-Hg-i0R"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="D3e-vw-fQl" firstAttribute="centerX" secondItem="en2-Uj-Kto" secondAttribute="centerX" id="4c0-1L-p9C"/>
+                                            <constraint firstItem="D3e-vw-fQl" firstAttribute="centerY" secondItem="en2-Uj-Kto" secondAttribute="centerY" id="9bU-vi-QeM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8e-kJ-f6M">
+                                        <rect key="frame" x="38" y="0.0" width="28" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R95-vp-mvV">
+                                                <rect key="frame" x="-3.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="R95-vp-mvV" secondAttribute="height" multiplier="1:1" id="2A8-M9-42j"/>
+                                                    <constraint firstAttribute="height" constant="35" id="atO-lB-BHz"/>
+                                                    <constraint firstAttribute="width" constant="35" id="i6S-6z-x5k"/>
+                                                </constraints>
+                                                <state key="normal" image="icCommentsStar"/>
+                                                <connections>
+                                                    <action selector="clickStar:" destination="E8F-kP-N97" eventType="touchUpInside" id="9Db-oy-6LO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="R95-vp-mvV" firstAttribute="centerY" secondItem="U8e-kJ-f6M" secondAttribute="centerY" id="VZ4-rg-ZwZ"/>
+                                            <constraint firstItem="R95-vp-mvV" firstAttribute="centerX" secondItem="U8e-kJ-f6M" secondAttribute="centerX" id="cfv-1c-jSl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-JZ-jdc">
+                                        <rect key="frame" x="76" y="0.0" width="28" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjp-LI-hMh">
+                                                <rect key="frame" x="-3.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="wjp-LI-hMh" secondAttribute="height" multiplier="1:1" id="bva-hl-OHh"/>
+                                                    <constraint firstAttribute="height" constant="35" id="ijD-eU-syz"/>
+                                                    <constraint firstAttribute="width" constant="35" id="uxr-kw-kJl"/>
+                                                </constraints>
+                                                <state key="normal" image="icCommentsStar"/>
+                                                <connections>
+                                                    <action selector="clickStar:" destination="E8F-kP-N97" eventType="touchUpInside" id="umc-J0-vy7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="wjp-LI-hMh" firstAttribute="centerX" secondItem="gCK-JZ-jdc" secondAttribute="centerX" id="Z0k-gn-9BI"/>
+                                            <constraint firstItem="wjp-LI-hMh" firstAttribute="centerY" secondItem="gCK-JZ-jdc" secondAttribute="centerY" id="mD9-db-qdo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xz-b8-qCP">
+                                        <rect key="frame" x="114" y="0.0" width="28" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsD-bt-EPb">
+                                                <rect key="frame" x="-3.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DsD-bt-EPb" secondAttribute="height" multiplier="1:1" id="HRH-Jr-Ujg"/>
+                                                    <constraint firstAttribute="height" constant="35" id="bGG-Mk-pEU"/>
+                                                    <constraint firstAttribute="width" constant="35" id="nRe-Ne-j5f"/>
+                                                </constraints>
+                                                <state key="normal" image="icCommentsStar"/>
+                                                <connections>
+                                                    <action selector="clickStar:" destination="E8F-kP-N97" eventType="touchUpInside" id="9t2-ir-OOG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="DsD-bt-EPb" firstAttribute="centerY" secondItem="1Xz-b8-qCP" secondAttribute="centerY" id="18r-mc-2wu"/>
+                                            <constraint firstItem="DsD-bt-EPb" firstAttribute="centerX" secondItem="1Xz-b8-qCP" secondAttribute="centerX" id="LHC-Yf-SR5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-H1-lUR">
+                                        <rect key="frame" x="152" y="0.0" width="28" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-bF-txi">
+                                                <rect key="frame" x="-3.5" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="IPv-Ao-BbU"/>
+                                                    <constraint firstAttribute="width" secondItem="SzS-bF-txi" secondAttribute="height" multiplier="1:1" id="X5A-q1-pMs"/>
+                                                    <constraint firstAttribute="width" constant="35" id="Yzh-bw-gun"/>
+                                                </constraints>
+                                                <state key="normal" image="icCommentsStar"/>
+                                                <connections>
+                                                    <action selector="clickStar:" destination="E8F-kP-N97" eventType="touchUpInside" id="pHZ-lN-xn7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="SzS-bF-txi" firstAttribute="centerX" secondItem="LEJ-H1-lUR" secondAttribute="centerX" id="h4F-vT-Y1y"/>
+                                            <constraint firstItem="SzS-bF-txi" firstAttribute="centerY" secondItem="LEJ-H1-lUR" secondAttribute="centerY" id="zcr-Sa-J4T"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="1zB-TD-c0R"/>
+                                    <constraint firstAttribute="width" constant="180" id="Pe8-oS-jDz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uj2-r0-sj0" firstAttribute="leading" secondItem="3oh-xC-FGI" secondAttribute="leading" constant="28" id="9M8-e2-6vx"/>
+                            <constraint firstItem="3oh-xC-FGI" firstAttribute="trailing" secondItem="yKM-x0-EjJ" secondAttribute="trailing" constant="24" id="NOR-T2-x3P"/>
+                            <constraint firstItem="o5e-ts-i3L" firstAttribute="leading" secondItem="3oh-xC-FGI" secondAttribute="leading" constant="24" id="Ovm-d1-MUZ"/>
+                            <constraint firstItem="ZjR-j3-fcu" firstAttribute="leading" secondItem="3oh-xC-FGI" secondAttribute="leading" constant="13" id="R40-v9-OIW"/>
+                            <constraint firstItem="o5e-ts-i3L" firstAttribute="top" secondItem="ZjR-j3-fcu" secondAttribute="bottom" constant="28" id="ShR-IK-1mH"/>
+                            <constraint firstItem="uj2-r0-sj0" firstAttribute="top" secondItem="o5e-ts-i3L" secondAttribute="bottom" constant="42" id="UYe-fz-3Sz"/>
+                            <constraint firstItem="ZjR-j3-fcu" firstAttribute="top" secondItem="3oh-xC-FGI" secondAttribute="top" constant="4" id="WGh-Dg-26L"/>
+                            <constraint firstItem="yKM-x0-EjJ" firstAttribute="top" secondItem="3oh-xC-FGI" secondAttribute="top" constant="14" id="gt6-WF-od4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3oh-xC-FGI"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="yKM-x0-EjJ" id="0Os-Tb-Sh7"/>
+                        <outlet property="star1" destination="D3e-vw-fQl" id="tiK-md-x0I"/>
+                        <outlet property="star2" destination="R95-vp-mvV" id="bcH-0P-UOq"/>
+                        <outlet property="star3" destination="wjp-LI-hMh" id="JFQ-3M-OrL"/>
+                        <outlet property="star4" destination="DsD-bt-EPb" id="nyq-qY-CyR"/>
+                        <outlet property="star5" destination="SzS-bF-txi" id="uNi-UD-xHk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf0-52-1tn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-52" y="-277"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icCommentsStar" width="35" height="35"/>
+        <image name="icXDark" width="48" height="48"/>
+    </resources>
 </document>

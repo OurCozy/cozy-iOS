@@ -144,6 +144,9 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             let storyboard = UIStoryboard(name: "MapDetail", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "MapDetailViewController") as! MapDetailViewController
             
+//            self.underlineImage.isHidden = true
+//            self.downButton.isHidden = true
+//
 //            self.navigationController?.pushViewController(vc, animated: true)
             
             vc.modalPresentationStyle = .fullScreen
