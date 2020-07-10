@@ -9,6 +9,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var testLabel: UILabel!
     
+    
     // Constraint from the top of the CommonView to the top of the MaskView
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
 
@@ -20,11 +21,14 @@ class DetailViewController: UIViewController, StoryboardBased {
     }
     
     override func viewDidLoad() {
-        
     }
 
     @IBAction func closePressed(_ sender: Any) {
         
+        
+        
+        
+        //self.scrollView.scrollToTop()
         self.setTabBarHidden(false)
         self.navigationController?.popViewController(animated: true)
         
@@ -70,7 +74,7 @@ extension DetailViewController: Animatable {
 
         // Push the content of the common view down to stay within the safe area insets
         
-//        let safeAreaTop = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? .zero
+
 //        let safeAreaTop =
 //            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.safeAreaInsets.top ?? .zero
         
@@ -125,5 +129,15 @@ extension DetailViewController: Animatable {
         positionAnimator.addAnimations {
             self.asCard(true)
         }
+    }
+}
+
+
+
+extension UIScrollView {
+    
+    func scrollToTop() {
+        let topOffset = CGPoint(x: 0, y: -contentInset.top)
+        setContentOffset(topOffset, animated: false)
     }
 }

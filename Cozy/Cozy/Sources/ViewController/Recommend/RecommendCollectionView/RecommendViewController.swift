@@ -12,6 +12,7 @@ class RecommendViewController: UIViewController {
     
     @IBOutlet weak var recommendCollectionView: UICollectionView!
     
+    
     fileprivate var selectedCell: UICollectionViewCell?
     private var isStatusBarHidden = false
     
@@ -24,6 +25,11 @@ class RecommendViewController: UIViewController {
         //        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         
         //dev pull 완료
+        
+//        self.tabBarItem.image = UIImage(named: "icTabMain")?.withRenderingMode(.alwaysOriginal)
+//        self.tabBarItem.title = "asdf"
+    
+        
         
         recommendCollectionView.delegate = self
         recommendCollectionView.dataSource = self
@@ -85,9 +91,6 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             let vc = DetailViewController.instantiate()
             
             //self.tabBarController?.tabBar.isHidden = true
-            
-            
-            //self.tabBarController?.setTabBarHidden(true)
             self.setTabBarHidden(true)
             self.navigationController?.pushViewController(vc, animated: true)
         }
