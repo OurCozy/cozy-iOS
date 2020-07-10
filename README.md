@@ -70,10 +70,15 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 | 메인 추천 및 DetailView - 탭바 밑으로 내려가고 위로 올라가는 애니메이션 구현 |     [📘인준](https://github.com/iJoom)     |
 |           메인 추천뷰 - 서버APi 이용한 통신 붙이기           |                     -                     |
 |         메인 DetailView - 지도APi 구현 및 링크 연결          |                     -                     |
-|       MapView - 테이블뷰 이용한 커스텀 디자인뷰 그리기       | [📙은지](https://github.com/ChoiEunji0114) |
-| MapView - 테이블뷰 터치시 Detai View 이동 및 DetailView 작업 | [📙은지](https://github.com/ChoiEunji0114) |
-|         MapDetailView - APPLE지도 이용하여 위치 표시         | [📙은지](https://github.com/ChoiEunji0114) |
-|            SearchView - View 그리기 및 코드 연결             | [📙은지](https://github.com/ChoiEunji0114) |
+| MapView - 지역에 따른 서점 리스트 조회 | [📙은지](https://github.com/ChoiEunji0114) |
+| MapView - custom navigation bar | [📙은지](https://github.com/ChoiEunji0114) |
+| MapView - 지역 선택 pop up view | [📙은지](https://github.com/ChoiEunji0114) |
+| MapView - 서점 리스트 서버 통신 | [📙은지](https://github.com/ChoiEunji0114) |
+| MapDetailView - APPLE지도 이용하여 위치 표시 | [📙은지](https://github.com/ChoiEunji0114) |
+| MapDetailView - 경로 버튼 클릭시 네이버 맵 이동 | [📙은지](https://github.com/ChoiEunji0114) |
+| MapDetailView - 서점 상세 정보 서버 통신 | [📙은지](https://github.com/ChoiEunji0114) |
+| Review - 별점 | [📙은지](https://github.com/ChoiEunji0114) |
+| SearchView - View 그리기 및 코드 연결 | [📙은지](https://github.com/ChoiEunji0114) |
 |           Server 통신을 이용한 나만의 북마크 기능            |                     -                     |
 |     BookMarkView - 테이블뷰를 이용한 커스텀 View 그리기      |  [📗재욱](https://github.com/didwodnr123)  |
 |             BookMarkView - 서점에 관한 Tag 구현              |  [📗재욱](https://github.com/didwodnr123)  |
