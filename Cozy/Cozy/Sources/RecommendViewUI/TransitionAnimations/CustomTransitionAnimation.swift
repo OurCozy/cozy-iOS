@@ -91,14 +91,14 @@ extension CustomTransitionAnimation {
         // all of our animations are done.
 
         // Animate the card's vertical position
-        let positionAnimator = UIViewPropertyAnimator(duration: self.positioningDuration, dampingRatio: 0.7)
+        let positionAnimator = UIViewPropertyAnimator(duration: self.positioningDuration - 0.1, dampingRatio: 0.7) //base dampingRatio 0.7
         positionAnimator.addAnimations {
             // Move the view in the Y direction
             toView.transform = CGAffineTransform(translationX: 0, y: yDiff)
         }
 
         // Animate the card's size
-        let sizeAnimator = UIViewPropertyAnimator(duration: self.resizingDuration, curve: .easeInOut)
+        let sizeAnimator = UIViewPropertyAnimator(duration: self.resizingDuration - 0.1, curve: .easeInOut)
         sizeAnimator.addAnimations {
             // Animate the size of the Card View
             toView.frame.size = destinationFrame.size
