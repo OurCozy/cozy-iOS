@@ -41,7 +41,6 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
     }
     
-    
     @IBAction func goNaverMap(_ sender: UIButton) {
         // bundle id : gamsung.Cozy
         let naverMapURL = URL(string: "nmap://map?&appname=com.example.myapp")

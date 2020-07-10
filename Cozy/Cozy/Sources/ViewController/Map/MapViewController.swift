@@ -15,6 +15,8 @@ class MapViewController: UIViewController {
     private let underlineImage = UIImageView(image: UIImage(named: "imgMapLine"))
     private let downButton = UIButton()
     
+    private let underlineImageForSmallTitle = UIImageView(image: UIImage(named: "imgMapLine"))
+    
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView! // table view
     
@@ -37,7 +39,6 @@ class MapViewController: UIViewController {
             downButton.setImage(UIImage(named: "icDownArrow"), for: .normal)
             downButton.clipsToBounds = true
             downButton.translatesAutoresizingMaskIntoConstraints = false
-            
             downButton.addTarget(self, action: #selector(clickDownButton), for: .touchUpInside)
             
             NSLayoutConstraint.activate([
@@ -142,6 +143,9 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
         if indexPath.section == 1 {
             let storyboard = UIStoryboard(name: "MapDetail", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "MapDetailViewController") as! MapDetailViewController
+            
+//            self.navigationController?.pushViewController(vc, animated: true)
+            
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
@@ -149,7 +153,7 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
     
     // 스크롤 할 때마다 호출
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y <= 0 {
+        if scrollView.contentOffset.y <= 1 {
             self.underlineImage.isHidden = false
             self.downButton.isHidden = false
         } else {
