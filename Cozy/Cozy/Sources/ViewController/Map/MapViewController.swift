@@ -8,23 +8,14 @@
 
 import UIKit
 
-// search image const
-private struct Const {
-    static let ImageSizeForLargeState: CGFloat = 40
-    static let ImageRightMargin: CGFloat = 16
-    static let ImageBottomMarginForLargeState: CGFloat = 12
-    static let ImageBottomMarginForSmallState: CGFloat = 6
-    static let ImageSizeForSmallState: CGFloat = 32
-    static let NavBarHeightSmallState: CGFloat = 44
-    static let NavBarHeightLargeState: CGFloat = 96.5
-}
-
 class MapViewController: UIViewController {
     
     private let searchImage = UIImageView(image: UIImage(named: "icSearch")) // search image
-    private let underlineView = UIView(frame: CGRect(x: 17, y: 98, width: 85, height: 2))
-    let downButton = UIButton(frame: CGRect(x: 100, y: 55, width: 42, height: 42))
     
+    private let underlineImage = UIImageView(image: UIImage(named: "imgMapLine"))
+    private let downButton = UIButton()
+    
+    @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView! // table view
     
     override func viewDidLoad() {
@@ -33,39 +24,43 @@ class MapViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.searchButton.tintColor = UIColor.gray
+        
         // iOS 11 버전 이상에서 실행
         if #available(iOS 11.0, *){
-            self.navigationController?.navigationBar.prefersLargeTitles = true
-            
-            // insert searchImage
-            self.navigationController?.navigationBar.addSubview(searchImage)
-            
-            // add imageview click event
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchImageTapped))
-            searchImage.isUserInteractionEnabled = true
-            searchImage.addGestureRecognizer(tapGestureRecognizer)
-            
-            searchImage.layer.cornerRadius = Const.ImageSizeForLargeState / 2
-            searchImage.clipsToBounds = true
-            searchImage.translatesAutoresizingMaskIntoConstraints = false
-            
-            // insert underline view
-            underlineView.layer.backgroundColor = UIColor.dustyOrange.cgColor
-            self.navigationController?.navigationBar.addSubview(underlineView)
-            
-            // insert down arrow button
-            downButton.setImage(UIImage(named: "icDownArrow"), for: .normal)
+            self.navigationController?.navigationBar.addSubview(underlineImage)
             self.navigationController?.navigationBar.addSubview(downButton)
-            self.downButton.addTarget(self, action: #selector(clickDownButton), for: .touchUpInside)
             
-            // search image 지정
+            underlineImage.clipsToBounds = true
+            underlineImage.translatesAutoresizingMaskIntoConstraints = false
+            
+            downButton.setImage(UIImage(named: "icDownArrow"), for: .normal)
+            downButton.clipsToBounds = true
+            downButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            downButton.addTarget(self, action: #selector(clickDownButton), for: .touchUpInside)
+            
             NSLayoutConstraint.activate([
-                searchImage.rightAnchor.constraint(equalTo: (self.navigationController?.navigationBar.rightAnchor)!, constant: -Const.ImageRightMargin),
-                searchImage.bottomAnchor.constraint(equalTo: (self.navigationController?.navigationBar.bottomAnchor)!, constant: -Const.ImageBottomMarginForLargeState),
-                searchImage.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
-                searchImage.widthAnchor.constraint(equalTo: searchImage.heightAnchor),
+                underlineImage.leftAnchor.constraint(equalTo: (self.navigationController?.navigationBar.leftAnchor)!, constant: 15),
+                underlineImage.bottomAnchor.constraint(equalTo: (self.navigationController?.navigationBar.bottomAnchor)!, constant: -10),
+                underlineImage.widthAnchor.constraint(equalToConstant: 88),
+                
+                downButton.leftAnchor.constraint(equalTo: (self.navigationController?.navigationBar.leftAnchor)!, constant: 100),
+                downButton.bottomAnchor.constraint(equalTo: (self.navigationController?.navigationBar.bottomAnchor)!, constant: -10),
+                downButton.widthAnchor.constraint(equalToConstant: 42),
+                downButton.heightAnchor.constraint(equalToConstant: 42)
             ])
         }
+    }
+    
+    @IBAction func searchButtonClick(_ sender: UIBarButtonItem) {
+        let storybaord = UIStoryboard(name: "SelectRegion", bundle: nil)
+        let pvc = storybaord.instantiateViewController(identifier: "SelectRegionViewController") as! SelectRegionViewController
+        
+        pvc.transitioningDelegate = self
+        pvc.modalPresentationStyle = .custom
+        
+        present(pvc, animated: true, completion: nil)
     }
     
     // 지역 선택 버튼 클릭
@@ -77,15 +72,6 @@ class MapViewController: UIViewController {
         pvc.modalPresentationStyle = .custom
         
         present(pvc, animated: true, completion: nil)
-    }
-    
-    // search image click event
-    @objc func searchImageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-        let storyboard = UIStoryboard(name: "Search", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        vc.modalPresentationStyle = .fullScreen
-        
-        present(vc, animated: true, completion: nil)
     }
     
     // deselect table cell
@@ -161,17 +147,14 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
         }
     }
     
-    // 처음 스크롤 시작할 때 한 번만 호출
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        self.underlineView.isHidden = true
-        self.downButton.isHidden = true
-    }
-    
-    // 스크롤 종료시 한 번만 호출
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y == 0 {
-            self.underlineView.isHidden = false
+    // 스크롤 할 때마다 호출
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= 0 {
+            self.underlineImage.isHidden = false
             self.downButton.isHidden = false
+        } else {
+            self.underlineImage.isHidden = true
+            self.downButton.isHidden = true
         }
     }
     

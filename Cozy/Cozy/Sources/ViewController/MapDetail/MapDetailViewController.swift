@@ -9,8 +9,11 @@
 import UIKit
 import MapKit
 
-class MapDetailViewController: UIViewController {
-
+class MapDetailViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    let scrollTopEdgeInsets: CGFloat = 210
+    
     @IBOutlet weak var bookstoreImageView: UIImageView!
     
     @IBOutlet weak var tagButton1: UIButton!
@@ -18,30 +21,41 @@ class MapDetailViewController: UIViewController {
     @IBOutlet weak var tagButton3: UIButton!
     
     @IBOutlet weak var timeLabel: UILabel!
-    
     @IBOutlet weak var explainLabel: UILabel!
-    
     
     @IBOutlet weak var mapView: MKMapView!
     
-    let eunpyeongLoc = CLLocationCoordinate2D(latitude: 37.6176125, longitude: 126.9227004) // 은평구
+    let eunpyeongLoc = CLLocationCoordinate2D(latitude: 37.6176125, longitude: 126.9227004) // 은평구 (샘플 서점 위치)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setTagButtonUI()
         self.setTimeLabel()
         self.setExplainLabel()
         
         self.mapView.mapType = MKMapType.standard
-        self.setMapView(coordinate: eunpyeongLoc)
+        self.setMapView(coordinate: eunpyeongLoc, addr:"안도북스")
+        
+        scrollView.contentInsetAdjustmentBehavior = .never
+        scrollView.delegate = self
     }
     
-    func setMapView(coordinate: CLLocationCoordinate2D){
+    
+    @IBAction func goNaverMap(_ sender: UIButton) {
+        // bundle id : gamsung.Cozy
+        let naverMapURL = URL(string: "nmap://map?&appname=com.example.myapp")
+        
+        UIApplication.shared.open(naverMapURL!, options: [:], completionHandler: nil)
+    }
+    
+    func setMapView(coordinate: CLLocationCoordinate2D, addr: String){
         let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta:0.01, longitudeDelta:0.01))
         self.mapView.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
+        annotation.title = addr
         self.mapView.addAnnotation(annotation)
     }
     
@@ -79,13 +93,26 @@ class MapDetailViewController: UIViewController {
     func setExplainLabel(){
         self.explainLabel.numberOfLines = 0
         self.explainLabel.text = """
-        스토리지북앤필름 너무 좋은 독립서점이에요. 해방촌의 분위기를
-        좋아하는데 이 책방이 한 몫하는것 같아요. 골목길에 있지만 일부러
-        찾아오는 책방입니다! 대형서점에 없는 책들도 많고 가게 자체도
+            스토리지북앤필름 너무 좋은 독립서점이에요. 해방촌의 분위기를
+            좋아하는데 이 책방이 한 몫하는것 같아요. 골목길에 있지만 일부러
+            찾아오는 책방입니다! 대형서점에 없는 책들도 많고 가게 자체도
         """
     }
     
     @IBAction func clickBookMarkButton(_ sender: UIButton) {
         sender.setImage(UIImage(named: "icBookmarkSelected"), for: .normal)
     }
+    
+    // 스크롤 애니메이션 지정
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let yPosition = scrollView.contentOffset.y
+        
+        if yPosition < 0 {
+           // 위로 스크롤
+        } else {
+            // 아래로 스크롤
+        }
+    }
+    
 }
+

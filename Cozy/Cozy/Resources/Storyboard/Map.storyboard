@@ -175,9 +175,16 @@
                         <viewLayoutGuide key="safeArea" id="foc-yY-XOA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icTabMapSelected" id="lmd-Va-UsU"/>
-                    <navigationItem key="navigationItem" title="마포구" id="DYz-xy-K6e"/>
+                    <navigationItem key="navigationItem" title="마포구" id="DYz-xy-K6e">
+                        <barButtonItem key="rightBarButtonItem" image="icSearch" id="JRA-2t-RZp">
+                            <connections>
+                                <action selector="searchButtonClick:" destination="nBS-Wg-Njp" id="dk2-J7-6iE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchButton" destination="JRA-2t-RZp" id="PjR-Jf-jvC"/>
                         <outlet property="tableView" destination="gHN-Zf-pev" id="PPY-Kf-qwa"/>
                     </connections>
                 </viewController>
@@ -190,8 +197,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G8f-8h-zUb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p0e-8R-BHo">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="p0e-8R-BHo">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -208,6 +215,7 @@
     <resources>
         <image name="74" width="497.33334350585938" height="331.66665649414062"/>
         <image name="icBookmarkSelected" width="57" height="57"/>
+        <image name="icSearch" width="48" height="48"/>
         <image name="icTabMapSelected" width="48" height="48"/>
     </resources>
 </document>
