@@ -35,13 +35,19 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 독립서점과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFQ-tT-VHa">
-                    <rect key="frame" x="20" y="278" width="172" height="29"/>
+                    <rect key="frame" x="16" y="278" width="172" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="MSW-KV-gIm"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그림, 커피 한잔 까지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAC-8h-VUq">
                     <rect key="frame" x="16" y="307" width="187" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="GC2-lC-WB6"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -71,11 +77,11 @@
                 <constraint firstItem="fAC-8h-VUq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="CRu-pB-IsB"/>
                 <constraint firstItem="SSU-nf-gA3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="SWr-da-PNh"/>
                 <constraint firstItem="lFV-do-EzR" firstAttribute="top" secondItem="fAC-8h-VUq" secondAttribute="bottom" constant="5" id="T1g-9u-e4P"/>
-                <constraint firstItem="JFQ-tT-VHa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="TJg-oq-aE5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XUk-0h-It8" secondAttribute="bottom" constant="29" id="VQQ-1d-vYt"/>
                 <constraint firstItem="XUk-0h-It8" firstAttribute="top" secondItem="lFV-do-EzR" secondAttribute="bottom" constant="3" id="Ypk-Io-whY"/>
                 <constraint firstItem="YhX-Kw-o4K" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="af1-In-qpp"/>
                 <constraint firstItem="YTq-94-leq" firstAttribute="top" secondItem="fAC-8h-VUq" secondAttribute="bottom" constant="8" id="fPp-0r-pc1"/>
+                <constraint firstItem="JFQ-tT-VHa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="i0a-p3-e5i"/>
                 <constraint firstItem="YTq-94-leq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="28" id="jmf-z3-IXm"/>
                 <constraint firstAttribute="top" relation="greaterThanOrEqual" secondItem="YhX-Kw-o4K" secondAttribute="top" id="p03-mf-VMm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YTq-94-leq" secondAttribute="bottom" constant="47" id="qeE-d5-Ku3"/>
