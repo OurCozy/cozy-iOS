@@ -32,12 +32,12 @@ class InterestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBookStoreData()
+        //sample data
+        //bookStoreList = [data01, data02, data03]
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        //sample data
-        bookStoreList = [data01, data02, data03]
         
         if #available(iOS 11.0, *){
             self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -69,6 +69,31 @@ class InterestViewController: UIViewController {
         if let index = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: index, animated: true)
         }
+    }
+    
+    func setBookStoreData(){
+        InterestService.shared.getBookStoreData(){ NetworkResult in
+            switch NetworkResult {
+                case .success(let data):
+                    guard let data = data as? [BookStoreServer] else {return print("error")}
+                    print("@@@@@@data@@@@@@")
+                    print(data)
+                    for data in data{
+                        self.bookStoreList.append(BookStore(bookStoreImageName: data.profile, bookStoreName: data.bookstoreName, hashTag01: data.hashtag1, hashTag02: data.hashtag2, hashTag03: data.hashtag3))
+                    }
+                    self.tableView.reloadData()
+
+                case .requestErr(_):
+                    print("Request error@@")
+                case .pathErr:
+                    print("path error")
+                case .serverErr:
+                    print("server error")
+                case .networkFail:
+                    print("network error")
+            }
+        }
+        
     }
     
 }
