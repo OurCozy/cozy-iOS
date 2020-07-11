@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import NMapsMap
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -22,9 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.configureWithDefaultBackground()
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
+        
+       
+       //네이버지도APi Id지정
+        NMFAuthManager.shared().clientId = "aedzgq78bf"
+        
+        
+        
         return true
     }
-
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -38,5 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+
 
 }

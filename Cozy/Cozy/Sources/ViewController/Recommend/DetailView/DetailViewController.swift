@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import NMapsMap
 
 class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var maskView: UIView!
@@ -9,6 +10,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var testLabel: UILabel!
     
+    @IBOutlet weak var detailNaverMapView: NMFMapView!
     
     // Constraint from the top of the CommonView to the top of the MaskView
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
@@ -21,6 +23,17 @@ class DetailViewController: UIViewController, StoryboardBased {
     }
     
     override func viewDidLoad() {
+        
+        //지도 커스텀
+        let marker = NMFMarker()
+        marker.position = NMGLatLng(lat: 37.5670135, lng: 126.9783740)
+        
+        detailNaverMapView.mapType = .basic
+        
+        marker.mapView = detailNaverMapView
+        
+        
+        
     }
 
     @IBAction func closePressed(_ sender: Any) {
