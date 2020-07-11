@@ -35,11 +35,17 @@ class DetailViewController: UIViewController, StoryboardBased {
     func setNaverMap(){
         //지도 커스텀
         let marker = NMFMarker()
-        marker.position = NMGLatLng(lat: 37.5670135, lng: 126.9783740)
-        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.5666102, lng: 126.9783881))
+        marker.position = NMGLatLng(lat: 37.556693, lng: 126.929313)
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.556693, lng: 126.929313))
+        
         cameraUpdate.reason = 3
         cameraUpdate.animation = .fly
         cameraUpdate.animationDuration = 2
+        
+        detailNaverMapView.mapType = .basic
+        detailNaverMapView.minZoomLevel = 5.0
+        detailNaverMapView.maxZoomLevel = 18.0
+        detailNaverMapView.zoomLevel = 15.0
         detailNaverMapView.moveCamera(cameraUpdate, completion: { (isCancelled) in
             if isCancelled {
                 print("카메라 이동 취소")
@@ -49,7 +55,20 @@ class DetailViewController: UIViewController, StoryboardBased {
         })
         
         marker.touchHandler = { (overlay) in
+            
             print("마커 클릭됨")
+            let appStoreURL = URL(string: "http://itunes.apple.com/app/id311867728?mt=8")!
+            if let detailMapURL = URL(string: "nmap://place?lat=37.556693&lng=126.929313&name=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%A0%95%EC%9E%90%EB%8F%99&gamsung.Cozy=Cozy"), UIApplication.shared.canOpenURL(detailMapURL)
+            { // 유효한 URL인지 검사합니다.
+                if #available(iOS 10.0, *) { //iOS 10.0부터 URL를 오픈하는 방법이 변경 되었습니다.
+                    UIApplication.shared.open(detailMapURL, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(appStoreURL)
+                    
+                }
+                
+            }
+            
             return true
         }
         
