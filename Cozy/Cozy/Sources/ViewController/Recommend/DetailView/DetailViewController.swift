@@ -58,7 +58,7 @@ class DetailViewController: UIViewController, StoryboardBased {
             
             print("마커 클릭됨")
             let appStoreURL = URL(string: "http://itunes.apple.com/app/id311867728?mt=8")!
-            if let detailMapURL = URL(string: "nmap://place?lat=37.556693&lng=126.929313&name=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%A0%95%EC%9E%90%EB%8F%99&gamsung.Cozy=Cozy"), UIApplication.shared.canOpenURL(detailMapURL)
+            if let detailMapURL = URL(string: "nmap://place?lat=37.556693&lng=126.929313&name=Cozy%ea%b0%80%20%ec%b6%94%ec%b2%9c%ed%95%98%eb%8a%94%20%ec%84%9c%ec%a0%90&gamsung.Cozy=Cozy"), UIApplication.shared.canOpenURL(detailMapURL)
             { // 유효한 URL인지 검사합니다.
                 if #available(iOS 10.0, *) { //iOS 10.0부터 URL를 오픈하는 방법이 변경 되었습니다.
                     UIApplication.shared.open(detailMapURL, options: [:], completionHandler: nil)
