@@ -58,6 +58,7 @@
 		B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63341F324B34F630070F8C4 /* MapDetail.storyboard */; };
 		B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */; };
 		B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */; };
+		CCF6752A24B8627100A40EC1 /* CollectionViewSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6752924B8627100A40EC1 /* CollectionViewSampleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		B63341F324B34F630070F8C4 /* MapDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDetail.storyboard; sourceTree = "<group>"; };
 		B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectRegion.storyboard; sourceTree = "<group>"; };
 		B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionViewController.swift; sourceTree = "<group>"; };
+		CCF6752924B8627100A40EC1 /* CollectionViewSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSampleVC.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				55E839EC24AF2B51003C64FE /* MyPageViewController.swift */,
+				CCF6752924B8627100A40EC1 /* CollectionViewSampleVC.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */,
 				B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */,
 				55CE354224B32F81001210A7 /* NibLoadable.swift in Sources */,
+				CCF6752A24B8627100A40EC1 /* CollectionViewSampleVC.swift in Sources */,
 				B63341E024B19C210070F8C4 /* CountTableViewCell.swift in Sources */,
 				55CE354124B32F81001210A7 /* Reusable.swift in Sources */,
 				55CE353F24B32F81001210A7 /* StoryboardBased.swift in Sources */,
