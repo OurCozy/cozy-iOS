@@ -34,5 +34,7 @@ struct BookStoreServer: Codable{
     var bookstoreIdx: Int
     var bookstoreName: String
     var profile: String
-    var hashtag: String
+    var hashtag1: String
+    var hashtag2: String
+    var hashtag3: String
 }
