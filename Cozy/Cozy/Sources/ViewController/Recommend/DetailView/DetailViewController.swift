@@ -10,8 +10,10 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var testLabel: UILabel!
     
-    @IBOutlet weak var detailNaverMapView: NMFMapView!
     
+    
+    @IBOutlet weak var detailNaverMapView: NMFMapView!
+    var authState: NMFAuthState!
     // Constraint from the top of the CommonView to the top of the MaskView
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
 
@@ -24,17 +26,36 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     override func viewDidLoad() {
         
+        
+        setNaverMap()
+        
+
+    }
+    
+    func setNaverMap(){
         //지도 커스텀
         let marker = NMFMarker()
         marker.position = NMGLatLng(lat: 37.5670135, lng: 126.9783740)
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.5666102, lng: 126.9783881))
+        cameraUpdate.reason = 3
+        cameraUpdate.animation = .fly
+        cameraUpdate.animationDuration = 2
+        detailNaverMapView.moveCamera(cameraUpdate, completion: { (isCancelled) in
+            if isCancelled {
+                print("카메라 이동 취소")
+            } else {
+                print("카메라 이동 성공")
+            }
+        })
         
-        detailNaverMapView.mapType = .basic
+        marker.touchHandler = { (overlay) in
+            print("마커 클릭됨")
+            return true
+        }
         
         marker.mapView = detailNaverMapView
-        
-        
-        
     }
+    
 
     @IBAction func closePressed(_ sender: Any) {
         
