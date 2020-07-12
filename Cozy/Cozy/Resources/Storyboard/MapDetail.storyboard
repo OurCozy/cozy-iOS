@@ -464,6 +464,19 @@
                                                     <constraint firstAttribute="height" constant="786" id="PtZ-KO-H5a"/>
                                                 </constraints>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agv-EF-Vr3">
+                                                <rect key="frame" x="24" y="2647.5" width="366" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="Iwv-7K-Ax6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <state key="normal" title="더보기">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickDetailButton:" destination="rGK-or-hGE" eventType="touchUpInside" id="pbq-fa-R3J"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -503,6 +516,7 @@
                                             <constraint firstItem="frI-GA-sru" firstAttribute="top" secondItem="BfS-ql-fzE" secondAttribute="bottom" constant="13" id="PdD-TJ-EVP"/>
                                             <constraint firstItem="Qwa-ri-Mrr" firstAttribute="centerX" secondItem="Xty-7E-IzH" secondAttribute="centerX" id="PdL-hz-kwr"/>
                                             <constraint firstItem="3TC-cD-lsL" firstAttribute="top" secondItem="H0F-gZ-F8h" secondAttribute="bottom" constant="17" id="PeI-J0-eFp"/>
+                                            <constraint firstItem="Agv-EF-Vr3" firstAttribute="top" secondItem="DRw-Yj-Zr6" secondAttribute="bottom" constant="32" id="QqW-zs-8gv"/>
                                             <constraint firstAttribute="trailing" secondItem="Zff-bB-oVm" secondAttribute="trailing" constant="8" id="ROo-TY-ePI"/>
                                             <constraint firstItem="UF9-FP-LFp" firstAttribute="top" secondItem="Qwa-ri-Mrr" secondAttribute="bottom" constant="24" id="RcI-Ca-EuD"/>
                                             <constraint firstAttribute="trailing" secondItem="3TC-cD-lsL" secondAttribute="trailing" constant="14" id="TZK-E5-kDf"/>
@@ -529,6 +543,7 @@
                                             <constraint firstItem="l2z-XM-Le4" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" id="ijs-eA-GEA"/>
                                             <constraint firstItem="Zff-bB-oVm" firstAttribute="leading" secondItem="dtP-mS-3kv" secondAttribute="trailing" constant="8" id="kKR-te-5cg"/>
                                             <constraint firstItem="Dvp-Kf-e9h" firstAttribute="top" secondItem="dtP-mS-3kv" secondAttribute="bottom" constant="9" id="kZQ-8I-Tik"/>
+                                            <constraint firstAttribute="trailing" secondItem="Agv-EF-Vr3" secondAttribute="trailing" constant="24" id="ke3-fg-lQA"/>
                                             <constraint firstItem="Se1-rj-d7A" firstAttribute="top" secondItem="DyU-if-5c7" secondAttribute="bottom" constant="9" id="kfz-El-fmP"/>
                                             <constraint firstAttribute="trailing" secondItem="H0F-gZ-F8h" secondAttribute="trailing" constant="24" id="kvj-kC-c2I"/>
                                             <constraint firstItem="a9i-tZ-xss" firstAttribute="top" secondItem="Xty-7E-IzH" secondAttribute="top" constant="20" id="kyY-i4-Il8"/>
@@ -537,6 +552,7 @@
                                             <constraint firstItem="dtP-mS-3kv" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="oBT-dW-1H0"/>
                                             <constraint firstItem="w7L-gg-hJz" firstAttribute="top" secondItem="h0b-qX-2dg" secondAttribute="bottom" constant="24" id="pfa-C0-a4c"/>
                                             <constraint firstAttribute="trailing" secondItem="BfS-ql-fzE" secondAttribute="trailing" constant="24" id="pqi-HI-2Z1"/>
+                                            <constraint firstItem="Agv-EF-Vr3" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="rCB-br-8U8"/>
                                             <constraint firstAttribute="trailing" secondItem="ifV-dM-lZ4" secondAttribute="trailing" constant="4" id="ruy-3f-AuY"/>
                                             <constraint firstItem="bNI-0H-QTL" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="uK1-e0-f4C"/>
                                             <constraint firstItem="qRr-fa-GEx" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="26" id="uj6-5f-zvG"/>
@@ -574,6 +590,7 @@
                         <outlet property="bookstoreImageView" destination="l2z-XM-Le4" id="gx4-ZO-IR6"/>
                         <outlet property="explainLabel" destination="qRr-fa-GEx" id="9lI-Cw-gvo"/>
                         <outlet property="mapView" destination="326-wH-W8R" id="03i-9z-Vxl"/>
+                        <outlet property="moreButton" destination="Agv-EF-Vr3" id="bEy-e5-Lod"/>
                         <outlet property="reviewImageView1" destination="qPd-3H-DwD" id="rh6-QG-G6Q"/>
                         <outlet property="reviewImageView2" destination="mDD-Qe-r8N" id="Cne-oy-Ide"/>
                         <outlet property="reviewLabel1" destination="k6O-1j-tvL" id="gMv-tO-vhZ"/>
