@@ -19,6 +19,7 @@ class BookStoreTableViewCell: UITableViewCell {
     @IBOutlet weak var hashTagLabel02: UILabel!
     @IBOutlet weak var hashTagLabel03: UILabel!
     
+    @IBOutlet weak var bookmarkButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

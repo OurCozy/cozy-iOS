@@ -28,19 +28,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14d-BC-p9y">
-                                                    <rect key="frame" x="24" y="28" width="327" height="311"/>
+                                                    <rect key="frame" x="24" y="28" width="327" height="306"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="74" translatesAutoresizingMaskIntoConstraints="NO" id="hgj-Pg-c0c">
-                                                            <rect key="frame" x="0.0" y="2" width="327" height="225"/>
+                                                            <rect key="frame" x="0.0" y="2" width="327" height="220"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="퇴근길 책 한잔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJv-5w-61h">
-                                                            <rect key="frame" x="18" y="238.33333333333331" width="113" height="29"/>
+                                                            <rect key="frame" x="18" y="233.33333333333331" width="113" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2w-Sz-9Qp">
-                                                            <rect key="frame" x="18" y="273" width="51" height="24"/>
+                                                            <rect key="frame" x="18" y="268" width="51" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjb-is-f5b">
                                                                     <rect key="frame" x="10" y="3" width="31" height="18"/>
@@ -58,7 +58,7 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07Z-86-11k">
-                                                            <rect key="frame" x="81" y="273" width="51" height="24"/>
+                                                            <rect key="frame" x="81" y="268" width="51" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aeb-99-KEf">
                                                                     <rect key="frame" x="10" y="3" width="31" height="18"/>
@@ -76,7 +76,7 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tm-na-cw8">
-                                                            <rect key="frame" x="144" y="273" width="51" height="24"/>
+                                                            <rect key="frame" x="144" y="268" width="51" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhp-63-wR6">
                                                                     <rect key="frame" x="10" y="3" width="31" height="18"/>
@@ -93,6 +93,10 @@
                                                                 <constraint firstItem="Mhp-63-wR6" firstAttribute="leading" secondItem="6Tm-na-cw8" secondAttribute="leading" constant="10" id="jG6-Xd-mtr"/>
                                                             </constraints>
                                                         </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82G-QN-eTa">
+                                                            <rect key="frame" x="206" y="234" width="111" height="57"/>
+                                                            <state key="normal" title="Button" image="icBookmarkSelected"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
@@ -108,6 +112,8 @@
                                                         <constraint firstItem="07Z-86-11k" firstAttribute="centerY" secondItem="G2w-Sz-9Qp" secondAttribute="centerY" id="ZY7-Bj-z8G"/>
                                                         <constraint firstItem="hgj-Pg-c0c" firstAttribute="leading" secondItem="14d-BC-p9y" secondAttribute="leading" id="a16-0Q-gFV"/>
                                                         <constraint firstItem="6Tm-na-cw8" firstAttribute="centerY" secondItem="07Z-86-11k" secondAttribute="centerY" id="efm-VT-us0"/>
+                                                        <constraint firstAttribute="bottom" secondItem="82G-QN-eTa" secondAttribute="bottom" constant="15" id="rDd-LA-P1x"/>
+                                                        <constraint firstAttribute="trailing" secondItem="82G-QN-eTa" secondAttribute="trailing" constant="10" id="xf4-ci-w0b"/>
                                                         <constraint firstItem="07Z-86-11k" firstAttribute="leading" secondItem="G2w-Sz-9Qp" secondAttribute="trailing" constant="12" id="yOc-mS-mDK"/>
                                                     </constraints>
                                                 </view>
@@ -116,12 +122,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="14d-BC-p9y" secondAttribute="trailing" constant="24" id="DV2-s8-3VB"/>
                                                 <constraint firstItem="14d-BC-p9y" firstAttribute="top" secondItem="RH8-pB-QQF" secondAttribute="top" constant="28" id="oLm-t2-Au0"/>
                                                 <constraint firstItem="14d-BC-p9y" firstAttribute="leading" secondItem="RH8-pB-QQF" secondAttribute="leading" constant="24" id="uVW-Qm-Ejt"/>
-                                                <constraint firstAttribute="bottom" secondItem="14d-BC-p9y" secondAttribute="bottom" id="wNd-L8-uUa"/>
+                                                <constraint firstAttribute="bottom" secondItem="14d-BC-p9y" secondAttribute="bottom" constant="5" id="wNd-L8-uUa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bookStoreImageView" destination="hgj-Pg-c0c" id="FVI-ye-QTm"/>
                                             <outlet property="bookStoreName" destination="OJv-5w-61h" id="aMj-vI-xr7"/>
+                                            <outlet property="bookmarkButton" destination="82G-QN-eTa" id="pTv-hP-sqG"/>
                                             <outlet property="hashTagLabel01" destination="gjb-is-f5b" id="cKM-kV-QJ6"/>
                                             <outlet property="hashTagLabel02" destination="Aeb-99-KEf" id="iF5-UD-Wrt"/>
                                             <outlet property="hashTagLabel03" destination="Mhp-63-wR6" id="3gh-zO-tRp"/>
@@ -171,6 +178,7 @@
     </scenes>
     <resources>
         <image name="74" width="497.33334350585938" height="331.66665649414062"/>
+        <image name="icBookmarkSelected" width="57" height="57"/>
         <image name="icTabBookmark" width="48" height="48"/>
     </resources>
 </document>
