@@ -57,6 +57,7 @@
 		B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63341F324B34F630070F8C4 /* MapDetail.storyboard */; };
 		B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */; };
 		B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */; };
+		CC2645EA24BA0D3B00BCE4CD /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */; };
 		CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */; };
 		CCF6753224B9E9E000A40EC1 /* LastBookstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,7 @@
 		B63341F324B34F630070F8C4 /* MapDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDetail.storyboard; sourceTree = "<group>"; };
 		B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectRegion.storyboard; sourceTree = "<group>"; };
 		B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionViewController.swift; sourceTree = "<group>"; };
+		CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstoreCell.swift; sourceTree = "<group>"; };
 		CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstore.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,6 +340,7 @@
 				55E839DF24AF2AD1003C64FE /* Map.storyboard */,
 				55E839E124AF2AE1003C64FE /* Interest.storyboard */,
 				55E839D024AF29C6003C64FE /* LaunchScreen.storyboard */,
+				CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */,
 				B63341E724B328880070F8C4 /* Search.storyboard */,
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
@@ -489,6 +492,7 @@
 				55ABB33C24B37901008B5A5B /* DetailViewController.storyboard in Resources */,
 				55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */,
 				55E839E224AF2AE1003C64FE /* Interest.storyboard in Resources */,
+				CC2645EA24BA0D3B00BCE4CD /* MyPage.storyboard in Resources */,
 				55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */,
 				55CE354F24B3471E001210A7 /* CommonView.xib in Resources */,
 			);

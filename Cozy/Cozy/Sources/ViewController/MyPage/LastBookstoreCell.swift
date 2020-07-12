@@ -17,6 +17,19 @@ class LastBookstoreCell: UICollectionViewCell {
     
     func set(_ bookstoreInformation: LastBookstore){
         bookstoreImageView.image = bookstoreInformation.bookstoreImage
+//        bookstoreImageView.layer.cornerRadius = 5
         nameLabel.text = bookstoreInformation.bookstoreName
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        bookstoreImageView.layer.cornerRadius = 5
+        
+    }
+    
+//    func cellSettings(){
+//        bookstoreImageView.layer.cornerRadius = 5
+//        
+//    }
 }

@@ -33,6 +33,8 @@ extension MyPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let lastBookstoreCell = collectionView.dequeueReusableCell(withReuseIdentifier:LastBookstoreCell.identifier, for:indexPath) as? LastBookstoreCell else {return UICollectionViewCell() }
         lastBookstoreCell.set(lastBookstoreList[indexPath.row])
+        
+        lastBookstoreCell.bookstoreImageView.layer.cornerRadius = 5
     
         return lastBookstoreCell
     }
@@ -43,16 +45,24 @@ extension MyPageViewController: UICollectionViewDataSource {
 }
 
 extension MyPageViewController: UICollectionViewDelegateFlowLayout {
+    // 셀 height, width 지정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 92, height: 122)
     }
+    // contentinset 지정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
+    // cell 위, 아래 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 17
     }
+    // cell 좌, 우 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 18
+        return 9
+    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.scrollDirection = .horizontal
     }
 }
