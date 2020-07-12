@@ -18,6 +18,7 @@ class MyPageViewController: UIViewController {
            let bookstore4 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
            let bookstore5 = LastBookstore(bookstoreImage: "39", bookstoreName: "지구불시착")
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,6 +62,7 @@ extension MyPageViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 9
     }
+    // 가로 스크롤
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.scrollDirection = .horizontal
