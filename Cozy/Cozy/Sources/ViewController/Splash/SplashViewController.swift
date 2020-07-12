@@ -15,10 +15,7 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.cozyLabel.font = UIFont(name: "Gilroy-Light", size: 32)
-        
         perform(#selector(goMain), with: nil, afterDelay: 2.0)
-
     }
     
     // MARK : Main 화면으로 넘어가기

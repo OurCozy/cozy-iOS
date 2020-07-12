@@ -30,10 +30,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xs2-i3-BUZ">
                                         <rect key="frame" x="80" y="0.0" width="58" height="58"/>
                                         <state key="normal" image="btnFacebookLogin"/>
+                                        <connections>
+                                            <action selector="goFacebookLogin:" destination="05y-SL-d4f" eventType="touchUpInside" id="Au1-Uw-c8f"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbh-uO-cxK">
                                         <rect key="frame" x="160" y="0.0" width="58" height="58"/>
                                         <state key="normal" image="btnNaverLogin"/>
+                                        <connections>
+                                            <action selector="goNaverLogin:" destination="05y-SL-d4f" eventType="touchUpInside" id="Dm2-LR-KH0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

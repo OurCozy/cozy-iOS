@@ -62,6 +62,8 @@
 		B65D3A0C24BB989000405549 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A0224BB941A00405549 /* Gilroy-Light.ttf */; };
 		B65D3A0F24BB993700405549 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A0E24BB993700405549 /* Login.storyboard */; };
 		B65D3A1224BB996700405549 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A1124BB996700405549 /* LoginViewController.swift */; };
+		B65D3A1424BB9D4800405549 /* SocialLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */; };
+		B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */; };
 		B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */; };
 		B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */; };
 		B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69E909524B8A1C2009C4218 /* Review.storyboard */; };
@@ -130,6 +132,8 @@
 		B65D3A0A24BB96ED00405549 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B65D3A0E24BB993700405549 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B65D3A1124BB996700405549 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SocialLogin.storyboard; sourceTree = "<group>"; };
+		B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
 		B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectRegion.storyboard; sourceTree = "<group>"; };
 		B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionViewController.swift; sourceTree = "<group>"; };
 		B69E909524B8A1C2009C4218 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
 				B65D3A0324BB94D100405549 /* Splash.storyboard */,
 				B65D3A0E24BB993700405549 /* Login.storyboard */,
+				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				B65D3A1124BB996700405549 /* LoginViewController.swift */,
+				B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -548,6 +554,7 @@
 				B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */,
 				55E839E024AF2AD1003C64FE /* Map.storyboard in Resources */,
 				55E839CF24AF29C6003C64FE /* Assets.xcassets in Resources */,
+				B65D3A1424BB9D4800405549 /* SocialLogin.storyboard in Resources */,
 				B65D3A0F24BB993700405549 /* Login.storyboard in Resources */,
 				B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */,
 				B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */,
@@ -651,6 +658,7 @@
 				55CE354D24B3467E001210A7 /* CommonView.swift in Sources */,
 				CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */,
 				55CE353824B32D17001210A7 /* CardCollectionViewCell.swift in Sources */,
+				B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
 				55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */,
 			);
