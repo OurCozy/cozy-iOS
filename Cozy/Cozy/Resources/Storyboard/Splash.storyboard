@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OkN-VC-qGX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Light.ttf">
+            <string>Gilroy-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="Ddq-cz-upm">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="OkN-VC-qGX" customClass="SplashViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6d-QG-Bkw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fzp-JE-wwl">
+                                <rect key="frame" x="151" y="391" width="112" height="114"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLogo" translatesAutoresizingMaskIntoConstraints="NO" id="W8V-Od-amL">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="73"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cozy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8S-hw-A6w">
+                                        <rect key="frame" x="22" y="82" width="68" height="32"/>
+                                        <fontDescription key="fontDescription" name="Gilroy-Light" family="Gilroy-Light" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fzp-JE-wwl" firstAttribute="centerX" secondItem="c6d-QG-Bkw" secondAttribute="centerX" id="bSe-NN-8Le"/>
+                            <constraint firstItem="fzp-JE-wwl" firstAttribute="centerY" secondItem="c6d-QG-Bkw" secondAttribute="centerY" id="hDL-L9-fpe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1So-i8-M9X"/>
+                    </view>
+                    <connections>
+                        <outlet property="cozyLabel" destination="l8S-hw-A6w" id="tXS-bX-G3V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajt-nM-SQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="-276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imgLogo" width="112" height="73"/>
+    </resources>
+</document>
