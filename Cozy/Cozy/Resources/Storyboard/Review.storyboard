@@ -46,6 +46,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3IW-nJ-4Cj" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="28" y="195" width="215" height="35"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="R7R-vN-umy"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
                                         <integer key="value" value="5"/>

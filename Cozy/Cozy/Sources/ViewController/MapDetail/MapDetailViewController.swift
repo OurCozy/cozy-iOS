@@ -25,6 +25,12 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var reviewLabel1: UILabel!
+    @IBOutlet weak var reviewLabel2: UILabel!
+    
+    @IBOutlet weak var reviewImageView1: UIImageView!
+    @IBOutlet weak var reviewImageView2: UIImageView!
+    
     let eunpyeongLoc = CLLocationCoordinate2D(latitude: 37.6176125, longitude: 126.9227004) // 은평구 (샘플 서점 위치)
     
     override func viewDidLoad() {
@@ -43,6 +49,19 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.delegate = self
+        
+        self.setReviewLabel()
+    }
+    
+    func setReviewLabel(){
+        self.reviewLabel1.numberOfLines = 0
+        self.reviewLabel1.text = "안도북스는 제가 자주 가는 서점입니다. 안도북스의 분위기를 좋아하고, 책방 속의 작은 소품들과 따뜻한 조명이 퇴근후의 저를 위로하는 것 같아서 자주 방문하는 곳이에요. 퇴근하고 바로 달려가기 조금 빠듯한 시간이지만 자주 찾는 책방입니다. "
+        
+        self.reviewImageView1.layer.cornerRadius = 5
+        
+        self.reviewLabel2.numberOfLines = 0
+        self.reviewLabel2.text = "안도북스는 제가 자주 가는 서점입니다. 안도북스의 분위기를 좋아하고, 책방 속의 작은 소품들과 따뜻한 조명이 퇴근후의 저를 위로하는 것 같아서 자주 방문하는 곳이에요. 퇴근하고 바로 달려가기 조금 빠듯한 시간이지만 자주 찾는 책방입니다."
+        self.reviewImageView2.layer.cornerRadius = 5
     }
     
     
@@ -102,7 +121,6 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         attrString.addAttributes([.paragraphStyle : style], range: NSMakeRange(0, attrString.length))
         
         self.timeLabel.attributedText = attrString
-        
     }
     
     func setExplainLabel(){
