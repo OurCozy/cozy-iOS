@@ -23,18 +23,20 @@ class InterestViewController: UIViewController {
     
     private let searchImage = UIImageView(image: UIImage(named: "icSearch")) // search image
     
-    @IBOutlet weak var tableView: UITableView! // table view
+    var bookStoreList: [BookStoreData] = []
+    var nickName: String = ""
+    let navigationString: String = "님의 콕!"
+    //    let data01 = BookStore(bookStoreImageName: "74", bookStoreName: "재욱이의 책방", hashTag01: "멋짐", hashTag02: "완전 멋짐", hashTag03: "개멋짐")
+    //    let data02 = BookStore(bookStoreImageName: "91", bookStoreName: "지윤이의 책방", hashTag01: "안 멋짐", hashTag02: "완전 안 멋짐", hashTag03: "그냥 안 멋짐")
+    //    let data03 = BookStore(bookStoreImageName: "74", bookStoreName: "재욱이의 책방", hashTag01: "멋짐", hashTag02: "완전 멋짐", hashTag03: "개멋짐")
     
-    var bookStoreList: [BookStore] = []
-    let data01 = BookStore(bookStoreImageName: "74", bookStoreName: "재욱이의 책방", hashTag01: "멋짐", hashTag02: "완전 멋짐", hashTag03: "개멋짐")
-    let data02 = BookStore(bookStoreImageName: "91", bookStoreName: "지윤이의 책방", hashTag01: "안 멋짐", hashTag02: "완전 안 멋짐", hashTag03: "그냥 안 멋짐")
-    let data03 = BookStore(bookStoreImageName: "74", bookStoreName: "재욱이의 책방", hashTag01: "멋짐", hashTag02: "완전 멋짐", hashTag03: "개멋짐")
+    @IBOutlet weak var tableView: UITableView! // table view
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        self.tabBarController?.tabBarItem.image = UIImage(named: "icTabBookmark")
         setBookStoreData()
-        //sample data
-        //bookStoreList = [data01, data02, data03]
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,7 +44,7 @@ class InterestViewController: UIViewController {
         if #available(iOS 11.0, *){
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationController?.navigationBar.addSubview(searchImage)
-            title = "양재욱"
+            
             
             searchImage.layer.cornerRadius = Const.ImageSizeForLargeState / 2
             searchImage.clipsToBounds = true
@@ -75,12 +77,14 @@ class InterestViewController: UIViewController {
         InterestService.shared.getBookStoreData(){ NetworkResult in
             switch NetworkResult {
                 case .success(let data):
-                    guard let data = data as? [BookStoreServer] else {return print("error")}
+                    guard let data = data as? [BookStoreData] else {return print("error")}
                     print("@@@@@@data@@@@@@")
                     print(data)
                     for data in data{
-                        self.bookStoreList.append(BookStore(bookStoreImageName: data.profile, bookStoreName: data.bookstoreName, hashTag01: data.hashtag1, hashTag02: data.hashtag2, hashTag03: data.hashtag3))
+                        self.bookStoreList.append(BookStoreData(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, profile: data.profile, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, nickname: data.nickname))
                     }
+                    self.nickName = self.bookStoreList[0].nickname
+                    self.navigationItem.title = self.nickName + self.navigationString
                     self.tableView.reloadData()
 
                 case .requestErr(_):
@@ -106,10 +110,6 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
         
     }
     
-    //    func numberOfSections(in tableView: UITableView) -> Int {
-    //        return 2
-    //    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return bookStoreList.count
@@ -117,18 +117,12 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        if indexPath.section == 0 {
-        //            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! UserNameTableViewCell
-        //            cell.userName.text = "양재욱"
-        //            return cell
-        //        } else {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! BookStoreTableViewCell
         cell.wholeView.setViewShadow()
         
-        cell.setBookStoreData(bookStoreImageName: bookStoreList[indexPath.row].bookStoreImageName, bookStoreName: bookStoreList[indexPath.row].bookStoreName, hashTag01: bookStoreList[indexPath.row].hashTag01, hashTag02: bookStoreList[indexPath.row].hashTag02, hashTag03: bookStoreList[indexPath.row].hashTag03)
+        cell.setBookStoreData(profile: bookStoreList[indexPath.row].profile, bookStoreName: bookStoreList[indexPath.row].bookstoreName, hashtag1: bookStoreList[indexPath.row].hashtag1, hashtag2: bookStoreList[indexPath.row].hashtag2, hashtag3: bookStoreList[indexPath.row].hashtag3)
         
         return cell
-        //}
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

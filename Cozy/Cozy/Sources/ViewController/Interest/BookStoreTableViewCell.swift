@@ -37,12 +37,12 @@ class BookStoreTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setBookStoreData(bookStoreImageName: String, bookStoreName: String, hashTag01: String, hashTag02:String, hashTag03:String){
-        self.bookStoreImageView.image = UIImage(named: bookStoreImageName)
+    func setBookStoreData(profile: String, bookStoreName: String, hashtag1: String, hashtag2:String, hashtag3:String){
+        self.bookStoreImageView.image = UIImage(named: profile)
         self.bookStoreName.text = bookStoreName
-        hashTagLabel01.text = hashTag01
-        hashTagLabel02.text = hashTag02
-        hashTagLabel03.text = hashTag03
+        hashTagLabel01.text = hashtag1
+        hashTagLabel02.text = hashtag2
+        hashTagLabel03.text = hashtag3
     }
 
 }

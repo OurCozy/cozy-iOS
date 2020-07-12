@@ -12,7 +12,7 @@ import Alamofire
 struct InterestService {
     static let shared = InterestService()
     
-    let header: HTTPHeaders = ["Content-Type": "application/json", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxLCJpYXQiOjE1OTQ0NjkyMjgsImV4cCI6MTU5NDQ3MjgyOCwiaXNzIjoib3VyLXNvcHQifQ.KsgGSJ5rMvEcuvVdPh9j_mYGABnISsFVQrFqgX4AM3I"]
+    let header: HTTPHeaders = ["Content-Type": "application/json", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxLCJpYXQiOjE1OTQ1MzYwMTIsImV4cCI6My42MzYzNjM2MzYzNjM3OTU0ZSsyMiwiaXNzIjoib3VyLXNvcHQifQ.nxltflO1cRWcc3YpPoou7ELc9_kWLCRWDmMsk_DA3Yc"]
     
     func getBookStoreData(completion: @escaping (NetworkResult<Any>) -> Void) {
         
@@ -47,6 +47,6 @@ struct InterestService {
         guard let decodedData = try? decoder.decode(InterestModel.self, from: data) else { return .pathErr }
         print(decodedData)
         guard let interestData = decodedData.data else { return .requestErr(decodedData.message) }
-        print(interestData)
+
         return .success(interestData)
     } }
