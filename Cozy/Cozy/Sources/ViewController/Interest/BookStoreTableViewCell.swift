@@ -9,6 +9,8 @@
 import UIKit
 
 class BookStoreTableViewCell: UITableViewCell {
+    
+    var isBookmarkClicked: Bool = false
 
     @IBOutlet weak var wholeView: UIView!
     @IBOutlet var hashTagCollection: [UIView]!
@@ -45,5 +47,18 @@ class BookStoreTableViewCell: UITableViewCell {
         hashTagLabel02.text = hashtag2
         hashTagLabel03.text = hashtag3
     }
+    
+    @IBAction func bookmarkButtonAction(_ sender: Any) {
+        if isBookmarkClicked == false{
+            bookmarkButton.setImage(UIImage(named: "icBookmark"), for: .normal)
+            isBookmarkClicked = true
+        }
+        else{
+            bookmarkButton.setImage(UIImage(named: "icBookmarkSelected"), for: .normal)
+            isBookmarkClicked = false
+        }
+        
+    }
+    
 
 }

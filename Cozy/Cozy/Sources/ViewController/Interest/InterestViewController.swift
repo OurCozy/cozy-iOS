@@ -36,10 +36,10 @@ class InterestViewController: UIViewController {
         super.viewDidLoad()
         
 //        self.tabBarController?.tabBarItem.image = UIImage(named: "icTabBookmark")
-        setBookStoreData()
-        
+    
         tableView.delegate = self
         tableView.dataSource = self
+        setBookStoreData()
         
         if #available(iOS 11.0, *){
             self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -81,9 +81,13 @@ class InterestViewController: UIViewController {
                     print("@@@@@@data@@@@@@")
                     print(data)
                     for data in data{
-                        self.bookStoreList.append(BookStoreData(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, profile: data.profile, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, nickname: data.nickname))
+                        if data.bookstoreName == "" && data.nickname != "" {
+                            self.nickName = data.nickname
+                        } else {
+                            self.bookStoreList.append(BookStoreData(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, profile: data.profile, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, nickname: data.nickname))
+                            self.nickName = self.bookStoreList[0].nickname
+                        }
                     }
-                    self.nickName = self.bookStoreList[0].nickname
                     self.navigationItem.title = self.nickName + self.navigationString
                     self.tableView.reloadData()
 
@@ -112,8 +116,14 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return bookStoreList.count
+        if bookStoreList.count == 0 {
+            tableView.setEmptyView(title: self.nickName + "만의 책박을 콕! 해볼까요?", message: "책방이 비어있습니다!")
+        }
+        else {
+            tableView.restore()
+        }
         
+        return bookStoreList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -133,5 +143,37 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
         else {
             // 가장 상단이 아닐 때
         }
+    }
+}
+
+extension UITableView {
+    func setEmptyView(title: String, message: String) {
+        let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
+        let titleLabel = UILabel()
+        let messageLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textColor = UIColor.black
+        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
+        messageLabel.textColor = UIColor.lightGray
+        messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 17)
+        emptyView.addSubview(titleLabel)
+        emptyView.addSubview(messageLabel)
+        titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
+        messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
+        titleLabel.text = title
+        messageLabel.text = message
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        // The only tricky part is here:
+        self.backgroundView = emptyView
+        self.separatorStyle = .none
+    }
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
     }
 }

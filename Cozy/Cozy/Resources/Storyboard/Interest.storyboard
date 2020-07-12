@@ -93,18 +93,24 @@
                                                                 <constraint firstItem="Mhp-63-wR6" firstAttribute="leading" secondItem="6Tm-na-cw8" secondAttribute="leading" constant="10" id="jG6-Xd-mtr"/>
                                                             </constraints>
                                                         </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82G-QN-eTa">
-                                                            <rect key="frame" x="206" y="234" width="111" height="57"/>
-                                                            <state key="normal" title="Button" image="icBookmarkSelected"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtg-az-J5z">
+                                                            <rect key="frame" x="260" y="234" width="57" height="57"/>
+                                                            <state key="normal" image="icBookmarkSelected"/>
+                                                            <connections>
+                                                                <action selector="bookmarkButtonAction:" destination="qz1-R4-4N5" eventType="touchUpInside" id="yOB-L8-g2H"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstItem="OJv-5w-61h" firstAttribute="top" secondItem="hgj-Pg-c0c" secondAttribute="bottom" constant="11.300000000000001" id="0FG-3U-x5U"/>
+                                                        <constraint firstItem="vtg-az-J5z" firstAttribute="top" secondItem="hgj-Pg-c0c" secondAttribute="bottom" constant="12" id="0j0-W4-1nz"/>
                                                         <constraint firstAttribute="trailing" secondItem="hgj-Pg-c0c" secondAttribute="trailing" id="9IP-ZZ-FGB"/>
                                                         <constraint firstItem="6Tm-na-cw8" firstAttribute="leading" secondItem="07Z-86-11k" secondAttribute="trailing" constant="12" id="9cf-Rd-dwP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vtg-az-J5z" secondAttribute="trailing" constant="10" id="A3z-7j-lQF"/>
                                                         <constraint firstAttribute="bottom" secondItem="hgj-Pg-c0c" secondAttribute="bottom" constant="84" id="Bcu-VB-Ejp"/>
                                                         <constraint firstItem="hgj-Pg-c0c" firstAttribute="top" secondItem="14d-BC-p9y" secondAttribute="top" constant="2" id="FbU-jO-GCk"/>
+                                                        <constraint firstAttribute="bottom" secondItem="vtg-az-J5z" secondAttribute="bottom" constant="15" id="HKF-E8-s5g"/>
                                                         <constraint firstItem="OJv-5w-61h" firstAttribute="leading" secondItem="14d-BC-p9y" secondAttribute="leading" constant="18" id="IPy-dl-Jr3"/>
                                                         <constraint firstItem="G2w-Sz-9Qp" firstAttribute="leading" secondItem="14d-BC-p9y" secondAttribute="leading" constant="18" id="Kda-bQ-Sih"/>
                                                         <constraint firstAttribute="bottom" secondItem="G2w-Sz-9Qp" secondAttribute="bottom" constant="14" id="L5m-gf-Ytx"/>
@@ -112,8 +118,6 @@
                                                         <constraint firstItem="07Z-86-11k" firstAttribute="centerY" secondItem="G2w-Sz-9Qp" secondAttribute="centerY" id="ZY7-Bj-z8G"/>
                                                         <constraint firstItem="hgj-Pg-c0c" firstAttribute="leading" secondItem="14d-BC-p9y" secondAttribute="leading" id="a16-0Q-gFV"/>
                                                         <constraint firstItem="6Tm-na-cw8" firstAttribute="centerY" secondItem="07Z-86-11k" secondAttribute="centerY" id="efm-VT-us0"/>
-                                                        <constraint firstAttribute="bottom" secondItem="82G-QN-eTa" secondAttribute="bottom" constant="15" id="rDd-LA-P1x"/>
-                                                        <constraint firstAttribute="trailing" secondItem="82G-QN-eTa" secondAttribute="trailing" constant="10" id="xf4-ci-w0b"/>
                                                         <constraint firstItem="07Z-86-11k" firstAttribute="leading" secondItem="G2w-Sz-9Qp" secondAttribute="trailing" constant="12" id="yOc-mS-mDK"/>
                                                     </constraints>
                                                 </view>
@@ -128,7 +132,7 @@
                                         <connections>
                                             <outlet property="bookStoreImageView" destination="hgj-Pg-c0c" id="FVI-ye-QTm"/>
                                             <outlet property="bookStoreName" destination="OJv-5w-61h" id="aMj-vI-xr7"/>
-                                            <outlet property="bookmarkButton" destination="82G-QN-eTa" id="pTv-hP-sqG"/>
+                                            <outlet property="bookmarkButton" destination="vtg-az-J5z" id="fTm-Jm-lvS"/>
                                             <outlet property="hashTagLabel01" destination="gjb-is-f5b" id="cKM-kV-QJ6"/>
                                             <outlet property="hashTagLabel02" destination="Aeb-99-KEf" id="iF5-UD-Wrt"/>
                                             <outlet property="hashTagLabel03" destination="Mhp-63-wR6" id="3gh-zO-tRp"/>
