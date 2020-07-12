@@ -20,6 +20,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     // Height constraint for the CommonView
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
 
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -29,7 +30,34 @@ class DetailViewController: UIViewController, StoryboardBased {
         
         setNaverMap()
         
-
+        print("viewDidLoad() 호출")
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
+        
+        
+    }
+    
+    @objc func appMovedToBackground() {
+        self.setTabBarHidden(true)
+       // self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("viewWillAppear() 호출")
+        
+//        if self.tabBarController?.tabBar.isHidden == true {
+//           // self.tabBarController?.tabBar.isHidden = true
+//             self.setTabBarHidden(false)
+//        }
+     //   self.setTabBarHidden(false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+      //  self.setTabBarHidden(true)
     }
     
     func setNaverMap(){
