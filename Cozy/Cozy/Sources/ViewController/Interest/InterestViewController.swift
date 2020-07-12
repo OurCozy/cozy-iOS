@@ -81,7 +81,7 @@ class InterestViewController: UIViewController {
                     print("@@@@@@data@@@@@@")
                     print(data)
                     for data in data{
-                        if data.bookstoreName == "" && data.nickname != "" {
+                        if data.bookstoreIdx == 0{
                             self.nickName = data.nickname
                         } else {
                             self.bookStoreList.append(BookStoreData(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, profile: data.profile, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, nickname: data.nickname))
