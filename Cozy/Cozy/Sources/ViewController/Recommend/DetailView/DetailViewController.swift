@@ -9,6 +9,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet var bookstoreCollection: [UIButton]!
     
     
     
@@ -29,6 +30,10 @@ class DetailViewController: UIViewController, StoryboardBased {
         
         
         setNaverMap()
+        
+        for buttonIndex in 0...2 {
+            bookstoreCollection[buttonIndex].settagButton()
+        }
         
         print("viewDidLoad() 호출")
         
@@ -57,9 +62,12 @@ class DetailViewController: UIViewController, StoryboardBased {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-      //  self.setTabBarHidden(true)
+        
     }
     
+    @IBAction func touchUpLocationButton(_ sender: Any) {
+        goToNaverMap()
+    }
     func setNaverMap(){
         //지도 커스텀
         let marker = NMFMarker()
@@ -85,23 +93,29 @@ class DetailViewController: UIViewController, StoryboardBased {
         marker.touchHandler = { (overlay) in
             
             print("마커 클릭됨")
-            let appStoreURL = URL(string: "http://itunes.apple.com/app/id311867728?mt=8")!
-            if let detailMapURL = URL(string: "nmap://place?lat=37.556693&lng=126.929313&name=Cozy%ea%b0%80%20%ec%b6%94%ec%b2%9c%ed%95%98%eb%8a%94%20%ec%84%9c%ec%a0%90&gamsung.Cozy=Cozy"), UIApplication.shared.canOpenURL(detailMapURL)
-            { // 유효한 URL인지 검사합니다.
-                if #available(iOS 10.0, *) { //iOS 10.0부터 URL를 오픈하는 방법이 변경 되었습니다.
-                    UIApplication.shared.open(detailMapURL, options: [:], completionHandler: nil)
-                } else {
-                    UIApplication.shared.openURL(appStoreURL)
-                    
-                }
-                
-            }
+            self.goToNaverMap()
             
             return true
         }
         
         marker.mapView = detailNaverMapView
     }
+    
+    
+    func goToNaverMap(){
+        let appStoreURL = URL(string: "http://itunes.apple.com/app/id311867728?mt=8")!
+                   if let detailMapURL = URL(string: "nmap://place?lat=37.556693&lng=126.929313&name=Cozy%ea%b0%80%20%ec%b6%94%ec%b2%9c%ed%95%98%eb%8a%94%20%ec%84%9c%ec%a0%90&gamsung.Cozy=Cozy"), UIApplication.shared.canOpenURL(detailMapURL)
+                   { // 유효한 URL인지 검사합니다.
+                       if #available(iOS 10.0, *) { //iOS 10.0부터 URL를 오픈하는 방법이 변경 되었습니다.
+                           UIApplication.shared.open(detailMapURL, options: [:], completionHandler: nil)
+                       } else {
+                           UIApplication.shared.openURL(appStoreURL)
+                           
+                       }
+                       
+                   }
+    }
+    
     
 
     @IBAction func closePressed(_ sender: Any) {
