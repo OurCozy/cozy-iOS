@@ -49,9 +49,9 @@ class DetailViewController: UIViewController, StoryboardBased {
         //tableviewHeight.constant = 0
         
         //리뷰데이터 없을때 스크롤 height
-       // scrollHeight.constant = 1830
+        //scrollHeight.constant = 1830
         //리뷰데이터 있을때 스크롤 height 테이블뷰만큼 + @
-        
+        //scrollHeight.constant = @
     }
     
     @objc func appMovedToBackground() {
@@ -148,6 +148,10 @@ class DetailViewController: UIViewController, StoryboardBased {
 
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 413
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
