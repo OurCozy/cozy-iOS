@@ -121,7 +121,7 @@
         <scene sceneID="280-8e-b2h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7N6-iS-Wzg" customClass="NavigationController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="icTabMain" id="qVr-fL-r85"/>
+                    <tabBarItem key="tabBarItem" id="qVr-fL-r85"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="56f-Rn-CQb">
                         <autoresizingMask key="autoresizingMask"/>
@@ -138,7 +138,6 @@
     </scenes>
     <resources>
         <image name="icSearch" width="48" height="48"/>
-        <image name="icTabMain" width="48" height="48"/>
         <image name="imgLogo" width="30" height="19"/>
     </resources>
 </document>

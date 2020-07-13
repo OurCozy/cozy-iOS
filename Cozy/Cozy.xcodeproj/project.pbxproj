@@ -32,6 +32,7 @@
 		55CE354B24B34536001210A7 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CE354A24B34536001210A7 /* CardCollectionViewCell.xib */; };
 		55CE354D24B3467E001210A7 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE354C24B3467E001210A7 /* CommonView.swift */; };
 		55CE354F24B3471E001210A7 /* CommonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CE354E24B3471E001210A7 /* CommonView.xib */; };
+		55E460B524BC512E0035ECCE /* reviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460B424BC512E0035ECCE /* reviewTableViewCell.swift */; };
 		55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C524AF29C2003C64FE /* AppDelegate.swift */; };
 		55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C724AF29C2003C64FE /* SceneDelegate.swift */; };
 		55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C924AF29C2003C64FE /* ViewController.swift */; };
@@ -88,6 +89,7 @@
 		55CE354A24B34536001210A7 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		55CE354C24B3467E001210A7 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
 		55CE354E24B3471E001210A7 /* CommonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonView.xib; sourceTree = "<group>"; };
+		55E460B424BC512E0035ECCE /* reviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewTableViewCell.swift; sourceTree = "<group>"; };
 		55E839C224AF29C2003C64FE /* Cozy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cozy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E839C524AF29C2003C64FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E839C724AF29C2003C64FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				B63341E124B19DAB0070F8C4 /* LibraryTableViewCell.swift */,
 				B63341DF24B19C210070F8C4 /* CountTableViewCell.swift */,
 				5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */,
+				55E460B424BC512E0035ECCE /* reviewTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */,
 				B63341EB24B328C30070F8C4 /* SearchViewController.swift in Sources */,
 				55CE353224B20876001210A7 /* Expandable.swift in Sources */,
+				55E460B524BC512E0035ECCE /* reviewTableViewCell.swift in Sources */,
 				55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */,
 				B63341E624B1D4600070F8C4 /* MapDetailViewController.swift in Sources */,
 				55ABB33A24B376DA008B5A5B /* NavigationController.swift in Sources */,

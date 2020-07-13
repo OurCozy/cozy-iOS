@@ -10,6 +10,8 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet var bookstoreCollection: [UIButton]!
+    @IBOutlet weak var reviewTableView: UITableView!
+    @IBOutlet weak var tableviewHeight: NSLayoutConstraint!
     
     
     
@@ -17,7 +19,8 @@ class DetailViewController: UIViewController, StoryboardBased {
     var authState: NMFAuthState!
     // Constraint from the top of the CommonView to the top of the MaskView
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var scrollHeight: NSLayoutConstraint!
+    
     // Height constraint for the CommonView
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
 
@@ -41,6 +44,13 @@ class DetailViewController: UIViewController, StoryboardBased {
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         
+        reviewTableView.delegate = self
+        reviewTableView.dataSource = self
+        //tableviewHeight.constant = 0
+        
+        //리뷰데이터 없을때 스크롤 height
+       // scrollHeight.constant = 1830
+        //리뷰데이터 있을때 스크롤 height 테이블뷰만큼 + @
         
     }
     
@@ -119,10 +129,6 @@ class DetailViewController: UIViewController, StoryboardBased {
     
 
     @IBAction func closePressed(_ sender: Any) {
-        
-        
-        
-        
         //self.scrollView.scrollToTop()
         self.setTabBarHidden(false)
         self.navigationController?.popViewController(animated: true)
@@ -139,6 +145,26 @@ class DetailViewController: UIViewController, StoryboardBased {
         }
     }
 }
+
+
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let reviewCell = reviewTableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath)
+        
+        return reviewCell
+        
+    }
+    
+    
+}
+
+
+
 
 extension DetailViewController: Animatable {
     var containerView: UIView? {
