@@ -8,8 +8,11 @@
 
 import UIKit
 
-class MyPageViewController: UIViewController {
+class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    
+    @IBOutlet weak var myReview: UIView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     private var lastBookstoreList: [LastBookstore] = []
     let bookstore1 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
@@ -23,11 +26,50 @@ class MyPageViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // 내가 쓴 후기 탭제스쳐 연결
+         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+         tapGesture.delegate = self
+         
+         self.myReview.addGestureRecognizer(tapGesture)
+
+
         lastBookstoreList = [bookstore1, bookstore2, bookstore3, bookstore4, bookstore5]
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
+        @IBAction func touchUpProfileButton(_ sender: Any) {
+    //    print("터치 프로필 버튼")
+        }
+    
+    // 공지사항 이동
+    @IBAction func gotoNotice(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "MyPage", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "NoticeViewController") as! NoticeViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // 이벤트 이동
+    @IBAction func gotoEvent(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "MyPage", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "EventViewController") as! EventViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+
+    // 내가 쓴 후기
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        let storyboard  = UIStoryboard(name: "MyPage", bundle: nil)
+        let vc  = storyboard.instantiateViewController(withIdentifier: "MyReviewViewController")
+        self.navigationController!.pushViewController(vc, animated: true)
+        return true
+    }
 }
+
+ 
+
 
 extension MyPageViewController: UICollectionViewDataSource {
     //셀에 들어가는 데이터 설정

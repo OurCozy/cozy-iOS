@@ -61,6 +61,9 @@
 		B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69E909524B8A1C2009C4218 /* Review.storyboard */; };
 		B69E909924B8A231009C4218 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E909824B8A231009C4218 /* ReviewViewController.swift */; };
 		CC2645EA24BA0D3B00BCE4CD /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */; };
+		CC2645EC24BC1B0500BCE4CD /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2645EB24BC1B0500BCE4CD /* NoticeViewController.swift */; };
+		CC2645EE24BC3B4200BCE4CD /* MyReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2645ED24BC3B4200BCE4CD /* MyReviewViewController.swift */; };
+		CC2645F224BC411700BCE4CD /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2645F124BC411700BCE4CD /* EventViewController.swift */; };
 		CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */; };
 		CCF6753224B9E9E000A40EC1 /* LastBookstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +126,9 @@
 		B69E909524B8A1C2009C4218 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
 		B69E909824B8A231009C4218 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		CC2645EB24BC1B0500BCE4CD /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		CC2645ED24BC3B4200BCE4CD /* MyReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyReviewViewController.swift; path = Cozy/Sources/ViewController/MyPage/MyReviewViewController.swift; sourceTree = SOURCE_ROOT; };
+		CC2645F124BC411700BCE4CD /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstoreCell.swift; sourceTree = "<group>"; };
 		CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstore.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -371,9 +377,12 @@
 		55E839F024AF2D51003C64FE /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				CC2645ED24BC3B4200BCE4CD /* MyReviewViewController.swift */,
 				55E839EC24AF2B51003C64FE /* MyPageViewController.swift */,
 				CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */,
 				CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */,
+				CC2645EB24BC1B0500BCE4CD /* NoticeViewController.swift */,
+				CC2645F124BC411700BCE4CD /* EventViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -567,6 +576,7 @@
 			files = (
 				183C1E4024B857C300FFE494 /* InterestService.swift in Sources */,
 				55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */,
+				CC2645F224BC411700BCE4CD /* EventViewController.swift in Sources */,
 				B69E909924B8A231009C4218 /* ReviewViewController.swift in Sources */,
 				183C1E3C24B7416600FFE494 /* APIConstants.swift in Sources */,
 				55E839CA24AF29C2003C64FE /* ViewController.swift in Sources */,
@@ -581,6 +591,7 @@
 				55E839ED24AF2B51003C64FE /* MyPageViewController.swift in Sources */,
 				B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */,
 				B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */,
+				CC2645EC24BC1B0500BCE4CD /* NoticeViewController.swift in Sources */,
 				55CE354224B32F81001210A7 /* NibLoadable.swift in Sources */,
 				B63341E024B19C210070F8C4 /* CountTableViewCell.swift in Sources */,
 				55CE354124B32F81001210A7 /* Reusable.swift in Sources */,
@@ -598,6 +609,7 @@
 				B63341E624B1D4600070F8C4 /* MapDetailViewController.swift in Sources */,
 				55ABB33A24B376DA008B5A5B /* NavigationController.swift in Sources */,
 				55E839E924AF2B43003C64FE /* MapViewController.swift in Sources */,
+				CC2645EE24BC3B4200BCE4CD /* MyReviewViewController.swift in Sources */,
 				55ABB33724B37681008B5A5B /* Animatable.swift in Sources */,
 				55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */,
 				55CE354D24B3467E001210A7 /* CommonView.swift in Sources */,
