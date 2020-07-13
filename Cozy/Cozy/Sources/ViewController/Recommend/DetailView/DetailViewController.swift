@@ -23,29 +23,29 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     // Height constraint for the CommonView
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var reviewMoreButton: UIButton!
+    
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
     override func viewDidLoad() {
-        
+        reviewTableView.delegate = self
+        reviewTableView.dataSource = self
         
         setNaverMap()
         
         for buttonIndex in 0...2 {
             bookstoreCollection[buttonIndex].settagButton()
         }
+        reviewMoreButton.settagButton()
         
-        print("viewDidLoad() 호출")
         
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         
-        reviewTableView.delegate = self
-        reviewTableView.dataSource = self
         //tableviewHeight.constant = 0
         
         //리뷰데이터 없을때 스크롤 height
@@ -135,6 +135,9 @@ class DetailViewController: UIViewController, StoryboardBased {
         
     }
 
+    @IBAction func testHeightButton(_ sender: Any) {
+        scrollHeight.constant = 1830
+    }
     func asCard(_ value: Bool) {
         if value {
             // Round the corners
