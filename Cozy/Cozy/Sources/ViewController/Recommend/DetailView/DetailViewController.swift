@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import NMapsMap
 
 class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var maskView: UIView!
@@ -8,32 +9,135 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet var bookstoreCollection: [UIButton]!
+    @IBOutlet weak var reviewTableView: UITableView!
+    @IBOutlet weak var tableviewHeight: NSLayoutConstraint!
     
     
+    
+    @IBOutlet weak var detailNaverMapView: NMFMapView!
+    var authState: NMFAuthState!
     // Constraint from the top of the CommonView to the top of the MaskView
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var scrollHeight: NSLayoutConstraint!
+    
     // Height constraint for the CommonView
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var reviewMoreButton: UIButton!
+    
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
     override func viewDidLoad() {
+        reviewTableView.delegate = self
+        reviewTableView.dataSource = self
+        
+        setNaverMap()
+        
+        for buttonIndex in 0...2 {
+            bookstoreCollection[buttonIndex].settagButton()
+        }
+        reviewMoreButton.settagButton()
+        
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
+        
+        //tableviewHeight.constant = 0
+        
+        //리뷰데이터 없을때 스크롤 height
+        //scrollHeight.constant = 1830
+        //리뷰데이터 있을때 스크롤 height 테이블뷰만큼 + @
+        //scrollHeight.constant = @
     }
+    
+    @objc func appMovedToBackground() {
+        self.setTabBarHidden(true)
+       // self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("viewWillAppear() 호출")
+        
+//        if self.tabBarController?.tabBar.isHidden == true {
+//           // self.tabBarController?.tabBar.isHidden = true
+//             self.setTabBarHidden(false)
+//        }
+     //   self.setTabBarHidden(false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
+    @IBAction func touchUpLocationButton(_ sender: Any) {
+        goToNaverMap()
+    }
+    func setNaverMap(){
+        //지도 커스텀
+        let marker = NMFMarker()
+        marker.position = NMGLatLng(lat: 37.556693, lng: 126.929313)
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.556693, lng: 126.929313))
+        
+        cameraUpdate.reason = 3
+        cameraUpdate.animation = .fly
+        cameraUpdate.animationDuration = 2
+        
+        detailNaverMapView.mapType = .basic
+        detailNaverMapView.minZoomLevel = 5.0
+        detailNaverMapView.maxZoomLevel = 18.0
+        detailNaverMapView.zoomLevel = 15.0
+        detailNaverMapView.moveCamera(cameraUpdate, completion: { (isCancelled) in
+            if isCancelled {
+                print("카메라 이동 취소")
+            } else {
+                print("카메라 이동 성공")
+            }
+        })
+        
+        marker.touchHandler = { (overlay) in
+            
+            print("마커 클릭됨")
+            self.goToNaverMap()
+            
+            return true
+        }
+        
+        marker.mapView = detailNaverMapView
+    }
+    
+    
+    func goToNaverMap(){
+        let appStoreURL = URL(string: "http://itunes.apple.com/app/id311867728?mt=8")!
+                   if let detailMapURL = URL(string: "nmap://place?lat=37.556693&lng=126.929313&name=Cozy%ea%b0%80%20%ec%b6%94%ec%b2%9c%ed%95%98%eb%8a%94%20%ec%84%9c%ec%a0%90&gamsung.Cozy=Cozy"), UIApplication.shared.canOpenURL(detailMapURL)
+                   { // 유효한 URL인지 검사합니다.
+                       if #available(iOS 10.0, *) { //iOS 10.0부터 URL를 오픈하는 방법이 변경 되었습니다.
+                           UIApplication.shared.open(detailMapURL, options: [:], completionHandler: nil)
+                       } else {
+                           UIApplication.shared.openURL(appStoreURL)
+                           
+                       }
+                       
+                   }
+    }
+    
+    
 
     @IBAction func closePressed(_ sender: Any) {
-        
-        
-        
-        
         //self.scrollView.scrollToTop()
         self.setTabBarHidden(false)
         self.navigationController?.popViewController(animated: true)
         
     }
 
+    @IBAction func testHeightButton(_ sender: Any) {
+        scrollHeight.constant = 1830
+    }
     func asCard(_ value: Bool) {
         if value {
             // Round the corners
@@ -44,6 +148,30 @@ class DetailViewController: UIViewController, StoryboardBased {
         }
     }
 }
+
+
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 413
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let reviewCell = reviewTableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath)
+        
+        return reviewCell
+        
+    }
+    
+    
+}
+
+
+
 
 extension DetailViewController: Animatable {
     var containerView: UIView? {

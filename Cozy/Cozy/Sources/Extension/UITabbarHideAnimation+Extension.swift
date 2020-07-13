@@ -36,6 +36,7 @@ extension UIViewController{
         
         func setTabBarHidden(_ hidden: Bool, animated: Bool = true, duration: TimeInterval = 0.4) {
             if animated {
+                print("setTabBarHidden호출")
                 if let frame = self.tabBarController?.tabBar.frame {
                     let factor: CGFloat = hidden ? 1 : -1
                     let y = frame.origin.y + (frame.size.height * factor)
