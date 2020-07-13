@@ -53,7 +53,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yb3-2l-yyg">
                                                     <rect key="frame" x="24" y="0.0" width="327" height="250"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="74" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-is-coP">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="74" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-is-coP">
                                                             <rect key="frame" x="0.0" y="2" width="327" height="164"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="퇴근길 책 한잔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdr-Bk-vCg">
@@ -153,6 +153,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bookstoreImageView" destination="jaW-is-coP" id="n30-Zs-aB9"/>
+                                            <outlet property="bookstoreName" destination="Vdr-Bk-vCg" id="e8H-BM-b3r"/>
                                             <outlet property="tagLabel" destination="7jV-Sf-3nc" id="bcm-xP-3nl"/>
                                             <outlet property="tagLabel2" destination="Zsk-GT-w2r" id="u3x-b1-evN"/>
                                             <outlet property="tagLabel3" destination="K5h-yG-Bs5" id="cJm-0B-GWg"/>
@@ -191,7 +193,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G8f-8h-zUb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="p0e-8R-BHo">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

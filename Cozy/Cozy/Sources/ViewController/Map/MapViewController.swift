@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MapViewController: UIViewController {
     
@@ -58,7 +59,7 @@ class MapViewController: UIViewController {
                 downButton.widthAnchor.constraint(equalToConstant: 42),
                 downButton.heightAnchor.constraint(equalToConstant: 42),
                 
-                searchButton.rightAnchor.constraint(equalToSystemSpacingAfter: (self.navigationController?.navigationBar.rightAnchor)!, multiplier: 7),
+                searchButton.rightAnchor.constraint(equalToSystemSpacingAfter: (self.navigationController?.navigationBar.rightAnchor)!, multiplier: 300),
                 searchButton.centerYAnchor.constraint(equalToSystemSpacingBelow: (self.navigationController?.navigationBar.centerYAnchor)!, multiplier: 0),
                 searchButton.widthAnchor.constraint(equalToConstant: 48),
                 searchButton.heightAnchor.constraint(equalToConstant: 48)
@@ -78,10 +79,11 @@ class MapViewController: UIViewController {
                 for data in data {
                     self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, sectionIdx: data.sectionIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, count: data.count, checked: data.checked))
                 }
-                print(data)
-                
+//                print(data)
+//                print(self.mapBookList.count)
+                self.tableView.reloadData()
             case .requestErr(_):
-                print("Request error@@")
+                print("Request error")
             case .pathErr:
                 print("path error")
             case .serverErr:
@@ -121,7 +123,6 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
-    
     // present half
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return HalfSizePresentationController(presentedViewController: presented, presenting: presenting)
@@ -149,14 +150,14 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
         if 0 == section {
             return 1
         } else {
-            return 5
+            return self.mapBookList.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! CountTableViewCell
-            cell.countLabel.text = "마포구의 독립 서점 87곳"
+            cell.countLabel.text = "마포구의 독립 서점 " + String(self.mapBookList.count) + "개"
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! LibraryTableViewCell
@@ -166,9 +167,14 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             cell.tagView2.setTagView()
             cell.tagView3.setTagView()
             
-            cell.tagLabel.text = "감성타코"
-            cell.tagLabel2.text = "독립서점"
-            cell.tagLabel3.text = "독립서점"
+            cell.bookstoreName.text = self.mapBookList[indexPath.row].bookstoreName
+            
+            let imageURL = URL(string: self.mapBookList[indexPath.row].image1)
+            cell.bookstoreImageView.kf.setImage(with: imageURL)
+            
+            cell.tagLabel.text = self.mapBookList[indexPath.row].hashtag1
+            cell.tagLabel2.text = self.mapBookList[indexPath.row].hashtag2
+            cell.tagLabel3.text = self.mapBookList[indexPath.row].hashtag3
             
             return cell
         }
