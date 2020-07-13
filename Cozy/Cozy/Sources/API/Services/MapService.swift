@@ -54,9 +54,7 @@ struct MapService {
     private func isData(by data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(MapResponseString.self, from: data) else { return .pathErr }
-        print(decodedData)
         guard let interestData = decodedData.data else { return .requestErr(decodedData.message) }
-        print(interestData)
         return .success(interestData)
     }
     
