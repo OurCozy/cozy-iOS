@@ -18,11 +18,15 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! // table view
     
+    var mapBookList: [MapBookStore] = [] // map data
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.downloadMapData()
         
         // iOS 11 버전 이상에서 실행
         if #available(iOS 11.0, *){
@@ -59,6 +63,32 @@ class MapViewController: UIViewController {
                 searchButton.widthAnchor.constraint(equalToConstant: 48),
                 searchButton.heightAnchor.constraint(equalToConstant: 48)
             ])
+        }
+    }
+    
+    // 서버 통신
+    func downloadMapData(){
+        MapService.shared.getMapBookStore(){ NetworkResult in
+            switch NetworkResult {
+            case .success(let data) :
+                print("success 💖")
+                
+                guard let data = data as? [MapBookStore] else { return }
+                
+                for data in data {
+                    self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, sectionIdx: data.sectionIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, count: data.count, checked: data.checked))
+                }
+                print(data)
+                
+            case .requestErr(_):
+                print("Request error@@")
+            case .pathErr:
+                print("path error")
+            case .serverErr:
+                print("server error")
+            case .networkFail:
+                print("network error")
+            }
         }
     }
     

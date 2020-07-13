@@ -68,6 +68,9 @@
 		B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */; };
 		B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69E909524B8A1C2009C4218 /* Review.storyboard */; };
 		B69E909924B8A231009C4218 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E909824B8A231009C4218 /* ReviewViewController.swift */; };
+		B6E3B39024BC406300F42D15 /* MapResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3B38F24BC406300F42D15 /* MapResponseString.swift */; };
+		B6E3B39324BC40B200F42D15 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3B39224BC40B200F42D15 /* MapService.swift */; };
+		B6E3B39524BC47C900F42D15 /* MapBookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3B39424BC47C900F42D15 /* MapBookStore.swift */; };
 		CC2645EA24BA0D3B00BCE4CD /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */; };
 		CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */; };
 		CCF6753224B9E9E000A40EC1 /* LastBookstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */; };
@@ -138,6 +141,9 @@
 		B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionViewController.swift; sourceTree = "<group>"; };
 		B69E909524B8A1C2009C4218 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
 		B69E909824B8A231009C4218 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		B6E3B38F24BC406300F42D15 /* MapResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapResponseString.swift; sourceTree = "<group>"; };
+		B6E3B39224BC40B200F42D15 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
+		B6E3B39424BC47C900F42D15 /* MapBookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBookStore.swift; sourceTree = "<group>"; };
 		CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstoreCell.swift; sourceTree = "<group>"; };
 		CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstore.swift; sourceTree = "<group>"; };
@@ -159,8 +165,8 @@
 		183C1E3A24B7415400FFE494 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				183C1E3B24B7416600FFE494 /* APIConstants.swift */,
-				183C1E3D24B7431B00FFE494 /* NetworkResult.swift */,
+				B6E3B38E24BC403D00F42D15 /* Response */,
+				B6E3B38D24BC403000F42D15 /* Services */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				55E839E824AF2B43003C64FE /* MapViewController.swift */,
+				B6E3B39424BC47C900F42D15 /* MapBookStore.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -475,6 +482,24 @@
 				B69E909824B8A231009C4218 /* ReviewViewController.swift */,
 			);
 			path = Review;
+			sourceTree = "<group>";
+		};
+		B6E3B38D24BC403000F42D15 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				183C1E3B24B7416600FFE494 /* APIConstants.swift */,
+				183C1E3D24B7431B00FFE494 /* NetworkResult.swift */,
+				B6E3B39224BC40B200F42D15 /* MapService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B6E3B38E24BC403D00F42D15 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B6E3B38F24BC406300F42D15 /* MapResponseString.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		DA6EB647575B9EB8135F0FC1 /* Pods */ = {
@@ -641,6 +666,7 @@
 				5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */,
 				183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */,
 				55CE354624B3306E001210A7 /* ShadowView.swift in Sources */,
+				B6E3B39024BC406300F42D15 /* MapResponseString.swift in Sources */,
 				55CE354024B32F81001210A7 /* NibOwnerLoadable.swift in Sources */,
 				B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */,
 				55E839E724AF2B39003C64FE /* RecommendViewController.swift in Sources */,
@@ -656,8 +682,10 @@
 				55ABB33724B37681008B5A5B /* Animatable.swift in Sources */,
 				55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */,
 				55CE354D24B3467E001210A7 /* CommonView.swift in Sources */,
+				B6E3B39524BC47C900F42D15 /* MapBookStore.swift in Sources */,
 				CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */,
 				55CE353824B32D17001210A7 /* CardCollectionViewCell.swift in Sources */,
+				B6E3B39324BC40B200F42D15 /* MapService.swift in Sources */,
 				B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
 				55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */,
