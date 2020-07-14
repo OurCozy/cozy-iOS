@@ -93,7 +93,6 @@ class InterestViewController: UIViewController {
 
                 case .requestErr(_):
                     print("Request error@@")
-                    self.nickName = "Gain"
                 case .pathErr:
                     print("path error")
                 case .serverErr:
@@ -162,6 +161,7 @@ extension UITableView {
         
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageLabel)
+        //emptyView.backgroundColor = UIColor.red
         
         titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
