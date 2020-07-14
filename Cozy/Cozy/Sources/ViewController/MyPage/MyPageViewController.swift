@@ -14,6 +14,9 @@ protocol ButtonDelegate {
 
 class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    //유저 프로필
+    
+    
     // 프로필 사진
     var delegate: ButtonDelegate?
     var indexPath: IndexPath?
@@ -67,8 +70,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         let vc = sb.instantiateViewController(identifier: "EventViewController") as! EventViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 
     // 내가 쓴 후기
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
@@ -77,6 +78,31 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         self.navigationController!.pushViewController(vc, animated: true)
         return true
     }
+    
+//    func setProfileData(){
+//        ProfileService.shared.getProfileData(){ NetworkResult in
+//            switch NetworkResult {
+//                case .success(let data):
+//                    guard let data = data as? [UserProfile] else {return print("error")}
+//                    print("@@@@@@data@@@@@@")
+//                    print(data)
+//                    for data in data{
+//                        self.bookStoreList.append(BookStore(bookStoreImageName: data.profile, bookStoreName: data.bookstoreName, hashTag01: data.hashtag1, hashTag02: data.hashtag2, hashTag03: data.hashtag3))
+//                    }
+//                    self.tableView.reloadData()
+//
+//                case .requestErr(_):
+//                    print("Request error@@")
+//                case .pathErr:
+//                    print("path error")
+//                case .serverErr:
+//                    print("server error")
+//                case .networkFail:
+//                    print("network error")
+//            }
+//        }
+//        
+//    }
 }
 
  

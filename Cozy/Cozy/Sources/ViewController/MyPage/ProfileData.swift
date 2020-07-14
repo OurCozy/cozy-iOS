@@ -8,6 +8,7 @@
 
 import Foundation
 
+// json 디코딩
 struct ProfileData: Codable {
     var status: Int
     var success: Bool
@@ -30,9 +31,10 @@ struct ProfileData: Codable {
         }
     }
 
+// 받아온 객체 디코딩
     struct UserProfile: Codable{
+        var profile: String
         var nickname: String
         var email: String
-        var profile: String
 }
         
