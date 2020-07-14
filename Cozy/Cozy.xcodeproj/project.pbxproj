@@ -68,6 +68,8 @@
 		B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */; };
 		B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */; };
 		B68682CF24BD8A04006DAADE /* SocialLogin2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68682CE24BD8A04006DAADE /* SocialLogin2ViewController.swift */; };
+		B68682D324BD8F11006DAADE /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68682D224BD8F11006DAADE /* Signin.storyboard */; };
+		B68682D624BD8F54006DAADE /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68682D524BD8F54006DAADE /* SigninViewController.swift */; };
 		B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69E909524B8A1C2009C4218 /* Review.storyboard */; };
 		B69E909924B8A231009C4218 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E909824B8A231009C4218 /* ReviewViewController.swift */; };
 		B6E3B39024BC406300F42D15 /* MapResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3B38F24BC406300F42D15 /* MapResponseString.swift */; };
@@ -146,6 +148,8 @@
 		B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectRegion.storyboard; sourceTree = "<group>"; };
 		B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionViewController.swift; sourceTree = "<group>"; };
 		B68682CE24BD8A04006DAADE /* SocialLogin2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin2ViewController.swift; sourceTree = "<group>"; };
+		B68682D224BD8F11006DAADE /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
+		B68682D524BD8F54006DAADE /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B69E909524B8A1C2009C4218 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
 		B69E909824B8A231009C4218 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		B6E3B38F24BC406300F42D15 /* MapResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapResponseString.swift; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 		55E839DA24AF2A0E003C64FE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B68682D424BD8F40006DAADE /* Signin */,
 				B65D3A1024BB994900405549 /* Login */,
 				B65D3A0524BB94D800405549 /* Splash */,
 				B69E909724B8A21E009C4218 /* Review */,
@@ -392,6 +397,7 @@
 				B65D3A0324BB94D100405549 /* Splash.storyboard */,
 				B65D3A0E24BB993700405549 /* Login.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
+				B68682D224BD8F11006DAADE /* Signin.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -491,6 +497,14 @@
 			path = SelectRegion;
 			sourceTree = "<group>";
 		};
+		B68682D424BD8F40006DAADE /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				B68682D524BD8F54006DAADE /* SigninViewController.swift */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
 		B69E909724B8A21E009C4218 /* Review */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +600,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68682D324BD8F11006DAADE /* Signin.storyboard in Resources */,
 				55E839D224AF29C6003C64FE /* LaunchScreen.storyboard in Resources */,
 				B65D3A0C24BB989000405549 /* Gilroy-Light.ttf in Resources */,
 				55CE354B24B34536001210A7 /* CardCollectionViewCell.xib in Resources */,
@@ -671,6 +686,7 @@
 				B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */,
 				183C1E2F24B1D5E500FFE494 /* BookStoreTableViewCell.swift in Sources */,
 				55ABB33824B37681008B5A5B /* CustomTransitionAnimation.swift in Sources */,
+				B68682D624BD8F54006DAADE /* SigninViewController.swift in Sources */,
 				55CE354324B32F81001210A7 /* UICollectionView+Reusable.swift in Sources */,
 				55E839ED24AF2B51003C64FE /* MyPageViewController.swift in Sources */,
 				B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */,

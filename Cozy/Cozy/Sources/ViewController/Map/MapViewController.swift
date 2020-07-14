@@ -21,6 +21,8 @@ class MapViewController: UIViewController {
     
     var mapBookList: [MapBookStore] = [] // map data
     
+    let mapIdx: Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,14 +75,10 @@ class MapViewController: UIViewController {
             switch NetworkResult {
             case .success(let data) :
                 print("success 💖")
-                
                 guard let data = data as? [MapBookStore] else { return }
-                
                 for data in data {
                     self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, sectionIdx: data.sectionIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, count: data.count, checked: data.checked))
                 }
-//                print(data)
-//                print(self.mapBookList.count)
                 self.tableView.reloadData()
             case .requestErr(_):
                 print("Request error")
@@ -162,10 +160,15 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! LibraryTableViewCell
             cell.wholeView.setViewShadow()
-            
             cell.tagView.setTagView()
             cell.tagView2.setTagView()
             cell.tagView3.setTagView()
+            
+            if self.mapBookList[indexPath.row].checked == 0 {
+                cell.bookMarkButton.setImage(UIImage(named: "icBookmark"), for: .normal)
+            } else {
+                cell.bookMarkButton.setImage(UIImage(named: "icBookmarkSelected"), for: .normal)
+            }
             
             cell.bookstoreName.text = self.mapBookList[indexPath.row].bookstoreName
             
@@ -179,7 +182,7 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             return cell
         }
     }
-    
+
     // cell click event 지정 - detail view 로 넘어가기
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
