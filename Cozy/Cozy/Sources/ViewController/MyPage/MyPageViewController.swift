@@ -8,11 +8,21 @@
 
 import UIKit
 
+protocol ButtonDelegate {
+    func onClickButton(in index: Int)
+}
+
 class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    // 프로필 사진
+    var delegate: ButtonDelegate?
+    var indexPath: IndexPath?
+    private var pickerController = UIImagePickerController()
     
+    // 내가 쓴 후기 뷰
     @IBOutlet weak var myReview: UIView!
     
+    // 최근 본 책방
     @IBOutlet weak var collectionView: UICollectionView!
     private var lastBookstoreList: [LastBookstore] = []
     let bookstore1 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
@@ -27,12 +37,13 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
 
         // Do any additional setup after loading the view.
         
+        pickerController.delegate = self
+        
         // 내가 쓴 후기 탭제스쳐 연결
          let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
          tapGesture.delegate = self
          
          self.myReview.addGestureRecognizer(tapGesture)
-
 
         lastBookstoreList = [bookstore1, bookstore2, bookstore3, bookstore4, bookstore5]
         collectionView.dataSource = self
@@ -40,7 +51,7 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
         @IBAction func touchUpProfileButton(_ sender: Any) {
-    //    print("터치 프로필 버튼")
+            delegate?.onClickButton(in: indexPath!.row)
         }
     
     // 공지사항 이동
@@ -69,7 +80,29 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
 }
 
  
+extension MyPageViewController: ButtonDelegate {
+    func onClickButton(in index: Int) {
+        let alertController = UIAlertController(title: "사진 선택", message: "", preferredStyle: .actionSheet)
+        let galleryAction = UIAlertAction(title: "사진 보관함", style: .default) { action in self.openLibrary() }
+        let photoAction = UIAlertAction(title: "카메라", style: .default) { action in self.openCamera() }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alertController.addAction(photoAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
 
+// 프로필 사진 사진함, 카메라 접근
+extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func openLibrary() {
+        pickerController.sourceType = .photoLibrary
+        self.present(pickerController, animated: true, completion: nil)
+    }
+    func openCamera() {
+        pickerController.sourceType = .camera
+        self.present(pickerController, animated: true, completion: nil)
+    }
+}
 
 extension MyPageViewController: UICollectionViewDataSource {
     //셀에 들어가는 데이터 설정
