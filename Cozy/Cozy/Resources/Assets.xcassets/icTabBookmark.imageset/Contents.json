@@ -6,13 +6,13 @@
       "filename" : "icTabBookmark.png"
     },
     {
-      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "icTabBookmark@2x.png"
+      "filename" : "icTabBookmark@2x.png",
+      "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
       "scale" : "3x",
+      "idiom" : "universal",
       "filename" : "icTabBookmark@3x.png"
     }
   ],
