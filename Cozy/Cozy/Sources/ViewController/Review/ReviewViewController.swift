@@ -7,28 +7,55 @@
 //
 
 import UIKit
+import Cosmos
 
-class ReviewViewController: UIViewController {
+class ReviewViewController: UIViewController, UIGestureRecognizerDelegate, UITextViewDelegate {
 
-    @IBOutlet weak var star1: UIButton!
-    @IBOutlet weak var star2: UIButton!
-    @IBOutlet weak var star3: UIButton!
-    @IBOutlet weak var star4: UIButton!
-    @IBOutlet weak var star5: UIButton!
-    
-    
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var reviewTextView: UITextView!
+    
+    @IBOutlet weak var ratingView: CosmosView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.star1.tag = 1
-        self.star2.tag = 2
-        self.star3.tag = 3
-        self.star4.tag = 4
-        self.star5.tag = 5
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+        tapGesture.delegate = self
         
-        self.nextButton.isEnabled = false
+        self.view.addGestureRecognizer(tapGesture)
+        
+        self.reviewTextView.text = "내용을 입력하세요"
+        self.reviewTextView.textColor = UIColor.veryLightPinkTwo
+        
+        self.reviewTextView.delegate = self
+        
+        self.ratingView.didFinishTouchingCosmos = { rating in
+            print("🌟 rating? ", rating)
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.veryLightPinkTwo {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "내용을 입력하세요"
+            textView.textColor = UIColor.veryLightPinkTwo
+            
+            self.nextButton.setTitleColor(UIColor.veryLightPinkTwo, for: .normal)
+        } else {
+            self.nextButton.setTitleColor(UIColor.dustyOrange, for: .normal)
+        }
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     @IBAction func goBack(_ sender: UIButton) {
@@ -36,53 +63,7 @@ class ReviewViewController: UIViewController {
     }
     
     @IBAction func goNextButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func clickStar(_ sender: UIButton) {
-        self.nextButton.isEnabled = true
-        self.nextButton.setTitleColor(UIColor.dustyOrange, for: .normal)
-        
-//        for i in 0...sender.tag {
-//            
-//        }
-        
-        switch sender.tag {
-        case 1:
-            self.star1.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star2.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-            self.star3.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-            self.star4.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-            self.star5.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-        case 2:
-            self.star1.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star2.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star3.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-            self.star4.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-            self.star5.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-        case 3:
-            self.star1.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star2.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star3.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star4.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-            self.star5.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-        case 4:
-            self.star1.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star2.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star3.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star4.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star5.setImage(UIImage(named: "icCommentsStar"), for: .normal)
-        case 5 :
-            self.star1.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star2.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star3.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star4.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-            self.star5.setImage(UIImage(named: "icCommentsStarSelected"), for: .normal)
-        default:
-            return
-        }
         
     }
-    
-    
 
 }

@@ -1,22 +1,30 @@
 PODS:
   - Alamofire (4.8.2)
+  - Cosmos (22.1.0)
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
+  - NMapsMap (3.8.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - Cosmos (~> 22.1)
   - Kingfisher (~> 5.0)
+  - NMapsMap
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cosmos
     - Kingfisher
+    - NMapsMap
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  NMapsMap: b3633ad688483a318be9293aeddd323a714fb08b
 
-PODFILE CHECKSUM: cc72fedd59ec7bfb7b365a2d4295982839047d5c
+PODFILE CHECKSUM: c5882cbc9a33efbb7ee93581bd91fa10f1b03640
 
 COCOAPODS: 1.9.3

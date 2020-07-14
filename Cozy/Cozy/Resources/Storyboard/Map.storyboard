@@ -53,7 +53,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yb3-2l-yyg">
                                                     <rect key="frame" x="24" y="0.0" width="327" height="250"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="74" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-is-coP">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="74" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-is-coP">
                                                             <rect key="frame" x="0.0" y="2" width="327" height="164"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="퇴근길 책 한잔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdr-Bk-vCg">
@@ -153,6 +153,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bookstoreImageView" destination="jaW-is-coP" id="n30-Zs-aB9"/>
+                                            <outlet property="bookstoreName" destination="Vdr-Bk-vCg" id="e8H-BM-b3r"/>
                                             <outlet property="tagLabel" destination="7jV-Sf-3nc" id="bcm-xP-3nl"/>
                                             <outlet property="tagLabel2" destination="Zsk-GT-w2r" id="u3x-b1-evN"/>
                                             <outlet property="tagLabel3" destination="K5h-yG-Bs5" id="cJm-0B-GWg"/>
@@ -175,16 +177,9 @@
                         <viewLayoutGuide key="safeArea" id="foc-yY-XOA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icTabMapSelected" id="lmd-Va-UsU"/>
-                    <navigationItem key="navigationItem" title="마포구" id="DYz-xy-K6e">
-                        <barButtonItem key="rightBarButtonItem" image="icSearch" id="JRA-2t-RZp">
-                            <connections>
-                                <action selector="searchButtonClick:" destination="nBS-Wg-Njp" id="dk2-J7-6iE"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="마포구" id="DYz-xy-K6e"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="searchButton" destination="JRA-2t-RZp" id="PjR-Jf-jvC"/>
                         <outlet property="tableView" destination="gHN-Zf-pev" id="PPY-Kf-qwa"/>
                     </connections>
                 </viewController>
@@ -198,7 +193,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G8f-8h-zUb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="p0e-8R-BHo">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -215,7 +210,6 @@
     <resources>
         <image name="74" width="497.33334350585938" height="331.66665649414062"/>
         <image name="icBookmarkSelected" width="57" height="57"/>
-        <image name="icSearch" width="48" height="48"/>
         <image name="icTabMapSelected" width="48" height="48"/>
     </resources>
 </document>

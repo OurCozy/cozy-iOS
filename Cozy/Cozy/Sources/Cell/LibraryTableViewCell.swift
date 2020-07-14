@@ -12,6 +12,9 @@ class LibraryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var wholeView: UIView!
     
+    @IBOutlet weak var bookstoreImageView: UIImageView!
+    @IBOutlet weak var bookstoreName: UILabel!
+    
     @IBOutlet weak var tagView: UIView!
     @IBOutlet weak var tagLabel: UILabel!
     
