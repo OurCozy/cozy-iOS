@@ -40,8 +40,10 @@ class BookStoreTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setBookStoreData(profile: String, bookStoreName: String, hashtag1: String, hashtag2:String, hashtag3:String){
-        self.bookStoreImageView.image = UIImage(named: profile)
+    func setBookStoreData(image1: String, bookStoreName: String, hashtag1: String, hashtag2:String, hashtag3:String){
+        let url = URL(string: image1)
+        guard let data = try? Data(contentsOf: url!) else {return}
+        self.bookStoreImageView.image = UIImage(data: data)
         self.bookStoreName.text = bookStoreName
         hashTagLabel01.text = hashtag1
         hashTagLabel02.text = hashtag2
