@@ -26,6 +26,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-iW-oI8">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
                                         <state key="normal" image="btnKakaoLogin"/>
+                                        <connections>
+                                            <action selector="goKakaoLogin:" destination="05y-SL-d4f" eventType="touchUpInside" id="9Bl-En-uVD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xs2-i3-BUZ">
                                         <rect key="frame" x="80" y="0.0" width="58" height="58"/>

@@ -98,6 +98,83 @@
             </objects>
             <point key="canvasLocation" x="253.62318840579712" y="-311.38392857142856"/>
         </scene>
+        <!--Social Login2 View Controller-->
+        <scene sceneID="63l-Il-gsO">
+            <objects>
+                <viewController storyboardIdentifier="SocialLogin2ViewController" id="onw-e2-6sI" customClass="SocialLogin2ViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ona-v6-7cT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIF-Ru-Eoq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="piD-KE-x48">
+                                <rect key="frame" x="24" y="356" width="366" height="184"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-rA-p5Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="rXP-Yb-C7E"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-E1-uSN">
+                                        <rect key="frame" x="0.0" y="62" width="366" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="bnm-gP-DPh"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUK-fC-FBp">
+                                        <rect key="frame" x="153" y="124" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="cYX-eZ-jMa"/>
+                                            <constraint firstAttribute="width" secondItem="XUK-fC-FBp" secondAttribute="height" multiplier="1:1" id="deg-UR-iX9"/>
+                                            <constraint firstAttribute="width" constant="60" id="k0s-2k-sYh"/>
+                                        </constraints>
+                                        <state key="normal" image="icX"/>
+                                        <connections>
+                                            <action selector="clickCloseButton:" destination="onw-e2-6sI" eventType="touchUpInside" id="Qfj-Wr-ed3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rtF-E1-uSN" firstAttribute="top" secondItem="RFv-rA-p5Z" secondAttribute="bottom" constant="14" id="1Fy-ur-nwo"/>
+                                    <constraint firstAttribute="trailing" secondItem="RFv-rA-p5Z" secondAttribute="trailing" id="6hX-OU-usO"/>
+                                    <constraint firstItem="XUK-fC-FBp" firstAttribute="top" secondItem="rtF-E1-uSN" secondAttribute="bottom" constant="14" id="9KY-Yx-gGZ"/>
+                                    <constraint firstItem="rtF-E1-uSN" firstAttribute="top" secondItem="RFv-rA-p5Z" secondAttribute="bottom" constant="14" id="Bzt-ro-1Bi"/>
+                                    <constraint firstItem="RFv-rA-p5Z" firstAttribute="top" secondItem="piD-KE-x48" secondAttribute="top" id="DXh-Hn-IoR"/>
+                                    <constraint firstItem="rtF-E1-uSN" firstAttribute="leading" secondItem="piD-KE-x48" secondAttribute="leading" id="NIw-KI-5ye"/>
+                                    <constraint firstAttribute="height" constant="184" id="PEv-Eo-YCk"/>
+                                    <constraint firstItem="RFv-rA-p5Z" firstAttribute="leading" secondItem="piD-KE-x48" secondAttribute="leading" id="lFN-EH-eeT"/>
+                                    <constraint firstAttribute="trailing" secondItem="rtF-E1-uSN" secondAttribute="trailing" id="p5N-el-kLa"/>
+                                    <constraint firstItem="XUK-fC-FBp" firstAttribute="top" secondItem="rtF-E1-uSN" secondAttribute="bottom" constant="14" id="urc-eZ-3h1"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EIF-Ru-Eoq" firstAttribute="leading" secondItem="voI-BS-s0c" secondAttribute="leading" id="17e-Kd-aU3"/>
+                            <constraint firstAttribute="bottom" secondItem="EIF-Ru-Eoq" secondAttribute="bottom" id="79c-4q-MJV"/>
+                            <constraint firstItem="piD-KE-x48" firstAttribute="leading" secondItem="voI-BS-s0c" secondAttribute="leading" constant="24" id="EF9-Fg-k2m"/>
+                            <constraint firstItem="piD-KE-x48" firstAttribute="centerX" secondItem="ona-v6-7cT" secondAttribute="centerX" id="MaC-SC-biB"/>
+                            <constraint firstItem="piD-KE-x48" firstAttribute="centerY" secondItem="ona-v6-7cT" secondAttribute="centerY" id="U4k-be-vh6"/>
+                            <constraint firstItem="EIF-Ru-Eoq" firstAttribute="trailing" secondItem="voI-BS-s0c" secondAttribute="trailing" id="d9j-kX-Xf1"/>
+                            <constraint firstItem="voI-BS-s0c" firstAttribute="trailing" secondItem="piD-KE-x48" secondAttribute="trailing" constant="24" id="oRM-4L-lXe"/>
+                            <constraint firstItem="EIF-Ru-Eoq" firstAttribute="top" secondItem="ona-v6-7cT" secondAttribute="top" id="rqb-7X-Gce"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="voI-BS-s0c"/>
+                    </view>
+                    <connections>
+                        <outlet property="easyLoginView" destination="rtF-E1-uSN" id="ONu-Hx-DgI"/>
+                        <outlet property="otherKakakoLoginView" destination="RFv-rA-p5Z" id="jrP-aU-i6d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hie-5E-NhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011.5942028985507" y="-311.38392857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btnFacebookLogin" width="58" height="58"/>

@@ -67,6 +67,7 @@
 		B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */; };
 		B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */; };
 		B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */; };
+		B68682CF24BD8A04006DAADE /* SocialLogin2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68682CE24BD8A04006DAADE /* SocialLogin2ViewController.swift */; };
 		B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69E909524B8A1C2009C4218 /* Review.storyboard */; };
 		B69E909924B8A231009C4218 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E909824B8A231009C4218 /* ReviewViewController.swift */; };
 		B6E3B39024BC406300F42D15 /* MapResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3B38F24BC406300F42D15 /* MapResponseString.swift */; };
@@ -144,6 +145,7 @@
 		B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
 		B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectRegion.storyboard; sourceTree = "<group>"; };
 		B6776B4624B7082B00BF0E53 /* SelectRegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegionViewController.swift; sourceTree = "<group>"; };
+		B68682CE24BD8A04006DAADE /* SocialLogin2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin2ViewController.swift; sourceTree = "<group>"; };
 		B69E909524B8A1C2009C4218 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
 		B69E909824B8A231009C4218 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		B6E3B38F24BC406300F42D15 /* MapResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapResponseString.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 			children = (
 				B65D3A1124BB996700405549 /* LoginViewController.swift */,
 				B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */,
+				B68682CE24BD8A04006DAADE /* SocialLogin2ViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68682CF24BD8A04006DAADE /* SocialLogin2ViewController.swift in Sources */,
 				B65D3A0924BB957100405549 /* UIFont+Extension.swift in Sources */,
 				183C1E4024B857C300FFE494 /* InterestService.swift in Sources */,
 				55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */,
