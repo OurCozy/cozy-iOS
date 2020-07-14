@@ -18,6 +18,8 @@ class RecommendViewController: UIViewController {
     
     var RecommendationList: [Recommendation.RecommendationData] = []
     
+    private var justOneServerConnect = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,7 +54,9 @@ class RecommendViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if justOneServerConnect == false {
         downloadRecommendationData()
+        }
        
     }
     
@@ -64,7 +68,7 @@ class RecommendViewController: UIViewController {
         RecommendationService.shared.getRecommendationData { NetworkResult in
             switch NetworkResult {
             case .success(let data) :
-                print("recommendation success 💖")
+                print("🎁 recommendation success 🎁 ")
                 
                 guard let data = data as? [Recommendation.RecommendationData] else {
                     print("데이터에서 리턴")
@@ -77,10 +81,7 @@ class RecommendViewController: UIViewController {
                     self.recommendCollectionView.reloadData()
                 }
                 print("휘뚜루마뚜루 \(self.RecommendationList[0].location)")
-                
-                
-                
-                
+                self.justOneServerConnect = true
                 
             case .requestErr(_):
                 print("Request error@@")
@@ -121,18 +122,14 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
         } else {
             let cardCell = collectionView.dequeueReusableCell(for: indexPath, cellType: CardCollectionViewCell.self)
             
-            
             DispatchQueue.global().async {
                 guard let imageURL = URL(string: self.RecommendationList[indexPath.row].profile) else {
                     return
                 }
-                guard let imageData: Data = try? Data(contentsOf: imageURL) else {
-                    return
-                }
+                
                 DispatchQueue.main.async {
-                     cardCell.commonView.mainRecommendImageView.image = UIImage(data: imageData)
+                    cardCell.commonView.mainRecommendImageView.setImage(from: self.RecommendationList[indexPath.row].profile)
                 }
-               
             }
             
             
@@ -152,9 +149,27 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             
             let vc = DetailViewController.instantiate()
             
-            //self.tabBarController?.tabBar.isHidden = true
+           
             self.setTabBarHidden(true)
+            //setTabBarHidden 아이폰 SE2 , 8 , 8+만 안먹힘, 분기처리 생각중
+            
+            //self.tabBarController?.tabBar.isHidden = true
+            guard let imageURL = URL(string: self.RecommendationList[0].profile) else {
+                return
+            }
+            guard let imageData: Data = try? Data(contentsOf: imageURL) else {
+                return
+            }
+            vc.getMainRecommendImageString = self.RecommendationList[indexPath.row].profile
+            vc.getGuideLabel1 = self.RecommendationList[indexPath.row].shortIntro
+            vc.getGuideLabel2 = self.RecommendationList[indexPath.row].shortIntro2
+            vc.getNameString = self.RecommendationList[indexPath.row].bookstoreName
+            vc.getLocationString = self.RecommendationList[indexPath.row].location
             self.navigationController?.pushViewController(vc, animated: true)
+            
+            
+            
+
         }
     }
     

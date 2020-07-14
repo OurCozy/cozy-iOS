@@ -13,7 +13,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var reviewTableView: UITableView!
     @IBOutlet weak var tableviewHeight: NSLayoutConstraint!
     
-    
+
     
     @IBOutlet weak var detailNaverMapView: NMFMapView!
     var authState: NMFAuthState!
@@ -31,8 +31,11 @@ class DetailViewController: UIViewController, StoryboardBased {
             self.setNeedsStatusBarAppearanceUpdate()
         }
     }
-    
-    
+    var getMainRecommendImageString: String = ""
+    var getGuideLabel1: String = ""
+    var getGuideLabel2: String = ""
+    var getNameString:String = ""
+    var getLocationString: String = ""
 //    isStatusBarHidden {
 //        willSet {
 //            setNeeds~~뭐시기()
@@ -42,6 +45,8 @@ class DetailViewController: UIViewController, StoryboardBased {
         reviewTableView.delegate = self
         reviewTableView.dataSource = self
         
+    
+        setMainCommonView()
         setNaverMap()
         
         for buttonIndex in 0...2 {
@@ -93,23 +98,19 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     @objc func appMovedToBackground() {
         self.setTabBarHidden(true)
+        
        // self.tabBarController?.tabBar.isHidden = true
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        print("viewWillAppear() 호출")
-        
-//        if self.tabBarController?.tabBar.isHidden == true {
-//           // self.tabBarController?.tabBar.isHidden = true
-//             self.setTabBarHidden(false)
-//        }
-     //   self.setTabBarHidden(false)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         
+    }
+    
+    func setMainCommonView() {
+        commonView.mainRecommendImageView.setImage(from: getMainRecommendImageString)
+        commonView.guideLabel1.text = getGuideLabel1
+        commonView.guideLabel2.text = getGuideLabel2
+        commonView.bookstoreName.text = getNameString
+        commonView.bookstoreAddress.text = getLocationString
     }
     
     @IBAction func touchUpLocationButton(_ sender: Any) {

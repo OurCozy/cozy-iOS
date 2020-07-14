@@ -550,12 +550,12 @@
         <image name="icHomepage" width="60" height="60"/>
         <image name="icInstagram" width="60" height="60"/>
         <image name="icMoreBlack" width="28" height="28"/>
-        <image name="icRightArrowSmall" width="24" height="24"/>
+        <image name="icRightArrowSmall" width="48" height="48"/>
         <image name="icXDark" width="48" height="48"/>
         <image name="imgAdress" width="22" height="22"/>
         <image name="imgCall" width="22" height="22"/>
         <image name="imgEtc" width="22" height="22"/>
-        <image name="imgProfile" width="80" height="80"/>
+        <image name="imgProfile" width="44" height="44"/>
         <image name="imgTime" width="22" height="22"/>
     </resources>
 </document>

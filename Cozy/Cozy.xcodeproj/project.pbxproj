@@ -36,6 +36,7 @@
 		55E460B524BC512E0035ECCE /* reviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460B424BC512E0035ECCE /* reviewTableViewCell.swift */; };
 		55E460B724BCB0360035ECCE /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460B624BCB0360035ECCE /* Recommendation.swift */; };
 		55E460B924BCB2370035ECCE /* RecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460B824BCB2370035ECCE /* RecommendationService.swift */; };
+		55E460BB24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460BA24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift */; };
 		55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C524AF29C2003C64FE /* AppDelegate.swift */; };
 		55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C724AF29C2003C64FE /* SceneDelegate.swift */; };
 		55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E839CB24AF29C2003C64FE /* Main.storyboard */; };
@@ -112,6 +113,7 @@
 		55E460B424BC512E0035ECCE /* reviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewTableViewCell.swift; sourceTree = "<group>"; };
 		55E460B624BCB0360035ECCE /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 		55E460B824BCB2370035ECCE /* RecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationService.swift; sourceTree = "<group>"; };
+		55E460BA24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageViewKingfisher+Extension.swift"; sourceTree = "<group>"; };
 		55E839C224AF29C2003C64FE /* Cozy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cozy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E839C524AF29C2003C64FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E839C724AF29C2003C64FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */,
 				55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */,
 				B65D3A0824BB957100405549 /* UIFont+Extension.swift */,
+				55E460BA24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				55CE354324B32F81001210A7 /* UICollectionView+Reusable.swift in Sources */,
 				55E839ED24AF2B51003C64FE /* MyPageViewController.swift in Sources */,
 				B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */,
+				55E460BB24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift in Sources */,
 				B63341D924B08F300070F8C4 /* UIView+Extension.swift in Sources */,
 				CC2645EC24BC1B0500BCE4CD /* NoticeViewController.swift in Sources */,
 				55CE354224B32F81001210A7 /* NibLoadable.swift in Sources */,
