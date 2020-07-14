@@ -8,6 +8,8 @@
 import UIKit
 import Foundation
 
+
+// 최근본 책방 collection view
 struct LastBookstore{
     var bookstoreImage: UIImage?
     var bookstoreName: String

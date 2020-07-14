@@ -79,6 +79,9 @@
 		CC2645EC24BC1B0500BCE4CD /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2645EB24BC1B0500BCE4CD /* NoticeViewController.swift */; };
 		CC2645EE24BC3B4200BCE4CD /* MyReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2645ED24BC3B4200BCE4CD /* MyReviewViewController.swift */; };
 		CC2645F224BC411700BCE4CD /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2645F124BC411700BCE4CD /* EventViewController.swift */; };
+		CC26460724BC990800BCE4CD /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26460624BC990800BCE4CD /* ProfileData.swift */; };
+		CC26460924BC9DF600BCE4CD /* UploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26460824BC9DF600BCE4CD /* UploadService.swift */; };
+		CC26460B24BDAD8F00BCE4CD /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26460A24BDAD8F00BCE4CD /* ProfileService.swift */; };
 		CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */; };
 		CCF6753224B9E9E000A40EC1 /* LastBookstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */; };
 /* End PBXBuildFile section */
@@ -159,6 +162,9 @@
 		CC2645EB24BC1B0500BCE4CD /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		CC2645ED24BC3B4200BCE4CD /* MyReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyReviewViewController.swift; path = Cozy/Sources/ViewController/MyPage/MyReviewViewController.swift; sourceTree = SOURCE_ROOT; };
 		CC2645F124BC411700BCE4CD /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		CC26460624BC990800BCE4CD /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		CC26460824BC9DF600BCE4CD /* UploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadService.swift; sourceTree = "<group>"; };
+		CC26460A24BDAD8F00BCE4CD /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstoreCell.swift; sourceTree = "<group>"; };
 		CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstore.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -423,6 +429,9 @@
 				CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */,
 				CC2645EB24BC1B0500BCE4CD /* NoticeViewController.swift */,
 				CC2645F124BC411700BCE4CD /* EventViewController.swift */,
+				CC26460624BC990800BCE4CD /* ProfileData.swift */,
+				CC26460824BC9DF600BCE4CD /* UploadService.swift */,
+				CC26460A24BDAD8F00BCE4CD /* ProfileService.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -703,6 +712,7 @@
 				B6E3B39024BC406300F42D15 /* MapResponseString.swift in Sources */,
 				55CE354024B32F81001210A7 /* NibOwnerLoadable.swift in Sources */,
 				B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */,
+				CC26460B24BDAD8F00BCE4CD /* ProfileService.swift in Sources */,
 				55E839E724AF2B39003C64FE /* RecommendViewController.swift in Sources */,
 				55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */,
 				B63341EB24B328C30070F8C4 /* SearchViewController.swift in Sources */,
@@ -721,10 +731,12 @@
 				B6E3B39524BC47C900F42D15 /* MapBookStore.swift in Sources */,
 				CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */,
 				55CE353824B32D17001210A7 /* CardCollectionViewCell.swift in Sources */,
+				CC26460724BC990800BCE4CD /* ProfileData.swift in Sources */,
 				B6E3B39324BC40B200F42D15 /* MapService.swift in Sources */,
 				B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
 				55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */,
+				CC26460924BC9DF600BCE4CD /* UploadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

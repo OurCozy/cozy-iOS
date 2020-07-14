@@ -30,8 +30,8 @@
                                                             <fragment content="cozynim@cozy.com">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" metaFont="menu" size="14"/>
-                                                                    <font key="NSOriginalFont" metaFont="menu" size="14"/>
+                                                                    <font key="NSFont" metaFont="label" size="14"/>
+                                                                    <font key="NSOriginalFont" metaFont="label" size="14"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -52,6 +52,10 @@
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile" translatesAutoresizingMaskIntoConstraints="NO" id="h1t-gW-x03">
                                                         <rect key="frame" x="147.66666666666666" y="41" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="Rgs-rz-gPS"/>
+                                                            <constraint firstAttribute="height" constant="80" id="iZd-nZ-Nbe"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSetting" translatesAutoresizingMaskIntoConstraints="NO" id="r4j-Yf-7Bx">
                                                         <rect key="frame" x="213.66666666666666" y="128.99999999999997" width="47.999999999999972" height="48"/>
@@ -61,7 +65,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwL-Ma-GiX">
-                                                        <rect key="frame" x="114" y="19" width="148" height="132"/>
+                                                        <rect key="frame" x="113" y="15" width="148" height="132"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <connections>
                                                             <action selector="touchUpProfileButton:" destination="SFl-W8-oFb" eventType="touchUpInside" id="XBa-Ak-lcj"/>
@@ -69,15 +73,19 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="h1t-gW-x03" firstAttribute="top" secondItem="Jva-Oc-6Hm" secondAttribute="top" constant="41" id="2H9-dJ-8nr"/>
                                                     <constraint firstItem="r4j-Yf-7Bx" firstAttribute="leading" secondItem="tZF-dI-EBA" secondAttribute="trailing" id="9sJ-aq-WL3"/>
-                                                    <constraint firstItem="h1t-gW-x03" firstAttribute="centerX" secondItem="Jva-Oc-6Hm" secondAttribute="centerX" id="A2T-Qy-vr8"/>
+                                                    <constraint firstItem="r4j-Yf-7Bx" firstAttribute="leading" secondItem="tZF-dI-EBA" secondAttribute="trailing" id="CtX-Ji-rGE"/>
                                                     <constraint firstItem="pmF-le-Osg" firstAttribute="centerX" secondItem="Jva-Oc-6Hm" secondAttribute="centerX" id="MO0-i0-T4R"/>
                                                     <constraint firstItem="tZF-dI-EBA" firstAttribute="centerX" secondItem="Jva-Oc-6Hm" secondAttribute="centerX" id="Qmc-IS-7bW"/>
                                                     <constraint firstItem="pmF-le-Osg" firstAttribute="top" secondItem="tZF-dI-EBA" secondAttribute="bottom" id="bBt-cm-Aqr"/>
-                                                    <constraint firstItem="tZF-dI-EBA" firstAttribute="top" secondItem="h1t-gW-x03" secondAttribute="bottom" constant="20" id="qvk-vu-Ey7"/>
+                                                    <constraint firstItem="tZF-dI-EBA" firstAttribute="centerX" secondItem="Jva-Oc-6Hm" secondAttribute="centerX" id="dTp-Ix-u7N"/>
+                                                    <constraint firstItem="h1t-gW-x03" firstAttribute="top" secondItem="Jva-Oc-6Hm" secondAttribute="top" constant="41" id="gTn-4f-ene"/>
+                                                    <constraint firstItem="h1t-gW-x03" firstAttribute="centerX" secondItem="Jva-Oc-6Hm" secondAttribute="centerX" id="ovz-DR-E3k"/>
                                                     <constraint firstAttribute="height" constant="240" id="qyB-qP-TIg"/>
+                                                    <constraint firstItem="pmF-le-Osg" firstAttribute="centerX" secondItem="Jva-Oc-6Hm" secondAttribute="centerX" id="rhd-Wr-637"/>
                                                     <constraint firstItem="tZF-dI-EBA" firstAttribute="centerY" secondItem="r4j-Yf-7Bx" secondAttribute="centerY" id="szl-B9-0HT"/>
+                                                    <constraint firstItem="tZF-dI-EBA" firstAttribute="top" secondItem="h1t-gW-x03" secondAttribute="bottom" constant="20" id="wqq-ur-j0B"/>
+                                                    <constraint firstItem="pmF-le-Osg" firstAttribute="top" secondItem="tZF-dI-EBA" secondAttribute="bottom" id="y9m-z9-sM0"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="WP8-sQ-2TW">
@@ -530,10 +538,12 @@
         <scene sceneID="ZnO-wE-bMI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qab-Cl-T8X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="icTabMypageSelected" id="3Wp-kT-IeF"/>
+                    <tabBarItem key="tabBarItem" image="icTabMypageSelected" id="3Wp-kT-IeF">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="yFK-ba-TSh">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -554,6 +564,6 @@
         <image name="icRightArrowSmall" width="48" height="48"/>
         <image name="icSetting" width="48" height="48"/>
         <image name="icTabMypageSelected" width="48" height="48"/>
-        <image name="imgProfile" width="80" height="80"/>
+        <image name="imgProfile" width="44" height="44"/>
     </resources>
 </document>
