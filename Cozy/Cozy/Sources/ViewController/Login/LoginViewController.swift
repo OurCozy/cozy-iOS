@@ -25,7 +25,8 @@ class LoginViewController: UIViewController {
         let vc = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         vc.modalPresentationStyle = .overCurrentContext
         
-        self.present(vc, animated: true, completion: nil)
+        //self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func goSignin(_ sender: UIButton) {

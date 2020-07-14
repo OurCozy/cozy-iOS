@@ -9,6 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommonView" customModule="Cozy" customModuleProvider="target">
             <connections>
+                <outlet property="bookstoreAddress" destination="YNY-Ue-MWj" id="O4n-YK-ETQ"/>
+                <outlet property="bookstoreName" destination="Nx8-Xv-paR" id="Gtw-PW-99d"/>
+                <outlet property="guideLabel1" destination="RGY-uZ-vPg" id="RZe-Lw-UKb"/>
+                <outlet property="guideLabel2" destination="iRE-Gf-xe4" id="Moh-ob-OrC"/>
+                <outlet property="mainRecommendImageView" destination="YhX-Kw-o4K" id="CsV-pk-9Hk"/>
                 <outlet property="topConstraint" destination="SWr-da-PNh" id="YUT-LP-G67"/>
             </connections>
         </placeholder>

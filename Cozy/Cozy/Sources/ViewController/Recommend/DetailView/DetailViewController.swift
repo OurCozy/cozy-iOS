@@ -26,10 +26,18 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var reviewMoreButton: UIButton!
     
     
-    override var prefersStatusBarHidden: Bool {
-        return true
+    private var isStatusBarHidden = true {
+        willSet {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
     }
     
+    
+//    isStatusBarHidden {
+//        willSet {
+//            setNeeds~~뭐시기()
+//        }
+//    }
     override func viewDidLoad() {
         reviewTableView.delegate = self
         reviewTableView.dataSource = self
@@ -46,13 +54,42 @@ class DetailViewController: UIViewController, StoryboardBased {
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         
+        
+
+        
         //tableviewHeight.constant = 0
         
         //리뷰데이터 없을때 스크롤 height
         //scrollHeight.constant = 1830
         //리뷰데이터 있을때 스크롤 height 테이블뷰만큼 + @
         //scrollHeight.constant = @
+        
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+//    override var childForStatusBarHidden: UIViewController? {
+//        let viewController = RecommendViewController()
+//        return viewController
+//    }
+    
+
+    
+    
+    
+    //    override var childForStatusBarHidden: UIViewController? {
+    //        let viewController = DetailViewController()
+    //        return viewController
+//    }
+    
+//    override open var childForStatusBarStyle: UIViewController? {
+//        return self
+//    }
+//
+//    override open var childForStatusBarHidden: UIViewController? {
+//        return self
+//    }
     
     @objc func appMovedToBackground() {
         self.setTabBarHidden(true)

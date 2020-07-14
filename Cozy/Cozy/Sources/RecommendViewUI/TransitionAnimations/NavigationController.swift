@@ -40,3 +40,21 @@ extension NavigationController: UINavigationControllerDelegate {
         return CustomTransitionAnimation(operation: operation, positioningDuration: 1, resizingDuration: 0.5)
     }
 }
+
+
+extension UINavigationController {
+    
+//    open override var childForStatusBarHidden: UIViewController? {
+//        return viewControllers.last
+//    }
+//
+//    open override var childForStatusBarStyle: UIViewController? {
+//        return viewControllers.last
+//    }
+    
+//    open override var childForStatusBarHidden: UIViewController?{
+//        return self.topViewController
+//    }
+    
+   
+}
