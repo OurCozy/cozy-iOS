@@ -93,7 +93,6 @@ class InterestViewController: UIViewController {
 
                 case .requestErr(_):
                     print("Request error@@")
-                    self.nickName = "Gain"
                 case .pathErr:
                     print("path error")
                 case .serverErr:
@@ -157,11 +156,12 @@ extension UITableView {
         
         titleLabel.textColor = UIColor.black
         titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
-        messageLabel.textColor = UIColor.lightGray
-        messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 17)
+        messageLabel.textColor = UIColor.gray
+        messageLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 17)
         
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageLabel)
+        emptyView.backgroundColor = UIColor.lightGray
         
         titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
