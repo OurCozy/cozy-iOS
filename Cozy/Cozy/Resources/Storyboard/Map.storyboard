@@ -62,9 +62,6 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBookmarkSelected" translatesAutoresizingMaskIntoConstraints="NO" id="J9X-dT-67B">
-                                                            <rect key="frame" x="260" y="178" width="57" height="57"/>
-                                                        </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpP-5B-uWW">
                                                             <rect key="frame" x="18" y="212" width="64" height="24"/>
                                                             <subviews>
@@ -125,18 +122,30 @@
                                                                 <constraint firstAttribute="bottom" secondItem="K5h-yG-Bs5" secondAttribute="bottom" constant="3" id="X6O-cK-Wv4"/>
                                                             </constraints>
                                                         </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h9-0a-U2c">
+                                                            <rect key="frame" x="260" y="178" width="57" height="57"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="3h9-0a-U2c" secondAttribute="height" multiplier="1:1" id="2yd-Ba-tkk"/>
+                                                                <constraint firstAttribute="height" constant="57" id="iJE-X0-7bB"/>
+                                                                <constraint firstAttribute="width" constant="57" id="tg9-nQ-ZH3"/>
+                                                            </constraints>
+                                                            <state key="normal" image="icBookmark"/>
+                                                            <connections>
+                                                                <action selector="bookMarkButtonClick:" destination="dFv-3k-yKW" eventType="touchUpInside" id="AnU-24-qLk"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="J9X-dT-67B" secondAttribute="bottom" constant="15" id="0Cf-OW-n0m"/>
                                                         <constraint firstAttribute="bottom" secondItem="jaW-is-coP" secondAttribute="bottom" constant="84" id="4CC-Kh-bwN"/>
                                                         <constraint firstAttribute="bottom" secondItem="syH-eY-AaW" secondAttribute="bottom" constant="14" id="EFZ-Hq-alo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3h9-0a-U2c" secondAttribute="trailing" constant="10" id="EcZ-14-dfz"/>
                                                         <constraint firstAttribute="bottom" secondItem="IpP-5B-uWW" secondAttribute="bottom" constant="14" id="I6F-kl-pkB"/>
-                                                        <constraint firstAttribute="trailing" secondItem="J9X-dT-67B" secondAttribute="trailing" constant="10" id="IsY-H4-yX7"/>
                                                         <constraint firstItem="Eco-Mf-Ktu" firstAttribute="leading" secondItem="syH-eY-AaW" secondAttribute="trailing" constant="12" id="Nxd-eO-Ncj"/>
                                                         <constraint firstItem="Vdr-Bk-vCg" firstAttribute="leading" secondItem="yb3-2l-yyg" secondAttribute="leading" constant="18" id="Tba-gu-arR"/>
                                                         <constraint firstItem="syH-eY-AaW" firstAttribute="leading" secondItem="IpP-5B-uWW" secondAttribute="trailing" constant="12" id="Vw9-oG-3Qn"/>
                                                         <constraint firstItem="IpP-5B-uWW" firstAttribute="leading" secondItem="yb3-2l-yyg" secondAttribute="leading" constant="18" id="aBA-Cb-KR5"/>
+                                                        <constraint firstItem="3h9-0a-U2c" firstAttribute="top" secondItem="jaW-is-coP" secondAttribute="bottom" constant="12" id="eLV-fJ-2pQ"/>
                                                         <constraint firstItem="Vdr-Bk-vCg" firstAttribute="top" secondItem="jaW-is-coP" secondAttribute="bottom" constant="11.300000000000001" id="gx1-13-Ida"/>
                                                         <constraint firstItem="jaW-is-coP" firstAttribute="top" secondItem="yb3-2l-yyg" secondAttribute="top" constant="2" id="haG-sc-a49"/>
                                                         <constraint firstAttribute="trailing" secondItem="jaW-is-coP" secondAttribute="trailing" id="ihU-pr-4AV"/>
@@ -153,6 +162,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bookMarkButton" destination="3h9-0a-U2c" id="L2P-Cx-eHR"/>
                                             <outlet property="bookstoreImageView" destination="jaW-is-coP" id="n30-Zs-aB9"/>
                                             <outlet property="bookstoreName" destination="Vdr-Bk-vCg" id="e8H-BM-b3r"/>
                                             <outlet property="tagLabel" destination="7jV-Sf-3nc" id="bcm-xP-3nl"/>
@@ -193,7 +203,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G8f-8h-zUb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="p0e-8R-BHo">
-                        <rect key="frame" x="0.0" y="44" width="375" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -209,7 +219,7 @@
     <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="74" width="497.33334350585938" height="331.66665649414062"/>
-        <image name="icBookmarkSelected" width="57" height="57"/>
+        <image name="icBookmark" width="57" height="57"/>
         <image name="icTabMapSelected" width="48" height="48"/>
     </resources>
 </document>

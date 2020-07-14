@@ -24,6 +24,8 @@ class LibraryTableViewCell: UITableViewCell {
     @IBOutlet weak var tagView3: UIView!
     @IBOutlet weak var tagLabel3: UILabel!
     
+    @IBOutlet weak var bookMarkButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,5 +35,9 @@ class LibraryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+//    @IBAction func bookMarkButtonClick(_ sender: UIButton) {
+//
+//    }
     
 }
