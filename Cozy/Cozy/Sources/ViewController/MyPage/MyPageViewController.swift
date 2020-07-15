@@ -15,7 +15,11 @@ protocol ButtonDelegate {
 class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
 
     //유저 프로필
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var userNickname: UILabel!
+    @IBOutlet weak var userEmail: UILabel!
     
+    var profileList: [UserProfile] = []
     
     // 프로필 사진
     var delegate: ButtonDelegate?
@@ -51,11 +55,23 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         lastBookstoreList = [bookstore1, bookstore2, bookstore3, bookstore4, bookstore5]
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        addProfileData()
     }
     
-        @IBAction func touchUpProfileButton(_ sender: Any) {
-            delegate?.onClickButton(in: indexPath!.row)
-        }
+    // 프로필 사진 서버 가져오기
+    func setProfileData(profile: String, userNickname: String, userEmail: String){
+        let url = URL(string: profile)
+        guard let data = try? Data(contentsOf: url!) else {return}
+        self.profileImage.image = UIImage(data: data)
+        self.userNickname.text = userNickname
+        self.userEmail.text = userEmail
+    }
+    
+    // 프로필 사진 클릭시 사진앨범
+    @IBAction func touchUpProfileButton(_ sender: Any) {
+        delegate?.onClickButton(in: indexPath!.row)
+    }
     
     // 공지사항 이동
     @IBAction func gotoNotice(_ sender: UIButton) {
@@ -79,30 +95,30 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         return true
     }
     
-//    func setProfileData(){
-//        ProfileService.shared.getProfileData(){ NetworkResult in
-//            switch NetworkResult {
-//                case .success(let data):
-//                    guard let data = data as? [UserProfile] else {return print("error")}
-//                    print("@@@@@@data@@@@@@")
-//                    print(data)
-//                    for data in data{
-//                        self.bookStoreList.append(BookStore(bookStoreImageName: data.profile, bookStoreName: data.bookstoreName, hashTag01: data.hashtag1, hashTag02: data.hashtag2, hashTag03: data.hashtag3))
-//                    }
-//                    self.tableView.reloadData()
-//
-//                case .requestErr(_):
-//                    print("Request error@@")
-//                case .pathErr:
-//                    print("path error")
-//                case .serverErr:
-//                    print("server error")
-//                case .networkFail:
-//                    print("network error")
-//            }
-//        }
-//        
-//    }
+    func addProfileData(){
+        ProfileService.shared.getProfileData(){ NetworkResult in
+            switch NetworkResult {
+                case .success(let data):
+                    guard let data = data as? [UserProfile] else {return print("error")}
+                    print("@@@@@@data@@@@@@")
+                    print(data)
+                    self.setProfileData(profile: data[0].profile, userNickname: data[0].nickname, userEmail: data[0].email)
+                
+                    // cell만 
+                    //self.tableView.reloadData()
+
+                case .requestErr(_):
+                    print("Request error@@")
+                case .pathErr:
+                    print("path error")
+                case .serverErr:
+                    print("server error")
+                case .networkFail:
+                    print("network error")
+            }
+        }
+        
+    }
 }
 
  
