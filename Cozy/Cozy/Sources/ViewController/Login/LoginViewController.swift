@@ -21,8 +21,8 @@ class LoginViewController: UIViewController {
     }
         
     @IBAction func goEmailLogin(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let sb = UIStoryboard(name: "EmailLogin", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "EmailLoginViewController") as! EmailLoginViewController
         vc.modalPresentationStyle = .overCurrentContext
         self.navigationController?.pushViewController(vc, animated: true)
 
