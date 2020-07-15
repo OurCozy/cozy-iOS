@@ -19,11 +19,7 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var userNickname: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     
-    
-    
-    
     var profileList: [UserProfile] = []
-    var nickName: String = ""
     
     // 프로필 사진
     var delegate: ButtonDelegate?
@@ -63,6 +59,7 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         addProfileData()
     }
     
+    // 프로필 사진 서버 가져오기
     func setProfileData(profile: String, userNickname: String, userEmail: String){
         let url = URL(string: profile)
         guard let data = try? Data(contentsOf: url!) else {return}
