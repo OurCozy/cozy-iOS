@@ -61,9 +61,9 @@
                                 <state key="normal" title="비밀번호 찾기"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jv-a9-Qmp">
-                                <rect key="frame" x="150" y="455" width="65" height="30"/>
+                                <rect key="frame" x="146" y="455" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="로그인하기"/>
+                                <state key="normal" title="로그인하기!!"/>
                                 <connections>
                                     <action selector="loginAction:" destination="Cqg-2h-Bfu" eventType="touchUpInside" id="nhz-6M-CAn"/>
                                 </connections>
