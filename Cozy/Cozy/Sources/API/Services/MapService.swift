@@ -18,9 +18,9 @@ struct MapService {
     ]
     
     // 지역별 서점 조회
-    func getMapBookStore(completion: @escaping (NetworkResult<Any>) -> Void){
+    func getMapBookStore(mapIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let myMapURL  = APIConstants.mapURL + "1"
+        let myMapURL  = APIConstants.mapURL + String(mapIdx)
         let dataRequest = Alamofire.request(myMapURL, method: .get, encoding: JSONEncoding.default, headers: header)
         
         dataRequest.responseData { dataResponse in

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p5m-ND-Rbc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -28,7 +28,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9i-tZ-xss">
-                                                <rect key="frame" x="354" y="20" width="48" height="48"/>
+                                                <rect key="frame" x="342" y="20" width="60" height="60"/>
                                                 <state key="normal" image="icX"/>
                                                 <connections>
                                                     <action selector="clickBackButton:" destination="rGK-or-hGE" eventType="touchUpInside" id="unz-5z-dIl"/>
@@ -604,7 +604,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C15-hI-IDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053.6231884057972" y="-265.51339285714283"/>
+            <point key="canvasLocation" x="2873.913043478261" y="-265.51339285714283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AlH-a5-Ifz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="p5m-ND-Rbc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yDM-HV-x5Y">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rGK-or-hGE" kind="relationship" relationship="rootViewController" id="y5v-XJ-iRM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3O-ch-9u3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963.7681159420292" y="-265.84821428571428"/>
         </scene>
     </scenes>
     <resources>
@@ -612,7 +629,7 @@
         <image name="82" width="396" height="259"/>
         <image name="83" width="482" height="482"/>
         <image name="84" width="375" height="281"/>
-        <image name="icBookmark" width="62" height="62"/>
+        <image name="icBookmark" width="57" height="57"/>
         <image name="icCommentsPost" width="48" height="48"/>
         <image name="icCommentsStar" width="35" height="35"/>
         <image name="icCommentsStarSelected" width="35" height="35"/>
@@ -622,7 +639,7 @@
         <image name="icInstagram" width="60" height="60"/>
         <image name="icMoreBlack" width="28" height="28"/>
         <image name="icRightArrowSmall" width="48" height="48"/>
-        <image name="icX" width="48" height="48"/>
+        <image name="icX" width="60" height="60"/>
         <image name="imgAdress" width="22" height="22"/>
         <image name="imgCall" width="22" height="22"/>
         <image name="imgEtc" width="22" height="22"/>

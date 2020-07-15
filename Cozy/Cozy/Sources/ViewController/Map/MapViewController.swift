@@ -23,6 +23,10 @@ class MapViewController: UIViewController {
     
     let mapIdx: Int = 1
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,10 +75,9 @@ class MapViewController: UIViewController {
     
     // 서버 통신
     func downloadMapData(){
-        MapService.shared.getMapBookStore(){ NetworkResult in
+        MapService.shared.getMapBookStore(mapIdx: 1){ NetworkResult in
             switch NetworkResult {
             case .success(let data) :
-                print("success 💖")
                 guard let data = data as? [MapBookStore] else { return }
                 for data in data {
                     self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, sectionIdx: data.sectionIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, count: data.count, checked: data.checked))
@@ -195,7 +198,12 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             //            self.navigationController?.pushViewController(vc, animated: true)
             
             vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
+            
+            
+            self.navigationController?.navigationBar.isHidden = true
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+//            present(vc, animated: true, completion: nil)
         }
     }
     
