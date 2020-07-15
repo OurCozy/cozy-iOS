@@ -260,6 +260,9 @@
                     <connections>
                         <outlet property="collectionView" destination="grT-5N-pB6" id="1eV-cM-jNx"/>
                         <outlet property="myReview" destination="QAc-AC-vQd" id="gnX-Jw-GcD"/>
+                        <outlet property="profileImage" destination="h1t-gW-x03" id="D0L-YD-6DA"/>
+                        <outlet property="userEmail" destination="pmF-le-Osg" id="ADR-Cr-GRF"/>
+                        <outlet property="userNickname" destination="tZF-dI-EBA" id="FqD-MJ-Wpe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8h-eX-Yjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -543,7 +546,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="yFK-ba-TSh">
-                        <rect key="frame" x="0.0" y="44" width="375" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

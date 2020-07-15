@@ -19,17 +19,7 @@ class LoginViewController: UIViewController {
         self.emailLoginButton.settagButton()
         self.signinButton.settagButton()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
+        
     @IBAction func goEmailLogin(_ sender: UIButton) {
 //        let sb = UIStoryboard(name: "EmailLogin", bundle: nil)
 //        let vc = sb.instantiateViewController(withIdentifier: "EmailLoginViewController") as! EmailLoginViewController
@@ -38,9 +28,9 @@ class LoginViewController: UIViewController {
         let vc = sb.instantiateViewController(identifier: "ViewController") as! ViewController
         vc.modalPresentationStyle = .fullScreen
 
+
         self.navigationController?.pushViewController(vc, animated: true)
-        
-        //self.present(vc, animated: true)
+
     }
     
     @IBAction func goSignin(_ sender: UIButton) {

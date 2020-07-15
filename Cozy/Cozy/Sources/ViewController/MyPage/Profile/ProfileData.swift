@@ -32,9 +32,16 @@ struct ProfileData: Codable {
     }
 
 // 받아온 객체 디코딩
-    struct UserProfile: Codable{
+struct UserProfile: Codable{
+    // API랑 변수명 같아야함
         var profile: String
         var nickname: String
         var email: String
+        
+        init(profile:String, nickname:String, email:String){
+            self.profile = profile
+            self.nickname = nickname
+            self.email = email
+        }
 }
         

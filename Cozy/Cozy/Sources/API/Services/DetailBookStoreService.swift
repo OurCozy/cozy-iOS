@@ -1,27 +1,27 @@
 //
-//  MapService.swift
+//  RecommendationService.swift
 //  Cozy
 //
-//  Created by 최은지 on 2020/07/13.
+//  Created by IJ . on 2020/07/14.
 //  Copyright © 2020 jun. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-struct MapService {
-    static let shared = MapService()
+struct DetailBookStoreService {
+    static let shared = DetailBookStoreService()
     
     let header: HTTPHeaders = [
         "Content-Type" : "application/json",
         "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxLCJpYXQiOjE1OTQ1NDM5NDIsImV4cCI6My42MzYzNjM2MzYzNjM3OTU0ZSsyMiwiaXNzIjoib3VyLXNvcHQifQ.gIsHK5BvP0CCvz7g2GgGVvREJyvIjaybQTk93xGR5r4"
     ]
     
-    // 지역별 서점 조회
-    func getMapBookStore(mapIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void){
+    
+    func getDetailBookStoreData(bookstoreIndex: Int ,completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let myMapURL  = APIConstants.mapURL + String(mapIdx)
-        let dataRequest = Alamofire.request(myMapURL, method: .get, encoding: JSONEncoding.default, headers: header)
+        let URL  = APIConstants.detailBookStoreURL + "\(bookstoreIndex)"
+        let dataRequest = Alamofire.request(URL, method: .get, encoding: JSONEncoding.default, headers: header)
         
         dataRequest.responseData { dataResponse in
             switch dataResponse.result {
@@ -53,9 +53,13 @@ struct MapService {
     // json decoding
     private func isData(by data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(MapResponseString.self, from: data) else { return .pathErr }
-        guard let interestData = decodedData.data else { return .requestErr(decodedData.message) }
-        return .success(interestData)
+        guard let decodedData = try? decoder.decode(DetailBookStoreModel.self, from: data) else { return .pathErr }
+        print(decodedData)
+        
+        guard let bookData = decodedData.data else { print("여기서 에러 asdf")
+            return .requestErr(decodedData.message) }
+        print(bookData)
+        return .success(bookData)
     }
     
 }

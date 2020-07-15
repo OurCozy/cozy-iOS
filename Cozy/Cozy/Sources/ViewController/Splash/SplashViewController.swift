@@ -24,7 +24,10 @@ class SplashViewController: UIViewController {
         let vc = sb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         vc.modalPresentationStyle = .overCurrentContext
         
+//        self.present(vc, animated: true, completion: nil)
+        
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 
 }
