@@ -80,7 +80,7 @@ class MapViewController: UIViewController {
             case .success(let data) :
                 guard let data = data as? [MapBookStore] else { return }
                 for data in data {
-                    self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, sectionIdx: data.sectionIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, count: data.count, checked: data.checked))
+                    self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, checked: data.checked, count: data.count))
                 }
                 self.tableView.reloadData()
             case .requestErr(_):
@@ -191,19 +191,10 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
         if indexPath.section == 1 {
             let storyboard = UIStoryboard(name: "MapDetail", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "MapDetailViewController") as! MapDetailViewController
-            
-            //            self.underlineImage.isHidden = true
-            //            self.downButton.isHidden = true
-            //
-            //            self.navigationController?.pushViewController(vc, animated: true)
-            
             vc.modalPresentationStyle = .fullScreen
-            
             
             self.navigationController?.navigationBar.isHidden = true
             self.navigationController?.pushViewController(vc, animated: true)
-            
-//            present(vc, animated: true, completion: nil)
         }
     }
     
