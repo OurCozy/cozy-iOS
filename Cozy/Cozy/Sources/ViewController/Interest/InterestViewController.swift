@@ -134,6 +134,7 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
         
         return cell
     }
+
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if tableView.contentOffset.y == 0 {
