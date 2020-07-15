@@ -55,6 +55,7 @@ class DetailViewController: UIViewController, StoryboardBased {
    
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         reviewTableView.delegate = self
         reviewTableView.dataSource = self
         
@@ -117,13 +118,18 @@ class DetailViewController: UIViewController, StoryboardBased {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        downloadDetailBookStoreModel()
+        super.viewWillAppear(animated)
+        
+       // DispatchQueue.main.async {
+            self.downloadDetailBookStoreModel()
+       // }
+        
         
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        super.viewDidAppear(animated)
         
         
         
@@ -132,7 +138,7 @@ class DetailViewController: UIViewController, StoryboardBased {
         self.bookstoreImageVIew[2].setImage(from: self.detailBookStoreModel[0].image3)
         
         
-        self.bookstoreCollection[0].sizeToFit()
+        //self.bookstoreCollection[0].sizeToFit()
         
        
         
@@ -165,6 +171,8 @@ class DetailViewController: UIViewController, StoryboardBased {
                 print("어 성공 \(self.detailBookStoreModel[0].image1)")
                 print("어 성공 \(self.detailBookStoreModel[0].bookstoreName)")
                 
+                print(Thread.isMainThread)
+                
                 
                 self.bookStoreNameLabel.text = self.detailBookStoreModel[0].bookstoreName
                 
@@ -180,60 +188,25 @@ class DetailViewController: UIViewController, StoryboardBased {
                 
                 //해시태그 버튼 라벨 삽입
                 
-                self.bookstoreCollection[0].titleLabel?.text = self.detailBookStoreModel[0].hashtag1
+
                 
+                self.bookstoreCollection[0].setTitle(self.detailBookStoreModel[0].hashtag1, for: .normal)
                 
+                print("\(self.detailBookStoreModel[0].hashtag1)")
                
-                self.bookstoreCollection[0].titleLabel?.text =
-                    self.detailBookStoreModel[0].hashtag2
+                self.bookstoreCollection[1].setTitle(self.detailBookStoreModel[0].hashtag2, for: .normal)
+                self.bookstoreCollection[1].titleLabel?.text = self.detailBookStoreModel[0].hashtag2
                 
-                self.bookstoreCollection[2].titleLabel?.text = self.detailBookStoreModel[0].hashtag3
-                
-               
-                
-                
+                self.bookstoreCollection[2].setTitle(self.detailBookStoreModel[0].hashtag3, for: .normal)
                 
                 //지도 통신 이동 , 함수로 빼서 데이터 없을때 분기처리 해야함
-                let bookstoreLatitude:Float = self.detailBookStoreModel[0].latitude
-                let bookstoreLongitude:Float = self.detailBookStoreModel[0].longitude
-                
-                let marker = NMFMarker()
-                marker.position = NMGLatLng(lat: Double(bookstoreLatitude), lng: Double(bookstoreLongitude))
-                let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: Double(bookstoreLatitude), lng: Double(bookstoreLongitude)))
-                
-                cameraUpdate.reason = 3
-                cameraUpdate.animation = .fly
-                cameraUpdate.animationDuration = 2
-                
-                self.detailNaverMapView.mapType = .basic
-                self.detailNaverMapView.minZoomLevel = 5.0
-                self.detailNaverMapView.maxZoomLevel = 18.0
-                self.detailNaverMapView.zoomLevel = 15.0
-                self.detailNaverMapView.moveCamera(cameraUpdate, completion: { (isCancelled) in
-                    if isCancelled {
-                        print("카메라 이동 취소")
-                    } else {
-                        print("카메라 이동 성공")
-                    }
-                })
-                
-                marker.touchHandler = { (overlay) in
-                    
-                    print("마커 클릭됨")
-                    self.goToNaverMap()
-                    
-                    return true
-                }
-                
-                marker.mapView = self.detailNaverMapView
-                
-                
-                
-                
+                self.setNaverMap()
                 DispatchQueue.main.async {
                     
                 }
                 
+                
+                self.view.layoutIfNeeded()
                 
                 
             case .requestErr(_):
@@ -254,8 +227,12 @@ class DetailViewController: UIViewController, StoryboardBased {
     func setNaverMap(){
         //지도 커스텀
         let marker = NMFMarker()
-        marker.position = NMGLatLng(lat: 37.556693, lng: 126.929313)
-        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.556693, lng: 126.929313))
+        
+        let bookstoreLatitude:Double = Double( self.detailBookStoreModel[0].latitude)
+        let bookstoreLongitude:Double = Double(self.detailBookStoreModel[0].longitude)
+        
+        marker.position = NMGLatLng(lat: bookstoreLatitude, lng: bookstoreLongitude)
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: bookstoreLatitude, lng: bookstoreLongitude))
         
         cameraUpdate.reason = 3
         cameraUpdate.animation = .fly
@@ -458,14 +435,14 @@ extension UIButton {
 //            return desiredButtonSize
 //        }
     
-    open override var intrinsicContentSize: CGSize {
-        return self.titleLabel!.intrinsicContentSize
-    }
-
-    // Whever the button is changed or needs to layout subviews,
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        titleLabel?.preferredMaxLayoutWidth = self.titleLabel!.frame.size.width
-    }
+//    open override var intrinsicContentSize: CGSize {
+//        return self.titleLabel!.intrinsicContentSize
+//    }
+//
+//    // Whever the button is changed or needs to layout subviews,
+//    open override func layoutSubviews() {
+//        super.layoutSubviews()
+//        titleLabel?.preferredMaxLayoutWidth = self.titleLabel!.frame.size.width
+//    }
     
 }

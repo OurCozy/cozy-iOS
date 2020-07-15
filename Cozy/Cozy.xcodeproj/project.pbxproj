@@ -39,6 +39,7 @@
 		55E460BB24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460BA24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift */; };
 		55E460BF24BD72580035ECCE /* DetailBookStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460BE24BD72580035ECCE /* DetailBookStoreModel.swift */; };
 		55E460C124BD74E90035ECCE /* DetailBookStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460C024BD74E90035ECCE /* DetailBookStoreService.swift */; };
+		55E460C324BF2B580035ECCE /* DetailReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460C224BF2B580035ECCE /* DetailReviewModel.swift */; };
 		55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C524AF29C2003C64FE /* AppDelegate.swift */; };
 		55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C724AF29C2003C64FE /* SceneDelegate.swift */; };
 		55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E839CB24AF29C2003C64FE /* Main.storyboard */; };
@@ -118,6 +119,7 @@
 		55E460BA24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageViewKingfisher+Extension.swift"; sourceTree = "<group>"; };
 		55E460BE24BD72580035ECCE /* DetailBookStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookStoreModel.swift; sourceTree = "<group>"; };
 		55E460C024BD74E90035ECCE /* DetailBookStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookStoreService.swift; sourceTree = "<group>"; };
+		55E460C224BF2B580035ECCE /* DetailReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewModel.swift; sourceTree = "<group>"; };
 		55E839C224AF29C2003C64FE /* Cozy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cozy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E839C524AF29C2003C64FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E839C724AF29C2003C64FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				B6E3B38F24BC406300F42D15 /* MapResponseString.swift */,
 				55E460B624BCB0360035ECCE /* Recommendation.swift */,
 				55E460BE24BD72580035ECCE /* DetailBookStoreModel.swift */,
+				55E460C224BF2B580035ECCE /* DetailReviewModel.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				B63341E624B1D4600070F8C4 /* MapDetailViewController.swift in Sources */,
 				55ABB33A24B376DA008B5A5B /* NavigationController.swift in Sources */,
 				B65D3A1224BB996700405549 /* LoginViewController.swift in Sources */,
+				55E460C324BF2B580035ECCE /* DetailReviewModel.swift in Sources */,
 				55E839E924AF2B43003C64FE /* MapViewController.swift in Sources */,
 				55E460B724BCB0360035ECCE /* Recommendation.swift in Sources */,
 				CC2645EE24BC3B4200BCE4CD /* MyReviewViewController.swift in Sources */,

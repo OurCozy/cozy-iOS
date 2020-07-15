@@ -53,25 +53,25 @@
                                                                         <state key="normal" image="icBookmark"/>
                                                                         <state key="selected" image="icBookmarkSelected"/>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-RG-CFC">
-                                                                        <rect key="frame" x="24" y="84" width="62" height="24"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-RG-CFC">
+                                                                        <rect key="frame" x="24" y="84" width="20" height="24"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="24" id="DKa-5a-XDm"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
-                                                                        <state key="normal" title="감성책방">
+                                                                        <state key="normal">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKO-MK-Bsc">
-                                                                        <rect key="frame" x="98" y="84" width="62" height="24"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKO-MK-Bsc">
+                                                                        <rect key="frame" x="56" y="84" width="20" height="24"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="24" id="4bo-LY-5pa"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
-                                                                        <state key="normal" title="감성책방">
+                                                                        <state key="normal">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                     </button>
@@ -79,6 +79,8 @@
                                                                         <rect key="frame" x="24" y="158" width="22" height="22"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="UIH-Sr-tEi" secondAttribute="height" multiplier="1:1" id="XKc-hp-7Fq"/>
+                                                                            <constraint firstAttribute="height" constant="22" id="pBY-Yp-Jtd"/>
+                                                                            <constraint firstAttribute="width" constant="22" id="sKl-R6-y9n"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTime" translatesAutoresizingMaskIntoConstraints="NO" id="Lf5-4G-dbg">
@@ -265,14 +267,14 @@
                                                                         </constraints>
                                                                         <state key="normal" image="icRightArrowSmall"/>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mc-5i-Uou">
-                                                                        <rect key="frame" x="172" y="84" width="62" height="24"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mc-5i-Uou">
+                                                                        <rect key="frame" x="88" y="84" width="20" height="24"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="24" id="rnr-h0-1Mk"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
-                                                                        <state key="normal" title="감성책방">
+                                                                        <state key="normal">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                     </button>
