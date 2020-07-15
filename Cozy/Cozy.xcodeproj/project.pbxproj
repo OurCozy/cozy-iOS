@@ -37,6 +37,8 @@
 		55E460B724BCB0360035ECCE /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460B624BCB0360035ECCE /* Recommendation.swift */; };
 		55E460B924BCB2370035ECCE /* RecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460B824BCB2370035ECCE /* RecommendationService.swift */; };
 		55E460BB24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460BA24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift */; };
+		55E460BF24BD72580035ECCE /* DetailBookStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460BE24BD72580035ECCE /* DetailBookStoreModel.swift */; };
+		55E460C124BD74E90035ECCE /* DetailBookStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E460C024BD74E90035ECCE /* DetailBookStoreService.swift */; };
 		55E839C624AF29C2003C64FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C524AF29C2003C64FE /* AppDelegate.swift */; };
 		55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E839C724AF29C2003C64FE /* SceneDelegate.swift */; };
 		55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E839CB24AF29C2003C64FE /* Main.storyboard */; };
@@ -114,6 +116,8 @@
 		55E460B624BCB0360035ECCE /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 		55E460B824BCB2370035ECCE /* RecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationService.swift; sourceTree = "<group>"; };
 		55E460BA24BD46D20035ECCE /* UIImageViewKingfisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageViewKingfisher+Extension.swift"; sourceTree = "<group>"; };
+		55E460BE24BD72580035ECCE /* DetailBookStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookStoreModel.swift; sourceTree = "<group>"; };
+		55E460C024BD74E90035ECCE /* DetailBookStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookStoreService.swift; sourceTree = "<group>"; };
 		55E839C224AF29C2003C64FE /* Cozy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cozy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E839C524AF29C2003C64FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E839C724AF29C2003C64FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -510,6 +514,7 @@
 				183C1E3D24B7431B00FFE494 /* NetworkResult.swift */,
 				B6E3B39224BC40B200F42D15 /* MapService.swift */,
 				55E460B824BCB2370035ECCE /* RecommendationService.swift */,
+				55E460C024BD74E90035ECCE /* DetailBookStoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -519,6 +524,7 @@
 			children = (
 				B6E3B38F24BC406300F42D15 /* MapResponseString.swift */,
 				55E460B624BCB0360035ECCE /* Recommendation.swift */,
+				55E460BE24BD72580035ECCE /* DetailBookStoreModel.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -690,6 +696,7 @@
 				55CE353F24B32F81001210A7 /* StoryboardBased.swift in Sources */,
 				5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */,
 				183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */,
+				55E460C124BD74E90035ECCE /* DetailBookStoreService.swift in Sources */,
 				55CE354624B3306E001210A7 /* ShadowView.swift in Sources */,
 				B6E3B39024BC406300F42D15 /* MapResponseString.swift in Sources */,
 				55CE354024B32F81001210A7 /* NibOwnerLoadable.swift in Sources */,
@@ -714,6 +721,7 @@
 				CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */,
 				55CE353824B32D17001210A7 /* CardCollectionViewCell.swift in Sources */,
 				B6E3B39324BC40B200F42D15 /* MapService.swift in Sources */,
+				55E460BF24BD72580035ECCE /* DetailBookStoreModel.swift in Sources */,
 				B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
 				55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */,

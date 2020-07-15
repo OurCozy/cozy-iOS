@@ -54,23 +54,23 @@
                                                                         <state key="selected" image="icBookmarkSelected"/>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-RG-CFC">
-                                                                        <rect key="frame" x="24" y="84" width="64" height="24"/>
+                                                                        <rect key="frame" x="24" y="84" width="62" height="24"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="24" id="DKa-5a-XDm"/>
-                                                                            <constraint firstAttribute="width" constant="64" id="wM6-jR-k7P"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
                                                                         <state key="normal" title="감성책방">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKO-MK-Bsc">
-                                                                        <rect key="frame" x="100" y="84" width="64" height="24"/>
+                                                                        <rect key="frame" x="98" y="84" width="62" height="24"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="24" id="4bo-LY-5pa"/>
-                                                                            <constraint firstAttribute="width" constant="64" id="p7f-c4-G13"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
                                                                         <state key="normal" title="감성책방">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
@@ -266,12 +266,12 @@
                                                                         <state key="normal" image="icRightArrowSmall"/>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mc-5i-Uou">
-                                                                        <rect key="frame" x="176" y="84" width="64" height="24"/>
+                                                                        <rect key="frame" x="172" y="84" width="62" height="24"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="24" id="rnr-h0-1Mk"/>
-                                                                            <constraint firstAttribute="width" constant="64" id="vfX-MD-4pB"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <inset key="contentEdgeInsets" minX="10" minY="3" maxX="10" maxY="3"/>
                                                                         <state key="normal" title="감성책방">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
@@ -319,16 +319,27 @@
                                                                                             <rect key="frame" x="0.0" y="203" width="327" height="210"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                         </imageView>
-                                                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJD-oi-dcJ">
-                                                                                            <rect key="frame" x="52" y="44" width="67" height="15"/>
-                                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                        </view>
                                                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xy-Qs-6LS">
                                                                                             <rect key="frame" x="299" y="37" width="28" height="28"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                             <state key="normal" image="icMoreBlack"/>
                                                                                         </button>
+                                                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJD-oi-dcJ" customClass="CosmosView" customModule="Cosmos">
+                                                                                            <rect key="frame" x="52" y="44" width="67" height="15"/>
+                                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <userDefinedRuntimeAttributes>
+                                                                                                <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                                                    <integer key="value" value="5"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                                                    <real key="value" value="12"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                                                                    <real key="value" value="0.0"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                            </userDefinedRuntimeAttributes>
+                                                                                        </view>
                                                                                     </subviews>
                                                                                 </tableViewCellContentView>
                                                                                 <connections>
@@ -518,6 +529,12 @@
                     <size key="freeformSize" width="375" height="3500"/>
                     <connections>
                         <outlet property="bodyView" destination="ucz-Kl-mbU" id="9Lm-88-iXm"/>
+                        <outlet property="bookStoreNameLabel" destination="evv-Wl-JlR" id="Ke0-Wl-3RL"/>
+                        <outlet property="bookstoreActivityLabel" destination="wBZ-qm-E91" id="kw3-mK-7TD"/>
+                        <outlet property="bookstoreLocation" destination="yAF-SK-1Cx" id="zgS-gO-Iqq"/>
+                        <outlet property="bookstorePhoneNumberLabel" destination="0U2-lz-CNv" id="pa1-OX-3Hw"/>
+                        <outlet property="bookstoreTimeLabel" destination="3DH-t2-Ff6" id="kNd-oE-g32"/>
+                        <outlet property="bookstroeDestriptionTextView" destination="EMh-ow-8pG" id="ak0-Ub-kpS"/>
                         <outlet property="closeButton" destination="kcc-Ec-eOY" id="R3J-EV-sIW"/>
                         <outlet property="commonView" destination="pao-gC-hAQ" id="oNH-Pc-E01"/>
                         <outlet property="detailNaverMapView" destination="lTT-Jb-Exw" id="Xuf-p3-m0e"/>
@@ -532,6 +549,9 @@
                         <outletCollection property="bookstoreCollection" destination="zIh-RG-CFC" collectionClass="NSMutableArray" id="33S-DO-APK"/>
                         <outletCollection property="bookstoreCollection" destination="hKO-MK-Bsc" collectionClass="NSMutableArray" id="wxS-Hp-eXo"/>
                         <outletCollection property="bookstoreCollection" destination="6mc-5i-Uou" collectionClass="NSMutableArray" id="BxJ-RB-0Xm"/>
+                        <outletCollection property="bookstoreImageVIew" destination="qez-eS-1es" collectionClass="NSMutableArray" id="fm9-IF-LOt"/>
+                        <outletCollection property="bookstoreImageVIew" destination="fad-68-PrV" collectionClass="NSMutableArray" id="iol-c2-BrO"/>
+                        <outletCollection property="bookstoreImageVIew" destination="XuY-SO-RkF" collectionClass="NSMutableArray" id="GfF-3q-Yqd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kp2-b2-SxF" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -20,6 +20,8 @@ class RecommendViewController: UIViewController {
     
     private var justOneServerConnect = false
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,9 +57,8 @@ class RecommendViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if justOneServerConnect == false {
-        downloadRecommendationData()
+         downloadRecommendationData()
         }
-       
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -123,10 +124,7 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             let cardCell = collectionView.dequeueReusableCell(for: indexPath, cellType: CardCollectionViewCell.self)
             
             DispatchQueue.global().async {
-                guard let imageURL = URL(string: self.RecommendationList[indexPath.row].profile) else {
-                    return
-                }
-                
+              
                 DispatchQueue.main.async {
                     cardCell.commonView.mainRecommendImageView.setImage(from: self.RecommendationList[indexPath.row].profile)
                 }
@@ -154,22 +152,15 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             //setTabBarHidden 아이폰 SE2 , 8 , 8+만 안먹힘, 분기처리 생각중
             
             //self.tabBarController?.tabBar.isHidden = true
-            guard let imageURL = URL(string: self.RecommendationList[0].profile) else {
-                return
-            }
-            guard let imageData: Data = try? Data(contentsOf: imageURL) else {
-                return
-            }
+            
             vc.getMainRecommendImageString = self.RecommendationList[indexPath.row].profile
             vc.getGuideLabel1 = self.RecommendationList[indexPath.row].shortIntro
             vc.getGuideLabel2 = self.RecommendationList[indexPath.row].shortIntro2
             vc.getNameString = self.RecommendationList[indexPath.row].bookstoreName
             vc.getLocationString = self.RecommendationList[indexPath.row].location
+            vc.getNowBookStoreIndex = self.RecommendationList[indexPath.row].bookstoreIdx
+            
             self.navigationController?.pushViewController(vc, animated: true)
-            
-            
-            
-
         }
     }
     
