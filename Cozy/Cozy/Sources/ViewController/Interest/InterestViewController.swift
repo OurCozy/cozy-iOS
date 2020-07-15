@@ -39,7 +39,7 @@ class InterestViewController: UIViewController {
     
         tableView.delegate = self
         tableView.dataSource = self
-        addBookStoreData()
+        setBookStoreData()
         
         if #available(iOS 11.0, *){
             self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -73,7 +73,7 @@ class InterestViewController: UIViewController {
         }
     }
     
-    func addBookStoreData(){
+    func setBookStoreData(){
         InterestService.shared.getBookStoreData(){ NetworkResult in
             switch NetworkResult {
                 case .success(let data):
@@ -84,7 +84,7 @@ class InterestViewController: UIViewController {
                         if data.bookstoreIdx == 0{
                             self.nickName = data.nickname
                         } else {
-                            self.bookStoreList.append(BookStoreData(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, image1: data.image1, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, nickname: data.nickname, profile: data.profile))
+                            self.bookStoreList.append(BookStoreData(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, image1: data.image1, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, nickname: data.nickname))
                             self.nickName = self.bookStoreList[0].nickname
                         }
                     }

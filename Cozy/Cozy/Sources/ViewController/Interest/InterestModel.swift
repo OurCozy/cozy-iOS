@@ -33,14 +33,13 @@ struct InterestModel: Codable{
 struct BookStoreData: Codable{
     var bookstoreIdx: Int
     var bookstoreName: String
-    var profile: String
+    var image1: String
     var hashtag1: String
     var hashtag2: String
     var hashtag3: String
     var nickname: String
-    var image1: String
     
-    init(bookstoreIdx:Int, bookstoreName:String, image1:String, hashtag1:String, hashtag2:String, hashtag3:String, nickname:String, profile:String){
+    init(bookstoreIdx:Int, bookstoreName:String, image1:String, hashtag1:String, hashtag2:String, hashtag3:String, nickname:String){
         self.bookstoreIdx = bookstoreIdx
         self.bookstoreName = bookstoreName
         self.image1 = image1
@@ -48,6 +47,5 @@ struct BookStoreData: Codable{
         self.hashtag2 = hashtag2
         self.hashtag3 = hashtag3
         self.nickname = nickname
-        self.profile = profile
     }
 }
