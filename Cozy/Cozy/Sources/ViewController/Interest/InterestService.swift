@@ -33,6 +33,27 @@ struct InterestService {
         }
     }
     
+    func putBookStoreData(completion: @escaping (NetworkResult<Any>) -> Void) {
+        let idx: String = "3"
+        
+        let dataRequest = Alamofire.request(APIConstants.interestURL+"/"+idx, method: .put, encoding:JSONEncoding.default, headers: header)
+        
+        dataRequest.responseData { dataResponse in
+            switch dataResponse.result {
+            case .success:
+                guard let statusCode = dataResponse.response?.statusCode else { return }
+                guard let value = dataResponse.result.value else { return }
+                print(value)
+                
+                let networkResult = self.judge(by: statusCode, value)
+                
+                completion(networkResult)
+                
+            case .failure: completion(.networkFail)
+            }
+        }
+    }
+    
     private func judge(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200: return isData(by: data)
@@ -49,4 +70,24 @@ struct InterestService {
         guard let interestData = decodedData.data else { return .requestErr(decodedData.message) }
 
         return .success(interestData)
-    } }
+    }
+    
+    private func judge2(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+        switch statusCode {
+        case 200: return isData(by: data)
+        case 400: return .pathErr
+        case 500: return .serverErr
+        default: return .networkFail
+        }
+    }
+    
+    private func isData2(by data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(PutData.self, from: data) else { return .pathErr }
+        print(decodedData)
+        guard let putData = decodedData.data else { return .requestErr(decodedData.message) }
+
+        return .success(putData.checked)
+    }
+    
+}

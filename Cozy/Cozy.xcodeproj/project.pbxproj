@@ -17,10 +17,11 @@
 		1854227A24BF27C500846154 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854227924BF27C500846154 /* EmailLoginViewController.swift */; };
 		18B81C8B24BF526700B14596 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C8A24BF526700B14596 /* LoginService.swift */; };
 		18B81C8D24BF52F400B14596 /* SigninData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C8C24BF52F400B14596 /* SigninData.swift */; };
-		18B81C9424BF610800B14596 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C9224BF610800B14596 /* Login.storyboard */; };
-		18B81C9524BF610800B14596 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C9324BF610800B14596 /* Splash.storyboard */; };
 		18B81C9024BF5F8B00B14596 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C8E24BF5F8B00B14596 /* Login.storyboard */; };
 		18B81C9124BF5F8B00B14596 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C8F24BF5F8B00B14596 /* Splash.storyboard */; };
+		18B81C9424BF610800B14596 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C9224BF610800B14596 /* Login.storyboard */; };
+		18B81C9524BF610800B14596 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C9324BF610800B14596 /* Splash.storyboard */; };
+		18B81C9B24BF6FDF00B14596 /* PutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C9A24BF6FDF00B14596 /* PutData.swift */; };
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
 		55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */; };
 		55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */; };
@@ -109,10 +110,11 @@
 		1854227924BF27C500846154 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		18B81C8A24BF526700B14596 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		18B81C8C24BF52F400B14596 /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
-		18B81C9224BF610800B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
-		18B81C9324BF610800B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
 		18B81C8E24BF5F8B00B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
 		18B81C8F24BF5F8B00B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
+		18B81C9224BF610800B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
+		18B81C9324BF610800B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
+		18B81C9A24BF6FDF00B14596 /* PutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutData.swift; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarHideAnimation+Extension.swift"; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				183C1E3424B1DB4600FFE494 /* BookStore.swift */,
 				183C1E3824B73CC600FFE494 /* InterestModel.swift */,
 				183C1E3F24B857C300FFE494 /* InterestService.swift */,
+				18B81C9A24BF6FDF00B14596 /* PutData.swift */,
 			);
 			path = Interest;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				18B81C8D24BF52F400B14596 /* SigninData.swift in Sources */,
 				B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
+				18B81C9B24BF6FDF00B14596 /* PutData.swift in Sources */,
 				55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */,
 				CC26460924BC9DF600BCE4CD /* UploadService.swift in Sources */,
 			);

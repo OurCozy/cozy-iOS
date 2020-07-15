@@ -50,9 +50,12 @@ class BookStoreTableViewCell: UITableViewCell {
         hashTagLabel03.text = hashtag3
     }
     
-    @IBAction func bookmarkButtonAction(_ sender: Any) {
+    @IBAction func bookmarkButtonAction(_ sender: UIButton) {
         if isBookmarkClicked == false{
+            //put data
+            //reload tableview cell
             bookmarkButton.setImage(UIImage(named: "icBookmark"), for: .normal)
+            deleteData()
             isBookmarkClicked = true
         }
         else{
@@ -60,6 +63,26 @@ class BookStoreTableViewCell: UITableViewCell {
             isBookmarkClicked = false
         }
         
+    }
+    
+    func deleteData(){
+        InterestService.shared.putBookStoreData(){ NetworkResult in
+            switch NetworkResult {
+            case .success(let data):
+                guard let data = data as? PutData else {return print("put data error")}
+                print("@@@data@@@")
+                print(data)
+                
+            case .requestErr(_):
+                print("Request error@@")
+            case .pathErr:
+                print("path error")
+            case .serverErr:
+                print("server error")
+            case .networkFail:
+                print("network error")
+            }
+        }
     }
     
 
