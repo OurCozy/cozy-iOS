@@ -35,6 +35,10 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
     
     let eunpyeongLoc = CLLocationCoordinate2D(latitude: 37.6176125, longitude: 126.9227004) // 은평구 (샘플 서점 위치)
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,9 +49,10 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         self.mapView.mapType = MKMapType.standard
         self.setMapView(coordinate: eunpyeongLoc, addr:"안도북스")
         
-        //        self.navigationController?.navigationBar.isTranslucent = true
-        //        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        //        navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.isHidden = true
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
         
         scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.delegate = self
