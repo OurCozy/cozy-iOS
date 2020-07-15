@@ -422,6 +422,7 @@
 				18B81C8F24BF5F8B00B14596 /* Splash.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
+				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
 				B68682D224BD8F11006DAADE /* Signin.storyboard */,
