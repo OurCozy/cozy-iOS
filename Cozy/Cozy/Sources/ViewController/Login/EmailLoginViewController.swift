@@ -24,6 +24,8 @@ class EmailLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        idTextField.delegate = self
+        pwTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -65,4 +67,14 @@ class EmailLoginViewController: UIViewController {
     }
     */
 
+}
+
+extension EmailLoginViewController: UITextFieldDelegate{
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
 }

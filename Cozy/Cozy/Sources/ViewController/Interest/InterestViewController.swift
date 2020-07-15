@@ -39,7 +39,7 @@ class InterestViewController: UIViewController {
     
         tableView.delegate = self
         tableView.dataSource = self
-        setBookStoreData()
+        addBookStoreData()
         
         if #available(iOS 11.0, *){
             self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -73,7 +73,7 @@ class InterestViewController: UIViewController {
         }
     }
     
-    func setBookStoreData(){
+    func addBookStoreData(){
         InterestService.shared.getBookStoreData(){ NetworkResult in
             switch NetworkResult {
                 case .success(let data):
