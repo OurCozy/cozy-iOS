@@ -14,7 +14,7 @@ struct APIConstants{
     static let signinURL = APIConstants.baseURL + "/user/signin"
     static let mainRecommendationURL = APIConstants.baseURL + "/main/recommendation"
     static let interestURL = APIConstants.baseURL + "/main/interest"
-    
+    static let detailBookStoreURL = APIConstants.baseURL + "/main/detail/"
     static let mapURL = APIConstants.baseURL + "/main/map/"
     
     static let mypageURL = APIConstants.baseURL + "/main/mypage"

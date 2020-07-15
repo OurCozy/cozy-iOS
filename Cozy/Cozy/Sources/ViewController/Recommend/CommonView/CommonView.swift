@@ -10,6 +10,11 @@ import UIKit
 
 class CommonView: UIView, NibOwnerLoadable {
     
+    @IBOutlet weak var mainRecommendImageView: UIImageView!
+    @IBOutlet weak var guideLabel1: UILabel!
+    @IBOutlet weak var guideLabel2: UILabel!
+    @IBOutlet weak var bookstoreName: UILabel!
+    @IBOutlet weak var bookstoreAddress: UILabel!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     var topConstraintValue: CGFloat {
