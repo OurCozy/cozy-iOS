@@ -17,8 +17,6 @@
 		1854227A24BF27C500846154 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854227924BF27C500846154 /* EmailLoginViewController.swift */; };
 		18B81C8B24BF526700B14596 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C8A24BF526700B14596 /* LoginService.swift */; };
 		18B81C8D24BF52F400B14596 /* SigninData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C8C24BF52F400B14596 /* SigninData.swift */; };
-		18B81C9024BF5F8B00B14596 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C8E24BF5F8B00B14596 /* Login.storyboard */; };
-		18B81C9124BF5F8B00B14596 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C8F24BF5F8B00B14596 /* Splash.storyboard */; };
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
 		55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */; };
 		55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */; };
@@ -68,6 +66,8 @@
 		B63341EB24B328C30070F8C4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341EA24B328C30070F8C4 /* SearchViewController.swift */; };
 		B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */; };
 		B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63341F324B34F630070F8C4 /* MapDetail.storyboard */; };
+		B6542A9724BF769800DE63B1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6542A9524BF769800DE63B1 /* Login.storyboard */; };
+		B6542A9824BF769800DE63B1 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6542A9624BF769800DE63B1 /* Splash.storyboard */; };
 		B65D3A0724BB94FC00405549 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0624BB94FC00405549 /* SplashViewController.swift */; };
 		B65D3A0924BB957100405549 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0824BB957100405549 /* UIFont+Extension.swift */; };
 		B65D3A0B24BB96ED00405549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0A24BB96ED00405549 /* ViewController.swift */; };
@@ -107,8 +107,6 @@
 		1854227924BF27C500846154 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		18B81C8A24BF526700B14596 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		18B81C8C24BF52F400B14596 /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
-		18B81C8E24BF5F8B00B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
-		18B81C8F24BF5F8B00B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarHideAnimation+Extension.swift"; sourceTree = "<group>"; };
@@ -161,6 +159,8 @@
 		B63341EA24B328C30070F8C4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		B63341F324B34F630070F8C4 /* MapDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDetail.storyboard; sourceTree = "<group>"; };
+		B6542A9524BF769800DE63B1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
+		B6542A9624BF769800DE63B1 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
 		B65D3A0224BB941A00405549 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
 		B65D3A0624BB94FC00405549 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B65D3A0824BB957100405549 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -409,6 +409,8 @@
 		55E839EE24AF2D1E003C64FE /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				B6542A9524BF769800DE63B1 /* Login.storyboard */,
+				B6542A9624BF769800DE63B1 /* Splash.storyboard */,
 				55ABB33B24B37901008B5A5B /* DetailViewController.storyboard */,
 				55E839CB24AF29C2003C64FE /* Main.storyboard */,
 				55E839DD24AF2AC3003C64FE /* Recommend.storyboard */,
@@ -417,10 +419,6 @@
 				55E839D024AF29C6003C64FE /* LaunchScreen.storyboard */,
 				CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */,
 				B63341E724B328880070F8C4 /* Search.storyboard */,
-				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
-				18B81C8E24BF5F8B00B14596 /* Login.storyboard */,
-				18B81C8F24BF5F8B00B14596 /* Splash.storyboard */,
-				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
@@ -673,7 +671,7 @@
 				55E839DE24AF2AC3003C64FE /* Recommend.storyboard in Resources */,
 				B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */,
 				55E839E024AF2AD1003C64FE /* Map.storyboard in Resources */,
-				18B81C9024BF5F8B00B14596 /* Login.storyboard in Resources */,
+				B6542A9724BF769800DE63B1 /* Login.storyboard in Resources */,
 				55E839CF24AF29C6003C64FE /* Assets.xcassets in Resources */,
 				B65D3A1424BB9D4800405549 /* SocialLogin.storyboard in Resources */,
 				B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */,
@@ -685,7 +683,7 @@
 				CC2645EA24BA0D3B00BCE4CD /* MyPage.storyboard in Resources */,
 				55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */,
 				55CE354F24B3471E001210A7 /* CommonView.xib in Resources */,
-				18B81C9124BF5F8B00B14596 /* Splash.storyboard in Resources */,
+				B6542A9824BF769800DE63B1 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

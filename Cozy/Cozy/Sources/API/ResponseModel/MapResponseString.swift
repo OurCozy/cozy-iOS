@@ -34,13 +34,12 @@ struct MapResponseString: Codable {
 
 struct MapBookStore: Codable {
     var bookstoreIdx: Int
-    var sectionIdx: Int
     var bookstoreName: String
     var hashtag1: String
     var hashtag2: String
     var hashtag3: String
     var profile: String
     var image1: String
-    var count: Int
     var checked: Int
+    var count: Int
 }

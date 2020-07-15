@@ -80,7 +80,7 @@ class MapViewController: UIViewController {
             case .success(let data) :
                 guard let data = data as? [MapBookStore] else { return }
                 for data in data {
-                    self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, sectionIdx: data.sectionIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, count: data.count, checked: data.checked))
+                    self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, checked: data.checked, count: data.count))
                 }
                 self.tableView.reloadData()
             case .requestErr(_):
