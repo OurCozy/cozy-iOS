@@ -60,6 +60,14 @@
                                 <rect key="frame" x="189" y="733" width="82" height="30"/>
                                 <state key="normal" title="비밀번호 찾기"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jv-a9-Qmp">
+                                <rect key="frame" x="150" y="455" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="로그인하기"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="Cqg-2h-Bfu" eventType="touchUpInside" id="nhz-6M-CAn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -90,13 +98,14 @@
                         <outlet property="checkIdButton" destination="U6A-fI-alr" id="rok-Ox-Ui5"/>
                         <outlet property="checkPwButton" destination="xqj-yt-ekM" id="ZMt-la-sSL"/>
                         <outlet property="idTextField" destination="dmQ-dm-C98" id="dHD-0O-PCv"/>
+                        <outlet property="loginButton" destination="6Jv-a9-Qmp" id="Mez-Ur-Z7G"/>
                         <outlet property="pwTextField" destination="eBI-Kf-pyD" id="t0u-Eu-knA"/>
                         <outlet property="simpleLine" destination="jkK-fo-moA" id="YGZ-n5-MQK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnn-RV-bO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186.95652173913044" y="-135.26785714285714"/>
+            <point key="canvasLocation" x="-257" y="-189"/>
         </scene>
     </scenes>
 </document>

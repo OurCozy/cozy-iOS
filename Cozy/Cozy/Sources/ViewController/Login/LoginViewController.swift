@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     @IBAction func goEmailLogin(_ sender: UIButton) {
@@ -37,9 +37,10 @@ class LoginViewController: UIViewController {
 //
 //        let vc = sb.instantiateViewController(identifier: "ViewController") as! ViewController
 //        vc.modalPresentationStyle = .fullScreen
-//        self.navigationController?.pushViewController(vc, animated: true)
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: true)
+
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        //self.present(vc, animated: true)
     }
     
     @IBAction func goSignin(_ sender: UIButton) {

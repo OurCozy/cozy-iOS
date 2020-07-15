@@ -12,7 +12,7 @@ class EmailLoginViewController: UIViewController {
     
     let border1 = CALayer()
     let border2 = CALayer()
-
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var autoLoginButton: UIButton!
@@ -20,10 +20,11 @@ class EmailLoginViewController: UIViewController {
     @IBOutlet weak var checkIdButton: UIButton!
     @IBOutlet weak var checkPwButton: UIButton!
     @IBOutlet weak var simpleLine: UIView!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         idTextField.delegate = self
         pwTextField.delegate = self
         // Do any additional setup after loading the view.
@@ -39,7 +40,7 @@ class EmailLoginViewController: UIViewController {
         checkPwButton.tintColor = UIColor.brownishGrey
         simpleLine.backgroundColor = UIColor.brownGrey
     }
-
+    
     func setTextFieldStyle(){
         idTextField.borderStyle = .none
         
@@ -57,16 +58,35 @@ class EmailLoginViewController: UIViewController {
         pwTextField.textAlignment = .left
         pwTextField.textColor = UIColor.black
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func loginAction(_ sender: Any) {
+        guard let inputEmail = idTextField.text else { return }
+        guard let inputPWD = pwTextField.text else { return }
+        
+        LoginService.loginShared.login(id: inputEmail, pwd: inputPWD) { networkResult in
+            switch networkResult {
+                
+            case .success(let token):
+                guard let token = token as? String else { return }
+                UserDefaults.standard.set(token, forKey: "token")
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+            
+            case .requestErr(let message):
+                guard let message = message as? String else { return }
+                let alertViewController = UIAlertController(title: "로그인 실패", message: message, preferredStyle: .alert)
+                let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertViewController.addAction(action)
+                self.present(alertViewController, animated: true, completion: nil)
+                
+            case .pathErr: print("path")
+            case .serverErr: print("serverErr")
+            case .networkFail: print("networkFail") }
+        }
     }
-    */
-
+    
+    
 }
 
 extension EmailLoginViewController: UITextFieldDelegate{
