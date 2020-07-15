@@ -411,6 +411,7 @@
 				B63341E724B328880070F8C4 /* Search.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
+				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
 				B65D3A0324BB94D100405549 /* Splash.storyboard */,
 				B65D3A0E24BB993700405549 /* Login.storyboard */,
