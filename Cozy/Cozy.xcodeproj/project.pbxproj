@@ -60,12 +60,10 @@
 		B63341EB24B328C30070F8C4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341EA24B328C30070F8C4 /* SearchViewController.swift */; };
 		B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */; };
 		B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63341F324B34F630070F8C4 /* MapDetail.storyboard */; };
-		B65D3A0424BB94D100405549 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A0324BB94D100405549 /* Splash.storyboard */; };
 		B65D3A0724BB94FC00405549 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0624BB94FC00405549 /* SplashViewController.swift */; };
 		B65D3A0924BB957100405549 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0824BB957100405549 /* UIFont+Extension.swift */; };
 		B65D3A0B24BB96ED00405549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0A24BB96ED00405549 /* ViewController.swift */; };
 		B65D3A0C24BB989000405549 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A0224BB941A00405549 /* Gilroy-Light.ttf */; };
-		B65D3A0F24BB993700405549 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A0E24BB993700405549 /* Login.storyboard */; };
 		B65D3A1224BB996700405549 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A1124BB996700405549 /* LoginViewController.swift */; };
 		B65D3A1424BB9D4800405549 /* SocialLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */; };
 		B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */; };
@@ -148,11 +146,9 @@
 		B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		B63341F324B34F630070F8C4 /* MapDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDetail.storyboard; sourceTree = "<group>"; };
 		B65D3A0224BB941A00405549 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
-		B65D3A0324BB94D100405549 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		B65D3A0624BB94FC00405549 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B65D3A0824BB957100405549 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		B65D3A0A24BB96ED00405549 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B65D3A0E24BB993700405549 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B65D3A1124BB996700405549 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SocialLogin.storyboard; sourceTree = "<group>"; };
 		B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
@@ -408,8 +404,6 @@
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
-				B65D3A0324BB94D100405549 /* Splash.storyboard */,
-				B65D3A0E24BB993700405549 /* Login.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
 				B68682D224BD8F11006DAADE /* Signin.storyboard */,
 				1854227724BF27A300846154 /* EmailLogin.storyboard */,
@@ -627,12 +621,10 @@
 				B65D3A0C24BB989000405549 /* Gilroy-Light.ttf in Resources */,
 				55CE354B24B34536001210A7 /* CardCollectionViewCell.xib in Resources */,
 				55E839DE24AF2AC3003C64FE /* Recommend.storyboard in Resources */,
-				B65D3A0424BB94D100405549 /* Splash.storyboard in Resources */,
 				B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */,
 				55E839E024AF2AD1003C64FE /* Map.storyboard in Resources */,
 				55E839CF24AF29C6003C64FE /* Assets.xcassets in Resources */,
 				B65D3A1424BB9D4800405549 /* SocialLogin.storyboard in Resources */,
-				B65D3A0F24BB993700405549 /* Login.storyboard in Resources */,
 				B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */,
 				B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */,
 				B63341E824B328880070F8C4 /* Search.storyboard in Resources */,
