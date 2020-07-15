@@ -130,7 +130,7 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! BookStoreTableViewCell
         cell.wholeView.setViewShadow()
         
-        cell.setBookStoreData(image1: bookStoreList[indexPath.row].image1, bookStoreName: bookStoreList[indexPath.row].bookstoreName, hashtag1: bookStoreList[indexPath.row].hashtag1, hashtag2: bookStoreList[indexPath.row].hashtag2, hashtag3: bookStoreList[indexPath.row].hashtag3)
+        cell.setBookStoreData(image1: bookStoreList[indexPath.row].image1, bookStoreName: bookStoreList[indexPath.row].bookstoreName, hashtag1: bookStoreList[indexPath.row].hashtag1, hashtag2: bookStoreList[indexPath.row].hashtag2, hashtag3: bookStoreList[indexPath.row].hashtag3, bookStoreIdx: bookStoreList[indexPath.row].bookstoreIdx)
         
         return cell
     }

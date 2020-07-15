@@ -33,10 +33,9 @@ struct InterestService {
         }
     }
     
-    func putBookStoreData(completion: @escaping (NetworkResult<Any>) -> Void) {
-        let idx: String = "3"
+    func putBookStoreData(bookStoreIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        let dataRequest = Alamofire.request(APIConstants.interestURL+"/"+idx, method: .put, encoding:JSONEncoding.default, headers: header)
+        let dataRequest = Alamofire.request(APIConstants.interestURL+"/"+String(bookStoreIdx), method: .put, encoding:JSONEncoding.default, headers: header)
         
         dataRequest.responseData { dataResponse in
             switch dataResponse.result {
@@ -45,7 +44,7 @@ struct InterestService {
                 guard let value = dataResponse.result.value else { return }
                 print(value)
                 
-                let networkResult = self.judge(by: statusCode, value)
+                let networkResult = self.judge2(by: statusCode, value)
                 
                 completion(networkResult)
                 
@@ -74,7 +73,7 @@ struct InterestService {
     
     private func judge2(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
-        case 200: return isData(by: data)
+        case 200: return isData2(by: data)
         case 400: return .pathErr
         case 500: return .serverErr
         default: return .networkFail
@@ -87,7 +86,7 @@ struct InterestService {
         print(decodedData)
         guard let putData = decodedData.data else { return .requestErr(decodedData.message) }
 
-        return .success(putData.checked)
+        return .success(putData)
     }
     
 }

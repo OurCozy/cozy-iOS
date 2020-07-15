@@ -11,6 +11,7 @@ import UIKit
 class BookStoreTableViewCell: UITableViewCell {
     
     var isBookmarkClicked: Bool = false
+    var bookStoreIdx: Int = 0
 
     @IBOutlet weak var wholeView: UIView!
     @IBOutlet var hashTagCollection: [UIView]!
@@ -40,7 +41,7 @@ class BookStoreTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setBookStoreData(image1: String, bookStoreName: String, hashtag1: String, hashtag2:String, hashtag3:String){
+    func setBookStoreData(image1: String, bookStoreName: String, hashtag1: String, hashtag2:String, hashtag3:String, bookStoreIdx: Int){
         let url = URL(string: image1)
         guard let data = try? Data(contentsOf: url!) else {return}
         self.bookStoreImageView.image = UIImage(data: data)
@@ -48,28 +49,29 @@ class BookStoreTableViewCell: UITableViewCell {
         hashTagLabel01.text = hashtag1
         hashTagLabel02.text = hashtag2
         hashTagLabel03.text = hashtag3
+        
+        self.bookStoreIdx = bookStoreIdx
     }
     
     @IBAction func bookmarkButtonAction(_ sender: UIButton) {
-        if isBookmarkClicked == false{
+//        if isBookmarkClicked == false{
             //put data
             //reload tableview cell
             bookmarkButton.setImage(UIImage(named: "icBookmark"), for: .normal)
-            deleteData()
-            isBookmarkClicked = true
-        }
-        else{
-            bookmarkButton.setImage(UIImage(named: "icBookmarkSelected"), for: .normal)
-            isBookmarkClicked = false
-        }
-        
+            deleteData(idx: self.bookStoreIdx)
+//            isBookmarkClicked = true
+//        }
+//        else{
+//            bookmarkButton.setImage(UIImage(named: "icBookmarkSelected"), for: .normal)
+//            isBookmarkClicked = false
+//        }
     }
     
-    func deleteData(){
-        InterestService.shared.putBookStoreData(){ NetworkResult in
+    func deleteData(idx: Int){
+        InterestService.shared.putBookStoreData(bookStoreIdx: idx){ NetworkResult in
             switch NetworkResult {
             case .success(let data):
-                guard let data = data as? PutData else {return print("put data error")}
+                guard let data = data as? Checked else {return print("put data error")}
                 print("@@@data@@@")
                 print(data)
                 
