@@ -13,6 +13,10 @@
 		183C1E3C24B7416600FFE494 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3B24B7416600FFE494 /* APIConstants.swift */; };
 		183C1E3E24B7431B00FFE494 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3D24B7431B00FFE494 /* NetworkResult.swift */; };
 		183C1E4024B857C300FFE494 /* InterestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3F24B857C300FFE494 /* InterestService.swift */; };
+		1854227824BF27A300846154 /* EmailLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1854227724BF27A300846154 /* EmailLogin.storyboard */; };
+		1854227A24BF27C500846154 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854227924BF27C500846154 /* EmailLoginViewController.swift */; };
+		18B81C8B24BF526700B14596 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C8A24BF526700B14596 /* LoginService.swift */; };
+		18B81C8D24BF52F400B14596 /* SigninData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C8C24BF52F400B14596 /* SigninData.swift */; };
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
 		55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */; };
 		55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */; };
@@ -62,12 +66,10 @@
 		B63341EB24B328C30070F8C4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341EA24B328C30070F8C4 /* SearchViewController.swift */; };
 		B63341ED24B344C50070F8C4 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */; };
 		B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63341F324B34F630070F8C4 /* MapDetail.storyboard */; };
-		B65D3A0424BB94D100405549 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A0324BB94D100405549 /* Splash.storyboard */; };
 		B65D3A0724BB94FC00405549 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0624BB94FC00405549 /* SplashViewController.swift */; };
 		B65D3A0924BB957100405549 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0824BB957100405549 /* UIFont+Extension.swift */; };
 		B65D3A0B24BB96ED00405549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0A24BB96ED00405549 /* ViewController.swift */; };
 		B65D3A0C24BB989000405549 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A0224BB941A00405549 /* Gilroy-Light.ttf */; };
-		B65D3A0F24BB993700405549 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A0E24BB993700405549 /* Login.storyboard */; };
 		B65D3A1224BB996700405549 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A1124BB996700405549 /* LoginViewController.swift */; };
 		B65D3A1424BB9D4800405549 /* SocialLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */; };
 		B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */; };
@@ -99,6 +101,10 @@
 		183C1E3B24B7416600FFE494 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		183C1E3D24B7431B00FFE494 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		183C1E3F24B857C300FFE494 /* InterestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestService.swift; sourceTree = "<group>"; };
+		1854227724BF27A300846154 /* EmailLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailLogin.storyboard; sourceTree = "<group>"; };
+		1854227924BF27C500846154 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
+		18B81C8A24BF526700B14596 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		18B81C8C24BF52F400B14596 /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarHideAnimation+Extension.swift"; sourceTree = "<group>"; };
@@ -152,11 +158,9 @@
 		B63341EC24B344C50070F8C4 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		B63341F324B34F630070F8C4 /* MapDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDetail.storyboard; sourceTree = "<group>"; };
 		B65D3A0224BB941A00405549 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
-		B65D3A0324BB94D100405549 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		B65D3A0624BB94FC00405549 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B65D3A0824BB957100405549 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		B65D3A0A24BB96ED00405549 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B65D3A0E24BB993700405549 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B65D3A1124BB996700405549 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SocialLogin.storyboard; sourceTree = "<group>"; };
 		B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
@@ -412,10 +416,9 @@
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
-				B65D3A0324BB94D100405549 /* Splash.storyboard */,
-				B65D3A0E24BB993700405549 /* Login.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
 				B68682D224BD8F11006DAADE /* Signin.storyboard */,
+				1854227724BF27A300846154 /* EmailLogin.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -503,6 +506,9 @@
 				B65D3A1124BB996700405549 /* LoginViewController.swift */,
 				B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */,
 				B68682CE24BD8A04006DAADE /* SocialLogin2ViewController.swift */,
+				1854227924BF27C500846154 /* EmailLoginViewController.swift */,
+				18B81C8A24BF526700B14596 /* LoginService.swift */,
+				18B81C8C24BF52F400B14596 /* SigninData.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -653,15 +659,14 @@
 			files = (
 				B68682D324BD8F11006DAADE /* Signin.storyboard in Resources */,
 				55E839D224AF29C6003C64FE /* LaunchScreen.storyboard in Resources */,
+				1854227824BF27A300846154 /* EmailLogin.storyboard in Resources */,
 				B65D3A0C24BB989000405549 /* Gilroy-Light.ttf in Resources */,
 				55CE354B24B34536001210A7 /* CardCollectionViewCell.xib in Resources */,
 				55E839DE24AF2AC3003C64FE /* Recommend.storyboard in Resources */,
-				B65D3A0424BB94D100405549 /* Splash.storyboard in Resources */,
 				B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */,
 				55E839E024AF2AD1003C64FE /* Map.storyboard in Resources */,
 				55E839CF24AF29C6003C64FE /* Assets.xcassets in Resources */,
 				B65D3A1424BB9D4800405549 /* SocialLogin.storyboard in Resources */,
-				B65D3A0F24BB993700405549 /* Login.storyboard in Resources */,
 				B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */,
 				B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */,
 				B63341E824B328880070F8C4 /* Search.storyboard in Resources */,
@@ -724,6 +729,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68682CF24BD8A04006DAADE /* SocialLogin2ViewController.swift in Sources */,
+				1854227A24BF27C500846154 /* EmailLoginViewController.swift in Sources */,
 				B65D3A0924BB957100405549 /* UIFont+Extension.swift in Sources */,
 				183C1E4024B857C300FFE494 /* InterestService.swift in Sources */,
 				55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */,
@@ -756,6 +762,7 @@
 				55CE354624B3306E001210A7 /* ShadowView.swift in Sources */,
 				B6E3B39024BC406300F42D15 /* MapResponseString.swift in Sources */,
 				55CE354024B32F81001210A7 /* NibOwnerLoadable.swift in Sources */,
+				18B81C8B24BF526700B14596 /* LoginService.swift in Sources */,
 				B63341E224B19DAB0070F8C4 /* LibraryTableViewCell.swift in Sources */,
 				CC26460B24BDAD8F00BCE4CD /* ProfileService.swift in Sources */,
 				55E839E724AF2B39003C64FE /* RecommendViewController.swift in Sources */,
@@ -781,6 +788,7 @@
 				CC26460724BC990800BCE4CD /* ProfileData.swift in Sources */,
 				B6E3B39324BC40B200F42D15 /* MapService.swift in Sources */,
 				55E460BF24BD72580035ECCE /* DetailBookStoreModel.swift in Sources */,
+				18B81C8D24BF52F400B14596 /* SigninData.swift in Sources */,
 				B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
 				55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */,

@@ -19,13 +19,13 @@ class LoginViewController: UIViewController {
         self.emailLoginButton.settagButton()
         self.signinButton.settagButton()
     }
-    
-    
+        
     @IBAction func goEmailLogin(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         vc.modalPresentationStyle = .overCurrentContext
         self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
     @IBAction func goSignin(_ sender: UIButton) {
