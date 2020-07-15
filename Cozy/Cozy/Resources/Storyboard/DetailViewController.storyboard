@@ -46,7 +46,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuM-PU-cxp">
-                                                                        <rect key="frame" x="309" y="48" width="62" height="62"/>
+                                                                        <rect key="frame" x="314" y="48" width="57" height="57"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="FuM-PU-cxp" secondAttribute="height" multiplier="1:1" id="VLq-Dr-yW6"/>
                                                                         </constraints>
@@ -230,7 +230,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0o-yu-LVk">
-                                                                        <rect key="frame" x="313" y="152" width="48" height="48"/>
+                                                                        <rect key="frame" x="313" y="147" width="48" height="48"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="Y0o-yu-LVk" secondAttribute="height" multiplier="1:1" id="p6j-jP-tRY"/>
                                                                         </constraints>
@@ -542,7 +542,7 @@
     <resources>
         <image name="61" width="396" height="396"/>
         <image name="65" width="375" height="250"/>
-        <image name="icBookmark" width="62" height="62"/>
+        <image name="icBookmark" width="57" height="57"/>
         <image name="icBookmarkSelected" width="57" height="57"/>
         <image name="icCommentsPost" width="48" height="48"/>
         <image name="icFacebook" width="60" height="60"/>
@@ -550,12 +550,12 @@
         <image name="icHomepage" width="60" height="60"/>
         <image name="icInstagram" width="60" height="60"/>
         <image name="icMoreBlack" width="28" height="28"/>
-        <image name="icRightArrowSmall" width="24" height="24"/>
+        <image name="icRightArrowSmall" width="48" height="48"/>
         <image name="icXDark" width="48" height="48"/>
         <image name="imgAdress" width="22" height="22"/>
         <image name="imgCall" width="22" height="22"/>
         <image name="imgEtc" width="22" height="22"/>
-        <image name="imgProfile" width="80" height="80"/>
+        <image name="imgProfile" width="44" height="44"/>
         <image name="imgTime" width="22" height="22"/>
     </resources>
 </document>
