@@ -13,6 +13,8 @@
 		183C1E3C24B7416600FFE494 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3B24B7416600FFE494 /* APIConstants.swift */; };
 		183C1E3E24B7431B00FFE494 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3D24B7431B00FFE494 /* NetworkResult.swift */; };
 		183C1E4024B857C300FFE494 /* InterestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3F24B857C300FFE494 /* InterestService.swift */; };
+		1854227824BF27A300846154 /* EmailLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1854227724BF27A300846154 /* EmailLogin.storyboard */; };
+		1854227A24BF27C500846154 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854227924BF27C500846154 /* EmailLoginViewController.swift */; };
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
 		55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */; };
 		55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */; };
@@ -93,6 +95,8 @@
 		183C1E3B24B7416600FFE494 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		183C1E3D24B7431B00FFE494 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		183C1E3F24B857C300FFE494 /* InterestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestService.swift; sourceTree = "<group>"; };
+		1854227724BF27A300846154 /* EmailLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailLogin.storyboard; sourceTree = "<group>"; };
+		1854227924BF27C500846154 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD424B57F9D00522643 /* UITabbarHideAnimation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarHideAnimation+Extension.swift"; sourceTree = "<group>"; };
@@ -404,6 +408,7 @@
 				B65D3A0E24BB993700405549 /* Login.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
 				B68682D224BD8F11006DAADE /* Signin.storyboard */,
+				1854227724BF27A300846154 /* EmailLogin.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -494,6 +499,7 @@
 				B65D3A1124BB996700405549 /* LoginViewController.swift */,
 				B65D3A1524BB9D6400405549 /* SocialLoginViewController.swift */,
 				B68682CE24BD8A04006DAADE /* SocialLogin2ViewController.swift */,
+				1854227924BF27C500846154 /* EmailLoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 			files = (
 				B68682D324BD8F11006DAADE /* Signin.storyboard in Resources */,
 				55E839D224AF29C6003C64FE /* LaunchScreen.storyboard in Resources */,
+				1854227824BF27A300846154 /* EmailLogin.storyboard in Resources */,
 				B65D3A0C24BB989000405549 /* Gilroy-Light.ttf in Resources */,
 				55CE354B24B34536001210A7 /* CardCollectionViewCell.xib in Resources */,
 				55E839DE24AF2AC3003C64FE /* Recommend.storyboard in Resources */,
@@ -682,6 +689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68682CF24BD8A04006DAADE /* SocialLogin2ViewController.swift in Sources */,
+				1854227A24BF27C500846154 /* EmailLoginViewController.swift in Sources */,
 				B65D3A0924BB957100405549 /* UIFont+Extension.swift in Sources */,
 				183C1E4024B857C300FFE494 /* InterestService.swift in Sources */,
 				55E839EB24AF2B4A003C64FE /* InterestViewController.swift in Sources */,
