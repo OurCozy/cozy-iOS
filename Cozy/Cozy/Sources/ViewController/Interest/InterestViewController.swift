@@ -32,8 +32,6 @@ class InterestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.tabBarController?.tabBarItem.image = UIImage(named: "icTabBookmark")
-        
         tableView.delegate = self
         tableView.dataSource = self
         addBookStoreData()
