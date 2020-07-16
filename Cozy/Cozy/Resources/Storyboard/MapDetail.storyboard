@@ -556,7 +556,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqI-CL-v9D">
-                                        <rect key="frame" x="26" y="60" width="48" height="48"/>
+                                        <rect key="frame" x="12" y="10" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="CFF-AL-Mua"/>
                                             <constraint firstAttribute="width" constant="48" id="MYL-F4-tST"/>
@@ -570,8 +570,8 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Xty-7E-IzH" secondAttribute="trailing" id="8zk-bX-4AR"/>
                                     <constraint firstAttribute="top" secondItem="Xty-7E-IzH" secondAttribute="top" id="WdS-fl-3LU"/>
-                                    <constraint firstItem="xqI-CL-v9D" firstAttribute="leading" secondItem="6G6-tq-6R7" secondAttribute="leading" constant="26" id="Xm4-c4-vN2"/>
-                                    <constraint firstItem="xqI-CL-v9D" firstAttribute="top" secondItem="6G6-tq-6R7" secondAttribute="top" constant="60" id="d6K-sy-GYL"/>
+                                    <constraint firstItem="xqI-CL-v9D" firstAttribute="leading" secondItem="6G6-tq-6R7" secondAttribute="leading" constant="12" id="Xm4-c4-vN2"/>
+                                    <constraint firstItem="xqI-CL-v9D" firstAttribute="top" secondItem="6G6-tq-6R7" secondAttribute="top" constant="10" id="d6K-sy-GYL"/>
                                     <constraint firstItem="Xty-7E-IzH" firstAttribute="width" secondItem="6G6-tq-6R7" secondAttribute="width" id="l9Y-tB-Phh"/>
                                     <constraint firstItem="Xty-7E-IzH" firstAttribute="height" secondItem="6G6-tq-6R7" secondAttribute="height" priority="250" id="lSD-wb-Axr"/>
                                     <constraint firstAttribute="bottom" secondItem="Xty-7E-IzH" secondAttribute="bottom" id="lb3-aQ-dHx"/>
@@ -591,10 +591,16 @@
                     <navigationItem key="navigationItem" id="k4H-Uy-MGK"/>
                     <size key="freeformSize" width="414" height="2735"/>
                     <connections>
+                        <outlet property="activityLabel" destination="6Th-8J-K63" id="8rq-OC-Epl"/>
+                        <outlet property="addressLabel" destination="g5b-v2-hfb" id="waZ-Kq-2Ki"/>
+                        <outlet property="bookstoreImage2" destination="ht0-gq-zGI" id="ZwW-8C-BCh"/>
+                        <outlet property="bookstoreImage3" destination="98n-la-nQU" id="GNE-0v-U7e"/>
                         <outlet property="bookstoreImageView" destination="l2z-XM-Le4" id="gx4-ZO-IR6"/>
+                        <outlet property="bookstoreName" destination="BfS-ql-fzE" id="IwR-gb-BiR"/>
                         <outlet property="explainLabel" destination="qRr-fa-GEx" id="9lI-Cw-gvo"/>
                         <outlet property="mapView" destination="326-wH-W8R" id="03i-9z-Vxl"/>
                         <outlet property="moreButton" destination="Agv-EF-Vr3" id="bEy-e5-Lod"/>
+                        <outlet property="phoneLabel" destination="Zff-bB-oVm" id="2Ke-Ln-JKq"/>
                         <outlet property="reviewImageView1" destination="qPd-3H-DwD" id="rh6-QG-G6Q"/>
                         <outlet property="reviewImageView2" destination="mDD-Qe-r8N" id="Cne-oy-Ide"/>
                         <outlet property="reviewLabel1" destination="k6O-1j-tvL" id="gMv-tO-vhZ"/>

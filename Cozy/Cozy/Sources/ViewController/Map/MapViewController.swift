@@ -237,6 +237,7 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             let storyboard = UIStoryboard(name: "MapDetail", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "MapDetailViewController") as! MapDetailViewController
             
+            vc.bookstoreIdx = self.mapBookList[indexPath.row].bookstoreIdx
             vc.modalPresentationStyle = .fullScreen
             
             self.navigationController?.pushViewController(vc, animated: true)
