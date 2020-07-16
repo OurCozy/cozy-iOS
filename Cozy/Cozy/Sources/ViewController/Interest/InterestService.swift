@@ -12,9 +12,11 @@ import Alamofire
 struct InterestService {
     static let shared = InterestService()
     
-    let header: HTTPHeaders = ["Content-Type": "application/json", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxMSwiaWF0IjoxNTk0ODk2NDcxLCJleHAiOjE1OTQ5MzI0NzEsImlzcyI6Im91ci1zb3B0In0.jazy0DLGWpJArBa-Tfb55DSopkAAA_kuEqU49VqGY44"]
     
     func getBookStoreData(completion: @escaping (NetworkResult<Any>) -> Void) {
+        
+        guard let token = UserDefaults.standard.string(forKey: "token") else {return}
+        let header: HTTPHeaders = ["Content-Type": "application/json", "token": token]
         
         let dataRequest = Alamofire.request(APIConstants.interestURL, method: .get, encoding:JSONEncoding.default, headers: header)
         
@@ -34,6 +36,9 @@ struct InterestService {
     }
     
     func putBookStoreData(bookStoreIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+        
+        guard let token = UserDefaults.standard.string(forKey: "token") else {return}
+        let header: HTTPHeaders = ["Content-Type": "application/json", "token": token]
         
         let dataRequest = Alamofire.request(APIConstants.interestURL+"/"+String(bookStoreIdx), method: .put, encoding:JSONEncoding.default, headers: header)
         
