@@ -117,8 +117,6 @@
 		1854227924BF27C500846154 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		18B81C8A24BF526700B14596 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		18B81C8C24BF52F400B14596 /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
-		18B81C9224BF610800B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
-		18B81C9324BF610800B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
 		18B81C9A24BF6FDF00B14596 /* PutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutData.swift; sourceTree = "<group>"; };
 		555E67ED24C0915400187AAF /* Uiview+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uiview+Storyboard.swift"; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -434,8 +432,6 @@
 				55E839E124AF2AE1003C64FE /* Interest.storyboard */,
 				55E839D024AF29C6003C64FE /* LaunchScreen.storyboard */,
 				CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */,
-				18B81C9224BF610800B14596 /* Login.storyboard */,
-				18B81C9324BF610800B14596 /* Splash.storyboard */,
 				B63341E724B328880070F8C4 /* Search.storyboard */,
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
