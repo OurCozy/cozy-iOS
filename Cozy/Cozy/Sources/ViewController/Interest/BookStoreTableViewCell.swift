@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ButtonActionDelegate {
+    func bookmarkButtonClick(at indexPath: IndexPath)
+}
+
 class BookStoreTableViewCell: UITableViewCell {
     
     var isBookmarkClicked: Bool = false
@@ -23,6 +27,9 @@ class BookStoreTableViewCell: UITableViewCell {
     @IBOutlet weak var hashTagLabel03: UILabel!
     
     @IBOutlet weak var bookmarkButton: UIButton!
+    
+    var delegate: ButtonActionDelegate?
+    var indexPath: IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,6 +66,9 @@ class BookStoreTableViewCell: UITableViewCell {
             //reload tableview cell
             bookmarkButton.setImage(UIImage(named: "icBookmark"), for: .normal)
             deleteData(idx: self.bookStoreIdx)
+        
+        print("셀의 bookrmarkbuttonidnexpath: \(self.indexPath!)")
+        self.delegate?.bookmarkButtonClick(at: self.indexPath!)
 //            isBookmarkClicked = true
 //        }
 //        else{
@@ -75,6 +85,7 @@ class BookStoreTableViewCell: UITableViewCell {
                 print("@@@data@@@")
                 print(data)
                 
+                
             case .requestErr(_):
                 print("Request error@@")
             case .pathErr:
@@ -82,7 +93,7 @@ class BookStoreTableViewCell: UITableViewCell {
             case .serverErr:
                 print("server error")
             case .networkFail:
-                print("network error")
+                print("network error@@")
             }
         }
     }
