@@ -16,8 +16,6 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button5: UIButton!
     @IBOutlet weak var button6: UIButton!
-    @IBOutlet weak var button7: UIButton!
-    @IBOutlet weak var button8: UIButton!
     
     @IBOutlet weak var searchWholeView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -45,6 +43,15 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
+    @IBAction func clickKeywords(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Search", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchListViewController") as! SearchListViewController
+        
+        vc.searchRegion = sender.titleLabel?.text ?? ""
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func goSearchList(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Search", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchListViewController") as! SearchListViewController
@@ -70,7 +77,6 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
         self.button4.settagButton()
         self.button5.settagButton()
         self.button6.settagButton()
-        self.button7.settagButton()
-        self.button8.settagButton()
     }
+    
 }

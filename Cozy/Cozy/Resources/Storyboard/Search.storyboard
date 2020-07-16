@@ -90,6 +90,9 @@
                                                                 <state key="normal" title="감성책방">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="clickKeywords:" destination="9v9-fP-Sce" eventType="touchUpInside" id="2Kr-ok-7RL"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -108,9 +111,12 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCg-XK-Zr4">
                                                                 <rect key="frame" x="7" y="7" width="80.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <state key="normal" title="감성책방">
+                                                                <state key="normal" title="맥주">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="clickKeywords:" destination="9v9-fP-Sce" eventType="touchUpInside" id="nb5-bj-skb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -129,9 +135,12 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1f-5k-UbZ">
                                                                 <rect key="frame" x="7" y="7" width="80.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <state key="normal" title="감성책방">
+                                                                <state key="normal" title="카페">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="clickKeywords:" destination="9v9-fP-Sce" eventType="touchUpInside" id="Sze-NP-Tma"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -150,9 +159,12 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8W-3b-aZm">
                                                                 <rect key="frame" x="7" y="7" width="80.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <state key="normal" title="감성책방">
+                                                                <state key="normal" title="독서모임">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="clickKeywords:" destination="9v9-fP-Sce" eventType="touchUpInside" id="FY6-pq-3ev"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -188,9 +200,12 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwB-36-d6T">
                                                                 <rect key="frame" x="7" y="7" width="80.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <state key="normal" title="감성책방">
+                                                                <state key="normal" title="영화">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="clickKeywords:" destination="9v9-fP-Sce" eventType="touchUpInside" id="6un-fn-BX3"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -209,9 +224,12 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exm-Sv-W79">
                                                                 <rect key="frame" x="7" y="7" width="80.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <state key="normal" title="감성책방">
+                                                                <state key="normal" title="드로잉">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="clickKeywords:" destination="9v9-fP-Sce" eventType="touchUpInside" id="ngm-gN-P0A"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -226,45 +244,11 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="da4-ff-2WO">
                                                         <rect key="frame" x="189" y="0.0" width="94.5" height="46"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp4-Vv-49a">
-                                                                <rect key="frame" x="7" y="7" width="80.5" height="32"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <state key="normal" title="감성책방">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="mp4-Vv-49a" secondAttribute="trailing" constant="7" id="8gG-TR-pF2"/>
-                                                            <constraint firstItem="mp4-Vv-49a" firstAttribute="centerY" secondItem="da4-ff-2WO" secondAttribute="centerY" id="LXA-Ux-OmV"/>
-                                                            <constraint firstItem="mp4-Vv-49a" firstAttribute="leading" secondItem="da4-ff-2WO" secondAttribute="leading" constant="7" id="dGy-um-Bil"/>
-                                                            <constraint firstItem="mp4-Vv-49a" firstAttribute="top" secondItem="da4-ff-2WO" secondAttribute="top" constant="7" id="vNJ-Wg-T2n"/>
-                                                            <constraint firstAttribute="bottom" secondItem="mp4-Vv-49a" secondAttribute="bottom" constant="7" id="z38-vz-gax"/>
-                                                            <constraint firstItem="mp4-Vv-49a" firstAttribute="centerX" secondItem="da4-ff-2WO" secondAttribute="centerX" id="zBW-sI-LaI"/>
-                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx1-bg-wSL">
                                                         <rect key="frame" x="283.5" y="0.0" width="94.5" height="46"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="356-d3-whY">
-                                                                <rect key="frame" x="7" y="7" width="80.5" height="32"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <state key="normal" title="감성책방">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                            </button>
-                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                        <constraints>
-                                                            <constraint firstItem="356-d3-whY" firstAttribute="leading" secondItem="hx1-bg-wSL" secondAttribute="leading" constant="7" id="0ad-T9-sV4"/>
-                                                            <constraint firstAttribute="trailing" secondItem="356-d3-whY" secondAttribute="trailing" constant="7" id="Acr-yQ-T9X"/>
-                                                            <constraint firstItem="356-d3-whY" firstAttribute="centerX" secondItem="hx1-bg-wSL" secondAttribute="centerX" id="HlY-6V-21h"/>
-                                                            <constraint firstItem="356-d3-whY" firstAttribute="centerY" secondItem="hx1-bg-wSL" secondAttribute="centerY" id="bys-4c-yst"/>
-                                                            <constraint firstAttribute="bottom" secondItem="356-d3-whY" secondAttribute="bottom" constant="7" id="kJG-16-JdL"/>
-                                                            <constraint firstItem="356-d3-whY" firstAttribute="top" secondItem="hx1-bg-wSL" secondAttribute="top" constant="7" id="ojy-O9-bQo"/>
-                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
@@ -312,8 +296,6 @@
                         <outlet property="button4" destination="A8W-3b-aZm" id="NEn-fu-tAW"/>
                         <outlet property="button5" destination="jwB-36-d6T" id="qdc-3y-aQj"/>
                         <outlet property="button6" destination="exm-Sv-W79" id="3wS-wg-BKi"/>
-                        <outlet property="button7" destination="mp4-Vv-49a" id="tqa-DO-0Pb"/>
-                        <outlet property="button8" destination="356-d3-whY" id="9Mt-LB-hxD"/>
                         <outlet property="searchTextField" destination="t3r-tK-reX" id="UdE-br-kKi"/>
                         <outlet property="searchWholeView" destination="7Vy-Gu-9Su" id="AZv-Vy-D6W"/>
                     </connections>
