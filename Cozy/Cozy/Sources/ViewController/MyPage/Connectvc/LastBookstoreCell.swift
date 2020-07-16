@@ -15,12 +15,6 @@ class LastBookstoreCell: UICollectionViewCell {
     @IBOutlet weak var bookstoreImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    func set(_ bookstoreInformation: LastBookstore){
-        bookstoreImageView.image = bookstoreInformation.bookstoreImage
-//        bookstoreImageView.layer.cornerRadius = 5
-        nameLabel.text = bookstoreInformation.bookstoreName
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,8 +22,11 @@ class LastBookstoreCell: UICollectionViewCell {
         
     }
     
-//    func cellSettings(){
-//        bookstoreImageView.layer.cornerRadius = 5
-//        
-//    }
+    func setRecentData(bookstoreName:String, image1: String){
+        let url = URL(string: image1)
+        guard let data = try? Data(contentsOf: url!) else {return}
+        self.bookstoreImageView.image = UIImage(data: data)
+        self.nameLabel.text = bookstoreName
+        
+    }
 }

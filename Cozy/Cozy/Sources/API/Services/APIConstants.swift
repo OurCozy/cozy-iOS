@@ -19,4 +19,5 @@ struct APIConstants{
     static let reviewURL = APIConstants.baseURL + "/main/detail/review2/" //13.209.107.188:3000/main/detail/review2/20
     static let mypageURL = APIConstants.baseURL + "/main/mypage"
     static let profileURL = APIConstants.baseURL + "/user/profile"
+    static let recentURL = APIConstants.baseURL + "/main/recent"
 }

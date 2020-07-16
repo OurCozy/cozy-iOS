@@ -98,8 +98,10 @@
 		CC26460724BC990800BCE4CD /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26460624BC990800BCE4CD /* ProfileData.swift */; };
 		CC26460924BC9DF600BCE4CD /* UploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26460824BC9DF600BCE4CD /* UploadService.swift */; };
 		CC26460B24BDAD8F00BCE4CD /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26460A24BDAD8F00BCE4CD /* ProfileService.swift */; };
+		CC55A9BC24C06590002F83DF /* recentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55A9BB24C06590002F83DF /* recentData.swift */; };
+		CC55A9BE24C065C8002F83DF /* recentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55A9BD24C065C8002F83DF /* recentService.swift */; };
+		CC6EE84824C097D1002F51FC /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6EE84724C097D1002F51FC /* SignUp.storyboard */; };
 		CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */; };
-		CCF6753224B9E9E000A40EC1 /* LastBookstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,8 +199,10 @@
 		CC26460624BC990800BCE4CD /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		CC26460824BC9DF600BCE4CD /* UploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadService.swift; sourceTree = "<group>"; };
 		CC26460A24BDAD8F00BCE4CD /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		CC55A9BB24C06590002F83DF /* recentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentData.swift; sourceTree = "<group>"; };
+		CC55A9BD24C065C8002F83DF /* recentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentService.swift; sourceTree = "<group>"; };
+		CC6EE84724C097D1002F51FC /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstoreCell.swift; sourceTree = "<group>"; };
-		CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstore.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -438,6 +442,9 @@
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
+				CC6EE84724C097D1002F51FC /* SignUp.storyboard */,
+				B65D3A0324BB94D100405549 /* Splash.storyboard */,
+				B65D3A0E24BB993700405549 /* Login.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
 				B68682D224BD8F11006DAADE /* Signin.storyboard */,
 				1854227724BF27A300846154 /* EmailLogin.storyboard */,
@@ -465,6 +472,8 @@
 				CC26460D24BDC6C900BCE4CD /* Collectionview */,
 				CC26460C24BDC68E00BCE4CD /* Connectvc */,
 				55E839EC24AF2B51003C64FE /* MyPageViewController.swift */,
+				CC55A9BB24C06590002F83DF /* recentData.swift */,
+				CC55A9BD24C065C8002F83DF /* recentService.swift */,
 				CC26460824BC9DF600BCE4CD /* UploadService.swift */,
 			);
 			path = MyPage;
@@ -589,6 +598,7 @@
 		CC26460C24BDC68E00BCE4CD /* Connectvc */ = {
 			isa = PBXGroup;
 			children = (
+				CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */,
 				CC2645F124BC411700BCE4CD /* EventViewController.swift */,
 				CC2645EB24BC1B0500BCE4CD /* NoticeViewController.swift */,
 				CC2645ED24BC3B4200BCE4CD /* MyReviewViewController.swift */,
@@ -599,8 +609,6 @@
 		CC26460D24BDC6C900BCE4CD /* Collectionview */ = {
 			isa = PBXGroup;
 			children = (
-				CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */,
-				CCF6753124B9E9E000A40EC1 /* LastBookstore.swift */,
 			);
 			path = Collectionview;
 			sourceTree = "<group>";
@@ -703,6 +711,7 @@
 				55ABB33C24B37901008B5A5B /* DetailViewController.storyboard in Resources */,
 				55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */,
 				55E839E224AF2AE1003C64FE /* Interest.storyboard in Resources */,
+				CC6EE84824C097D1002F51FC /* SignUp.storyboard in Resources */,
 				CC2645EA24BA0D3B00BCE4CD /* MyPage.storyboard in Resources */,
 				55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */,
 				55CE354F24B3471E001210A7 /* CommonView.xib in Resources */,
@@ -758,6 +767,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC55A9BE24C065C8002F83DF /* recentService.swift in Sources */,
 				B68682CF24BD8A04006DAADE /* SocialLogin2ViewController.swift in Sources */,
 				1854227A24BF27C500846154 /* EmailLoginViewController.swift in Sources */,
 				B65D3A0924BB957100405549 /* UIFont+Extension.swift in Sources */,
@@ -767,7 +777,7 @@
 				B69E909924B8A231009C4218 /* ReviewViewController.swift in Sources */,
 				183C1E3C24B7416600FFE494 /* APIConstants.swift in Sources */,
 				183C1E3E24B7431B00FFE494 /* NetworkResult.swift in Sources */,
-				CCF6753224B9E9E000A40EC1 /* LastBookstore.swift in Sources */,
+				CC55A9BC24C06590002F83DF /* recentData.swift in Sources */,
 				55CE354924B3444B001210A7 /* DetailViewController.swift in Sources */,
 				183C1E3924B73CC600FFE494 /* InterestModel.swift in Sources */,
 				B6776B4724B7082B00BF0E53 /* SelectRegionViewController.swift in Sources */,
