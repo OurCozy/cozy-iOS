@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yTN-iZ-zZm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yTN-iZ-zZm">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -31,7 +31,7 @@
                                                     <rect key="frame" x="24" y="28" width="327" height="306"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="74" translatesAutoresizingMaskIntoConstraints="NO" id="hgj-Pg-c0c">
-                                                            <rect key="frame" x="0.0" y="2" width="327" height="220"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="222"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="퇴근길 책 한잔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJv-5w-61h">
                                                             <rect key="frame" x="18" y="233.33333333333331" width="113" height="29"/>
@@ -109,7 +109,7 @@
                                                         <constraint firstItem="6Tm-na-cw8" firstAttribute="leading" secondItem="07Z-86-11k" secondAttribute="trailing" constant="12" id="9cf-Rd-dwP"/>
                                                         <constraint firstAttribute="trailing" secondItem="vtg-az-J5z" secondAttribute="trailing" constant="10" id="A3z-7j-lQF"/>
                                                         <constraint firstAttribute="bottom" secondItem="hgj-Pg-c0c" secondAttribute="bottom" constant="84" id="Bcu-VB-Ejp"/>
-                                                        <constraint firstItem="hgj-Pg-c0c" firstAttribute="top" secondItem="14d-BC-p9y" secondAttribute="top" constant="2" id="FbU-jO-GCk"/>
+                                                        <constraint firstItem="hgj-Pg-c0c" firstAttribute="top" secondItem="14d-BC-p9y" secondAttribute="top" id="FbU-jO-GCk"/>
                                                         <constraint firstAttribute="bottom" secondItem="vtg-az-J5z" secondAttribute="bottom" constant="15" id="HKF-E8-s5g"/>
                                                         <constraint firstItem="OJv-5w-61h" firstAttribute="leading" secondItem="14d-BC-p9y" secondAttribute="leading" constant="18" id="IPy-dl-Jr3"/>
                                                         <constraint firstItem="G2w-Sz-9Qp" firstAttribute="leading" secondItem="14d-BC-p9y" secondAttribute="leading" constant="18" id="Kda-bQ-Sih"/>
@@ -118,6 +118,7 @@
                                                         <constraint firstItem="07Z-86-11k" firstAttribute="centerY" secondItem="G2w-Sz-9Qp" secondAttribute="centerY" id="ZY7-Bj-z8G"/>
                                                         <constraint firstItem="hgj-Pg-c0c" firstAttribute="leading" secondItem="14d-BC-p9y" secondAttribute="leading" id="a16-0Q-gFV"/>
                                                         <constraint firstItem="6Tm-na-cw8" firstAttribute="centerY" secondItem="07Z-86-11k" secondAttribute="centerY" id="efm-VT-us0"/>
+                                                        <constraint firstItem="hgj-Pg-c0c" firstAttribute="top" secondItem="14d-BC-p9y" secondAttribute="top" id="i1L-UB-XT4"/>
                                                         <constraint firstItem="07Z-86-11k" firstAttribute="leading" secondItem="G2w-Sz-9Qp" secondAttribute="trailing" constant="12" id="yOc-mS-mDK"/>
                                                     </constraints>
                                                 </view>

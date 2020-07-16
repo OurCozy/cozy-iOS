@@ -98,8 +98,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1821F40524C09044008DDE25 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Cozy/Resources/Storyboard/Login.storyboard; sourceTree = "<group>"; };
-		1821F40724C0904B008DDE25 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = Cozy/Resources/Storyboard/Splash.storyboard; sourceTree = "<group>"; };
+		1821F40524C09044008DDE25 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		1821F40724C0904B008DDE25 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreTableViewCell.swift; sourceTree = "<group>"; };
 		183C1E3424B1DB4600FFE494 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
 		183C1E3824B73CC600FFE494 /* InterestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestModel.swift; sourceTree = "<group>"; };
@@ -110,10 +110,6 @@
 		1854227924BF27C500846154 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		18B81C8A24BF526700B14596 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		18B81C8C24BF52F400B14596 /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
-		18B81C8E24BF5F8B00B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
-		18B81C8F24BF5F8B00B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
-		18B81C9224BF610800B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
-		18B81C9324BF610800B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
 		18B81C9A24BF6FDF00B14596 /* PutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutData.swift; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSearchCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -323,8 +319,6 @@
 		55E839B924AF29C2003C64FE = {
 			isa = PBXGroup;
 			children = (
-				1821F40724C0904B008DDE25 /* Splash.storyboard */,
-				1821F40524C09044008DDE25 /* Login.storyboard */,
 				55E839C424AF29C2003C64FE /* Cozy */,
 				55E839C324AF29C2003C64FE /* Products */,
 				DA6EB647575B9EB8135F0FC1 /* Pods */,
@@ -417,6 +411,8 @@
 		55E839EE24AF2D1E003C64FE /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				1821F40724C0904B008DDE25 /* Splash.storyboard */,
+				1821F40524C09044008DDE25 /* Login.storyboard */,
 				55ABB33B24B37901008B5A5B /* DetailViewController.storyboard */,
 				55E839CB24AF29C2003C64FE /* Main.storyboard */,
 				55E839DD24AF2AC3003C64FE /* Recommend.storyboard */,
@@ -424,12 +420,8 @@
 				55E839E124AF2AE1003C64FE /* Interest.storyboard */,
 				55E839D024AF29C6003C64FE /* LaunchScreen.storyboard */,
 				CC2645E924BA0D3B00BCE4CD /* MyPage.storyboard */,
-				18B81C9224BF610800B14596 /* Login.storyboard */,
-				18B81C9324BF610800B14596 /* Splash.storyboard */,
 				B63341E724B328880070F8C4 /* Search.storyboard */,
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
-				18B81C8E24BF5F8B00B14596 /* Login.storyboard */,
-				18B81C8F24BF5F8B00B14596 /* Splash.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
