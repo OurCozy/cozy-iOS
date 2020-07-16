@@ -134,13 +134,13 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
                 }
                 
                 
-                print("데이터어 \(self.recentList[0])")
-                print("데이터어 \(self.recentList[1])")
+//                print("데이터어 \(self.recentList[0])")
+//                print("데이터어 \(self.recentList[1])")
+                
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
                 
-            // 디코딩에러
             case .requestErr(_):
                 print("Recent Request error@@")
             case .pathErr:
