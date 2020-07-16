@@ -28,11 +28,11 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func goSignin(_ sender: UIButton) {
+    @IBAction func goSignUP(_ sender: UIButton) {
         print("click🌟")
         
-        let sb = UIStoryboard(name: "MyPage", bundle: nil)
-        let vc = sb.instantiateViewController(identifier: "NoticeViewController") as! NoticeViewController
+        let sb = UIStoryboard(name: "SignUp", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "SignUpViewController") as! SignUpViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
 //        let sb = UIStoryboard(name: "Signin", bundle: nil)
