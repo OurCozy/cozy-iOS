@@ -14,7 +14,7 @@ class MapViewController: UIViewController {
     private let underlineImage = UIImageView(image: UIImage(named: "imgMapLine"))
     private let downButton = UIButton()
     private let searchButton = UIButton()
-        
+    
     private var backView = UIView()
     
     @IBOutlet weak var tableView: UITableView! // table view
@@ -34,7 +34,7 @@ class MapViewController: UIViewController {
     @objc func baboEunjiJJang(_ notification: NSNotification) {
         
         let getIdx = notification.object as! Int
-        
+        self.mapIdx = getIdx as! Int
         downloadMapData(mapIndex: getIdx)
         self.backView.isHidden = true
     }
@@ -178,7 +178,31 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! CountTableViewCell
-            cell.countLabel.text = "마포구의 독립 서점 " + String(self.mapBookList.count) + "개"
+            
+            switch self.mapIdx {
+            case 1:
+                cell.countLabel.text = "마포구의 독립 서점 " + String(self.mapBookList.count) + "개"
+                self.navigationItem.title = "마포구"
+            case 2:
+                cell.countLabel.text = "용산구의 독립 서점 " + String(self.mapBookList.count) + "개"
+                self.navigationItem.title = "용산구"
+            case 3:
+                cell.countLabel.text = "관악구의 독립 서점 " + String(self.mapBookList.count) + "개"
+                self.navigationItem.title = "관악구"
+            case 4:
+                cell.countLabel.text = "광진구의 독립 서점 " + String(self.mapBookList.count) + "개"
+                self.navigationItem.title = "광진구"
+            case 5:
+                cell.countLabel.text = "강남구의 독립 서점 " + String(self.mapBookList.count) + "개"
+                self.navigationItem.title = "강남구"
+            case 6 :
+                cell.countLabel.text = "종로구의 독립 서점 " + String(self.mapBookList.count) + "개"
+                self.navigationItem.title = "종로구"
+            default:
+                cell.countLabel.text = "마포구의 독립 서점 " + String(self.mapBookList.count) + "개"
+                self.navigationItem.title = "마포구"
+            }
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! LibraryTableViewCell
@@ -206,7 +230,7 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             return cell
         }
     }
-
+    
     // cell click event 지정 - detail view 로 넘어가기
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
