@@ -34,8 +34,8 @@ class EmailLoginViewController: UIViewController {
         setTextFieldStyle()
         autoLoginButton.layer.cornerRadius = 9
         autoLoginButton.layer.borderWidth = 1
-        autoLoginButton.layer.borderColor = UIColor.veryLightPinkTwo.cgColor
-        autoLoginLabel.textColor = UIColor.veryLightPinkTwo
+//        autoLoginButton.layer.borderColor = UIColor.veryLightPinkTwo.cgColor
+//        autoLoginLabel.textColor = UIColor.veryLightPinkTwo
         checkIdButton.tintColor = UIColor.brownishGrey
         checkPwButton.tintColor = UIColor.brownishGrey
         simpleLine.backgroundColor = UIColor.brownGrey
@@ -94,6 +94,25 @@ class EmailLoginViewController: UIViewController {
 }
 
 extension EmailLoginViewController: UITextFieldDelegate{
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        if textField.textColor == UIColor.veryLightPinkTwo{
+//            textField.text = nil
+//            textField.textColor = UIColor.black
+//        }
+//    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text?.isEmpty == true {
+            self.loginButton.setTitleColor(UIColor.veryLightPinkTwo, for: .normal)
+            self.autoLoginLabel.textColor = UIColor.veryLightPinkTwo
+            self.autoLoginButton.layer.borderColor = UIColor.veryLightPinkTwo.cgColor
+        } else {
+            self.loginButton.setTitleColor(UIColor.dustyOrange, for: .normal)
+            self.autoLoginLabel.textColor = UIColor.dustyOrange
+            self.autoLoginButton.layer.borderColor = UIColor.dustyOrange.cgColor
+        }
+    }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
