@@ -103,7 +103,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTime" translatesAutoresizingMaskIntoConstraints="NO" id="Se1-rj-d7A">
-                                                <rect key="frame" x="24" y="400" width="22" height="22"/>
+                                                <rect key="frame" x="24" y="421" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="3Se-iL-KYt"/>
                                                     <constraint firstAttribute="height" constant="22" id="8d6-r4-s7C"/>
@@ -491,9 +491,9 @@
                                             <constraint firstItem="98n-la-nQU" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" id="EzY-62-sri"/>
                                             <constraint firstItem="qO1-WN-5zu" firstAttribute="top" secondItem="H0F-gZ-F8h" secondAttribute="bottom" constant="24" id="FjC-Q6-OT6"/>
                                             <constraint firstAttribute="trailing" secondItem="UF9-FP-LFp" secondAttribute="trailing" constant="24.300000000000001" id="GNi-6o-fGd"/>
-                                            <constraint firstItem="dtP-mS-3kv" firstAttribute="top" secondItem="Se1-rj-d7A" secondAttribute="bottom" constant="53" id="I4f-da-KOu"/>
                                             <constraint firstItem="Dvp-Kf-e9h" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="I4z-Jg-YMk"/>
                                             <constraint firstItem="cHa-o3-GYf" firstAttribute="top" secondItem="6Th-8J-K63" secondAttribute="bottom" constant="32" id="IGl-8T-tLy"/>
+                                            <constraint firstItem="Se1-rj-d7A" firstAttribute="centerY" secondItem="Aed-6u-Zl5" secondAttribute="centerY" id="IGt-Ed-1N0"/>
                                             <constraint firstAttribute="trailing" secondItem="ht0-gq-zGI" secondAttribute="trailing" id="IZd-Lw-6ZV"/>
                                             <constraint firstAttribute="trailing" secondItem="DRw-Yj-Zr6" secondAttribute="trailing" id="Ik9-Ej-Vfv"/>
                                             <constraint firstItem="BfS-ql-fzE" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="Jdf-cl-ZDf"/>
@@ -536,9 +536,9 @@
                                             <constraint firstItem="Zff-bB-oVm" firstAttribute="leading" secondItem="dtP-mS-3kv" secondAttribute="trailing" constant="8" id="kKR-te-5cg"/>
                                             <constraint firstItem="Dvp-Kf-e9h" firstAttribute="top" secondItem="dtP-mS-3kv" secondAttribute="bottom" constant="9" id="kZQ-8I-Tik"/>
                                             <constraint firstAttribute="trailing" secondItem="Agv-EF-Vr3" secondAttribute="trailing" constant="24" id="ke3-fg-lQA"/>
-                                            <constraint firstItem="Se1-rj-d7A" firstAttribute="top" secondItem="DyU-if-5c7" secondAttribute="bottom" constant="9" id="kfz-El-fmP"/>
                                             <constraint firstAttribute="trailing" secondItem="H0F-gZ-F8h" secondAttribute="trailing" constant="24" id="kvj-kC-c2I"/>
                                             <constraint firstItem="qO1-WN-5zu" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="lfL-aa-GqZ"/>
+                                            <constraint firstItem="dtP-mS-3kv" firstAttribute="top" secondItem="Se1-rj-d7A" secondAttribute="bottom" constant="32" id="lgM-tW-G1T"/>
                                             <constraint firstItem="326-wH-W8R" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" id="n5p-N4-nag"/>
                                             <constraint firstItem="dtP-mS-3kv" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="oBT-dW-1H0"/>
                                             <constraint firstItem="w7L-gg-hJz" firstAttribute="top" secondItem="h0b-qX-2dg" secondAttribute="bottom" constant="24" id="pfa-C0-a4c"/>

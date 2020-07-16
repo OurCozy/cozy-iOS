@@ -1,19 +1,25 @@
 //
-//  SearchListViewController.swift
+//  SignUpViewController.swift
 //  Cozy
 //
-//  Created by 최은지 on 2020/07/16.
+//  Created by 양지영 on 2020/07/17.
 //  Copyright © 2020 jun. All rights reserved.
 //
 
 import UIKit
 
-class SearchListViewController: UIViewController {
-
+class SignUpViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func dismissView(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
     }
     
 

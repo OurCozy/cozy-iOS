@@ -30,8 +30,8 @@
                                                             <fragment content="cozynim@cozy.com">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" metaFont="menu" size="14"/>
-                                                                    <font key="NSOriginalFont" metaFont="menu" size="14"/>
+                                                                    <font key="NSFont" metaFont="label" size="14"/>
+                                                                    <font key="NSOriginalFont" metaFont="label" size="14"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -233,12 +233,17 @@
                                             <constraint firstItem="Jva-Oc-6Hm" firstAttribute="leading" secondItem="d4a-vR-8fm" secondAttribute="leading" id="x4H-DI-jFD"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bvb-Ec-YNa">
-                                        <rect key="frame" x="298" y="334.99999999999989" width="77" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTransWhite" translatesAutoresizingMaskIntoConstraints="NO" id="Bvb-Ec-YNa">
+                                        <rect key="frame" x="300" y="463" width="75" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="NdY-Db-yyc"/>
+                                            <constraint firstAttribute="height" constant="150" id="yB4-Lv-Yg0"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Bvb-Ec-YNa" firstAttribute="top" secondItem="WNO-zl-ZEk" secondAttribute="top" constant="463" id="29c-Qy-yeh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bvb-Ec-YNa" secondAttribute="trailing" id="3aY-DC-p21"/>
                                     <constraint firstItem="d4a-vR-8fm" firstAttribute="top" secondItem="WNO-zl-ZEk" secondAttribute="top" id="APv-N2-zUj"/>
                                     <constraint firstItem="d4a-vR-8fm" firstAttribute="leading" secondItem="WNO-zl-ZEk" secondAttribute="leading" id="GL5-xa-C7K"/>
                                     <constraint firstAttribute="bottom" secondItem="d4a-vR-8fm" secondAttribute="bottom" constant="9.6666666666667425" id="gbF-oK-ClY"/>
@@ -569,5 +574,6 @@
         <image name="icSetting" width="48" height="48"/>
         <image name="icTabMypageSelected" width="48" height="48"/>
         <image name="imgProfile" width="44" height="44"/>
+        <image name="imgTransWhite" width="75" height="150"/>
     </resources>
 </document>

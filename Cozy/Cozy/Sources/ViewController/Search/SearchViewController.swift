@@ -20,6 +20,7 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var button8: UIButton!
     
     @IBOutlet weak var searchWholeView: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,18 +35,27 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
         self.settingButtonLayer()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     
     @IBAction func goSearchList(_ sender: UIButton) {
-        print("click search💡")
-        
         let storyboard = UIStoryboard(name: "Search", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchListViewController") as! SearchListViewController
+        
+        vc.searchRegion = self.searchTextField.text ?? ""
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func clickCloseButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
