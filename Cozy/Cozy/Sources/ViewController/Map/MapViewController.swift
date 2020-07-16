@@ -77,7 +77,7 @@ class MapViewController: UIViewController {
                 downButton.widthAnchor.constraint(equalToConstant: 42),
                 downButton.heightAnchor.constraint(equalToConstant: 42),
                 
-                searchButton.rightAnchor.constraint(equalToSystemSpacingAfter: (self.navigationController?.navigationBar.rightAnchor)!, multiplier: 300),
+                searchButton.rightAnchor.constraint(equalToSystemSpacingAfter: (self.navigationController?.navigationBar.rightAnchor)!, multiplier: 100),
                 searchButton.centerYAnchor.constraint(equalToSystemSpacingBelow: (self.navigationController?.navigationBar.centerYAnchor)!, multiplier: 0),
                 searchButton.widthAnchor.constraint(equalToConstant: 48),
                 searchButton.heightAnchor.constraint(equalToConstant: 48)
@@ -112,9 +112,11 @@ class MapViewController: UIViewController {
     @objc func clickSearchButton(){
         let storybaord = UIStoryboard(name: "Search", bundle: nil)
         let vc = storybaord.instantiateViewController(identifier: "SearchViewController") as! SearchViewController
-        vc.modalPresentationStyle = .fullScreen
         
-        present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true, completion: nil)
     }
     
     // 지역 선택 버튼 클릭
