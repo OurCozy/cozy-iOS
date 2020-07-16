@@ -89,6 +89,7 @@ class InterestViewController: UIViewController {
                         }
                     }
                     self.navigationItem.title = self.nickName + self.navigationString
+                    
                     self.tableView.reloadData()
 
                 case .requestErr(_):
@@ -117,7 +118,7 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if bookStoreList.count == 0 {
-            tableView.setEmptyView(title: self.nickName + "만의 책박을 콕! 해볼까요?", message: "책방이 비어있습니다!")
+            tableView.setEmptyView(title: self.nickName + "님만의 책방을 콕! 해볼까요?", message: "책방이 비어있습니다!")
         }
         else {
             tableView.restore()

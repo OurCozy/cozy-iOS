@@ -12,7 +12,7 @@ import Alamofire
 struct InterestService {
     static let shared = InterestService()
     
-    let header: HTTPHeaders = ["Content-Type": "application/json", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxMSwiaWF0IjoxNTk0ODgyOTQzLCJleHAiOjE1OTQ5MTg5NDMsImlzcyI6Im91ci1zb3B0In0.i2PBFO0bwA8Qnpt118wBvYv80x0v4HuK7z2kduR2Pzo"]
+    let header: HTTPHeaders = ["Content-Type": "application/json", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxMSwiaWF0IjoxNTk0ODk2NDcxLCJleHAiOjE1OTQ5MzI0NzEsImlzcyI6Im91ci1zb3B0In0.jazy0DLGWpJArBa-Tfb55DSopkAAA_kuEqU49VqGY44"]
     
     func getBookStoreData(completion: @escaping (NetworkResult<Any>) -> Void) {
         
