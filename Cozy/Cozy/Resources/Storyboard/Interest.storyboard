@@ -163,9 +163,7 @@
         <scene sceneID="gwe-NJ-uR2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yTN-iZ-zZm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icTabBookmark" id="o12-46-Sx2">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="icTabBookmark" id="o12-46-Sx2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GD6-f6-xcV">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
