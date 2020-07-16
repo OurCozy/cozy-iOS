@@ -314,6 +314,7 @@
                         <outlet property="button6" destination="exm-Sv-W79" id="3wS-wg-BKi"/>
                         <outlet property="button7" destination="mp4-Vv-49a" id="tqa-DO-0Pb"/>
                         <outlet property="button8" destination="356-d3-whY" id="9Mt-LB-hxD"/>
+                        <outlet property="searchTextField" destination="t3r-tK-reX" id="UdE-br-kKi"/>
                         <outlet property="searchWholeView" destination="7Vy-Gu-9Su" id="AZv-Vy-D6W"/>
                     </connections>
                 </viewController>

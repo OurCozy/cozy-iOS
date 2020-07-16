@@ -20,6 +20,7 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var button8: UIButton!
     
     @IBOutlet weak var searchWholeView: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,8 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func goSearchList(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Search", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchListViewController") as! SearchListViewController
+        
+        vc.searchRegion = self.searchTextField.text ?? ""
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
