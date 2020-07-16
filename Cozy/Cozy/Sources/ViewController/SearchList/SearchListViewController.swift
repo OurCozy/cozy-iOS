@@ -12,6 +12,7 @@ import Kingfisher
 class SearchListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var mainLabel: UILabel!
     
     var searchRegion: String = ""
     var searchList: [SearchBookStore] = [] // 검색 리스트
@@ -22,6 +23,7 @@ class SearchListViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.mainLabel.text = self.searchRegion
         self.downloadSearchData()
     }
     
@@ -71,7 +73,6 @@ extension SearchListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 291
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.searchList.count

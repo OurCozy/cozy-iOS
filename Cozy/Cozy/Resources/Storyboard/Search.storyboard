@@ -451,7 +451,7 @@
                                     <constraint firstAttribute="height" constant="48" id="U74-tu-8vz"/>
                                     <constraint firstAttribute="width" constant="48" id="sg5-lB-rkw"/>
                                 </constraints>
-                                <state key="normal" image="icLeftArrowDark"/>
+                                <state key="normal" image="icLeftArrow"/>
                                 <connections>
                                     <action selector="goBack:" destination="JXA-xc-x7y" eventType="touchUpInside" id="hGE-9F-I6X"/>
                                 </connections>
@@ -475,6 +475,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="x0w-Vb-J9S"/>
                     <connections>
+                        <outlet property="mainLabel" destination="JGH-Sa-JUa" id="Ifn-cw-PBt"/>
                         <outlet property="tableView" destination="iJf-9D-ZFX" id="m3r-vQ-ahh"/>
                     </connections>
                 </viewController>
@@ -504,7 +505,7 @@
     <resources>
         <image name="91" width="402" height="268"/>
         <image name="icBookmarkSelected" width="57" height="57"/>
-        <image name="icLeftArrowDark" width="48" height="48"/>
+        <image name="icLeftArrow" width="48" height="48"/>
         <image name="icSearch" width="48" height="48"/>
         <image name="icXDark" width="48" height="48"/>
     </resources>
