@@ -143,6 +143,9 @@
                                                                             <constraint firstAttribute="width" secondItem="RP1-LF-gfx" secondAttribute="height" multiplier="1:1" id="317-Se-y0D"/>
                                                                         </constraints>
                                                                         <state key="normal" image="icFacebook"/>
+                                                                        <connections>
+                                                                            <action selector="touchUpFacebookButton:" destination="9PU-bB-qR6" eventType="touchUpInside" id="a8O-DW-7dq"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-So-PZ7">
                                                                         <rect key="frame" x="253" y="347" width="60" height="60"/>
@@ -150,6 +153,9 @@
                                                                             <constraint firstAttribute="width" secondItem="BM2-So-PZ7" secondAttribute="height" multiplier="1:1" id="fPs-I0-tZm"/>
                                                                         </constraints>
                                                                         <state key="normal" image="icInstagram"/>
+                                                                        <connections>
+                                                                            <action selector="touchUpInstaButton:" destination="9PU-bB-qR6" eventType="touchUpInside" id="3BL-Lf-VFj"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gF-IH-ItU">
                                                                         <rect key="frame" x="61" y="347" width="60" height="60"/>
@@ -157,6 +163,9 @@
                                                                             <constraint firstAttribute="width" secondItem="2gF-IH-ItU" secondAttribute="height" multiplier="1:1" id="2Nj-vn-HWW"/>
                                                                         </constraints>
                                                                         <state key="normal" image="icHomepage"/>
+                                                                        <connections>
+                                                                            <action selector="touchUpHomePageButton:" destination="9PU-bB-qR6" eventType="touchUpInside" id="36u-z8-HhM"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGX-AV-eDx">
                                                                         <rect key="frame" x="24" y="415" width="327" height="1"/>
@@ -621,6 +630,9 @@
                         <outletCollection property="bookstoreImageVIew" destination="qez-eS-1es" collectionClass="NSMutableArray" id="fm9-IF-LOt"/>
                         <outletCollection property="bookstoreImageVIew" destination="fad-68-PrV" collectionClass="NSMutableArray" id="iol-c2-BrO"/>
                         <outletCollection property="bookstoreImageVIew" destination="XuY-SO-RkF" collectionClass="NSMutableArray" id="GfF-3q-Yqd"/>
+                        <outletCollection property="detailLinkButton" destination="2gF-IH-ItU" collectionClass="NSMutableArray" id="jt6-cA-70V"/>
+                        <outletCollection property="detailLinkButton" destination="RP1-LF-gfx" collectionClass="NSMutableArray" id="GYC-4x-qxJ"/>
+                        <outletCollection property="detailLinkButton" destination="BM2-So-PZ7" collectionClass="NSMutableArray" id="p9o-nD-a8m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kp2-b2-SxF" userLabel="First Responder" sceneMemberID="firstResponder"/>

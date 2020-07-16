@@ -24,6 +24,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     @IBOutlet weak var intableviewMoreButton: UIButton!
     
+    @IBOutlet var detailLinkButton: [UIButton]!
     
     
     
@@ -170,6 +171,56 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBAction func touchUpMoreButton(_ sender: Any) {
         //리뷰 모아둔 곳 푸쉬
     }
+    
+    @IBAction func touchUpHomePageButton(_ sender: Any) {
+        
+        if self.detailBookStoreModel[0].homepage == "NULL" {
+            showAlert(style: .alert)
+            return
+        }
+        
+        if let homeURL = URL(string: "\(self.detailBookStoreModel[0].homepage)") {
+            UIApplication.shared.open(homeURL, options: [:])
+        }
+
+    }
+    @IBAction func touchUpFacebookButton(_ sender: Any) {
+        if self.detailBookStoreModel[0].facebook == "NULL" {
+            showAlert(style: .alert)
+            return
+        }
+        
+        if let homeURL = URL(string: "\(self.detailBookStoreModel[0].facebook)") {
+            UIApplication.shared.open(homeURL, options: [:])
+        }
+    }
+    
+    @IBAction func touchUpInstaButton(_ sender: Any) {
+        if self.detailBookStoreModel[0].instagram == "NULL" {
+            showAlert(style: .alert)
+        }else {
+            if let homeURL = URL(string: "\(self.detailBookStoreModel[0].instagram)") {
+                UIApplication.shared.open(homeURL, options: [:])
+            }
+        }
+    }
+    //URL Button AlertPresent
+    func showAlert(style: UIAlertController.Style) {
+        let alert = UIAlertController(title: "알림", message: "아쉽게도 해당 페이지가 없네요!ㅠㅠ", preferredStyle: style)
+        let success = UIAlertAction(title: "확인", style: .default) { (action) in
+            print("확인")
+        }
+        
+       // let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+        
+        alert.addAction(success)
+       // alert.addAction(cancel)
+       
+        self.present(alert, animated: true, completion: nil)
+    }
+
+
+    
     func downloadDetailBookStoreModel() {
         DetailBookStoreService.shared.getDetailBookStoreData(bookstoreIndex: self.getNowBookStoreIndex) { NetworkResult in
             switch NetworkResult {
@@ -200,7 +251,7 @@ class DetailViewController: UIViewController, StoryboardBased {
                 self.bookstroeDestriptionTextView.text = self.detailBookStoreModel[0].description
                 
                 
-
+                
                 
                 //해시태그 버튼 라벨 삽입
                 
