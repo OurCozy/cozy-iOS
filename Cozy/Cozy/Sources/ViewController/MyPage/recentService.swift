@@ -12,13 +12,17 @@ import Alamofire
 struct RecentService {
     static let shared = RecentService()
 
-    // request header 생성
-    let header: HTTPHeaders = ["Content-Type": "application/json",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyMCwiaWF0IjoxNTk0OTA3MDUwLCJleHAiOjE1OTQ5NDMwNTAsImlzcyI6Im91ci1zb3B0In0._3Q4-RPpF4ufWyCM4NjEBkRkdMx3tuUIVVqS5qwiCfY"
-        //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyMCwiaWF0IjoxNTk0OTA3MDUwLCJleHAiOjE1OTQ5NDMwNTAsImlzcyI6Im91ci1zb3B0In0._3Q4-RPpF4ufWyCM4NjEBkRkdMx3tuUIVVqS5qwiCfY
-    ]
+//    // request header 생성
+//    let header: HTTPHeaders = ["Content-Type": "application/json",
+//    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyMCwiaWF0IjoxNTk0OTA3MDUwLCJleHAiOjE1OTQ5NDMwNTAsImlzcyI6Im91ci1zb3B0In0._3Q4-RPpF4ufWyCM4NjEBkRkdMx3tuUIVVqS5qwiCfY"
+//        //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyMCwiaWF0IjoxNTk0OTA3MDUwLCJleHAiOjE1OTQ5NDMwNTAsImlzcyI6Im91ci1zb3B0In0._3Q4-RPpF4ufWyCM4NjEBkRkdMx3tuUIVVqS5qwiCfY
+    //]
 
     func getRecentData(completion: @escaping(NetworkResult<Any>) -> Void) {
+        
+        guard let token = UserDefaults.standard.string(forKey: "token") else {return}
+        let header: HTTPHeaders = ["Content-Type": "application/json", "token": token]
+        
         // 원하는 형식의 http request 생성
         let dataRequest = Alamofire.request(APIConstants.recentURL, method: .get, encoding:JSONEncoding.default, headers: header)
             
