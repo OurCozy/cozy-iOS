@@ -174,13 +174,32 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     @IBAction func touchUpHomePageButton(_ sender: Any) {
         
-        if self.detailBookStoreModel[0].homepage == "NULL" {
-            showAlert(style: .alert)
-            return
-        }
+//        if self.detailBookStoreModel[0].homepage == "NULL" {
+//            showAlert(style: .alert)
+//            return
+//        }
+//
+//        if let homeURL = URL(string: "\(self.detailBookStoreModel[0].homepage)") {
+//            UIApplication.shared.open(homeURL, options: [:])
+//        }
         
-        if let homeURL = URL(string: "\(self.detailBookStoreModel[0].homepage)") {
-            UIApplication.shared.open(homeURL, options: [:])
+        print(self.detailBookStoreModel[0].bookstoreIdx)
+        InterestService.shared.putBookStoreData(bookStoreIdx: self.detailBookStoreModel[0].bookstoreIdx){ NetworkResult in
+            switch NetworkResult {
+            case .success(let data):
+                guard let data = data as? Checked else {return print("put data error")}
+                print("@@@북마크 성공@@@")
+                print(data)
+                
+            case .requestErr(_):
+                print("Request error@@")
+            case .pathErr:
+                print("path error")
+            case .serverErr:
+                print("server error")
+            case .networkFail:
+                print("network error@@")
+            }
         }
 
     }

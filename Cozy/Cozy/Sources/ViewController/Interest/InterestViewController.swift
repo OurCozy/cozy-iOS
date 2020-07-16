@@ -64,6 +64,10 @@ class InterestViewController: UIViewController {
             //            print(navBarHeight)
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         addBookStoreData()
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -80,6 +84,7 @@ class InterestViewController: UIViewController {
                     guard let data = data as? [BookStoreData] else {return print("error")}
                     print("@@@@@@data@@@@@@")
                     print(data)
+                    self.bookStoreList.removeAll()
                     for data in data{
                         if data.bookstoreIdx == 0{
                             self.nickName = data.nickname
@@ -90,7 +95,10 @@ class InterestViewController: UIViewController {
                     }
                     self.navigationItem.title = self.nickName + self.navigationString
                     
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                          self.tableView.reloadData()
+                    }
+                  
 
                 case .requestErr(_):
                     print("Request error@@")
@@ -119,7 +127,8 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if bookStoreList.count == 0 {
-            tableView.setEmptyView(title: self.nickName + "님만의 책방을 콕! 해볼까요?", message: "책방이 비어있습니다!")
+//            tableView.setEmptyView(title: self.nickName + "님만의 책방을 콕! 해볼까요?", message: "책방이 비어있습니다!")
+            tableView.setEmptyView(title: "", message: "책방이 비어있습니다!")
         }
         else {
             tableView.restore()
@@ -142,8 +151,9 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let sb = UIStoryboard(name: "MapDetail", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MapDetailViewController") as! MapDetailViewController
+        vc.bookstoreIdx = self.bookStoreList[indexPath.row].bookstoreIdx
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -174,7 +184,7 @@ extension UITableView {
         
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageLabel)
-        emptyView.backgroundColor = UIColor.lightGray
+        emptyView.backgroundColor = UIColor.white
         
         titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
