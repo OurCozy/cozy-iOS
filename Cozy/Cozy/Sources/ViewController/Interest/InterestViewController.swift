@@ -26,9 +26,6 @@ class InterestViewController: UIViewController {
     var bookStoreList: [BookStoreData] = []
     var nickName: String = ""
     let navigationString: String = "님의 콕!"
-    //    let data01 = BookStore(bookStoreImageName: "74", bookStoreName: "재욱이의 책방", hashTag01: "멋짐", hashTag02: "완전 멋짐", hashTag03: "개멋짐")
-    //    let data02 = BookStore(bookStoreImageName: "91", bookStoreName: "지윤이의 책방", hashTag01: "안 멋짐", hashTag02: "완전 안 멋짐", hashTag03: "그냥 안 멋짐")
-    //    let data03 = BookStore(bookStoreImageName: "74", bookStoreName: "재욱이의 책방", hashTag01: "멋짐", hashTag02: "완전 멋짐", hashTag03: "개멋짐")
     
     @IBOutlet weak var tableView: UITableView! // table view
     
@@ -97,8 +94,6 @@ class InterestViewController: UIViewController {
                     DispatchQueue.main.async {
                           self.tableView.reloadData()
                     }
-                  
-
                 case .requestErr(_):
                     print("Request error@@")
                 case .pathErr:
