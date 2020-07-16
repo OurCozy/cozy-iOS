@@ -140,7 +140,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
                     self.collectionView.reloadData()
                 }
                 
-            // 디코딩에러
             case .requestErr(_):
                 print("Recent Request error@@")
             case .pathErr:
