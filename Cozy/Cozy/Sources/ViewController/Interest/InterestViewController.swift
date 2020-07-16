@@ -64,6 +64,11 @@ class InterestViewController: UIViewController {
             //            print(navBarHeight)
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -90,7 +95,10 @@ class InterestViewController: UIViewController {
                     }
                     self.navigationItem.title = self.nickName + self.navigationString
                     
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                          self.tableView.reloadData()
+                    }
+                  
 
                 case .requestErr(_):
                     print("Request error@@")
@@ -142,8 +150,9 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let sb = UIStoryboard(name: "MapDetail", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MapDetailViewController") as! MapDetailViewController
+        vc.bookstoreIdx = self.bookStoreList[indexPath.row].bookstoreIdx
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
