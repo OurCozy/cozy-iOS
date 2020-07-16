@@ -16,12 +16,15 @@ class NavigationController: UINavigationController {
         
        
         
-        self.tabBarItem.image = UIImage(named: "icTabMain")?.withRenderingMode(.alwaysOriginal)
+//        self.tabBarItem.image = UIImage(named: "icTabMain")?.withRenderingMode(.alwaysOriginal)
+//
+//
+//
+//        self.tabBarItem.selectedImage = UIImage(named: "icTabMainSelected")?.withRenderingMode(.alwaysOriginal)
+//        self.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: 0, right: 0)
         
         
         
-        self.tabBarItem.selectedImage = UIImage(named: "icTabMainSelected")?.withRenderingMode(.alwaysOriginal)
-        self.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: 0, right: 0)
         
         //Animation Custom때문에 tabbaritem 적용이 NavigationController에서 텝바 이미지 적용
         self.delegate = self

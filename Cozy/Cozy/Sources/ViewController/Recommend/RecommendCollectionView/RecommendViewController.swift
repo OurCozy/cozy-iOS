@@ -35,6 +35,17 @@ class RecommendViewController: UIViewController {
         //        self.tabBarItem.image = UIImage(named: "icTabMain")?.withRenderingMode(.alwaysOriginal)
         //        self.tabBarItem.title = "asdf"
         
+        
+        // tab bar item image 설정
+//        self.tabBarController?.tabBar.items![1].image = UIImage(named: "ictabmap")
+//        self.tabBarController?.tabBar.items![2].image = UIImage(named: "tabStoryIc")
+//        self.tabBarController?.tabBar.items![3].image = UIImage(named: "tabProfileIc")
+        
+        // tab bar color 설정
+        //self.tabBarController?.tabBar.selectedImageTintColor = UIColor.marigold
+        
+        
+        
         recommendCollectionView.delegate = self
         recommendCollectionView.dataSource = self
         
@@ -52,6 +63,12 @@ class RecommendViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
        // downloadRecommendationData()
+        super.viewWillAppear(animated)
+       
+//        self.tabBarController?.tabBar.isHidden = false
+//        UIView.animate(withDuration: 0.3) {
+//            self.view.layoutIfNeeded()
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,6 +112,8 @@ class RecommendViewController: UIViewController {
             }
         }
     }
+    
+    
     
 }
 
@@ -147,7 +166,7 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             
             let vc = DetailViewController.instantiate()
             
-           
+//            vc.hidesBottomBarWhenPushed = true
             self.setTabBarHidden(true)
             //setTabBarHidden 아이폰 SE2 , 8 , 8+만 안먹힘, 분기처리 생각중
             
@@ -160,6 +179,7 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             vc.getLocationString = self.RecommendationList[indexPath.row].location
             vc.getNowBookStoreIndex = self.RecommendationList[indexPath.row].bookstoreIdx
             
+            self.view.setNeedsLayout()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

@@ -51,7 +51,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-Iv-J3K">
-                                                    <rect key="frame" x="280" y="24" width="47" height="48"/>
+                                                    <rect key="frame" x="280" y="24" width="48" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="47o-V4-dVc"/>
                                                         <constraint firstAttribute="width" constant="48" id="NOY-Qf-kql"/>
@@ -121,7 +121,9 @@
         <scene sceneID="280-8e-b2h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7N6-iS-Wzg" customClass="NavigationController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" id="qVr-fL-r85"/>
+                    <tabBarItem key="tabBarItem" image="icTabMain" id="qVr-fL-r85">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="56f-Rn-CQb">
                         <autoresizingMask key="autoresizingMask"/>
@@ -138,6 +140,7 @@
     </scenes>
     <resources>
         <image name="icSearch" width="48" height="48"/>
-        <image name="imgLogo" width="30" height="19"/>
+        <image name="icTabMain" width="48" height="48"/>
+        <image name="imgLogo" width="112" height="73"/>
     </resources>
 </document>
