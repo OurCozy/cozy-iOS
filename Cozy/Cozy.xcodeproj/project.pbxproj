@@ -425,6 +425,8 @@
 				1821F40524C09044008DDE25 /* Login.storyboard */,
 				1821F40324C08FCD008DDE25 /* Splash.storyboard */,
 				1821F40724C0904B008DDE25 /* Splash.storyboard */,
+				1821F40724C0904B008DDE25 /* Splash.storyboard */,
+				1821F40524C09044008DDE25 /* Login.storyboard */,
 				55ABB33B24B37901008B5A5B /* DetailViewController.storyboard */,
 				55E839CB24AF29C2003C64FE /* Main.storyboard */,
 				55E839DD24AF2AC3003C64FE /* Recommend.storyboard */,

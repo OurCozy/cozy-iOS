@@ -39,6 +39,7 @@ class BookStoreTableViewCell: UITableViewCell {
             view.layer.borderWidth = 1
             view.layer.borderColor = UIColor.dustyOrange.cgColor
         }
+        //bookStoreImageView.layer.cornerRadius = 10
         
     }
 
