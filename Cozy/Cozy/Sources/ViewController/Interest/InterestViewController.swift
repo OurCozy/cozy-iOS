@@ -36,7 +36,7 @@ class InterestViewController: UIViewController {
         super.viewDidLoad()
         
 //        self.tabBarController?.tabBarItem.image = UIImage(named: "icTabBookmark")
-    
+        
         tableView.delegate = self
         tableView.dataSource = self
         addBookStoreData()
@@ -109,6 +109,7 @@ class InterestViewController: UIViewController {
 
 extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 287
@@ -130,13 +131,20 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! BookStoreTableViewCell
         cell.wholeView.setViewShadow()
+        cell.bookStoreImageView.roundCorners([.topLeft, .topRight], radius: 10)
         cell.indexPath = indexPath
         cell.delegate = self
-        
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         cell.setBookStoreData(image1: bookStoreList[indexPath.row].image1, bookStoreName: bookStoreList[indexPath.row].bookstoreName, hashtag1: bookStoreList[indexPath.row].hashtag1, hashtag2: bookStoreList[indexPath.row].hashtag2, hashtag3: bookStoreList[indexPath.row].hashtag3, bookStoreIdx: bookStoreList[indexPath.row].bookstoreIdx)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     
