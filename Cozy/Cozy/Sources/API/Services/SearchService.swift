@@ -12,13 +12,16 @@ import Alamofire
 struct SearchService {
     static let shared = SearchService()
     
-    let header: HTTPHeaders = [
-        "Content-Type" : "application/json",
-        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxMSwiaWF0IjoxNTk0OTI1NjI1LCJleHAiOjE1OTQ5NjE2MjUsImlzcyI6Im91ci1zb3B0In0.Z36KA6mimPQIJ1ABEfT3-du9EHo2mqh6XY9kUYhODOw"
-    ]
+//    let header: HTTPHeaders = [
+//        "Content-Type" : "application/json",
+//        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxMSwiaWF0IjoxNTk0OTI1NjI1LCJleHAiOjE1OTQ5NjE2MjUsImlzcyI6Im91ci1zb3B0In0.Z36KA6mimPQIJ1ABEfT3-du9EHo2mqh6XY9kUYhODOw"
+//    ]
     
     // MARK : 검색별 서점 조회
     func searchBookStore(searchRegion: String, completiton: @escaping (NetworkResult<Any>) -> Void) {
+        
+        guard let token = UserDefaults.standard.string(forKey: "token") else {return}
+        let header: HTTPHeaders = ["Content-Type": "application/json", "token": token]
         
         let encodedRegion = makeStringKoreanEncoded(searchRegion)
         let searchURL = APIConstants.searchURL + encodedRegion
