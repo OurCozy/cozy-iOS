@@ -47,7 +47,7 @@ extension UIViewController{
                     return
                 }
             }
-            self.tabBarController?.tabBar.isHidden = hidden
+            //self.tabBarController?.tabBar.isHidden = hidden
         }
     
     

@@ -13,9 +13,12 @@ struct DetailReviewModel: Codable {
     
     struct ReviewData: Codable {
         let reviewIdx, userIdx, bookstoreIdx: Int
-        let content, photo: String
+        let content: String
+        let photo: String
         let stars: Int
         let createdAt: String
+        let nickname: String
+        let profile: String
     }
     
     let status: Int

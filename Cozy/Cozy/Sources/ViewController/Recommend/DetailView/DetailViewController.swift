@@ -22,6 +22,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var bookstoreActivityLabel: UILabel!
     @IBOutlet weak var bookstroeDestriptionTextView: UITextView!
     
+    @IBOutlet weak var intableviewMoreButton: UIButton!
     
     
     
@@ -34,7 +35,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     // Height constraint for the CommonView
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var reviewMoreButton: UIButton!
+    
     
     
     private var isStatusBarHidden = true {
@@ -49,24 +50,26 @@ class DetailViewController: UIViewController, StoryboardBased {
     var getLocationString: String = ""
     var getNowBookStoreIndex: Int = 1
     var detailBookStoreModel: [DetailBookStoreModel.BookData] = []
-    
+    var myDetailReviewModel: [DetailReviewModel.ReviewData] = []
     
     
    
+    var eachCellHeight: [CGFloat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewTableView.delegate = self
         reviewTableView.dataSource = self
         
-        
+        reviewTableView.rowHeight = UITableView.automaticDimension
+        reviewTableView.estimatedRowHeight = 100
         setMainCommonView()
         //setNaverMap()
         
         for buttonIndex in 0...2 {
             bookstoreCollection[buttonIndex].settagButton()
         }
-        reviewMoreButton.settagButton()
+        
         
         
         let notificationCenter = NotificationCenter.default
@@ -121,10 +124,25 @@ class DetailViewController: UIViewController, StoryboardBased {
         super.viewWillAppear(animated)
         
        // DispatchQueue.main.async {
-            self.downloadDetailBookStoreModel()
+        self.downloadDetailBookStoreModel()
+        self.downloadReviewData()
        // }
         
+    
+//        if let frame = self.tabBarController?.tabBar.frame {
+//            let factor: CGFloat = true ? 1 : -1
+//            let y = frame.origin.y + (frame.size.height * factor)
+//            UIView.animate(withDuration: 0.3, animations: {
+//                self.tabBarController?.tabBar.frame = CGRect(x: frame.origin.x, y: y, width: frame.width, height: frame.height)
+//            })
+//            return
+//        }
         
+        
+//        self.tabBarController?.tabBar.isHidden = true
+//        UIView.animate(withDuration: 0.3) {
+//            self.view.layoutIfNeeded()
+//        }
         
     }
     
@@ -139,12 +157,6 @@ class DetailViewController: UIViewController, StoryboardBased {
         
         
         //self.bookstoreCollection[0].sizeToFit()
-        
-       
-        
-        
-        
-        
     }
     
     func setMainCommonView() {
@@ -155,6 +167,9 @@ class DetailViewController: UIViewController, StoryboardBased {
         commonView.bookstoreAddress.text = getLocationString
     }
     
+    @IBAction func touchUpMoreButton(_ sender: Any) {
+        //리뷰 모아둔 곳 푸쉬
+    }
     func downloadDetailBookStoreModel() {
         DetailBookStoreService.shared.getDetailBookStoreData(bookstoreIndex: self.getNowBookStoreIndex) { NetworkResult in
             switch NetworkResult {
@@ -168,6 +183,7 @@ class DetailViewController: UIViewController, StoryboardBased {
                 
                 self.detailBookStoreModel = data
                 
+                
                 print("어 성공 \(self.detailBookStoreModel[0].image1)")
                 print("어 성공 \(self.detailBookStoreModel[0].bookstoreName)")
                 
@@ -180,7 +196,7 @@ class DetailViewController: UIViewController, StoryboardBased {
                 self.bookstoreLocation.text = self.detailBookStoreModel[0].location
                 self.bookstorePhoneNumberLabel.text = self.detailBookStoreModel[0].tel
                 self.bookstoreActivityLabel.text = self.detailBookStoreModel[0].activity
-                self.bookstoreTimeLabel.text = self.detailBookStoreModel[0].time
+                self.bookstoreTimeLabel.text = "\(self.detailBookStoreModel[0].time)\n시간 변동 가능"
                 self.bookstroeDestriptionTextView.text = self.detailBookStoreModel[0].description
                 
                 
@@ -220,6 +236,66 @@ class DetailViewController: UIViewController, StoryboardBased {
             }
         }
     }
+    
+    
+    
+    func downloadReviewData(){
+        DetailReviewService.shared.getReviewData(bookstoreIndex: 2) { NetworkResult in
+            switch NetworkResult {
+            case .success(let data) :
+                print("🎁 recommendation review success 🎁 ")
+                
+//                if data as! Bool == false {
+//                    //후기 없을때
+//                    //self.scrollHeight.constant = 1830
+//                    return
+//                }
+                
+                
+                guard let data = data as? [DetailReviewModel.ReviewData] else {
+                    print("데이터에서 리턴")
+                    return
+                }
+                
+                self.myDetailReviewModel = data
+                var index: Int = 0
+                self.myDetailReviewModel.forEach { element in
+                    let eachLabel: UILabel = {
+                        let label = UILabel()
+                        label.numberOfLines = 0
+                        label.text = self.myDetailReviewModel[index].content
+                        index += 1
+                        return label
+                    }()
+                    
+                    
+                    let size = eachLabel.sizeThatFits(CGSize(width: 100, height: 100))
+                    print(size.height/10)
+                    self.eachCellHeight.append(320 + (size.height/10))
+                }
+                
+                
+                
+                
+                DispatchQueue.main.async {
+                    self.reviewTableView.reloadData()
+                }
+                
+                print(data)
+                
+                
+            case .requestErr(_):
+                print("Request error@@")
+            case .pathErr:
+                print("path error")
+            case .serverErr:
+                print("server error")
+            case .networkFail:
+                print("network error")
+            }
+        }
+    }
+    
     
     @IBAction func touchUpLocationButton(_ sender: Any) {
         goToNaverMap()
@@ -289,9 +365,6 @@ class DetailViewController: UIViewController, StoryboardBased {
         
     }
     
-    @IBAction func testHeightButton(_ sender: Any) {
-        scrollHeight.constant = 1830
-    }
     func asCard(_ value: Bool) {
         if value {
             // Round the corners
@@ -306,16 +379,28 @@ class DetailViewController: UIViewController, StoryboardBased {
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 413
+        return eachCellHeight[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return myDetailReviewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let reviewCell = reviewTableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath)
+        let reviewCell = reviewTableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! reviewTableViewCell
+        
+        reviewCell.reviewNameLabel.text = myDetailReviewModel[indexPath.row].nickname
+        reviewCell.reviewImageView.setImage(from: myDetailReviewModel[indexPath.row].profile)
+        reviewCell.reviewWriteLabel.text = myDetailReviewModel[indexPath.row].content
+        reviewCell.reviewTime.text = myDetailReviewModel[indexPath.row].createdAt
+    
+        
+//        let backgroundView = UIView()
+//        backgroundView.backgroundColor = UIColor.white
+//        reviewCell.selectedBackgroundView = backgroundView
+        
         
         return reviewCell
         
@@ -425,24 +510,4 @@ extension UIScrollView {
 }
 
 
-extension UIButton {
-    
-    
-//    open override var intrinsicContentSize: CGSize {
-//            let labelSize = titleLabel?.sizeThatFits(CGSize(width: frame.size.width, height: CGFloat.greatestFiniteMagnitude)) ?? .zero
-//            let desiredButtonSize = CGSize(width: labelSize.width + titleEdgeInsets.left + titleEdgeInsets.right, height: labelSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom)
-//
-//            return desiredButtonSize
-//        }
-    
-//    open override var intrinsicContentSize: CGSize {
-//        return self.titleLabel!.intrinsicContentSize
-//    }
-//
-//    // Whever the button is changed or needs to layout subviews,
-//    open override func layoutSubviews() {
-//        super.layoutSubviews()
-//        titleLabel?.preferredMaxLayoutWidth = self.titleLabel!.frame.size.width
-//    }
-    
-}
+

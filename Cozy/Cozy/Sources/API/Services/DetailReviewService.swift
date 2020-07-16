@@ -1,16 +1,16 @@
 //
-//  RecommendationService.swift
+//  DetailReviewService.swift
 //  Cozy
 //
-//  Created by IJ . on 2020/07/14.
+//  Created by IJ . on 2020/07/16.
 //  Copyright © 2020 jun. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-struct DetailBookStoreService {
-    static let shared = DetailBookStoreService()
+struct DetailReviewService {
+    static let shared = DetailReviewService()
     
     let header: HTTPHeaders = [
         "Content-Type" : "application/json",
@@ -18,9 +18,9 @@ struct DetailBookStoreService {
     ]
     
     
-    func getDetailBookStoreData(bookstoreIndex: Int ,completion: @escaping (NetworkResult<Any>) -> Void){
+    func getReviewData(bookstoreIndex: Int ,completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let URL  = APIConstants.detailBookStoreURL + "\(bookstoreIndex)"
+        let URL  = APIConstants.reviewURL + "\(bookstoreIndex)"
         let dataRequest = Alamofire.request(URL, method: .get, encoding: JSONEncoding.default, headers: header)
         
         dataRequest.responseData { dataResponse in
@@ -53,13 +53,17 @@ struct DetailBookStoreService {
     // json decoding
     private func isData(by data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(DetailBookStoreModel.self, from: data) else { return .pathErr }
+        guard let decodedData = try? decoder.decode(DetailReviewModel.self, from: data) else { return .pathErr }
         //print(decodedData)
         
-        guard let bookData = decodedData.data else { print("여기서 에러 asdf")
+        if decodedData.message == "작성된 후기가 없습니다." {
+            return .success(false)
+        }
+        
+        guard let reviewData = decodedData.data else { print("디코딩 데이터 에서 Error")
             return .requestErr(decodedData.message) }
-        //print(bookData)
-        return .success(bookData)
+        //print(reviewData)
+        return .success(reviewData)
     }
     
 }

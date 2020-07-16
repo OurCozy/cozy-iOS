@@ -7,15 +7,20 @@
 //
 
 import UIKit
-
+import Cosmos
 class reviewTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var reviewLabel: UILabel!
+    @IBOutlet weak var reviewNameLabel: UILabel!
+    @IBOutlet weak var reviewStar: CosmosView!
+    @IBOutlet weak var reviewTime: UILabel!
+    @IBOutlet weak var reviewWriteLabel: UILabel!
+    @IBOutlet weak var reviewImageView: UIImageView!
+    @IBOutlet weak var reviewMoreButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        reviewLabel.text = "asdf"
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
