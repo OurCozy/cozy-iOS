@@ -12,13 +12,16 @@ import Alamofire
 struct DetailBookStoreService {
     static let shared = DetailBookStoreService()
     
-    let header: HTTPHeaders = [
-        "Content-Type" : "application/json",
-        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxLCJpYXQiOjE1OTQ1NDM5NDIsImV4cCI6My42MzYzNjM2MzYzNjM3OTU0ZSsyMiwiaXNzIjoib3VyLXNvcHQifQ.gIsHK5BvP0CCvz7g2GgGVvREJyvIjaybQTk93xGR5r4"
-    ]
+//    let header: HTTPHeaders = [
+//        "Content-Type" : "application/json",
+//        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxLCJpYXQiOjE1OTQ1NDM5NDIsImV4cCI6My42MzYzNjM2MzYzNjM3OTU0ZSsyMiwiaXNzIjoib3VyLXNvcHQifQ.gIsHK5BvP0CCvz7g2GgGVvREJyvIjaybQTk93xGR5r4"
+//    ]
     
     
     func getDetailBookStoreData(bookstoreIndex: Int ,completion: @escaping (NetworkResult<Any>) -> Void){
+        guard let token = UserDefaults.standard.string(forKey: "token") else {return}
+        let header: HTTPHeaders = ["Content-Type": "application/json", "token": token]
+        
         
         let URL  = APIConstants.detailBookStoreURL + "\(bookstoreIndex)"
         let dataRequest = Alamofire.request(URL, method: .get, encoding: JSONEncoding.default, headers: header)
