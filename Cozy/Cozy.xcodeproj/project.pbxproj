@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1821F40624C09044008DDE25 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1821F40524C09044008DDE25 /* Login.storyboard */; };
+		1821F40824C0904B008DDE25 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1821F40724C0904B008DDE25 /* Splash.storyboard */; };
 		183C1E2F24B1D5E500FFE494 /* BookStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */; };
 		183C1E3524B1DB4600FFE494 /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3424B1DB4600FFE494 /* BookStore.swift */; };
 		183C1E3924B73CC600FFE494 /* InterestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C1E3824B73CC600FFE494 /* InterestModel.swift */; };
@@ -17,10 +19,6 @@
 		1854227A24BF27C500846154 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854227924BF27C500846154 /* EmailLoginViewController.swift */; };
 		18B81C8B24BF526700B14596 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C8A24BF526700B14596 /* LoginService.swift */; };
 		18B81C8D24BF52F400B14596 /* SigninData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C8C24BF52F400B14596 /* SigninData.swift */; };
-		18B81C9024BF5F8B00B14596 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C8E24BF5F8B00B14596 /* Login.storyboard */; };
-		18B81C9124BF5F8B00B14596 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C8F24BF5F8B00B14596 /* Splash.storyboard */; };
-		18B81C9424BF610800B14596 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C9224BF610800B14596 /* Login.storyboard */; };
-		18B81C9524BF610800B14596 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B81C9324BF610800B14596 /* Splash.storyboard */; };
 		18B81C9B24BF6FDF00B14596 /* PutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B81C9A24BF6FDF00B14596 /* PutData.swift */; };
 		5565A14E24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */; };
 		55A94AD324B49D0400522643 /* LogoSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A94AD224B49D0400522643 /* LogoSearchCollectionViewCell.swift */; };
@@ -100,6 +98,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1821F40524C09044008DDE25 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Cozy/Resources/Storyboard/Login.storyboard; sourceTree = "<group>"; };
+		1821F40724C0904B008DDE25 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = Cozy/Resources/Storyboard/Splash.storyboard; sourceTree = "<group>"; };
 		183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreTableViewCell.swift; sourceTree = "<group>"; };
 		183C1E3424B1DB4600FFE494 /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
 		183C1E3824B73CC600FFE494 /* InterestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestModel.swift; sourceTree = "<group>"; };
@@ -323,6 +323,8 @@
 		55E839B924AF29C2003C64FE = {
 			isa = PBXGroup;
 			children = (
+				1821F40724C0904B008DDE25 /* Splash.storyboard */,
+				1821F40524C09044008DDE25 /* Login.storyboard */,
 				55E839C424AF29C2003C64FE /* Cozy */,
 				55E839C324AF29C2003C64FE /* Products */,
 				DA6EB647575B9EB8135F0FC1 /* Pods */,
@@ -680,12 +682,12 @@
 				55E839DE24AF2AC3003C64FE /* Recommend.storyboard in Resources */,
 				B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */,
 				55E839E024AF2AD1003C64FE /* Map.storyboard in Resources */,
-				18B81C9424BF610800B14596 /* Login.storyboard in Resources */,
-				18B81C9024BF5F8B00B14596 /* Login.storyboard in Resources */,
+				1821F40624C09044008DDE25 /* Login.storyboard in Resources */,
 				55E839CF24AF29C6003C64FE /* Assets.xcassets in Resources */,
 				B65D3A1424BB9D4800405549 /* SocialLogin.storyboard in Resources */,
 				B69E909624B8A1C2009C4218 /* Review.storyboard in Resources */,
 				B6776B4424B7080C00BF0E53 /* SelectRegion.storyboard in Resources */,
+				1821F40824C0904B008DDE25 /* Splash.storyboard in Resources */,
 				B63341E824B328880070F8C4 /* Search.storyboard in Resources */,
 				55ABB33C24B37901008B5A5B /* DetailViewController.storyboard in Resources */,
 				55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */,
@@ -693,8 +695,6 @@
 				CC2645EA24BA0D3B00BCE4CD /* MyPage.storyboard in Resources */,
 				55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */,
 				55CE354F24B3471E001210A7 /* CommonView.xib in Resources */,
-				18B81C9524BF610800B14596 /* Splash.storyboard in Resources */,
-				18B81C9124BF5F8B00B14596 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
