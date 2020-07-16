@@ -30,8 +30,8 @@
                                                             <fragment content="cozynim@cozy.com">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" metaFont="label" size="14"/>
-                                                                    <font key="NSOriginalFont" metaFont="label" size="14"/>
+                                                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                                                    <font key="NSOriginalFont" metaFont="menu" size="14"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -64,12 +64,9 @@
                                                             <constraint firstAttribute="height" constant="48" id="WXb-AW-bnx"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwL-Ma-GiX">
-                                                        <rect key="frame" x="113" y="15" width="148" height="132"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHD-Ad-niD">
+                                                        <rect key="frame" x="136" y="31" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <connections>
-                                                            <action selector="touchUpProfileButton:" destination="SFl-W8-oFb" eventType="touchUpInside" id="XBa-Ak-lcj"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -236,6 +233,10 @@
                                             <constraint firstItem="Jva-Oc-6Hm" firstAttribute="leading" secondItem="d4a-vR-8fm" secondAttribute="leading" id="x4H-DI-jFD"/>
                                         </constraints>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bvb-Ec-YNa">
+                                        <rect key="frame" x="298" y="334.99999999999989" width="77" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="d4a-vR-8fm" firstAttribute="top" secondItem="WNO-zl-ZEk" secondAttribute="top" id="APv-N2-zUj"/>

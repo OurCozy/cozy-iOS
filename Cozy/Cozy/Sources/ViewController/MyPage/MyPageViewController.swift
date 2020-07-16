@@ -13,15 +13,15 @@ protocol ButtonDelegate {
 }
 
 class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
-
+    
     //유저 프로필
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userNickname: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     
-    var profileList: [UserProfile] = []
     
-    // 프로필 사진
+    
+    // 프로필 사진 업로드
     var delegate: ButtonDelegate?
     var indexPath: IndexPath?
     private var pickerController = UIImagePickerController()
@@ -30,33 +30,35 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var myReview: UIView!
     
     // 최근 본 책방
+    var recentList: [recentBookstore] = []
     @IBOutlet weak var collectionView: UICollectionView!
-    private var lastBookstoreList: [LastBookstore] = []
-    let bookstore1 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
-           let bookstore2 = LastBookstore(bookstoreImage: "39", bookstoreName: "지구불시착")
-           let bookstore3 = LastBookstore(bookstoreImage: "40", bookstoreName: "책인감")
-           let bookstore4 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
-           let bookstore5 = LastBookstore(bookstoreImage: "39", bookstoreName: "지구불시착")
+    //    private var lastBookstoreList: [LastBookstore] = []
+    //    let bookstore1 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
+    //           let bookstore2 = LastBookstore(bookstoreImage: "39", bookstoreName: "지구불시착")
+    //           let bookstore3 = LastBookstore(bookstoreImage: "40", bookstoreName: "책인감")
+    //           let bookstore4 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
+    //           let bookstore5 = LastBookstore(bookstoreImage: "39", bookstoreName: "지구불시착")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         pickerController.delegate = self
         
         // 내가 쓴 후기 탭제스쳐 연결
-         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
-         tapGesture.delegate = self
-         
-         self.myReview.addGestureRecognizer(tapGesture)
-
-        lastBookstoreList = [bookstore1, bookstore2, bookstore3, bookstore4, bookstore5]
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+        tapGesture.delegate = self
+        
+        self.myReview.addGestureRecognizer(tapGesture)
+        
+        //        lastBookstoreList = [bookstore1, bookstore2, bookstore3, bookstore4, bookstore5]
         collectionView.dataSource = self
         collectionView.delegate = self
         
         addProfileData()
+        setRecentData()
     }
     
     // 프로필 사진 서버 가져오기
@@ -86,7 +88,7 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         let vc = sb.instantiateViewController(identifier: "EventViewController") as! EventViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
+    
     // 내가 쓴 후기
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         let storyboard  = UIStoryboard(name: "MyPage", bundle: nil)
@@ -98,30 +100,61 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     func addProfileData(){
         ProfileService.shared.getProfileData(){ NetworkResult in
             switch NetworkResult {
-                case .success(let data):
-                    guard let data = data as? [UserProfile] else {return print("error")}
-                    print("@@@@@@data@@@@@@")
-                    print(data)
-                    self.setProfileData(profile: data[0].profile, userNickname: data[0].nickname, userEmail: data[0].email)
+            case .success(let data):
+                guard let data = data as? [UserProfile] else {return print("error")}
+                print("@@@@@@data@@@@@@")
+                print(data)
+                self.setProfileData(profile: data[0].profile, userNickname: data[0].nickname, userEmail: data[0].email)
                 
-                    // cell만 
-                    //self.tableView.reloadData()
-
-                case .requestErr(_):
-                    print("Request error@@")
-                case .pathErr:
-                    print("path error")
-                case .serverErr:
-                    print("server error")
-                case .networkFail:
-                    print("network error")
+                // cell만
+                //self.tableView.reloadData()
+                
+            case .requestErr(_):
+                print("Request error@@")
+            case .pathErr:
+                print("path error")
+            case .serverErr:
+                print("server error")
+            case .networkFail:
+                print("network error")
             }
         }
-        
+    }
+    
+    // 최근 본 책방
+    func setRecentData(){
+        RecentService.shared.getRecentData(){ NetworkResult in
+            switch NetworkResult {
+            case .success(let data):
+                guard let data = data as? [recentBookstore] else {return print("recenterror")}
+                print("@@@recentdata@@@@@@")
+                print(data)
+                for data in data{
+                    self.recentList.append(recentBookstore(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, profile: data.profile, image1: data.image1))
+                }
+                
+                
+                print("데이터어 \(self.recentList[0])")
+                print("데이터어 \(self.recentList[1])")
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                
+            // 디코딩에러
+            case .requestErr(_):
+                print("Recent Request error@@")
+            case .pathErr:
+                print("recent path error")
+            case .serverErr:
+                print("recent server error")
+            case .networkFail:
+                print("recent network error")
+            }
+        }
     }
 }
 
- 
+
 extension MyPageViewController: ButtonDelegate {
     func onClickButton(in index: Int) {
         let alertController = UIAlertController(title: "사진 선택", message: "", preferredStyle: .actionSheet)
@@ -150,15 +183,19 @@ extension MyPageViewController: UICollectionViewDataSource {
     //셀에 들어가는 데이터 설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let lastBookstoreCell = collectionView.dequeueReusableCell(withReuseIdentifier:LastBookstoreCell.identifier, for:indexPath) as? LastBookstoreCell else {return UICollectionViewCell() }
-        lastBookstoreCell.set(lastBookstoreList[indexPath.row])
+        
         
         lastBookstoreCell.bookstoreImageView.layer.cornerRadius = 5
-    
+        
+        lastBookstoreCell.bookstoreImageView.setImage(from: self.recentList[indexPath.row].image1)
+        lastBookstoreCell.nameLabel.text = self.recentList[indexPath.row].bookstoreName
+        
+        
         return lastBookstoreCell
     }
     //섹션에 몇개 들어가는지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lastBookstoreList.count
+        return recentList.count
     }
 }
 

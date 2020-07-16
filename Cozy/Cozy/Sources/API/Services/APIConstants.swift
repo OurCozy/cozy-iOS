@@ -19,4 +19,5 @@ struct APIConstants{
     
     static let mypageURL = APIConstants.baseURL + "/main/mypage"
     static let profileURL = APIConstants.baseURL + "/user/profile"
+    static let recentURL = APIConstants.baseURL + "/main/recent"
 }
