@@ -143,7 +143,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
                 
 //                print("데이터어 \(self.recentList[0])")
 //                print("데이터어 \(self.recentList[1])")
-
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }

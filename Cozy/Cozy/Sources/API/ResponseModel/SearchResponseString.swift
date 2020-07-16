@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct SearchResponseString {
+struct SearchResponseString : Codable{
     let status: Int
     let success: Bool
     let message: String

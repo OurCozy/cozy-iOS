@@ -65,8 +65,8 @@ class BookStoreTableViewCell: UITableViewCell {
 //        if isBookmarkClicked == false{
             //put data
             //reload tableview cell
-            bookmarkButton.setImage(UIImage(named: "icBookmark"), for: .normal)
-            deleteData(idx: self.bookStoreIdx)
+        bookmarkButton.setImage(UIImage(named: "icBookmark"), for: .selected)
+        deleteData(idx: self.bookStoreIdx)
         
         print("셀의 bookrmarkbuttonidnexpath: \(self.indexPath!)")
         self.delegate?.bookmarkButtonClick(at: self.indexPath!)
