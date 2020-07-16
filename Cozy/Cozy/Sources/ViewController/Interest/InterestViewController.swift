@@ -45,7 +45,6 @@ class InterestViewController: UIViewController {
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationController?.navigationBar.addSubview(searchImage)
             
-            
             searchImage.layer.cornerRadius = Const.ImageSizeForLargeState / 2
             searchImage.clipsToBounds = true
             searchImage.translatesAutoresizingMaskIntoConstraints = false
@@ -66,7 +65,7 @@ class InterestViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         addBookStoreData()
+        addBookStoreData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
