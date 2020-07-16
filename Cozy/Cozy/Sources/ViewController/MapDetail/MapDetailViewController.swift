@@ -77,8 +77,6 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         self.moreButton.settagButton()
         
         self.downloadMapDetail()
-        
-        print("detail💖")
     }
     
     func downloadMapDetail(){
@@ -100,7 +98,6 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
             case .networkFail:
                 print("network error")
             }
-            
         }
     }
     

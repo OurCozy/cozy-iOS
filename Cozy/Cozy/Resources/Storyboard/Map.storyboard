@@ -183,7 +183,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="foc-yY-XOA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icTabMapSelected" id="lmd-Va-UsU"/>
+                    <tabBarItem key="tabBarItem" title="" image="icTabMapSelected" id="lmd-Va-UsU">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="마포구" id="DYz-xy-K6e"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -200,7 +202,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G8f-8h-zUb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="p0e-8R-BHo">
-                        <rect key="frame" x="0.0" y="44" width="375" height="104.33333333333334"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
