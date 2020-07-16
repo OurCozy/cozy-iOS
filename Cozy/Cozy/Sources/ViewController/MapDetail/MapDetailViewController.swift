@@ -39,6 +39,16 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         return true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,17 +58,17 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         
         self.mapView.mapType = MKMapType.standard
         self.setMapView(coordinate: eunpyeongLoc, addr:"안도북스")
-        
-//        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.isHidden = true
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        navigationController?.navigationBar.shadowImage = UIImage()
-        
+
         scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.delegate = self
         
         self.setReviewLabel()
         self.moreButton.settagButton()
+    
+    }
+    
+    @IBAction func goBack(_ sender: UIButton) {
+         self.navigationController?.popViewController(animated: true)
     }
     
     func setReviewLabel(){
@@ -116,9 +126,6 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         self.mapView.addAnnotation(annotation)
     }
     
-    @IBAction func clickBackButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     func setTagButtonUI(){
         self.tagButton1.settagButton()

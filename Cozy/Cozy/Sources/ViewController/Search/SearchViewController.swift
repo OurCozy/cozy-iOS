@@ -34,6 +34,16 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate {
         self.settingButtonLayer()
     }
     
+    
+    @IBAction func goSearchList(_ sender: UIButton) {
+        print("click search💡")
+        
+        let storyboard = UIStoryboard(name: "Search", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchListViewController") as! SearchListViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func clickCloseButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }

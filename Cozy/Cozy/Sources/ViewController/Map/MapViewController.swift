@@ -34,7 +34,7 @@ class MapViewController: UIViewController {
     @objc func baboEunjiJJang(_ notification: NSNotification) {
         
         let getIdx = notification.object as! Int
-        self.mapIdx = getIdx as! Int
+        self.mapIdx = getIdx 
         downloadMapData(mapIndex: getIdx)
         self.backView.isHidden = true
     }
@@ -239,7 +239,6 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             
             vc.modalPresentationStyle = .fullScreen
             
-            self.navigationController?.navigationBar.isHidden = true
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

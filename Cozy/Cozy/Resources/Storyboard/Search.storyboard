@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9v9-fP-Sce">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -36,8 +36,15 @@
                                 <rect key="frame" x="24" y="127" width="366" height="42"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af8-Wz-9Kz">
-                                        <rect key="frame" x="318" y="0.0" width="48" height="42"/>
+                                        <rect key="frame" x="303" y="0.0" width="48" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="Qtj-p4-7tu"/>
+                                            <constraint firstAttribute="width" constant="48" id="rGl-6t-5Qh"/>
+                                        </constraints>
                                         <state key="normal" image="icSearch"/>
+                                        <connections>
+                                            <action selector="goSearchList:" destination="9v9-fP-Sce" eventType="touchUpInside" id="QdV-p8-fvf"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="검색어를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3r-tK-reX">
                                         <rect key="frame" x="12" y="0.0" width="307" height="42"/>
@@ -53,8 +60,10 @@
                                     <constraint firstAttribute="height" constant="42" id="QDa-eO-dKq"/>
                                     <constraint firstItem="af8-Wz-9Kz" firstAttribute="top" secondItem="7Vy-Gu-9Su" secondAttribute="top" id="RuP-8S-DEK"/>
                                     <constraint firstItem="t3r-tK-reX" firstAttribute="leading" secondItem="7Vy-Gu-9Su" secondAttribute="leading" constant="12" id="Uta-Cf-ItP"/>
-                                    <constraint firstAttribute="trailing" secondItem="af8-Wz-9Kz" secondAttribute="trailing" id="gkT-yR-tcK"/>
+                                    <constraint firstAttribute="bottom" secondItem="af8-Wz-9Kz" secondAttribute="bottom" id="fRV-TZ-Cbn"/>
+                                    <constraint firstItem="af8-Wz-9Kz" firstAttribute="top" secondItem="7Vy-Gu-9Su" secondAttribute="top" id="g0z-zZ-Iyf"/>
                                     <constraint firstAttribute="bottom" secondItem="t3r-tK-reX" secondAttribute="bottom" id="mmp-iA-Dfe"/>
+                                    <constraint firstAttribute="trailing" secondItem="af8-Wz-9Kz" secondAttribute="trailing" constant="15" id="n3X-G7-J58"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이런 책방들은 어떠세요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj9-jV-q7d">
@@ -295,6 +304,7 @@
                             <outletCollection property="gestureRecognizers" destination="0oT-ln-eSo" appends="YES" id="aBB-P6-cCl"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="fQ1-wt-lVS"/>
                     <connections>
                         <outlet property="button1" destination="ZgQ-ht-kAs" id="xyA-nW-Whp"/>
                         <outlet property="button2" destination="FCg-XK-Zr4" id="YFH-w7-Cdz"/>
@@ -310,7 +320,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuN-Au-1dz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="0oT-ln-eSo"/>
             </objects>
-            <point key="canvasLocation" x="-168.11594202898553" y="35.491071428571423"/>
+            <point key="canvasLocation" x="742.02898550724649" y="35.491071428571423"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="si4-uZ-tsU">
+            <objects>
+                <viewController storyboardIdentifier="SearchListViewController" id="JXA-xc-x7y" customClass="SearchListViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZGv-Gc-a79">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ks4-dc-j41"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="x0w-Vb-J9S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjC-nt-R7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3039.130434782609" y="12.723214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PPj-LU-rhT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eYS-WC-48x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ztp-Np-l7t">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JXA-xc-x7y" kind="relationship" relationship="rootViewController" id="PQh-S7-hJr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1p-Gx-yEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128.985507246377" y="12.723214285714285"/>
         </scene>
     </scenes>
     <resources>

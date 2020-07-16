@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p5m-ND-Rbc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rGK-or-hGE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -27,13 +27,6 @@
                                                     <constraint firstAttribute="height" constant="250" id="ZSG-m1-gr3"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9i-tZ-xss">
-                                                <rect key="frame" x="342" y="20" width="60" height="60"/>
-                                                <state key="normal" image="icX"/>
-                                                <connections>
-                                                    <action selector="clickBackButton:" destination="rGK-or-hGE" eventType="touchUpInside" id="unz-5z-dIl"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안도북스" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfS-ql-fzE">
                                                 <rect key="frame" x="24" y="246" width="366" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -496,7 +489,6 @@
                                             <constraint firstItem="tdB-Fz-KB2" firstAttribute="top" secondItem="qRr-fa-GEx" secondAttribute="bottom" constant="5" id="E7D-8P-RkI"/>
                                             <constraint firstItem="6Th-8J-K63" firstAttribute="leading" secondItem="Dvp-Kf-e9h" secondAttribute="trailing" constant="8" id="ESy-et-N3d"/>
                                             <constraint firstItem="98n-la-nQU" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" id="EzY-62-sri"/>
-                                            <constraint firstAttribute="trailing" secondItem="a9i-tZ-xss" secondAttribute="trailing" constant="12" id="FHY-Vy-xcs"/>
                                             <constraint firstItem="qO1-WN-5zu" firstAttribute="top" secondItem="H0F-gZ-F8h" secondAttribute="bottom" constant="24" id="FjC-Q6-OT6"/>
                                             <constraint firstAttribute="trailing" secondItem="UF9-FP-LFp" secondAttribute="trailing" constant="24.300000000000001" id="GNi-6o-fGd"/>
                                             <constraint firstItem="dtP-mS-3kv" firstAttribute="top" secondItem="Se1-rj-d7A" secondAttribute="bottom" constant="53" id="I4f-da-KOu"/>
@@ -546,7 +538,6 @@
                                             <constraint firstAttribute="trailing" secondItem="Agv-EF-Vr3" secondAttribute="trailing" constant="24" id="ke3-fg-lQA"/>
                                             <constraint firstItem="Se1-rj-d7A" firstAttribute="top" secondItem="DyU-if-5c7" secondAttribute="bottom" constant="9" id="kfz-El-fmP"/>
                                             <constraint firstAttribute="trailing" secondItem="H0F-gZ-F8h" secondAttribute="trailing" constant="24" id="kvj-kC-c2I"/>
-                                            <constraint firstItem="a9i-tZ-xss" firstAttribute="top" secondItem="Xty-7E-IzH" secondAttribute="top" constant="20" id="kyY-i4-Il8"/>
                                             <constraint firstItem="qO1-WN-5zu" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="lfL-aa-GqZ"/>
                                             <constraint firstItem="326-wH-W8R" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" id="n5p-N4-nag"/>
                                             <constraint firstItem="dtP-mS-3kv" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="oBT-dW-1H0"/>
@@ -564,10 +555,23 @@
                                             <constraint firstItem="DyU-if-5c7" firstAttribute="leading" secondItem="Xty-7E-IzH" secondAttribute="leading" constant="24" id="zkl-Uz-iYb"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqI-CL-v9D">
+                                        <rect key="frame" x="26" y="60" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="CFF-AL-Mua"/>
+                                            <constraint firstAttribute="width" constant="48" id="MYL-F4-tST"/>
+                                        </constraints>
+                                        <state key="normal" image="icLeftArrowDark"/>
+                                        <connections>
+                                            <action selector="goBack:" destination="rGK-or-hGE" eventType="touchUpInside" id="52t-E0-MC5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Xty-7E-IzH" secondAttribute="trailing" id="8zk-bX-4AR"/>
                                     <constraint firstAttribute="top" secondItem="Xty-7E-IzH" secondAttribute="top" id="WdS-fl-3LU"/>
+                                    <constraint firstItem="xqI-CL-v9D" firstAttribute="leading" secondItem="6G6-tq-6R7" secondAttribute="leading" constant="26" id="Xm4-c4-vN2"/>
+                                    <constraint firstItem="xqI-CL-v9D" firstAttribute="top" secondItem="6G6-tq-6R7" secondAttribute="top" constant="60" id="d6K-sy-GYL"/>
                                     <constraint firstItem="Xty-7E-IzH" firstAttribute="width" secondItem="6G6-tq-6R7" secondAttribute="width" id="l9Y-tB-Phh"/>
                                     <constraint firstItem="Xty-7E-IzH" firstAttribute="height" secondItem="6G6-tq-6R7" secondAttribute="height" priority="250" id="lSD-wb-Axr"/>
                                     <constraint firstAttribute="bottom" secondItem="Xty-7E-IzH" secondAttribute="bottom" id="lb3-aQ-dHx"/>
@@ -604,24 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C15-hI-IDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2873.913043478261" y="-265.51339285714283"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="AlH-a5-Ifz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="p5m-ND-Rbc" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yDM-HV-x5Y">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="rGK-or-hGE" kind="relationship" relationship="rootViewController" id="y5v-XJ-iRM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C3O-ch-9u3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1963.7681159420292" y="-265.84821428571428"/>
+            <point key="canvasLocation" x="2645" y="-306"/>
         </scene>
     </scenes>
     <resources>
@@ -637,9 +624,9 @@
         <image name="icFindRoad" width="48" height="48"/>
         <image name="icHomepage" width="60" height="60"/>
         <image name="icInstagram" width="60" height="60"/>
+        <image name="icLeftArrowDark" width="48" height="48"/>
         <image name="icMoreBlack" width="28" height="28"/>
         <image name="icRightArrowSmall" width="48" height="48"/>
-        <image name="icX" width="60" height="60"/>
         <image name="imgAdress" width="22" height="22"/>
         <image name="imgCall" width="22" height="22"/>
         <image name="imgEtc" width="22" height="22"/>
