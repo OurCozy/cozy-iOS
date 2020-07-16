@@ -20,8 +20,9 @@ class RecommendViewController: UIViewController {
     
     private var justOneServerConnect = false
     
+    @IBOutlet weak var nicknameLabel: UILabel!
     
-    
+    var logoSearchCheck: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,7 +95,7 @@ class RecommendViewController: UIViewController {
                 }
                 
                 self.RecommendationList = data
-                
+                self.logoSearchCheck = 1
                 DispatchQueue.main.async {
                     self.recommendCollectionView.reloadData()
                 }
@@ -127,16 +128,16 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if 0 == section {
-            return 1
+            return logoSearchCheck
         } else {
             return RecommendationList.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.section == 0{
-            let guideCell = collectionView.dequeueReusableCell(withReuseIdentifier: "logoSearchCell", for: indexPath)
-            
+        if indexPath.section == 0 {
+            let guideCell = collectionView.dequeueReusableCell(withReuseIdentifier: "logoSearchCell", for: indexPath) as! LogoSearchCollectionViewCell
+            guideCell.guideLabel1.text = "\(self.RecommendationList[0].nickname)님,"
             
             return guideCell
         } else {

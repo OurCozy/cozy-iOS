@@ -52,6 +52,9 @@
                                                                         </constraints>
                                                                         <state key="normal" image="icBookmark"/>
                                                                         <state key="selected" image="icBookmarkSelected"/>
+                                                                        <connections>
+                                                                            <action selector="touchUpBookMarkButton:" destination="9PU-bB-qR6" eventType="touchUpInside" id="65g-p0-JW5"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-RG-CFC">
                                                                         <rect key="frame" x="24" y="84" width="20" height="24"/>
@@ -608,6 +611,7 @@
                     <connections>
                         <outlet property="bodyView" destination="ucz-Kl-mbU" id="9Lm-88-iXm"/>
                         <outlet property="bookStoreNameLabel" destination="evv-Wl-JlR" id="Ke0-Wl-3RL"/>
+                        <outlet property="bookmarkButton" destination="FuM-PU-cxp" id="tiL-Ve-sv6"/>
                         <outlet property="bookstoreActivityLabel" destination="wBZ-qm-E91" id="kw3-mK-7TD"/>
                         <outlet property="bookstoreLocation" destination="yAF-SK-1Cx" id="zgS-gO-Iqq"/>
                         <outlet property="bookstorePhoneNumberLabel" destination="0U2-lz-CNv" id="pa1-OX-3Hw"/>

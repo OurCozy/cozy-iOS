@@ -25,6 +25,7 @@ class DetailViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var intableviewMoreButton: UIButton!
     
     @IBOutlet var detailLinkButton: [UIButton]!
+    @IBOutlet weak var bookmarkButton: UIButton!
     
     
     
@@ -70,6 +71,8 @@ class DetailViewController: UIViewController, StoryboardBased {
         for buttonIndex in 0...2 {
             bookstoreCollection[buttonIndex].settagButton()
         }
+        
+        bookmarkButton.setImage(UIImage(named: "icBookmarkSelected"), for: .selected)
         
         
         
@@ -172,34 +175,43 @@ class DetailViewController: UIViewController, StoryboardBased {
         //리뷰 모아둔 곳 푸쉬
     }
     
+    @IBAction func touchUpBookMarkButton(_ sender: Any) {
+        
+        if self.bookmarkButton.isSelected == false {
+            self.bookmarkButton.isSelected = true
+        }else {
+            self.bookmarkButton.isSelected = false
+        }
+        
+        
+        
+        InterestService.shared.putBookStoreData(bookStoreIdx: self.detailBookStoreModel[0].bookstoreIdx){ NetworkResult in
+                   switch NetworkResult {
+                   case .success(let data):
+                       guard let data = data as? Checked else {return print("put data error")}
+                       print("@@@북마크 성공@@@")
+                       print(data)
+                       
+                   case .requestErr(_):
+                       print("Request error@@")
+                   case .pathErr:
+                       print("path error")
+                   case .serverErr:
+                       print("server error")
+                   case .networkFail:
+                       print("network error@@")
+                   }
+               }
+    }
     @IBAction func touchUpHomePageButton(_ sender: Any) {
         
-//        if self.detailBookStoreModel[0].homepage == "NULL" {
-//            showAlert(style: .alert)
-//            return
-//        }
-//
-//        if let homeURL = URL(string: "\(self.detailBookStoreModel[0].homepage)") {
-//            UIApplication.shared.open(homeURL, options: [:])
-//        }
-        
-        print(self.detailBookStoreModel[0].bookstoreIdx)
-        InterestService.shared.putBookStoreData(bookStoreIdx: self.detailBookStoreModel[0].bookstoreIdx){ NetworkResult in
-            switch NetworkResult {
-            case .success(let data):
-                guard let data = data as? Checked else {return print("put data error")}
-                print("@@@북마크 성공@@@")
-                print(data)
-                
-            case .requestErr(_):
-                print("Request error@@")
-            case .pathErr:
-                print("path error")
-            case .serverErr:
-                print("server error")
-            case .networkFail:
-                print("network error@@")
-            }
+        if self.detailBookStoreModel[0].homepage == "NULL" {
+            showAlert(style: .alert)
+            return
+        }
+
+        if let homeURL = URL(string: "\(self.detailBookStoreModel[0].homepage)") {
+            UIApplication.shared.open(homeURL, options: [:])
         }
 
     }

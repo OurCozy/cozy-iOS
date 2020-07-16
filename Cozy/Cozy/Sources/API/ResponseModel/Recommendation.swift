@@ -18,6 +18,7 @@ struct Recommendation: Codable {
         let shortIntro2: String
         let bookstoreName: String
         let location: String
+        let nickname: String
     }
     
     let status: Int
