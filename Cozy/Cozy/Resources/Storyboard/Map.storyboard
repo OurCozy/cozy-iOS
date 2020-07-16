@@ -10,7 +10,7 @@
         <!--마포구-->
         <scene sceneID="tEv-nS-Qwd">
             <objects>
-                <viewController id="nBS-Wg-Njp" customClass="MapViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="nBS-Wg-Njp" customClass="MapViewController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QfM-iF-Bul">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,10 +63,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpP-5B-uWW">
-                                                            <rect key="frame" x="18" y="212" width="64" height="24"/>
+                                                            <rect key="frame" x="17.999999999999996" y="212" width="61.666666666666657" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감성책방" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jV-Sf-3nc">
-                                                                    <rect key="frame" x="10" y="3" width="44" height="18"/>
+                                                                    <rect key="frame" x="10" y="3" width="41.666666666666664" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -78,15 +78,14 @@
                                                                 <constraint firstAttribute="trailing" secondItem="7jV-Sf-3nc" secondAttribute="trailing" constant="10" id="Skt-Zc-qgN"/>
                                                                 <constraint firstItem="7jV-Sf-3nc" firstAttribute="leading" secondItem="IpP-5B-uWW" secondAttribute="leading" constant="10" id="bvu-PE-rlR"/>
                                                                 <constraint firstItem="7jV-Sf-3nc" firstAttribute="top" secondItem="IpP-5B-uWW" secondAttribute="top" constant="3" id="o07-tM-aJt"/>
-                                                                <constraint firstAttribute="width" constant="64" id="tPa-FT-lCd"/>
                                                                 <constraint firstAttribute="bottom" secondItem="7jV-Sf-3nc" secondAttribute="bottom" constant="3" id="z6V-XR-Yf4"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syH-eY-AaW">
-                                                            <rect key="frame" x="94" y="212" width="64" height="24"/>
+                                                            <rect key="frame" x="91.666666666666671" y="212" width="61.666666666666671" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감성책방" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsk-GT-w2r">
-                                                                    <rect key="frame" x="10" y="3" width="44" height="18"/>
+                                                                    <rect key="frame" x="10" y="3" width="41.666666666666664" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -94,7 +93,6 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="64" id="7bd-El-hAp"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Zsk-GT-w2r" secondAttribute="trailing" constant="10" id="9nD-0a-JND"/>
                                                                 <constraint firstAttribute="height" constant="24" id="HwZ-NA-2hN"/>
                                                                 <constraint firstItem="Zsk-GT-w2r" firstAttribute="leading" secondItem="syH-eY-AaW" secondAttribute="leading" constant="10" id="Tfi-eO-8lz"/>
@@ -103,10 +101,10 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-Mf-Ktu">
-                                                            <rect key="frame" x="170" y="212" width="64" height="24"/>
+                                                            <rect key="frame" x="165.33333333333334" y="212" width="61.666666666666657" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감성책방" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-yG-Bs5">
-                                                                    <rect key="frame" x="10" y="3" width="44" height="18"/>
+                                                                    <rect key="frame" x="10" y="3" width="41.666666666666664" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -115,7 +113,6 @@
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="K5h-yG-Bs5" firstAttribute="top" secondItem="Eco-Mf-Ktu" secondAttribute="top" constant="3" id="4am-AT-sjh"/>
-                                                                <constraint firstAttribute="width" constant="64" id="Fnr-Ga-hrz"/>
                                                                 <constraint firstAttribute="height" constant="24" id="Gve-HJ-SM2"/>
                                                                 <constraint firstAttribute="trailing" secondItem="K5h-yG-Bs5" secondAttribute="trailing" constant="10" id="Hto-XD-62T"/>
                                                                 <constraint firstItem="K5h-yG-Bs5" firstAttribute="leading" secondItem="Eco-Mf-Ktu" secondAttribute="leading" constant="10" id="JRF-HE-bEh"/>

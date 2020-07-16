@@ -14,26 +14,38 @@ class MapViewController: UIViewController {
     private let underlineImage = UIImageView(image: UIImage(named: "imgMapLine"))
     private let downButton = UIButton()
     private let searchButton = UIButton()
-    
-    private let underlineImageForSmallTitle = UIImageView(image: UIImage(named: "imgMapLine"))
+        
+    private var backView = UIView()
     
     @IBOutlet weak var tableView: UITableView! // table view
     
     var mapBookList: [MapBookStore] = [] // map data
     
-    let mapIdx: Int = 1
+    var mapIdx: Int = 1
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    private func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(baboEunjiJJang(_:)), name: .dismissSlideView, object: nil)
+    }
+    
+    @objc func baboEunjiJJang(_ notification: NSNotification) {
+        
+        let getIdx = notification.object as! Int
+        
+        downloadMapData(mapIndex: getIdx)
+        self.backView.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addObserver()
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.downloadMapData()
+        self.downloadMapData(mapIndex: self.mapIdx)
         
         // iOS 11 버전 이상에서 실행
         if #available(iOS 11.0, *){
@@ -74,10 +86,11 @@ class MapViewController: UIViewController {
     }
     
     // 서버 통신
-    func downloadMapData(){
-        MapService.shared.getMapBookStore(mapIdx: 1){ NetworkResult in
+    func downloadMapData(mapIndex: Int){
+        MapService.shared.getMapBookStore(mapIdx: mapIndex){ NetworkResult in
             switch NetworkResult {
             case .success(let data) :
+                self.mapBookList = []
                 guard let data = data as? [MapBookStore] else { return }
                 for data in data {
                     self.mapBookList.append(MapBookStore(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, hashtag1: data.hashtag1, hashtag2: data.hashtag2, hashtag3: data.hashtag3, profile: data.profile, image1: data.image1, checked: data.checked, count: data.count))
@@ -100,6 +113,7 @@ class MapViewController: UIViewController {
         let storybaord = UIStoryboard(name: "Search", bundle: nil)
         let vc = storybaord.instantiateViewController(identifier: "SearchViewController") as! SearchViewController
         vc.modalPresentationStyle = .fullScreen
+        
         present(vc, animated: true, completion: nil)
     }
     
@@ -111,6 +125,12 @@ class MapViewController: UIViewController {
         pvc.transitioningDelegate = self
         pvc.modalPresentationStyle = .custom
         
+        self.backView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        self.backView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        window?.addSubview(backView)
+        self.backView.isHidden = false
         present(pvc, animated: true, completion: nil)
     }
     
@@ -177,6 +197,7 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             
             let imageURL = URL(string: self.mapBookList[indexPath.row].image1)
             cell.bookstoreImageView.kf.setImage(with: imageURL)
+            cell.bookstoreImageView.roundCorners([.topLeft, .topRight], radius: 10)
             
             cell.tagLabel.text = self.mapBookList[indexPath.row].hashtag1
             cell.tagLabel2.text = self.mapBookList[indexPath.row].hashtag2
@@ -192,18 +213,10 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource, UIScrol
             let storyboard = UIStoryboard(name: "MapDetail", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "MapDetailViewController") as! MapDetailViewController
             
-            //            self.underlineImage.isHidden = true
-            //            self.downButton.isHidden = true
-            //
-            //            self.navigationController?.pushViewController(vc, animated: true)
-            
             vc.modalPresentationStyle = .fullScreen
-            
             
             self.navigationController?.navigationBar.isHidden = true
             self.navigationController?.pushViewController(vc, animated: true)
-            
-//            present(vc, animated: true, completion: nil)
         }
     }
     

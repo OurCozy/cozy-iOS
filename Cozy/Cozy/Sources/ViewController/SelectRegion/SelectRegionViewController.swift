@@ -8,6 +8,11 @@
 
 import UIKit
 
+// notification 등록
+extension NSNotification.Name {
+    static let dismissSlideView = NSNotification.Name("dismissSlideView")
+}
+
 class SelectRegionViewController: UIViewController {
     
     @IBOutlet weak var regionButton1: UIButton!
@@ -27,6 +32,7 @@ class SelectRegionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setRegionButtons()
         self.gyeongiUnderline.isHidden = true
     }
@@ -76,10 +82,14 @@ class SelectRegionViewController: UIViewController {
     
     // 지역 선택
     @IBAction func clickRegionButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        let vc = UIStoryboard(name: "Map", bundle: nil).instantiateViewController(identifier: "MapViewController") as! MapViewController
+        vc.mapIdx = sender.tag
+        
+        self.dismiss(animated: true, completion: {
+            NotificationCenter.default.post(name: .dismissSlideView, object: sender.tag)
+        })
     }
     
-
     // button UI 설정
     func setRegionButtons(){
         self.regionButton1.setRegionButton()
@@ -88,6 +98,13 @@ class SelectRegionViewController: UIViewController {
         self.regionButton4.setRegionButton()
         self.regionButton5.setRegionButton()
         self.regionButton6.setRegionButton()
+        
+        self.regionButton1.tag = 1
+        self.regionButton2.tag = 2
+        self.regionButton3.tag = 3
+        self.regionButton4.tag = 4
+        self.regionButton5.tag = 5
+        self.regionButton6.tag = 6
     }
     
     func isHideButtons(isHidden: Bool){
@@ -97,6 +114,5 @@ class SelectRegionViewController: UIViewController {
             self.buttonView.isHidden = false
         }
     }
-    
     
 }
