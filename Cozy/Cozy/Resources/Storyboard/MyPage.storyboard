@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qab-Cl-T8X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qab-Cl-T8X">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -543,11 +543,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qab-Cl-T8X" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="icTabMypageSelected" id="3Wp-kT-IeF">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="yFK-ba-TSh">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
