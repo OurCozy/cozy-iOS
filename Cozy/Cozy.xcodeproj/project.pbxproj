@@ -75,6 +75,8 @@
 		B63341F424B34F630070F8C4 /* MapDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63341F324B34F630070F8C4 /* MapDetail.storyboard */; };
 		B6542A9A24C0649600DE63B1 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6542A9924C0649600DE63B1 /* SearchListViewController.swift */; };
 		B6542A9D24C0A87100DE63B1 /* SearchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6542A9C24C0A87100DE63B1 /* SearchListTableViewCell.swift */; };
+		B6542A9F24C0B11500DE63B1 /* SearchResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6542A9E24C0B11500DE63B1 /* SearchResponseString.swift */; };
+		B6542AA124C0B2FB00DE63B1 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6542AA024C0B2FB00DE63B1 /* SearchService.swift */; };
 		B65D3A0724BB94FC00405549 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0624BB94FC00405549 /* SplashViewController.swift */; };
 		B65D3A0924BB957100405549 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0824BB957100405549 /* UIFont+Extension.swift */; };
 		B65D3A0B24BB96ED00405549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D3A0A24BB96ED00405549 /* ViewController.swift */; };
@@ -179,6 +181,8 @@
 		B63341F324B34F630070F8C4 /* MapDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapDetail.storyboard; sourceTree = "<group>"; };
 		B6542A9924C0649600DE63B1 /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 		B6542A9C24C0A87100DE63B1 /* SearchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewCell.swift; sourceTree = "<group>"; };
+		B6542A9E24C0B11500DE63B1 /* SearchResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseString.swift; sourceTree = "<group>"; };
+		B6542AA024C0B2FB00DE63B1 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		B65D3A0224BB941A00405549 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
 		B65D3A0624BB94FC00405549 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B65D3A0824BB957100405549 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -593,6 +597,7 @@
 				55E460B824BCB2370035ECCE /* RecommendationService.swift */,
 				55E460C024BD74E90035ECCE /* DetailBookStoreService.swift */,
 				55E460C424BF626D0035ECCE /* DetailReviewService.swift */,
+				B6542AA024C0B2FB00DE63B1 /* SearchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -604,6 +609,7 @@
 				55E460B624BCB0360035ECCE /* Recommendation.swift */,
 				55E460BE24BD72580035ECCE /* DetailBookStoreModel.swift */,
 				55E460C224BF2B580035ECCE /* DetailReviewModel.swift */,
+				B6542A9E24C0B11500DE63B1 /* SearchResponseString.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -838,6 +844,7 @@
 				55ABB33724B37681008B5A5B /* Animatable.swift in Sources */,
 				55E839C824AF29C2003C64FE /* SceneDelegate.swift in Sources */,
 				55CE354D24B3467E001210A7 /* CommonView.swift in Sources */,
+				B6542A9F24C0B11500DE63B1 /* SearchResponseString.swift in Sources */,
 				B6E3B39524BC47C900F42D15 /* MapBookStore.swift in Sources */,
 				CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */,
 				55CE353824B32D17001210A7 /* CardCollectionViewCell.swift in Sources */,
@@ -848,6 +855,7 @@
 				B65D3A1624BB9D6400405549 /* SocialLoginViewController.swift in Sources */,
 				55E839F524AF2DCB003C64FE /* UIColor+Extension.swift in Sources */,
 				18B81C9B24BF6FDF00B14596 /* PutData.swift in Sources */,
+				B6542AA124C0B2FB00DE63B1 /* SearchService.swift in Sources */,
 				55A94AD524B57F9D00522643 /* UITabbarHideAnimation+Extension.swift in Sources */,
 				CC26460924BC9DF600BCE4CD /* UploadService.swift in Sources */,
 				555E67EE24C0915400187AAF /* Uiview+Storyboard.swift in Sources */,
