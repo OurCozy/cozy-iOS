@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Kingfisher
 
 class MapDetailViewController: UIViewController, UIScrollViewDelegate {
     
@@ -15,6 +16,9 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
     let scrollTopEdgeInsets: CGFloat = 210
     
     @IBOutlet weak var bookstoreImageView: UIImageView!
+    @IBOutlet weak var bookstoreName: UILabel!
+    
+    @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var tagButton1: UIButton!
     @IBOutlet weak var tagButton2: UIButton!
@@ -22,6 +26,11 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var activityLabel: UILabel!
+    
+    @IBOutlet weak var bookstoreImage2: UIImageView!
+    @IBOutlet weak var bookstoreImage3: UIImageView!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -32,6 +41,10 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var reviewImageView2: UIImageView!
     
     @IBOutlet weak var moreButton: UIButton!
+    
+    var detailBookStoreModel: [DetailBookStoreModel.BookData] = []
+    
+    var bookstoreIdx: Int = 13
     
     let eunpyeongLoc = CLLocationCoordinate2D(latitude: 37.6176125, longitude: 126.9227004) // 은평구 (샘플 서점 위치)
     
@@ -53,22 +66,76 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         self.setTagButtonUI()
-        self.setTimeLabel()
-        self.setExplainLabel()
         
         self.mapView.mapType = MKMapType.standard
         self.setMapView(coordinate: eunpyeongLoc, addr:"안도북스")
-
+        
         scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.delegate = self
         
         self.setReviewLabel()
         self.moreButton.settagButton()
+        
+        self.downloadMapDetail()
+        
+        print("detail💖")
+    }
     
+    func downloadMapDetail(){
+        self.detailBookStoreModel = []
+        
+        DetailBookStoreService.shared.getDetailBookStoreData(bookstoreIndex: self.bookstoreIdx){ NetworkResult in
+            switch NetworkResult {
+            case .success(let data):
+                guard let data = data as? [DetailBookStoreModel.BookData] else { return }
+                self.detailBookStoreModel = data
+                
+                self.updateView()
+            case .requestErr(_):
+                print("Request error")
+            case .pathErr:
+                print("path error")
+            case .serverErr:
+                print("server error")
+            case .networkFail:
+                print("network error")
+            }
+            
+        }
+    }
+    
+    // 데이터에 맞게 뷰 정보 update
+    func updateView(){
+        
+        let urlString = self.detailBookStoreModel[0].image1
+        let imageURL = URL(string: urlString)
+        self.bookstoreImageView.kf.setImage(with: imageURL)
+        
+        self.bookstoreName.text = self.detailBookStoreModel[0].bookstoreName
+        
+        self.tagButton1.setTitle(self.detailBookStoreModel[0].hashtag1, for: .normal)
+        self.tagButton2.setTitle(self.detailBookStoreModel[0].hashtag2, for: .normal)
+        self.tagButton3.setTitle(self.detailBookStoreModel[0].hashtag3, for: .normal)
+        
+        self.addressLabel.text = self.detailBookStoreModel[0].location
+        self.setTimeLabel()
+        self.phoneLabel.text = self.detailBookStoreModel[0].tel
+        self.activityLabel.text = self.detailBookStoreModel[0].activity
+        
+        let imgurlStr2 = self.detailBookStoreModel[0].image2
+        let imgurlStr3 = self.detailBookStoreModel[0].image3
+        let imgURL2 = URL(string: imgurlStr2)
+        let imgURL3 = URL(string: imgurlStr3)
+        
+        self.bookstoreImage2.kf.setImage(with: imgURL2)
+        self.bookstoreImage3.kf.setImage(with: imgURL3)
+        
+        self.setExplainLabel()
+        
     }
     
     @IBAction func goBack(_ sender: UIButton) {
-         self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func setReviewLabel(){
@@ -98,6 +165,7 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    // 리뷰 버튼 클릭
     @IBAction func goReview(_ sender: UIButton) {
         
     }
@@ -139,9 +207,9 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 6.0
         
-        let timeString1 = NSAttributedString(string: "평일 13:00 ~ 19:00(화-토) \n", attributes: [.font : UIFont.systemFont(ofSize: 14)])
-        let timeString2 = NSAttributedString(string: "공휴일 00:00~24:00(일,월 휴무) \n", attributes: [.font : UIFont.systemFont(ofSize: 14)])
-        let timeString3 = NSAttributedString(string: "시간 변동 가능 \n", attributes: [.font : UIFont.systemFont(ofSize: 14)])
+        let timeString1 = NSAttributedString(string: self.detailBookStoreModel[0].time + "\n", attributes: [.font : UIFont.systemFont(ofSize: 14)])
+        let timeString2 = NSAttributedString(string: self.detailBookStoreModel[0].dayoff + "\n", attributes: [.font : UIFont.systemFont(ofSize: 14)])
+        let timeString3 = NSAttributedString(string: self.detailBookStoreModel[0].changeable + "", attributes: [.font : UIFont.systemFont(ofSize: 14)])
         
         let attrString = NSMutableAttributedString()
         attrString.append(timeString1)
@@ -159,7 +227,7 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 3.0
         
-        let reviewText = NSAttributedString(string: "스토리지북앤필름 너무 좋은 독립서점이에요. 해방촌의 분위기를 좋아하는데 이 책방이 한 몫하는것 같아요. 골목길에 있지만 일부러 찾아오는 책방입니다! 대형서점에 없는 책들도 많고 가게 자체도", attributes: [.font : UIFont.systemFont(ofSize: 12)])
+        let reviewText = NSAttributedString(string: self.detailBookStoreModel[0].description + "", attributes: [.font : UIFont.systemFont(ofSize: 12)])
         
         let attrString = NSMutableAttributedString()
         attrString.append(reviewText)
