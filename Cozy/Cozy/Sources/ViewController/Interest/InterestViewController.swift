@@ -89,6 +89,7 @@ class InterestViewController: UIViewController {
                         }
                     }
                     self.navigationItem.title = self.nickName + self.navigationString
+                    
                     self.tableView.reloadData()
 
                 case .requestErr(_):
@@ -117,7 +118,7 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if bookStoreList.count == 0 {
-            tableView.setEmptyView(title: self.nickName + "만의 책박을 콕! 해볼까요?", message: "책방이 비어있습니다!")
+            tableView.setEmptyView(title: self.nickName + "님만의 책방을 콕! 해볼까요?", message: "책방이 비어있습니다!")
         }
         else {
             tableView.restore()
@@ -129,11 +130,15 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! BookStoreTableViewCell
         cell.wholeView.setViewShadow()
+        cell.indexPath = indexPath
+        cell.delegate = self
         
-        cell.setBookStoreData(image1: bookStoreList[indexPath.row].image1, bookStoreName: bookStoreList[indexPath.row].bookstoreName, hashtag1: bookStoreList[indexPath.row].hashtag1, hashtag2: bookStoreList[indexPath.row].hashtag2, hashtag3: bookStoreList[indexPath.row].hashtag3)
+        
+        cell.setBookStoreData(image1: bookStoreList[indexPath.row].image1, bookStoreName: bookStoreList[indexPath.row].bookstoreName, hashtag1: bookStoreList[indexPath.row].hashtag1, hashtag2: bookStoreList[indexPath.row].hashtag2, hashtag3: bookStoreList[indexPath.row].hashtag3, bookStoreIdx: bookStoreList[indexPath.row].bookstoreIdx)
         
         return cell
     }
+
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if tableView.contentOffset.y == 0 {
@@ -178,8 +183,30 @@ extension UITableView {
         self.backgroundView = emptyView
         self.separatorStyle = .none
     }
+    
     func restore() {
         self.backgroundView = nil
         self.separatorStyle = .singleLine
+    }
+}
+
+extension InterestViewController: ButtonActionDelegate {
+    func bookmarkButtonClick(at indexPath: IndexPath) {
+        print(indexPath)
+        bookStoreList.remove(at: indexPath.row)
+        print(indexPath)
+        
+        self.tableView.deleteRows(at: [indexPath], with: .right)
+        
+        for index in indexPath.row..<bookStoreList.count {
+            guard let eachCell = tableView.cellForRow(at: indexPath) as? BookStoreTableViewCell else { return print("error") }
+            eachCell.indexPath = IndexPath(row: index, section: 0)
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+
+        print(indexPath)
     }
 }

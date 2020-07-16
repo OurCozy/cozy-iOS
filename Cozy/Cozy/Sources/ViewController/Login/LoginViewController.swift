@@ -21,9 +21,14 @@ class LoginViewController: UIViewController {
     }
         
     @IBAction func goEmailLogin(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "EmailLogin", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "EmailLoginViewController") as! EmailLoginViewController
-        vc.modalPresentationStyle = .overCurrentContext
+//        let sb = UIStoryboard(name: "EmailLogin", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "EmailLoginViewController") as! EmailLoginViewController
+        let sb = UIStoryboard(name: "Main", bundle:  nil)
+
+        let vc = sb.instantiateViewController(identifier: "ViewController") as! ViewController
+        vc.modalPresentationStyle = .fullScreen
+
+
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
