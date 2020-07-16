@@ -18,8 +18,7 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userNickname: UILabel!
     @IBOutlet weak var userEmail: UILabel!
-    
-    
+
     
     // 프로필 사진 업로드
     var delegate: ButtonDelegate?
@@ -58,6 +57,12 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         collectionView.delegate = self
         
         addProfileData()
+        setRecentData()
+    }
+    
+    // 최근 본 책방 바로 보이게
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setRecentData()
     }
     
@@ -129,6 +134,8 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
                 guard let data = data as? [recentBookstore] else {return print("recenterror")}
                 print("@@@recentdata@@@@@@")
                 print(data)
+                // 최근 본 책방 바로 뜨게
+                self.recentList.removeAll()
                 for data in data{
                     self.recentList.append(recentBookstore(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, profile: data.profile, image1: data.image1))
                 }
