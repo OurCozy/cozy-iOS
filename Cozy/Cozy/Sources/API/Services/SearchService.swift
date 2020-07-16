@@ -14,14 +14,14 @@ struct SearchService {
     
     let header: HTTPHeaders = [
         "Content-Type" : "application/json",
-        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxLCJpYXQiOjE1OTQ1NDM5NDIsImV4cCI6My42MzYzNjM2MzYzNjM3OTU0ZSsyMiwiaXNzIjoib3VyLXNvcHQifQ.gIsHK5BvP0CCvz7g2GgGVvREJyvIjaybQTk93xGR5r4"
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxMSwiaWF0IjoxNTk0OTI1NjI1LCJleHAiOjE1OTQ5NjE2MjUsImlzcyI6Im91ci1zb3B0In0.Z36KA6mimPQIJ1ABEfT3-du9EHo2mqh6XY9kUYhODOw"
     ]
     
     // MARK : 검색별 서점 조회
     func searchBookStore(searchRegion: String, completiton: @escaping (NetworkResult<Any>) -> Void) {
         
         let encodedRegion = makeStringKoreanEncoded(searchRegion)
-        let searchURL = APIConstants.searchURL + searchRegion
+        let searchURL = APIConstants.searchURL + encodedRegion
         
         let dataRequest = Alamofire.request(searchURL, method: .get, encoding: JSONEncoding.default, headers: header)
         
@@ -58,7 +58,7 @@ struct SearchService {
     // json decoding
     private func isData(by data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(MapResponseString.self, from: data) else { return .pathErr }
+        guard let decodedData = try? decoder.decode(SearchResponseString.self, from: data) else { return .pathErr }
         guard let interestData = decodedData.data else { return .requestErr(decodedData.message) }
         return .success(interestData)
     }

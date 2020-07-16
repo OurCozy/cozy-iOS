@@ -14,7 +14,7 @@ struct MapService {
     
     let header: HTTPHeaders = [
         "Content-Type" : "application/json",
-        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxMSwiaWF0IjoxNTk0ODgyOTQzLCJleHAiOjE1OTQ5MTg5NDMsImlzcyI6Im91ci1zb3B0In0.i2PBFO0bwA8Qnpt118wBvYv80x0v4HuK7z2kduR2Pzo"
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxMSwiaWF0IjoxNTk0OTI1NjI1LCJleHAiOjE1OTQ5NjE2MjUsImlzcyI6Im91ci1zb3B0In0.Z36KA6mimPQIJ1ABEfT3-du9EHo2mqh6XY9kUYhODOw"
     ]
     
     // 지역별 서점 조회
