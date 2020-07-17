@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -93,8 +93,8 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huq-Gg-Yw3">
-                                <rect key="frame" x="25" y="60" width="102" height="48"/>
-                                <state key="normal" title="Button" image="icLeftArrowDark"/>
+                                <rect key="frame" x="25" y="60" width="48" height="48"/>
+                                <state key="normal" image="icLeftArrow"/>
                                 <connections>
                                     <action selector="dismissView:" destination="VrC-la-edT" eventType="touchUpInside" id="MsH-FE-H7r"/>
                                 </connections>
@@ -143,6 +143,6 @@
     </scenes>
     <resources>
         <image name="btnEmailDoubleCheck" width="67" height="28"/>
-        <image name="icLeftArrowDark" width="48" height="48"/>
+        <image name="icLeftArrow" width="48" height="48"/>
     </resources>
 </document>
