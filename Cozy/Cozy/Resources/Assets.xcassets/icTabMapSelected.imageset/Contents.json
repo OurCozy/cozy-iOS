@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
       "scale" : "1x",
+      "idiom" : "universal",
       "filename" : "icTabMapSelected.png"
     },
     {
+      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "icTabMapSelected@2x.png",
-      "idiom" : "universal"
+      "filename" : "icTabMapSelected@2x.png"
     },
     {
-      "filename" : "icTabMapSelected@3x.png",
       "scale" : "3x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "icTabMapSelected@3x.png"
     }
   ],
   "info" : {
