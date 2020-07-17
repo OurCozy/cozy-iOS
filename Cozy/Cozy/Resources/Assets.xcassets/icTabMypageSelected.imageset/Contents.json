@@ -2,12 +2,12 @@
   "images" : [
     {
       "filename" : "icTabMypageSelected.png",
-      "scale" : "1x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "1x"
     },
     {
-      "filename" : "icTabMypageSelected@2x.png",
       "idiom" : "universal",
+      "filename" : "icTabMypageSelected@2x.png",
       "scale" : "2x"
     },
     {

@@ -247,6 +247,13 @@ extension MyPageViewController: UICollectionViewDataSource {
     }
     //섹션에 몇개 들어가는지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        if recentList.count == 0 {
+//        //            tableView.setEmptyView(title: self.nickName + "님만의 책방을 콕! 해볼까요?", message: "책방이 비어있습니다!")
+//                    collectionView.setEmptyView(title: "", message: "책방이 비어있습니다!")
+//                }
+//                else {
+//                    collectionView.restore()
+//                }
         return recentList.count
     }
 }
