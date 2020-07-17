@@ -94,8 +94,9 @@
                                                 <rect key="frame" x="24" y="369" width="22" height="22"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 마포구 월드컵북로6길 87 2층 201호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-v2-hfb">
-                                                <rect key="frame" x="54" y="369" width="233.5" height="20"/>
+                                                <rect key="frame" x="54" y="369" width="250" height="20"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="4cn-d1-afI"/>
                                                     <constraint firstAttribute="height" constant="20" id="drT-K2-OeH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -614,7 +615,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C15-hI-IDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="-306"/>
+            <point key="canvasLocation" x="2644.9275362318845" y="-306.36160714285711"/>
         </scene>
     </scenes>
     <resources>

@@ -73,6 +73,7 @@ class MapDetailViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.delegate = self
         
+        self.addressLabel.numberOfLines = 0
         self.setReviewLabel()
         self.moreButton.settagButton()
         
