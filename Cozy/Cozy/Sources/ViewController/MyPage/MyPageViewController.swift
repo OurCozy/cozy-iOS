@@ -8,9 +8,10 @@
 
 import UIKit
 
-protocol ButtonDelegate {
-    func onClickButton(in index: Int)
-}
+
+//protocol ButtonDelegate {
+//    func onClickButton()
+//}
 
 class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -18,11 +19,11 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userNickname: UILabel!
     @IBOutlet weak var userEmail: UILabel!
-
+    
     
     // 프로필 사진 업로드
-    var delegate: ButtonDelegate?
-    var indexPath: IndexPath?
+//    var delegate: ButtonDelegate?
+    //var indexPath: IndexPath?
     private var pickerController = UIImagePickerController()
     
     // 내가 쓴 후기 뷰
@@ -43,6 +44,9 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        profileImage.layer.cornerRadius = 40
+        profileImage.layer.borderWidth = 1
+        profileImage.layer.borderColor = UIColor.clear.cgColor
         
         pickerController.delegate = self
         
@@ -58,6 +62,8 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         addProfileData()
         setRecentData()
+        
+        
     }
     
     // 최근 본 책방 바로 보이게
@@ -66,19 +72,37 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         setRecentData()
     }
     
-    // 프로필 사진 서버 가져오기
+    // 프로필 가져오기
     func setProfileData(profile: String, userNickname: String, userEmail: String){
-        let url = URL(string: profile)
-        guard let data = try? Data(contentsOf: url!) else {return}
-        self.profileImage.image = UIImage(data: data)
-        self.userNickname.text = userNickname
-        self.userEmail.text = userEmail
-    }
+           let url = URL(string: profile)
+           guard let data = try? Data(contentsOf: url!) else {return}
+           self.profileImage.image = UIImage(data: data)
+           self.userNickname.text = userNickname
+           self.userEmail.text = userEmail
+       }
     
-    // 프로필 사진 클릭시 사진앨범
-    @IBAction func touchUpProfileButton(_ sender: Any) {
-        delegate?.onClickButton(in: indexPath!.row)
+    @IBAction func setProfileBtn(_ sender: Any) {
+        print("siba")
+        //delegate?.onClickButton()
+                let alertController = UIAlertController(title: "사진 선택", message: "가져올 곳을 선택하세요", preferredStyle: .actionSheet)
+                let galleryAction = UIAlertAction(title: "사진 보관함", style: .default) { action in self.openLibrary() }
+                let photoAction = UIAlertAction(title: "카메라", style: .default) { action in self.openCamera() }
+                let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+                alertController.addAction(galleryAction)
+                alertController.addAction(photoAction)
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true, completion: nil)
     }
+
+//    func setImageRound(_ image: UIImageView) {
+//
+//        image.layer.cornerRadius = image.frame.height/2
+//        image.layer.borderWidth = 1
+//        image.layer.borderColor = UIColor.brownishGrey.cgColor
+//        image.clipsToBounds = true
+//
+//    }
+
     
     // 공지사항 이동
     @IBAction func gotoNotice(_ sender: UIButton) {
@@ -126,6 +150,34 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
+    // upload profile
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            
+            guard let token = UserDefaults.standard.object(forKey: "token") as? String else { return }
+            UploadService.shared.uploadImage(token, image, url.lastPathComponent) { networkResult in
+                switch networkResult {
+                case .success(let profileData):
+                    guard let profileData = profileData as? [UserProfile] else { return }
+                    print(profileData[0].profile)
+                    
+                case .requestErr(let failMessage):
+                    guard let message = failMessage as? String else { return }
+                    print(message)
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("serverErr")
+                case .networkFail:
+                    print("networkFail")
+                }
+            }
+            //guard let profileCell = self.freindTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? MyProfileCell else { return }
+            profileImage.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
     // 최근 본 책방
     func setRecentData(){
         RecentService.shared.getRecentData(){ NetworkResult in
@@ -161,17 +213,11 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
 }
 
 
-extension MyPageViewController: ButtonDelegate {
-    func onClickButton(in index: Int) {
-        let alertController = UIAlertController(title: "사진 선택", message: "", preferredStyle: .actionSheet)
-        let galleryAction = UIAlertAction(title: "사진 보관함", style: .default) { action in self.openLibrary() }
-        let photoAction = UIAlertAction(title: "카메라", style: .default) { action in self.openCamera() }
-        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-        alertController.addAction(photoAction)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
-}
+//extension MyPageViewController: ButtonDelegate {
+//    func onClickButton() {
+//
+//    }
+//}
 
 // 프로필 사진 사진함, 카메라 접근
 extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
