@@ -50,12 +50,6 @@ class InterestViewController: UIViewController {
                 searchImage.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
                 searchImage.widthAnchor.constraint(equalTo: searchImage.heightAnchor)
             ])
-            
-            
-            //            self.navigationController?.navigationBar.backgroundColor
-            //            let navBarHeight = UIApplication.shared.statusBarFrame.size.height +
-            //            (navigationController?.navigationBar.frame.height ?? 0.0)
-            //            print(navBarHeight)
         }
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -119,7 +113,6 @@ extension InterestViewController: UITableViewDelegate, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if bookStoreList.count == 0 {
-//            tableView.setEmptyView(title: self.nickName + "님만의 책방을 콕! 해볼까요?", message: "책방이 비어있습니다!")
             tableView.setEmptyView(title: "", message: "책방이 비어있습니다!")
         }
         else {

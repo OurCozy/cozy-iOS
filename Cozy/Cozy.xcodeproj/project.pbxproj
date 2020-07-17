@@ -121,8 +121,6 @@
 		1854227924BF27C500846154 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		18B81C8A24BF526700B14596 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		18B81C8C24BF52F400B14596 /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
-		18B81C9224BF610800B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
-		18B81C9324BF610800B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
 		18B81C9A24BF6FDF00B14596 /* PutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutData.swift; sourceTree = "<group>"; };
 		555E67ED24C0915400187AAF /* Uiview+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uiview+Storyboard.swift"; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -384,7 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				B6542A9B24C0A7E400DE63B1 /* SearchList */,
-				B68682D424BD8F40006DAADE /* Signin */,
 				CC6EE84B24C0B56E002F51FC /* SignUp */,
 				B65D3A1024BB994900405549 /* Login */,
 				B65D3A0524BB94D800405549 /* Splash */,
@@ -435,9 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				1821F40124C08FC6008DDE25 /* Login.storyboard */,
-				1821F40524C09044008DDE25 /* Login.storyboard */,
 				1821F40324C08FCD008DDE25 /* Splash.storyboard */,
-				1821F40724C0904B008DDE25 /* Splash.storyboard */,
 				1821F40724C0904B008DDE25 /* Splash.storyboard */,
 				1821F40524C09044008DDE25 /* Login.storyboard */,
 				55ABB33B24B37901008B5A5B /* DetailViewController.storyboard */,
@@ -451,10 +446,7 @@
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
-				B65D3A0324BB94D100405549 /* Splash.storyboard */,
-				B65D3A0E24BB993700405549 /* Login.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
-				B68682D224BD8F11006DAADE /* Signin.storyboard */,
 				1854227724BF27A300846154 /* EmailLogin.storyboard */,
 				CC6EE84924C0B414002F51FC /* SignUp.storyboard */,
 			);
@@ -467,9 +459,6 @@
 				55E839EA24AF2B4A003C64FE /* InterestViewController.swift */,
 				183C1E2E24B1D5E500FFE494 /* BookStoreTableViewCell.swift */,
 				183C1E3424B1DB4600FFE494 /* BookStore.swift */,
-				183C1E3824B73CC600FFE494 /* InterestModel.swift */,
-				183C1E3F24B857C300FFE494 /* InterestService.swift */,
-				18B81C9A24BF6FDF00B14596 /* PutData.swift */,
 			);
 			path = Interest;
 			sourceTree = "<group>";
@@ -589,6 +578,7 @@
 				55E460C024BD74E90035ECCE /* DetailBookStoreService.swift */,
 				55E460C424BF626D0035ECCE /* DetailReviewService.swift */,
 				B6542AA024C0B2FB00DE63B1 /* SearchService.swift */,
+				183C1E3F24B857C300FFE494 /* InterestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -601,6 +591,8 @@
 				55E460BE24BD72580035ECCE /* DetailBookStoreModel.swift */,
 				55E460C224BF2B580035ECCE /* DetailReviewModel.swift */,
 				B6542A9E24C0B11500DE63B1 /* SearchResponseString.swift */,
+				183C1E3824B73CC600FFE494 /* InterestModel.swift */,
+				18B81C9A24BF6FDF00B14596 /* PutData.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
