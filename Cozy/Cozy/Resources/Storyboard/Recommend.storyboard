@@ -107,6 +107,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lfu-b6-V3f"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="icTabMain2" id="v2D-Ka-PV9"/>
                     <navigationItem key="navigationItem" id="NR8-O0-35K"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -121,9 +122,6 @@
         <scene sceneID="280-8e-b2h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7N6-iS-Wzg" customClass="NavigationController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" id="qVr-fL-r85">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="56f-Rn-CQb">
                         <autoresizingMask key="autoresizingMask"/>
@@ -140,6 +138,7 @@
     </scenes>
     <resources>
         <image name="icSearch" width="48" height="48"/>
+        <image name="icTabMain2" width="48" height="48"/>
         <image name="imgLogo" width="112" height="73"/>
     </resources>
 </document>
