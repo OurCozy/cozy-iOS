@@ -151,32 +151,35 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 
 |                             기능                             | 개발 여부 | 담당자 |
 | :----------------------------------------------------------: | :---------------------------------------: | :----: |
-|               메인 추천뷰 - 고정 가이드셀 구현               |    | [📘인준](https://github.com/iJoom) | 
-|    메인 추천뷰 - 펼쳐지면서 스크롤뷰 전환 애니메이션 구현    |       |  [📘인준](https://github.com/iJoom)  | 
-|       메인 DetailView - 애니메이션 후 디테일뷰로 전환        |        | [📘인준](https://github.com/iJoom) | 
-| 메인 추천 및 DetailView - 탭바 밑으로 내려가고 위로 올라가는 애니메이션 구현 |          | [📘인준](https://github.com/iJoom) | 
-|           메인 추천뷰 - 서버APi 이용한 통신 붙이기           |                     -                     | [📘인준](https://github.com/iJoom) | 
-|         메인 DetailView - 지도APi 구현 및 링크 연결          |                     -                     | [📘인준](https://github.com/iJoom) | 
-| MapView - 지역에 따른 서점 리스트 조회 | O |  [📙은지](https://github.com/ChoiEunji0114) |
-| MapView - custom navigation bar | O | [📙은지](https://github.com/ChoiEunji0114) |  
-| MapView - 지역 선택 pop up view |  O | [📙은지](https://github.com/ChoiEunji0114) |  
-| MapView - 지역 선택에 따른 서점 리스트 서버 통신 | O | [📙은지](https://github.com/ChoiEunji0114) |   
-| MapDetailView - APPLE 지도 이용하여 위치 표시 | O |  [📙은지](https://github.com/ChoiEunji0114) | 
-| MapDetailView - 서점 상세 정보 서버 통신 | O | [📙은지](https://github.com/ChoiEunji0114) |  
-| SearchView - 텍스트로 서점 검색하기 | O | [📙은지](https://github.com/ChoiEunji0114) | 
-| SearchView - 키워드로 서점 검색하기 | O | [📙은지](https://github.com/ChoiEunji0114) | 
-| SplashView | O | [📙은지](https://github.com/ChoiEunji0114) | 
-| SocialLoginPopupView - 페이스북, 네이버 로그인 팝업 | O | [📙은지](https://github.com/ChoiEunji0114) | 
-| SocialLogin - 페이스북, 네이버, 카카오 | X | [📙은지](https://github.com/ChoiEunji0114) | 
-| Review - 별점과 후기 작성 | O | [📙은지](https://github.com/ChoiEunji0114) |  
-| Review - 후기 서버 통신 | X |  [📙은지](https://github.com/ChoiEunji0114) |   
-|           Server 통신을 이용한 나만의 북마크 기능        |     |                     -                     |  
-|     BookMarkView - 테이블뷰를 이용한 커스텀 View 그리기    |    |  [📗재욱](https://github.com/didwodnr123)  |  
-|             BookMarkView - 서점에 관한 Tag 구현       |       |  [📗재욱](https://github.com/didwodnr123)  |  
-|    BookMarkView - 북마크한 책이 없을때를 확인해 View 구성    |      |                -                     |  
-|               MyPage - 뷰 그리기 및 코드 연결           |      |   [📒지영](https://github.com/yangg0228)   |  
-|               MyPage - 기기에 맞는 AutoLayout          |      |                     -                     |   
-|                      MyPage - 공지사항                  |     |                     -                     |   
+| 메인 추천뷰 - 고정 가이드셀 구현   |    | [📘인준](https://github.com/iJoom) | 
+| 메인 추천뷰 - 펼쳐지면서 스크롤뷰 전환 애니메이션 구현    |   |  [📘인준](https://github.com/iJoom)  | 
+| 메인 DetailView - 애니메이션 후 디테일뷰로 전환  |   | [📘인준](https://github.com/iJoom) | 
+| 메인 추천 및 DetailView - 탭바 밑으로 내려가고 위로 올라가는 애니메이션 구현 |   | [📘인준](https://github.com/iJoom) | 
+| 메인 추천뷰 - 서버APi 이용한 통신 붙이기 |    | [📘인준](https://github.com/iJoom) | 
+| 메인 DetailView - 지도APi 구현 및 링크 연결 |    | [📘인준](https://github.com/iJoom) | 
+| 지역에 따른 서점 리스트 조회 | O |  [📙은지](https://github.com/ChoiEunji0114) |
+| custom navigation bar | O | [📙은지](https://github.com/ChoiEunji0114) |  
+| 지역 선택 pop up view |  O | [📙은지](https://github.com/ChoiEunji0114) |  
+| 지역 선택에 따른 서점 리스트 서버 통신 | O | [📙은지](https://github.com/ChoiEunji0114) |   
+| APPLE 지도 이용하여 위치 표시 | O |  [📙은지](https://github.com/ChoiEunji0114) | 
+| 서점 상세 정보 불러오기 | O | [📙은지](https://github.com/ChoiEunji0114) |  
+| 텍스트로 서점 검색 | O | [📙은지](https://github.com/ChoiEunji0114) | 
+| 키워드로 서점 검색 | O | [📙은지](https://github.com/ChoiEunji0114) | 
+| Splash | O | [📙은지](https://github.com/ChoiEunji0114) | 
+| 페이스북, 네이버 로그인 팝업 | O | [📙은지](https://github.com/ChoiEunji0114) | 
+| 페이스북, 네이버, 카카오 소셜 로그인 | X | [📙은지](https://github.com/ChoiEunji0114) | 
+| 별점과 후기 작성 | O | [📙은지](https://github.com/ChoiEunji0114) |  
+| 후기 서버 통신 | X |  [📙은지](https://github.com/ChoiEunji0114) |   
+| Server 통신을 이용한 나만의 북마크 기능  |     |      |  
+| BookMarkView - 테이블뷰를 이용한 커스텀 View 그리기  |    |  [📗재욱](https://github.com/didwodnr123)  |  
+| BookMarkView - 서점에 관한 Tag 구현  |     |  [📗재욱](https://github.com/didwodnr123)  |  
+| BookMarkView - 북마크한 책이 없을때를 확인해 View 구성    |      |                -                     |  
+| 내 프로필 서버 통신 | O |   [📒지영](https://github.com/yangg0228)  |  
+| 내 프로필 이미지 업로드 | O |   [📒지영](https://github.com/yangg0228)  |  
+| 공지사항, 이벤트 조회 | O |   [📒지영](https://github.com/yangg0228)  |  
+| 최근 본 책방 collection view  | O |   [📒지영](https://github.com/yangg0228)  |  
+| 최근 본 책방 서버 통신 | O |   [📒지영](https://github.com/yangg0228)  |  
+
 
 <br/>
 
@@ -199,6 +202,41 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 
 ## 문제점과 해결 방법 🔥
 
+1. 지역별 서점 조회
+
+- 지역 선택 view 를 dismiss 할 때마다 서버 통신하기 -> `NSNotification` 으로 해결 ❗️
+
+```swift
+// notification 등록
+extension NSNotification.Name {
+    static let dismissSlideView = NSNotification.Name("dismissSlideView")
+}
+```
+
+```swift
+  // dismiss 시켜줄 때마다 button tag 값을 전송 (지역 index값)
+  self.dismiss(animated: true, completion: {
+       NotificationCenter.default.post(name: .dismissSlideView, object: sender.tag)
+  })
+```
+
+```swift
+    // observer 등록
+    private func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(downloadmap(_:)), name: .dismissSlideView, object: nil)
+    }
+```
+
+```swift
+    // 원하는 동작 작성
+    @objc func downloadmap(_ notification: NSNotification) {
+        let getIdx = notification.object as! Int
+        self.mapIdx = getIdx 
+        downloadMapData(mapIndex: getIdx)
+        self.backView.isHidden = true
+    }
+```
+
 
 
 <br/>
@@ -207,5 +245,7 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 
 - [황인준](https://github.com/iJoom)
 - [최은지](https://github.com/ChoiEunji0114)
+    > 코지 사랑해 아요크루 사랑해 🥺🥺🥺 오래보자잉 💜
 - [양재욱](https://github.com/didwodnr123)
 - [양지영](https://github.com/yangg0228)
+    > 뷰도 제대로 못 그렸던 저를 끝까지 거둬주고 이끌어준 우리 팀원들,, 존경하고 사룽훼
