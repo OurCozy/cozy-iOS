@@ -10,6 +10,7 @@ import UIKit
 import Cosmos
 class reviewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var reviewNameLabel: UILabel!
     @IBOutlet weak var reviewStar: CosmosView!
     @IBOutlet weak var reviewTime: UILabel!

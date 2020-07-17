@@ -51,10 +51,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-Iv-J3K">
-                                                    <rect key="frame" x="280" y="24" width="47" height="48"/>
+                                                    <rect key="frame" x="278" y="24" width="48" height="48"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="47o-V4-dVc"/>
-                                                        <constraint firstAttribute="width" constant="48" id="NOY-Qf-kql"/>
+                                                        <constraint firstAttribute="height" constant="48" id="5x3-7Y-ngx"/>
+                                                        <constraint firstAttribute="width" constant="48" id="CXl-IG-JWa"/>
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <state key="normal" image="icSearch"/>
@@ -74,16 +74,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="zzO-Iv-J3K" secondAttribute="trailing" id="8ub-iy-eod"/>
+                                                <constraint firstAttribute="trailing" secondItem="zzO-Iv-J3K" secondAttribute="trailing" constant="1" id="8yF-TZ-5Pp"/>
                                                 <constraint firstAttribute="bottom" secondItem="dbX-fb-dBY" secondAttribute="bottom" constant="14" id="AfB-f8-BKB"/>
                                                 <constraint firstItem="UYg-82-Fhy" firstAttribute="top" secondItem="TXh-tw-vMp" secondAttribute="top" constant="37" id="FTv-4U-xhg"/>
-                                                <constraint firstItem="zzO-Iv-J3K" firstAttribute="leading" secondItem="UYg-82-Fhy" secondAttribute="trailing" constant="248" id="LsR-Rp-knX"/>
                                                 <constraint firstItem="dbX-fb-dBY" firstAttribute="leading" secondItem="TXh-tw-vMp" secondAttribute="leading" id="XH4-pC-Jr2"/>
                                                 <constraint firstItem="grD-Cv-dIl" firstAttribute="leading" secondItem="TXh-tw-vMp" secondAttribute="leading" id="XUa-I5-n0t"/>
-                                                <constraint firstItem="zzO-Iv-J3K" firstAttribute="top" secondItem="TXh-tw-vMp" secondAttribute="top" constant="24" id="jFw-CX-WqO"/>
                                                 <constraint firstAttribute="trailing" secondItem="dbX-fb-dBY" secondAttribute="trailing" constant="8" id="jL9-w1-LAO"/>
                                                 <constraint firstItem="dbX-fb-dBY" firstAttribute="top" secondItem="grD-Cv-dIl" secondAttribute="bottom" constant="1" id="qdZ-wM-sAn"/>
                                                 <constraint firstItem="UYg-82-Fhy" firstAttribute="leading" secondItem="TXh-tw-vMp" secondAttribute="leading" id="sxO-Je-ik1"/>
+                                                <constraint firstItem="zzO-Iv-J3K" firstAttribute="top" secondItem="TXh-tw-vMp" secondAttribute="top" constant="24" id="tU9-ZL-pNQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="grD-Cv-dIl" secondAttribute="trailing" constant="8" id="xBa-mQ-A4w"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -107,6 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lfu-b6-V3f"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="icTabMain2" id="v2D-Ka-PV9"/>
                     <navigationItem key="navigationItem" id="NR8-O0-35K"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -121,9 +121,6 @@
         <scene sceneID="280-8e-b2h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7N6-iS-Wzg" customClass="NavigationController" customModule="Cozy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="icTabMain" id="qVr-fL-r85">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="56f-Rn-CQb">
                         <autoresizingMask key="autoresizingMask"/>
@@ -140,7 +137,7 @@
     </scenes>
     <resources>
         <image name="icSearch" width="48" height="48"/>
-        <image name="icTabMain" width="48" height="48"/>
+        <image name="icTabMain2" width="48" height="48"/>
         <image name="imgLogo" width="112" height="73"/>
     </resources>
 </document>

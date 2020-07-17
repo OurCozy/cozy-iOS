@@ -155,9 +155,7 @@ class DetailViewController: UIViewController, StoryboardBased {
         
         
         
-        self.bookstoreImageVIew[0].setImage(from: self.detailBookStoreModel[0].image1)
-        self.bookstoreImageVIew[1].setImage(from: self.detailBookStoreModel[0].image2)
-        self.bookstoreImageVIew[2].setImage(from: self.detailBookStoreModel[0].image3)
+        
         
         
         //self.bookstoreCollection[0].sizeToFit()
@@ -282,7 +280,9 @@ class DetailViewController: UIViewController, StoryboardBased {
                 self.bookstroeDestriptionTextView.text = self.detailBookStoreModel[0].description
                 
                 
-                
+                self.bookstoreImageVIew[0].setImage(from: self.detailBookStoreModel[0].image1)
+                self.bookstoreImageVIew[1].setImage(from: self.detailBookStoreModel[0].image2)
+                self.bookstoreImageVIew[2].setImage(from: self.detailBookStoreModel[0].image3)
                 
                 //해시태그 버튼 라벨 삽입
                 
@@ -322,16 +322,20 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     
     func downloadReviewData(){
-        DetailReviewService.shared.getReviewData(bookstoreIndex: 2) { NetworkResult in
+        DetailReviewService.shared.getReviewData(bookstoreIndex: self.getNowBookStoreIndex) { NetworkResult in
             switch NetworkResult {
             case .success(let data) :
                 print("🎁 recommendation review success 🎁 ")
                 
-//                if data as! Bool == false {
+//                if data as! Int == 455 {
 //                    //후기 없을때
-//                    //self.scrollHeight.constant = 1830
+//                    self.scrollHeight.constant = 1830
 //                    return
+//                } else {
+//                    self.scrollHeight.constant = 2400
 //                }
+                
+                
                 
                 
                 guard let data = data as? [DetailReviewModel.ReviewData] else {
@@ -340,6 +344,11 @@ class DetailViewController: UIViewController, StoryboardBased {
                 }
                 
                 self.myDetailReviewModel = data
+//                if self.myDetailReviewModel[0]. {
+//
+//                    self.scrollHeight.constant = 1830
+//                    return
+//                }
                 var index: Int = 0
                 self.myDetailReviewModel.forEach { element in
                     let eachLabel: UILabel = {
@@ -474,10 +483,10 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         let reviewCell = reviewTableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! reviewTableViewCell
         
         reviewCell.reviewNameLabel.text = myDetailReviewModel[indexPath.row].nickname
-        reviewCell.reviewImageView.setImage(from: myDetailReviewModel[indexPath.row].profile)
+        reviewCell.reviewImageView.setImage(from: myDetailReviewModel[indexPath.row].photo)
         reviewCell.reviewWriteLabel.text = myDetailReviewModel[indexPath.row].content
         reviewCell.reviewTime.text = myDetailReviewModel[indexPath.row].createdAt
-    
+        reviewCell.profileImageView.setImage(from: myDetailReviewModel[indexPath.row].profile)
         
 //        let backgroundView = UIView()
 //        backgroundView.backgroundColor = UIColor.white

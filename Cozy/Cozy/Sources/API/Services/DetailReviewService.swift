@@ -58,10 +58,10 @@ struct DetailReviewService {
     private func isData(by data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(DetailReviewModel.self, from: data) else { return .pathErr }
-        //print(decodedData)
+        print("리뷰데이터 디코딩 됨\(decodedData)")
         
-        if decodedData.message == "작성된 후기가 없습니다." {
-            return .success(false)
+        if decodedData.success == false  {
+            return .success(455)
         }
         
         guard let reviewData = decodedData.data else { print("디코딩 데이터 에서 Error")

@@ -1,9 +1,9 @@
 {
   "images" : [
     {
+      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "icTabMainSelected.png",
-      "scale" : "1x"
+      "filename" : "icTabMainSelected.png"
     },
     {
       "scale" : "2x",
@@ -11,9 +11,9 @@
       "filename" : "icTabMainSelected@2x.png"
     },
     {
+      "filename" : "icTabMainSelected@3x.png",
       "scale" : "3x",
-      "idiom" : "universal",
-      "filename" : "icTabMainSelected@3x.png"
+      "idiom" : "universal"
     }
   ],
   "info" : {
