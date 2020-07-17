@@ -61,7 +61,7 @@ class MapViewController: UIViewController {
             downButton.translatesAutoresizingMaskIntoConstraints = false
             downButton.addTarget(self, action: #selector(clickDownButton), for: .touchUpInside)
             
-            searchButton.setImage(UIImage(named: "icSearch"), for: .normal)
+            searchButton.setImage(UIImage(named: "icSearch2"), for: .normal)
             searchButton.clipsToBounds = true
             searchButton.translatesAutoresizingMaskIntoConstraints = false
             searchButton.addTarget(self, action: #selector(clickSearchButton), for: .touchUpInside)

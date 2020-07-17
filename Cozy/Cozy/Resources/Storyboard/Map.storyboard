@@ -183,9 +183,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="foc-yY-XOA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icTabMapSelected" id="lmd-Va-UsU">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="icTabMapSelected" id="lmd-Va-UsU"/>
                     <navigationItem key="navigationItem" title="마포구" id="DYz-xy-K6e"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
