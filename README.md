@@ -257,4 +257,4 @@ extension NSNotification.Name {
     > 코지 사랑해 아요크루 사랑해 🥺🥺🥺 오래보자잉 💜
 - [양재욱](https://github.com/didwodnr123)
 - [양지영](https://github.com/yangg0228)
-    > 뷰도 제대로 못 그렸던 저를 끝까지 거둬주고 이끌어준 우리 팀원들,, 존경하고 사룽훼 
+    > 뷰도 제대로 못 그렸던 저를 끝까지 거둬주고 이끌어준 우리 팀원들,, 존경하고 사룽훼 🐉🐲💚
