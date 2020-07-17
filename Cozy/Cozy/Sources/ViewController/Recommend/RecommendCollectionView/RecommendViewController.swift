@@ -179,7 +179,7 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             vc.getNameString = self.RecommendationList[indexPath.row].bookstoreName
             vc.getLocationString = self.RecommendationList[indexPath.row].location
             vc.getNowBookStoreIndex = self.RecommendationList[indexPath.row].bookstoreIdx
-            
+            print("해당 북스토어 인덱스값:\(self.RecommendationList[indexPath.row].bookstoreIdx)")
             self.view.setNeedsLayout()
             self.navigationController?.pushViewController(vc, animated: true)
         }

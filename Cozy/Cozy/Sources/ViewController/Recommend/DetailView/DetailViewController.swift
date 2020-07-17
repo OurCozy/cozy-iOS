@@ -322,16 +322,20 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     
     func downloadReviewData(){
-        DetailReviewService.shared.getReviewData(bookstoreIndex: 2) { NetworkResult in
+        DetailReviewService.shared.getReviewData(bookstoreIndex: self.getNowBookStoreIndex) { NetworkResult in
             switch NetworkResult {
             case .success(let data) :
                 print("🎁 recommendation review success 🎁 ")
                 
-//                if data as! Bool == false {
+//                if data as! Int == 455 {
 //                    //후기 없을때
-//                    //self.scrollHeight.constant = 1830
+//                    self.scrollHeight.constant = 1830
 //                    return
+//                } else {
+//                    self.scrollHeight.constant = 2400
 //                }
+                
+                
                 
                 
                 guard let data = data as? [DetailReviewModel.ReviewData] else {
@@ -340,6 +344,11 @@ class DetailViewController: UIViewController, StoryboardBased {
                 }
                 
                 self.myDetailReviewModel = data
+//                if self.myDetailReviewModel[0]. {
+//
+//                    self.scrollHeight.constant = 1830
+//                    return
+//                }
                 var index: Int = 0
                 self.myDetailReviewModel.forEach { element in
                     let eachLabel: UILabel = {
