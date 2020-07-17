@@ -345,10 +345,10 @@ class DetailViewController: UIViewController, StoryboardBased {
                 
                 self.myDetailReviewModel = data
 //                if self.myDetailReviewModel[0]. {
-//
-//                    self.scrollHeight.constant = 1830
-//                    return
-//                }
+                //
+                //                    self.scrollHeight.constant = 1830
+                //                    return
+                //                }
                 var index: Int = 0
                 self.myDetailReviewModel.forEach { element in
                     let eachLabel: UILabel = {
@@ -451,7 +451,19 @@ class DetailViewController: UIViewController, StoryboardBased {
     
     @IBAction func closePressed(_ sender: Any) {
         //self.scrollView.scrollToTop()
-        self.setTabBarHidden(false)
+        
+        let bounds = UIScreen.main.bounds
+        let deviceHeight = bounds.size.height
+        
+        switch deviceHeight {
+        case 667.0: //iphone 6, 6s, 7, 8 => 4.7 inch
+            self.tabBarController?.tabBar.isHidden = false
+        case 812.0: //iphone X, XS => 5.8 inch
+            self.setTabBarHidden(false)
+        default:
+            self.setTabBarHidden(false)
+        }
+        
         self.navigationController?.popViewController(animated: true)
         
     }

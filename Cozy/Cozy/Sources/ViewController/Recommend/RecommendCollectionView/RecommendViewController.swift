@@ -167,8 +167,21 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             
             let vc = DetailViewController.instantiate()
             
-//            vc.hidesBottomBarWhenPushed = true
-            self.setTabBarHidden(true)
+            //            vc.hidesBottomBarWhenPushed = true
+            
+            let bounds = UIScreen.main.bounds
+            let deviceHeight = bounds.size.height
+            
+            switch deviceHeight {
+            case 667.0: //iphone 6, 6s, 7, 8 => 4.7 inch
+                self.tabBarController?.tabBar.isHidden = true
+            case 812.0: //iphone X, XS => 5.8 inch
+                self.setTabBarHidden(true)
+            default:
+                self.setTabBarHidden(true)
+            }
+            
+            
             //setTabBarHidden 아이폰 SE2 , 8 , 8+만 안먹힘, 분기처리 생각중
             
             //self.tabBarController?.tabBar.isHidden = true
