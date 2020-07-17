@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="./Readme-images/cozy.png" width="100" />   
+  <img src="./screenshots/cozy.png" width="100" />   
 </p>
 
-<h1 align="center"> Cozy_iOS </h1>
+<h1 align="center"> Cozy_iOS 📚 </h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/SOPT-blue" />
@@ -17,6 +17,13 @@
 </p>
 
 <br/>
+
+## Library
+
+- [Alamofire](https://github.com/Alamofire/Alamofire) '~> 4.8.2'
+- [Kingfisher](https://github.com/onevcat/Kingfisher) '~> 5.0'
+- [Cosmos](https://github.com/evgenyneu/Cosmos) '~> 22.1'
+- [NMapsMap]()
 
 ## ✌️ Coding Convention
 - 변수 , 함수명 low camel case 사용
