@@ -245,6 +245,10 @@ extension NSNotification.Name {
     }
 ```
 
+2. app store animation 적용하기 는 [여기](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/IJ.md)
+
+3. 테이블 셀 삭제하기 는 [여기](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jaeuk.md)
+
 <br/>
 
 ## 👩‍👩‍👦‍👦 Contributor
