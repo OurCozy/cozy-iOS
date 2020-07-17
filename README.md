@@ -89,6 +89,12 @@
 
 <br/>
 
+### Review
+
+<img src="./screenshots/review.png" width="300">
+
+<br/>
+
 ### Bookmark
 
 <img src="./screenshots/bookmark.png" width="300">  <img src="./screenshots/delete-bookmark.gif" width="250">
