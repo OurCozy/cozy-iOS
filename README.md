@@ -55,6 +55,10 @@
 
 <br/>
 
+### Signin
+
+<img src="./screenshots/signin.png" width="300">
+
 ### Main
 
 <img src="./screenshots/main.png" width="300"> 
@@ -94,6 +98,8 @@
 ### My page
 
 <img src="./screenshots/mypage.png" width="300"> <img src="./screenshots/mypage-comment.png" width="300">  <img src="./screenshots/mypage-event.png" width="300">  <img src="./screenshots/mypage-notice.png" width="300"> 
+
+> 프로필 사진 업로드
 
 <img src="./screenshots/mypage-profile-anim.gif" width="250">
 
