@@ -101,8 +101,8 @@
 		CC26460B24BDAD8F00BCE4CD /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC26460A24BDAD8F00BCE4CD /* ProfileService.swift */; };
 		CC55A9BC24C06590002F83DF /* recentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55A9BB24C06590002F83DF /* recentData.swift */; };
 		CC55A9BE24C065C8002F83DF /* recentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55A9BD24C065C8002F83DF /* recentService.swift */; };
-		CC6EE84A24C0B414002F51FC /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC6EE84924C0B414002F51FC /* SignUp.storyboard */; };
 		CC6EE84D24C0B598002F51FC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6EE84C24C0B598002F51FC /* SignUpViewController.swift */; };
+		CCC88B8024C1A57000A4773E /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC88B7F24C1A57000A4773E /* SignUp.storyboard */; };
 		CCF6753024B9E22A00A40EC1 /* LastBookstoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,8 +121,6 @@
 		1854227924BF27C500846154 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		18B81C8A24BF526700B14596 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		18B81C8C24BF52F400B14596 /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
-		18B81C9224BF610800B14596 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Login.storyboard"; sourceTree = "<group>"; };
-		18B81C9324BF610800B14596 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = "../../../../../../Downloads/cozy-iOS-Cozy-Cozy-Resources-Storyboard/Splash.storyboard"; sourceTree = "<group>"; };
 		18B81C9A24BF6FDF00B14596 /* PutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutData.swift; sourceTree = "<group>"; };
 		555E67ED24C0915400187AAF /* Uiview+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uiview+Storyboard.swift"; sourceTree = "<group>"; };
 		5565A14C24B1D34E00DF6E88 /* CustomExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -206,8 +204,8 @@
 		CC26460A24BDAD8F00BCE4CD /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		CC55A9BB24C06590002F83DF /* recentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentData.swift; sourceTree = "<group>"; };
 		CC55A9BD24C065C8002F83DF /* recentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentService.swift; sourceTree = "<group>"; };
-		CC6EE84924C0B414002F51FC /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		CC6EE84C24C0B598002F51FC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CCC88B7F24C1A57000A4773E /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignUp.storyboard; path = ../../../../../.Trash/SignUp.storyboard; sourceTree = "<group>"; };
 		CCF6752F24B9E22A00A40EC1 /* LastBookstoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBookstoreCell.swift; sourceTree = "<group>"; };
 		F3287E8FE7F893E28F29A028 /* Pods_Cozy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cozy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -384,7 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				B6542A9B24C0A7E400DE63B1 /* SearchList */,
-				B68682D424BD8F40006DAADE /* Signin */,
 				CC6EE84B24C0B56E002F51FC /* SignUp */,
 				B65D3A1024BB994900405549 /* Login */,
 				B65D3A0524BB94D800405549 /* Splash */,
@@ -435,9 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				1821F40124C08FC6008DDE25 /* Login.storyboard */,
-				1821F40524C09044008DDE25 /* Login.storyboard */,
 				1821F40324C08FCD008DDE25 /* Splash.storyboard */,
-				1821F40724C0904B008DDE25 /* Splash.storyboard */,
 				1821F40724C0904B008DDE25 /* Splash.storyboard */,
 				1821F40524C09044008DDE25 /* Login.storyboard */,
 				55ABB33B24B37901008B5A5B /* DetailViewController.storyboard */,
@@ -451,12 +446,9 @@
 				B63341F324B34F630070F8C4 /* MapDetail.storyboard */,
 				B6776B4324B7080C00BF0E53 /* SelectRegion.storyboard */,
 				B69E909524B8A1C2009C4218 /* Review.storyboard */,
-				B65D3A0324BB94D100405549 /* Splash.storyboard */,
-				B65D3A0E24BB993700405549 /* Login.storyboard */,
+				CCC88B7F24C1A57000A4773E /* SignUp.storyboard */,
 				B65D3A1324BB9D4800405549 /* SocialLogin.storyboard */,
-				B68682D224BD8F11006DAADE /* Signin.storyboard */,
 				1854227724BF27A300846154 /* EmailLogin.storyboard */,
-				CC6EE84924C0B414002F51FC /* SignUp.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -478,7 +470,6 @@
 			isa = PBXGroup;
 			children = (
 				CC26460E24BDC79200BCE4CD /* Profile */,
-				CC26460D24BDC6C900BCE4CD /* Collectionview */,
 				CC26460C24BDC68E00BCE4CD /* Connectvc */,
 				55E839EC24AF2B51003C64FE /* MyPageViewController.swift */,
 				CC55A9BB24C06590002F83DF /* recentData.swift */,
@@ -616,13 +607,6 @@
 			path = Connectvc;
 			sourceTree = "<group>";
 		};
-		CC26460D24BDC6C900BCE4CD /* Collectionview */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Collectionview;
-			sourceTree = "<group>";
-		};
 		CC26460E24BDC79200BCE4CD /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,8 +711,8 @@
 				B63341E824B328880070F8C4 /* Search.storyboard in Resources */,
 				55ABB33C24B37901008B5A5B /* DetailViewController.storyboard in Resources */,
 				55CE352F24B1DB5C001210A7 /* CustomExpandableCollectionViewCell.xib in Resources */,
+				CCC88B8024C1A57000A4773E /* SignUp.storyboard in Resources */,
 				55E839E224AF2AE1003C64FE /* Interest.storyboard in Resources */,
-				CC6EE84A24C0B414002F51FC /* SignUp.storyboard in Resources */,
 				CC2645EA24BA0D3B00BCE4CD /* MyPage.storyboard in Resources */,
 				55E839CD24AF29C2003C64FE /* Main.storyboard in Resources */,
 				55CE354F24B3471E001210A7 /* CommonView.xib in Resources */,

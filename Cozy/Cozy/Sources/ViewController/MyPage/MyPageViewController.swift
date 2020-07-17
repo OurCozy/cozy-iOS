@@ -9,10 +9,6 @@
 import UIKit
 
 
-//protocol ButtonDelegate {
-//    func onClickButton()
-//}
-
 class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     //유저 프로필
@@ -22,8 +18,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
     // 프로필 사진 업로드
-//    var delegate: ButtonDelegate?
-    //var indexPath: IndexPath?
     private var pickerController = UIImagePickerController()
     
     // 내가 쓴 후기 뷰
@@ -32,12 +26,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     // 최근 본 책방
     var recentList: [recentBookstore] = []
     @IBOutlet weak var collectionView: UICollectionView!
-    //    private var lastBookstoreList: [LastBookstore] = []
-    //    let bookstore1 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
-    //           let bookstore2 = LastBookstore(bookstoreImage: "39", bookstoreName: "지구불시착")
-    //           let bookstore3 = LastBookstore(bookstoreImage: "40", bookstoreName: "책인감")
-    //           let bookstore4 = LastBookstore(bookstoreImage: "37", bookstoreName: "퇴근길 책 한잔")
-    //           let bookstore5 = LastBookstore(bookstoreImage: "39", bookstoreName: "지구불시착")
     
     
     override func viewDidLoad() {
@@ -56,7 +44,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.myReview.addGestureRecognizer(tapGesture)
         
-        //        lastBookstoreList = [bookstore1, bookstore2, bookstore3, bookstore4, bookstore5]
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -82,8 +69,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
        }
     
     @IBAction func setProfileBtn(_ sender: Any) {
-        print("siba")
-        //delegate?.onClickButton()
                 let alertController = UIAlertController(title: "사진 선택", message: "가져올 곳을 선택하세요", preferredStyle: .actionSheet)
                 let galleryAction = UIAlertAction(title: "사진 보관함", style: .default) { action in self.openLibrary() }
                 let photoAction = UIAlertAction(title: "카메라", style: .default) { action in self.openCamera() }
@@ -93,15 +78,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
                 alertController.addAction(cancelAction)
                 self.present(alertController, animated: true, completion: nil)
     }
-
-//    func setImageRound(_ image: UIImageView) {
-//
-//        image.layer.cornerRadius = image.frame.height/2
-//        image.layer.borderWidth = 1
-//        image.layer.borderColor = UIColor.brownishGrey.cgColor
-//        image.clipsToBounds = true
-//
-//    }
 
     
     // 공지사항 이동
@@ -135,8 +111,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
                 print(data)
                 self.setProfileData(profile: data[0].profile, userNickname: data[0].nickname, userEmail: data[0].email)
                 
-                // cell만
-                //self.tableView.reloadData()
                 
             case .requestErr(_):
                 print("Request error@@")
@@ -172,7 +146,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
                     print("networkFail")
                 }
             }
-            //guard let profileCell = self.freindTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? MyProfileCell else { return }
             profileImage.image = image
         }
         dismiss(animated: true, completion: nil)
@@ -191,10 +164,7 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
                 for data in data{
                     self.recentList.append(recentBookstore(bookstoreIdx: data.bookstoreIdx, bookstoreName: data.bookstoreName, profile: data.profile, image1: data.image1))
                 }
-                
-                
-//                print("데이터어 \(self.recentList[0])")
-//                print("데이터어 \(self.recentList[1])")
+             
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -212,12 +182,6 @@ class MyPageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 }
 
-
-//extension MyPageViewController: ButtonDelegate {
-//    func onClickButton() {
-//
-//    }
-//}
 
 // 프로필 사진 사진함, 카메라 접근
 extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
