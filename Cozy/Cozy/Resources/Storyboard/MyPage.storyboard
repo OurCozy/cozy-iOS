@@ -30,8 +30,8 @@
                                                             <fragment content="cozynim@cozy.com">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" metaFont="label" size="14"/>
-                                                                    <font key="NSOriginalFont" metaFont="label" size="14"/>
+                                                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                                                    <font key="NSOriginalFont" metaFont="menu" size="14"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -50,7 +50,7 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile" translatesAutoresizingMaskIntoConstraints="NO" id="h1t-gW-x03">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile" translatesAutoresizingMaskIntoConstraints="NO" id="h1t-gW-x03">
                                                         <rect key="frame" x="147.66666666666666" y="41" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="Rgs-rz-gPS"/>
@@ -64,9 +64,12 @@
                                                             <constraint firstAttribute="height" constant="48" id="WXb-AW-bnx"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHD-Ad-niD">
-                                                        <rect key="frame" x="136" y="31" width="100" height="100"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rU-Aj-E4W">
+                                                        <rect key="frame" x="137" y="31" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <action selector="setProfileBtn:" destination="SFl-W8-oFb" eventType="touchUpInside" id="qke-kw-4jI"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
