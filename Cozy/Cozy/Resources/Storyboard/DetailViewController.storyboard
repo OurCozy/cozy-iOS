@@ -355,6 +355,10 @@
                                                                                         </label>
                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Xtl-2A-msD">
                                                                                             <rect key="frame" x="0.0" y="21" width="44" height="44"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="height" constant="44" id="4q7-Pi-Fej"/>
+                                                                                                <constraint firstAttribute="width" constant="44" id="Bjb-7a-VsG"/>
+                                                                                            </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뚜루루루" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9O4-kH-xUi">
                                                                                             <rect key="frame" x="0.0" y="79" width="327" height="14.5"/>
@@ -423,6 +427,7 @@
                                                                                     </constraints>
                                                                                 </tableViewCellContentView>
                                                                                 <connections>
+                                                                                    <outlet property="profileImageView" destination="Xtl-2A-msD" id="1XO-1e-ftP"/>
                                                                                     <outlet property="reviewImageView" destination="PAc-pa-dqz" id="9hJ-sc-LWu"/>
                                                                                     <outlet property="reviewMoreButton" destination="2Xy-Qs-6LS" id="uIR-FB-T8d"/>
                                                                                     <outlet property="reviewNameLabel" destination="488-nH-rxe" id="Whz-J4-S4x"/>
