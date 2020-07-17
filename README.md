@@ -18,12 +18,86 @@
 
 <br/>
 
+## Workflow
+
+<p align="center">
+  <img src="./screenshots/workflow.png" width="1000">
+</p>
+
+<br/>
+
+### OUR SOPT 26th iOS Project
+
+- 개발 기간 : 2020년 6월 28일 ~ 2020년 7월 18일 
+
+<br/>
+
 ## Library
 
-- [Alamofire](https://github.com/Alamofire/Alamofire) '~> 4.8.2'
-- [Kingfisher](https://github.com/onevcat/Kingfisher) '~> 5.0'
-- [Cosmos](https://github.com/evgenyneu/Cosmos) '~> 22.1'
-- [NMapsMap]()
+- pod [Alamofire](https://github.com/Alamofire/Alamofire) '~> 4.8.2'
+- pod [Kingfisher](https://github.com/onevcat/Kingfisher) '~> 5.0'
+- pod [Cosmos](https://github.com/evgenyneu/Cosmos) '~> 22.1'
+- pod [NMapsMap]()
+
+<br/>
+
+## Screenshots 📱
+
+### Splash
+
+<img src="./screenshots/splash.png" width="300">
+
+<br/>
+
+### Login
+
+<img src="./screenshots/login.png" width="300"> <img src="./screenshots/facebook.png" width="300"> <img src="./screenshots/naver.png" width="300"> <img src="./screenshots/emaillogin.png" width="300">
+
+<br/>
+
+### Main
+
+<img src="./screenshots/main.png" width="300"> 
+
+> main animation
+
+<img src="./screenshots/main-anim.gif" width="250"> <img src="./screenshots/main-anim2.gif" width="250"> <img src="./screenshots/main-anim3.gif" width="250">
+
+<br/>
+
+### Map
+
+<img src="./screenshots/map.png" width="300"> <img src="./screenshots/map-select.png" width="300">
+
+> map animation
+
+<img src="./screenshots/map-anim.gif" width="250">
+
+<br/>
+
+### Search
+
+<img src="./screenshots/search.png" width="300">
+
+> 키워드 검색, 텍스트 검색
+
+<img src="./screenshots/search-keyword-anim.gif" width="250"> <img src="./screenshots/search-anim2.gif" width="250">
+
+<br/>
+
+### Bookmark
+
+<img src="./screenshots/bookmark.png" width="300">  <img src="./screenshots/bookmark-anim.gif" width="250">
+
+<br/>
+
+### My page
+
+<img src="./screenshots/mypage.png" width="300"> <img src="./screenshots/mypage-comment.png" width="300">  <img src="./screenshots/mypage-event.png" width="300">  <img src="./screenshots/mypage-notice.png" width="300"> 
+
+<img src="./screenshots/mypage-profile-anim.gif" width="250">
+
+<br/>
 
 ## ✌️ Coding Convention
 - 변수 , 함수명 low camel case 사용
