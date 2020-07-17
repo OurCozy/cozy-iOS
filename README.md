@@ -157,15 +157,19 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 | 메인 추천 및 DetailView - 탭바 밑으로 내려가고 위로 올라가는 애니메이션 구현 |          | [📘인준](https://github.com/iJoom) | 
 |           메인 추천뷰 - 서버APi 이용한 통신 붙이기           |                     -                     | [📘인준](https://github.com/iJoom) | 
 |         메인 DetailView - 지도APi 구현 및 링크 연결          |                     -                     | [📘인준](https://github.com/iJoom) | 
-| MapView - 지역에 따른 서점 리스트 조회 |  |  [📙은지](https://github.com/ChoiEunji0114) |
-| MapView - custom navigation bar |  | [📙은지](https://github.com/ChoiEunji0114) |  
-| MapView - 지역 선택 pop up view |   | [📙은지](https://github.com/ChoiEunji0114) |  
-| MapView - 서점 리스트 서버 통신 |  | [📙은지](https://github.com/ChoiEunji0114) |   
-| MapDetailView - APPLE지도 이용하여 위치 표시 |  |  [📙은지](https://github.com/ChoiEunji0114) | 
-| MapDetailView - 경로 버튼 클릭시 네이버 맵 이동 |  |  [📙은지](https://github.com/ChoiEunji0114) |  
-| MapDetailView - 서점 상세 정보 서버 통신 |   | [📙은지](https://github.com/ChoiEunji0114) |  
-| Review - 별점 |  | [📙은지](https://github.com/ChoiEunji0114) |  
-| SearchView - View 그리기 및 코드 연결 |   |  [📙은지](https://github.com/ChoiEunji0114) |  
+| MapView - 지역에 따른 서점 리스트 조회 | O |  [📙은지](https://github.com/ChoiEunji0114) |
+| MapView - custom navigation bar | O | [📙은지](https://github.com/ChoiEunji0114) |  
+| MapView - 지역 선택 pop up view |  O | [📙은지](https://github.com/ChoiEunji0114) |  
+| MapView - 지역 선택에 따른 서점 리스트 서버 통신 | O | [📙은지](https://github.com/ChoiEunji0114) |   
+| MapDetailView - APPLE 지도 이용하여 위치 표시 | O |  [📙은지](https://github.com/ChoiEunji0114) | 
+| MapDetailView - 서점 상세 정보 서버 통신 | O | [📙은지](https://github.com/ChoiEunji0114) |  
+| SearchView - 텍스트로 서점 검색하기 | O | [📙은지](https://github.com/ChoiEunji0114) | 
+| SearchView - 키워드로 서점 검색하기 | O | [📙은지](https://github.com/ChoiEunji0114) | 
+| SplashView | O | [📙은지](https://github.com/ChoiEunji0114) | 
+| SocialLoginPopupView - 페이스북, 네이버 로그인 팝업 | O | [📙은지](https://github.com/ChoiEunji0114) | 
+| SocialLogin - 페이스북, 네이버, 카카오 | X | [📙은지](https://github.com/ChoiEunji0114) | 
+| Review - 별점과 후기 작성 | O | [📙은지](https://github.com/ChoiEunji0114) |  
+| Review - 후기 서버 통신 | X |  [📙은지](https://github.com/ChoiEunji0114) |   
 |           Server 통신을 이용한 나만의 북마크 기능        |     |                     -                     |  
 |     BookMarkView - 테이블뷰를 이용한 커스텀 View 그리기    |    |  [📗재욱](https://github.com/didwodnr123)  |  
 |             BookMarkView - 서점에 관한 Tag 구현       |       |  [📗재욱](https://github.com/didwodnr123)  |  
@@ -188,8 +192,14 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 * Sources
   * 크게는 코드의 기능에 따라 그리고 ViewUi로 분류
   * Protocols, Cell , Extension , Viewcontroller(뷰컨 안에 세분화된 기능으로 분류)
-    * Cell 같은 경우 - Cell로 View의 메인을 구현하는 경우, 즉 뷰컨에 더욱 가까운 역할을 하면 그 기능안에 Cell을 넣어도 됨
+  * Cell 같은 경우 - Cell로 View의 메인을 구현하는 경우, 즉 뷰컨에 더욱 가까운 역할을 하면 그 기능안에 Cell을 넣어도 됨
   * 복잡한 View 구현시 기능 안에서도 폴더를 나눠 View와 코드를 분담시킴
+
+<br/>
+
+## 문제점과 해결 방법 🔥
+
+
 
 <br/>
 
