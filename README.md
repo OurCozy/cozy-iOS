@@ -71,11 +71,11 @@
 
 ### Map
 
-<img src="./screenshots/map.png" width="300"> <img src="./screenshots/map-select.png" width="300">
+<img src="./screenshots/map.png" width="300"> <img src="./screenshots/map-select.png" width="300"> 
 
 > map animation
 
-<img src="./screenshots/map-anim.gif" width="250">
+<img src="./screenshots/map-anim.gif" width="250"> <img src="./screenshots/mapdetail.gif" width="250">
 
 <br/>
 
@@ -91,7 +91,7 @@
 
 ### Bookmark
 
-<img src="./screenshots/bookmark.png" width="300">  <img src="./screenshots/bookmark-anim.gif" width="250">
+<img src="./screenshots/bookmark.png" width="300">  <img src="./screenshots/delete-bookmark.gif" width="250">
 
 <br/>
 
@@ -194,7 +194,7 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 ## 📁 Foldering
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/55793344/86769419-1b0bcf00-c08a-11ea-8d4b-eb674b04a543.png" width="300"/>
+  <img src="./screenshots/folder.png" width="300"> 
 </p>
 
 * Resources
@@ -245,8 +245,6 @@ extension NSNotification.Name {
     }
 ```
 
-
-
 <br/>
 
 ## 👩‍👩‍👦‍👦 Contributor
@@ -256,5 +254,6 @@ extension NSNotification.Name {
 - [최은지](https://github.com/ChoiEunji0114)
     > 코지 사랑해 아요크루 사랑해 🥺🥺🥺 오래보자잉 💜
 - [양재욱](https://github.com/didwodnr123)
+    > 🚨재드래곤❗️다들 너무 열심히 잘해서 고마웠당, 사실 내가 제일 잘했다 ㅎㅎ
 - [양지영](https://github.com/yangg0228)
     > 뷰도 제대로 못 그렸던 저를 끝까지 거둬주고 이끌어준 우리 팀원들,, 존경하고 사룽훼 🐉🐲💚
