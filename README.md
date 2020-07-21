@@ -159,40 +159,40 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 |:-----| :------------------------------------------------------| :--: | :----: |
 | Main | iOS 앱스토어 애니메이션 적용(라이브러리 사용X,Only swift Native구현) | O | [📘인준](https://github.com/iJoom) |
 |  | SE2와 11pro 해상도에 맞게 셀사이즈 분기처리 | O | [📘인준](https://github.com/iJoom) |
-| Detailview | 북마크 버튼 서버 실시간 통신 | O | [📘인준](https://github.com/iJoom) | 
+| Detailview | 북마크 버튼 서버 실시간 통신 | O | [📘인준](https://github.com/iJoom) |
 |  | 커스텀 탭바 히든 애니메이션 적용 | O | [📘인준](https://github.com/iJoom) |
 |  | 버튼 및 라벨 서버 통신한 텍스트 크기에 맞게 유동적인 사이즈 변경 | O | [📘인준](https://github.com/iJoom) |
 |  | 해당URL 이동 및 URL없을때 Alert액션으로 메세지 O | O | [📘인준](https://github.com/iJoom) |
 |  | 네이버지도 서점 위치 통신 및 APi 연결 완료 | O | [📘인준](https://github.com/iJoom) |
 |  | 마커 및 길찾기 버튼 터치시, 네이버지도 앱으로 이동 후 길찾기로 넘어가게 구현 | O | [📘인준](https://github.com/iJoom) |
 | Map  | 지역에 따른 서점 리스트 조회 | O |  [📙은지](https://github.com/ChoiEunji0114) |
-|   | custom navigation bar | O | [📙은지](https://github.com/ChoiEunji0114) |  
-| Select Region  | 지역 선택 pop up view |  O | [📙은지](https://github.com/ChoiEunji0114) |  
-|  | 지역 선택에 따른 서점 리스트 서버 통신 | O | [📙은지](https://github.com/ChoiEunji0114) |   
-| Detailview | APPLE 지도 이용하여 위치 표시 | O |  [📙은지](https://github.com/ChoiEunji0114) | 
-|   | 서점 상세 정보 불러오기 | O | [📙은지](https://github.com/ChoiEunji0114) |  
-| Search  | 텍스트로 서점 검색 | O | [📙은지](https://github.com/ChoiEunji0114) | 
-|   | 키워드로 서점 검색 | O | [📙은지](https://github.com/ChoiEunji0114) | 
-| Splash | Splash | O | [📙은지](https://github.com/ChoiEunji0114) | 
-| Login  | 페이스북, 네이버 로그인 팝업 | O | [📙은지](https://github.com/ChoiEunji0114) | 
-|   | 페이스북, 네이버, 카카오 소셜 로그인 | X | [📙은지](https://github.com/ChoiEunji0114) | 
-| Review | 별점과 후기 작성 | O | [📙은지](https://github.com/ChoiEunji0114) |  
-|   | 후기 서버 통신 | X |  [📙은지](https://github.com/ChoiEunji0114) |   
-| Interest | 테이블뷰를 이용한 커스텀 View | O |  [📗재욱](https://github.com/didwodnr123)  |  
-|   | 서점에 관한 Tag 구현 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-|   | 북마크 된 서점 리스트 Get 통신 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-|   | 북마크 삭제 Put 통신 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-|   | 네비게이션바 커스텀 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-|   | 로그인 토큰 받아오기 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-| EmailLoginView | 이메일 로그인 커스텀 View 그리기 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-|  | Post 통신 로그인 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-|  | 네비게이션 컨트롤 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-|  | 로그인 버튼 동적으로 색상 변경 | O |  [📗재욱](https://github.com/didwodnr123)  |  
-| MyPage | 내 프로필 서버 통신 | O |   [📒지영](https://github.com/yangg0228)  |  
-|   | 내 프로필 이미지 업로드 | O |   [📒지영](https://github.com/yangg0228)  |  
-|   | 공지사항, 이벤트 조회 | O |   [📒지영](https://github.com/yangg0228)  |  
-|   | 최근 본 책방 collection view  | O |   [📒지영](https://github.com/yangg0228)  |  
-|   | 최근 본 책방 서버 통신 | O |   [📒지영](https://github.com/yangg0228)  |  
+|   | custom navigation bar | O | [📙은지](https://github.com/ChoiEunji0114) |
+| Select Region  | 지역 선택 pop up view |  O | [📙은지](https://github.com/ChoiEunji0114) |
+|  | 지역 선택에 따른 서점 리스트 서버 통신 | O | [📙은지](https://github.com/ChoiEunji0114) |
+| Detailview | APPLE 지도 이용하여 위치 표시 | O |  [📙은지](https://github.com/ChoiEunji0114) |
+|   | 서점 상세 정보 불러오기 | O | [📙은지](https://github.com/ChoiEunji0114) |
+| Search  | 텍스트로 서점 검색 | O | [📙은지](https://github.com/ChoiEunji0114) |
+|   | 키워드로 서점 검색 | O | [📙은지](https://github.com/ChoiEunji0114) |
+| Splash | Splash | O | [📙은지](https://github.com/ChoiEunji0114) |
+| Login  | 페이스북, 네이버 로그인 팝업 | O | [📙은지](https://github.com/ChoiEunji0114) |
+|   | 페이스북, 네이버, 카카오 소셜 로그인 | X | [📙은지](https://github.com/ChoiEunji0114) |
+| Review | 별점과 후기 작성 | O | [📙은지](https://github.com/ChoiEunji0114) |
+|   | 후기 서버 통신 | X |  [📙은지](https://github.com/ChoiEunji0114) |
+| Interest | 테이블뷰를 이용한 커스텀 View | O |  [📗재욱](https://github.com/didwodnr123)  |
+|   | 서점에 관한 Tag 구현 | O |  [📗재욱](https://github.com/didwodnr123)  |
+|   | 북마크 된 서점 리스트 Get 통신 | O |  [📗재욱](https://github.com/didwodnr123)  |
+|   | 북마크 삭제 Put 통신 | O |  [📗재욱](https://github.com/didwodnr123)  |
+|   | 네비게이션바 커스텀 | O |  [📗재욱](https://github.com/didwodnr123)  |
+|   | 로그인 토큰 받아오기 | O |  [📗재욱](https://github.com/didwodnr123)  |
+| EmailLoginView | 이메일 로그인 커스텀 View 그리기 | O |  [📗재욱](https://github.com/didwodnr123)  |
+|  | Post 통신 로그인 | O |  [📗재욱](https://github.com/didwodnr123)  |
+|  | 네비게이션 컨트롤 | O |  [📗재욱](https://github.com/didwodnr123)  |
+|  | 로그인 버튼 동적으로 색상 변경 | O |  [📗재욱](https://github.com/didwodnr123)  |
+| MyPage | 내 프로필 서버 통신 | O |   [📒지영](https://github.com/yangg0228)  |
+|   | 내 프로필 이미지 업로드 | O |   [📒지영](https://github.com/yangg0228)  |
+|   | 공지사항, 이벤트 조회 | O |   [📒지영](https://github.com/yangg0228)  |
+|   | 최근 본 책방 collection view  | O |   [📒지영](https://github.com/yangg0228)  |
+|   | 최근 본 책방 서버 통신 | O |   [📒지영](https://github.com/yangg0228)  |
 
 
 <br/>
@@ -216,56 +216,29 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 
 ## 문제점과 해결 방법 🔥
 
-1. 지역별 서점 조회
+***
 
-- 지역 선택 view 를 dismiss 할 때마다 서버 통신하기 -> `NSNotification` 으로 해결 ❗️
+app store animation 적용하기 및 그외 문제해결  [인준](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/IJ.md)
 
-```swift
-// notification 등록
-extension NSNotification.Name {
-    static let dismissSlideView = NSNotification.Name("dismissSlideView")
-}
-```
+지역벌 서점 조회 은지
 
-```swift
-  // dismiss 시켜줄 때마다 button tag 값을 전송 (지역 index값)
-  self.dismiss(animated: true, completion: {
-       NotificationCenter.default.post(name: .dismissSlideView, object: sender.tag)
-  })
-```
+테이블 셀 삭제하기 (북마크 삭제)는 [재욱](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jaeuk.md)
 
-```swift
-    // observer 등록
-    private func addObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(downloadmap(_:)), name: .dismissSlideView, object: nil)
-    }
-```
-
-```swift
-    // 원하는 동작 작성
-    @objc func downloadmap(_ notification: NSNotification) {
-        let getIdx = notification.object as! Int
-        self.mapIdx = getIdx 
-        downloadMapData(mapIndex: getIdx)
-        self.backView.isHidden = true
-    }
-```
-
-2. app store animation 적용하기 는 [여기](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/IJ.md)
-
-3. 테이블 셀 삭제하기 (북마크 삭제)는 [여기](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jaeuk.md)
-
-4. 최근 본 책방의 컬렉션 뷰 데이터 처리는 [여기](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jy.md)
+최근 본 책방의 컬렉션 뷰 데이터 처리는 [지영](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jy.md)
 
 <br/>
 
 ## 👩‍👩‍👦‍👦 Contributor
 
 - [황인준](https://github.com/iJoom)
+    
     > 🏅좋은 팀원과 실제로 쓸수 있는 UI/UX와 메인 기능이 핵심인 앱을 만들 수 있어서 너무 짱짱짱🏅
 - [최은지](https://github.com/ChoiEunji0114)
+    
     > 코지 사랑해 아요크루 사랑해 🥺🥺🥺 오래보자잉 💜
 - [양재욱](https://github.com/didwodnr123)
+    
     > 🚨재드래곤❗️다들 너무 열심히 잘해서 고마웠당, 사실 내가 제일 잘했다 ㅎㅎ
 - [양지영](https://github.com/yangg0228)
+    
     > 뷰도 제대로 못 그렸던 저를 끝까지 거둬주고 이끌어준 우리 팀원들,, 존경하고 사룽훼 🐉🐲💚
