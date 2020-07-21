@@ -218,13 +218,13 @@ class CustomExpandableCollectionViewCell: UICollectionViewCell {
 
 ***
 
-app store animation 적용하기 및 그외 문제해결  [인준](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/IJ.md)
+* app store animation 적용하기 및 그외 문제해결  [인준](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/IJ.md)
 
-지역벌 서점 조회 은지
+* 지역벌 서점 조회는 [은지](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/silverg.md)
 
-테이블 셀 삭제하기 (북마크 삭제)는 [재욱](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jaeuk.md)
+* 테이블 셀 삭제하기 (북마크 삭제)는 [재욱](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jaeuk.md)
 
-최근 본 책방의 컬렉션 뷰 데이터 처리는 [지영](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jy.md)
+* 최근 본 책방의 컬렉션 뷰 데이터 처리는 [지영](https://github.com/OurCozy/cozy-iOS/blob/dev/screenshots/jy.md)
 
 <br/>
 
