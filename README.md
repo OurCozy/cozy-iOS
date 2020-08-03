@@ -1,6 +1,9 @@
+<img src="./screenshots/cozyintro.png" width="1000">
+
+<!--
 <p align="center">
   <img src="./screenshots/cozy.png" width="100" />   
-</p>
+</p> -->
 
 <h1 align="center"> Cozy_iOS 📚 </h1>
 
